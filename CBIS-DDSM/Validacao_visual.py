@@ -1,21 +1,3 @@
-"""
-Validação visual: mamografia completa x recorte x máscara ROI
-------------------------------------------------------------------
-Plota, lado a lado, as três imagens de uma amostra de casos:
-  1) mamografia completa (full mammogram)
-  2) recorte da anormalidade (cropped)
-  3) máscara ROI (ROI mask)
-
-Objetivo: confirmar visualmente que 'cropped' e 'ROI mask' não estão
-trocados no CSV original (bug documentado do CBIS-DDSM em algumas
-distribuições). Uma máscara ROI correta deve ser predominantemente
-preta com uma região branca/binária destacando a anormalidade — bem
-diferente de um recorte em tons de cinza da mamografia.
-
-Rode depois de mapear_paths_imagens.py, usando
-cbis_ddsm_metadados_com_paths_jpg.csv como entrada.
-"""
-
 import pandas as pd
 import matplotlib.pyplot as plt
 from PIL import Image

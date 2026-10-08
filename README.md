@@ -22,6 +22,7 @@ Trabalho da disciplina **Ciência dos Dados** — Engenharia de Computação, CE
 | **CBIS-DDSM** ([Kaggle](https://www.kaggle.com/datasets/awsaf49/cbis-ddsm-breast-cancer-image-dataset), versão em JPEG do [TCIA](https://www.cancerimagingarchive.net/collection/cbis-ddsm/)) | Imagens + metadados clínicos: densidade mamária, tipo de anormalidade, tipo/distribuição de calcificação, BI-RADS, patologia | Download direto (CSV + JPEG) |
 | **INCA** | Estimativas de incidência, mortalidade, mamografias no SUS 2018–2022 | Web scraping (requests + BeautifulSoup) |
 | **DATASUS / TABNET** | Mamografias realizadas (SIA) e óbitos por câncer de mama (SIM), por UF, faixa etária e ano | Web scraping com envio de formulário (requests.post) |
+| **DATASUS / SISCAN** | Laudos de mamografia: BI-RADS e densidade (tipo de mama), por faixa etária, indicação e ano | Web scraping de formulário TabnetBD; dados extraídos do JavaScript da resposta |
 
 **Período (dados brasileiros):** mamografias realizadas entre **2018 e 2022**, além das estimativas de incidência mais recentes. O CBIS-DDSM é tratado como base **transversal**.
 
@@ -73,10 +74,12 @@ pip install -r requirements.txt
 ```bash
 python -m src.scraping.inca      # INCA: incidência, mamografias no SUS (2018–2022), mortalidade
 python -m src.scraping.tabnet    # TABNET: mamografias (SIA) e óbitos por câncer de mama (SIM), 2018–2022
+python -m src.scraping.siscan    # SISCAN: laudos de mamografia por BI-RADS e densidade, 2018–2022
 ```
 
 HTML bruto em `data/raw/`, CSVs em `data/interim/`. Análise de cada fonte e problemas encontrados:
-[docs/scraping_inca.md](docs/scraping_inca.md) · [docs/scraping_tabnet.md](docs/scraping_tabnet.md).
+[docs/scraping_inca.md](docs/scraping_inca.md) · [docs/scraping_tabnet.md](docs/scraping_tabnet.md) ·
+[docs/scraping_siscan.md](docs/scraping_siscan.md).
 
 Testes:
 

@@ -1,22 +1,37 @@
 """Funções auxiliares de coleta (requisições e parsing de tabelas HTML)."""
 
+import logging
 import re
 import time
 
-import pandas as pd
 import requests
-from bs4 import BeautifulSoup
+from bs4 import Tag
 
 from src import config
 
+log = logging.getLogger(__name__)
 
-def baixa_html(url: str, metodo: str = "get", dados: dict | None = None, pausa: float = 1.0) -> str:
-    """Baixa uma página via GET ou POST (formulários do TABNET)."""
-    time.sleep(pausa)  # evita sobrecarregar os servidores públicos
-    resp = requests.request(metodo, url, data=dados, headers=config.HEADERS, timeout=60)
-    resp.raise_for_status()
-    resp.encoding = resp.apparent_encoding
-    return resp.text
+
+def baixa_html(
+    url: str,
+    metodo: str = "get",
+    dados: dict | None = None,
+    pausa: float = 1.0,
+    tentativas: int = 3,
+) -> str:
+    """Baixa uma página via GET ou POST (formulários do TABNET), com novas tentativas."""
+    for tentativa in range(1, tentativas + 1):
+        time.sleep(pausa)  # evita sobrecarregar os servidores públicos
+        try:
+            resp = requests.request(metodo, url, data=dados, headers=config.HEADERS, timeout=60)
+            resp.raise_for_status()
+            resp.encoding = resp.apparent_encoding
+            return resp.text
+        except requests.RequestException as erro:
+            log.warning("Falha ao baixar %s (tentativa %d/%d): %s", url, tentativa, tentativas, erro)
+            if tentativa == tentativas:
+                raise
+            pausa *= 2
 
 
 def limpa_numero(texto: str) -> float | None:
@@ -28,15 +43,15 @@ def limpa_numero(texto: str) -> float | None:
     return float(texto) if texto else None
 
 
-def tabela_html_para_df(html: str, indice: int = 0) -> pd.DataFrame:
-    """Extrai a n-ésima <table> do HTML para um dataframe de strings."""
-    soup = BeautifulSoup(html, "lxml")
-    tabelas = soup.find_all("table")
-    if not tabelas:
-        raise ValueError("Nenhuma tabela encontrada na página.")
+def linhas_da_tabela(tabela: Tag) -> list[list[str]]:
+    """Texto das células de uma <table>, linha a linha, sem colunas totalmente vazias."""
     linhas = [
-        [cel.get_text(strip=True) for cel in tr.find_all(["th", "td"])]
-        for tr in tabelas[indice].find_all("tr")
+        [cel.get_text(" ", strip=True) for cel in tr.find_all(["th", "td"])]
+        for tr in tabela.find_all("tr")
     ]
-    linhas = [l for l in linhas if l]
-    return pd.DataFrame(linhas[1:], columns=linhas[0])
+    linhas = [l for l in linhas if any(l)]
+    n_colunas = max(len(l) for l in linhas)
+    linhas = [l + [""] * (n_colunas - len(l)) for l in linhas]
+    # algumas tabelas do gov.br têm colunas "espaçadoras" vazias
+    usadas = [j for j in range(n_colunas) if any(l[j] for l in linhas)]
+    return [[l[j] for j in usadas] for l in linhas]

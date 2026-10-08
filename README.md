@@ -68,6 +68,22 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
+### Coleta (web scraping)
+
+```bash
+python -m src.scraping.inca      # INCA: incidência, mamografias no SUS (2018–2022), mortalidade
+```
+
+HTML bruto em `data/raw/inca/`, CSVs em `data/interim/`. Detalhes e problemas encontrados na fonte: [docs/scraping_inca.md](docs/scraping_inca.md).
+
+Testes:
+
+```bash
+python -m pytest
+```
+
+### CBIS-DDSM
+
 Baixe os CSVs de metadados do CBIS-DDSM e coloque em `data/raw/cbis-ddsm/`:
 
 - `mass_case_description_train_set.csv`, `mass_case_description_test_set.csv`

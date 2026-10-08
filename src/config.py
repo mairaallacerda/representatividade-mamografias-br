@@ -36,6 +36,16 @@ CBIS_FILES = {
     "calc_test": "calc_case_description_test_set.csv",
 }
 
+REGIOES_UF = {
+    "Norte": ["Acre", "Amapá", "Amazonas", "Pará", "Rondônia", "Roraima", "Tocantins"],
+    "Nordeste": ["Alagoas", "Bahia", "Ceará", "Maranhão", "Paraíba", "Pernambuco",
+                 "Piauí", "Rio Grande do Norte", "Sergipe"],
+    "Sudeste": ["Espírito Santo", "Minas Gerais", "Rio de Janeiro", "São Paulo"],
+    "Sul": ["Paraná", "Rio Grande do Sul", "Santa Catarina"],
+    "Centro-Oeste": ["Distrito Federal", "Goiás", "Mato Grosso", "Mato Grosso do Sul"],
+}
+UF_PARA_REGIAO = {uf: regiao for regiao, ufs in REGIOES_UF.items() for uf in ufs}
+
 HEADERS = {
     "User-Agent": (
         "Mozilla/5.0 (projeto academico CEFET-MG - Ciencia dos Dados)"

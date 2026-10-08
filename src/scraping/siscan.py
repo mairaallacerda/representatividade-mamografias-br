@@ -10,10 +10,6 @@ O SISCAN usa uma versão mais nova do TABNET ("TabnetBD"), diferente do SIA/SIM:
 | Filtros    | campos ``S...``                  | campos ``S...`` e ``X...``                    |
 | Resultado  | ``<table class="tabdados">``     | **dentro de um <script>** (Google Charts)     |
 
-Além disso, o link publicado no site do DATASUS (``dhdat.exe?siscan/mamografia_resid``) está
-incompleto: o JavaScript da página acrescenta a abrangência e a extensão
-(``mamografia_resid`` + ``br`` + ``.def``).
-
 Uso:
     python -m src.scraping.siscan            # coleta (se necessário) e extrai
     python -m src.scraping.siscan --forcar   # refaz todas as consultas
@@ -79,9 +75,7 @@ CONSULTAS = [
 ]
 
 
-# ---------------------------------------------------------------
 # 1. Montagem do POST
-# ---------------------------------------------------------------
 def campos_ocultos(html: str) -> list[tuple[str, str]]:
     form = BeautifulSoup(html, "lxml").find("form")
     return [(i["name"], i.get("value", "")) for i in form.find_all("input", type="hidden") if i.get("name")]
@@ -110,9 +104,7 @@ def monta_post(consulta: ConsultaSiscan, opcoes: dict[str, dict[str, str]],
     return dados + ocultos + [("grafico", "")]
 
 
-# ---------------------------------------------------------------
 # 2. Leitura do resultado (dados dentro do JavaScript)
-# ---------------------------------------------------------------
 def le_google_datatable(html: str) -> tuple[list[str], list[list]]:
     """Extrai colunas e linhas de ``data.addColumn(...)`` / ``data.addRows([...])``.
 
@@ -133,9 +125,7 @@ def le_google_datatable(html: str) -> tuple[list[str], list[list]]:
     return [c.strip() for c in colunas], linhas
 
 
-# ---------------------------------------------------------------
 # 3. Coleta e extração
-# ---------------------------------------------------------------
 def coletar(forcar: bool = False) -> None:
     config.RAW_DATASUS.mkdir(parents=True, exist_ok=True)
     metadados_path = config.RAW_DATASUS / "coleta_siscan.json"

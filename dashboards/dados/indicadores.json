@@ -1,0 +1,16 @@
+{
+  "mamografias_2022": 4251434.0,
+  "queda_2020_pct": -39.86886912182707,
+  "obitos_2022": 19103.0,
+  "casos_estimados_ano": 73610.0,
+  "cbis_pct_malignas": 40.83520179372198,
+  "brasil_casos_por_100_mamografias": 1.7314157999395028,
+  "razao_case_mix": 23.584861472991523,
+  "w_cohen_densidade": 0.09689616771741255,
+  "pct_densas_40_44": 68.08200206955112,
+  "pct_densas_65_69": 35.437704618324894,
+  "pct_suspeitos_rastreamento": 0.8922343962279412,
+  "pct_suspeitos_cbis": 61.827354260089685,
+  "cbis_lesoes": 3568,
+  "cbis_pacientes": 1566
+}

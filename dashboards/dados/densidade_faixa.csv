@@ -1,0 +1,65 @@
+﻿faixa_etaria,ordem_faixa,densidade,densidade_nome,exames
+até 9,0,4,4 Densa,336.0
+até 9,0,1,1 Adiposa,316.0
+até 9,0,3,3 Predominantemente densa,737.0
+até 9,0,2,2 Predominantemente adiposa,713.0
+10–14,1,4,4 Densa,149.0
+10–14,1,1,1 Adiposa,46.0
+10–14,1,3,3 Predominantemente densa,210.0
+10–14,1,2,2 Predominantemente adiposa,102.0
+15–19,2,4,4 Densa,1596.0
+15–19,2,1,1 Adiposa,164.0
+15–19,2,3,3 Predominantemente densa,1207.0
+15–19,2,2,2 Predominantemente adiposa,294.0
+20–24,3,4,4 Densa,4199.0
+20–24,3,1,1 Adiposa,608.0
+20–24,3,3,3 Predominantemente densa,3744.0
+20–24,3,2,2 Predominantemente adiposa,1078.0
+25–29,4,4,4 Densa,7213.0
+25–29,4,1,1 Adiposa,1573.0
+25–29,4,3,3 Predominantemente densa,8592.0
+25–29,4,2,2 Predominantemente adiposa,2914.0
+30–34,5,4,4 Densa,16711.0
+30–34,5,1,1 Adiposa,4976.0
+30–34,5,3,3 Predominantemente densa,25039.0
+30–34,5,2,2 Predominantemente adiposa,10260.0
+35–39,6,4,4 Densa,74733.0
+35–39,6,1,1 Adiposa,25569.0
+35–39,6,3,3 Predominantemente densa,125221.0
+35–39,6,2,2 Predominantemente adiposa,59500.0
+40–44,7,4,4 Densa,391374.0
+40–44,7,1,1 Adiposa,147173.0
+40–44,7,3,3 Predominantemente densa,701464.0
+40–44,7,2,2 Predominantemente adiposa,365168.0
+45–49,8,4,4 Densa,433023.0
+45–49,8,1,1 Adiposa,216859.0
+45–49,8,3,3 Predominantemente densa,851998.0
+45–49,8,2,2 Predominantemente adiposa,523129.0
+50–54,9,4,4 Densa,455432.0
+50–54,9,1,1 Adiposa,405507.0
+50–54,9,3,3 Predominantemente densa,1005839.0
+50–54,9,2,2 Predominantemente adiposa,921143.0
+55–59,10,4,4 Densa,320916.0
+55–59,10,1,1 Adiposa,440971.0
+55–59,10,3,3 Predominantemente densa,781494.0
+55–59,10,2,2 Predominantemente adiposa,953639.0
+60–64,11,4,4 Densa,217117.0
+60–64,11,1,1 Adiposa,398845.0
+60–64,11,3,3 Predominantemente densa,550006.0
+60–64,11,2,2 Predominantemente adiposa,820641.0
+65–69,12,4,4 Densa,130629.0
+65–69,12,1,1 Adiposa,281231.0
+65–69,12,3,3 Predominantemente densa,330704.0
+65–69,12,2,2 Predominantemente adiposa,559250.0
+70–74,13,4,4 Densa,47012.0
+70–74,13,1,1 Adiposa,108132.0
+70–74,13,3,3 Predominantemente densa,115532.0
+70–74,13,2,2 Predominantemente adiposa,204907.0
+75–79,14,4,4 Densa,17665.0
+75–79,14,1,1 Adiposa,43810.0
+75–79,14,3,3 Predominantemente densa,42017.0
+75–79,14,2,2 Predominantemente adiposa,81588.0
+80+,15,4,4 Densa,6703.0
+80+,15,1,1 Adiposa,17675.0
+80+,15,3,3 Predominantemente densa,16070.0
+80+,15,2,2 Predominantemente adiposa,32254.0

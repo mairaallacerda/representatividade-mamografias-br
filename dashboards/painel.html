@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+</head>
+<body>
+<title>Mamografias Brasil × CBIS-DDSM</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: cabeçalho com a tese, abas por pergunta, faixa de indicadores e grade de gráficos (2 colunas → 1 no celular) */
+:root {
+  --bg: #f5f8f8;
+  --surface: #ffffff;
+  --ink: #0f1a1c;
+  --muted: #56666a;
+  --line: #d9e2e3;
+  --grid: #e9eeee;
+  --accent: #0d6b62;
+  --s-brasil: #1baf7a;
+  --s-brasil-suave: #a8e2cb;
+  --s-cbis: #2a78d6;
+  --s-cbis-suave: #b7d3f6;
+  --s-diag: #eb6834;
+  --f-display: "IBM Plex Sans Condensed", "Arial Narrow", "Roboto Condensed", sans-serif;
+  --f-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Consolas, monospace;
+  --raio: 10px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1214; --surface: #141b1e; --ink: #e5eded; --muted: #9aa9ab; --line: #263134; --grid: #1d272a;
+    --accent: #5fc8b8; --s-brasil: #199e70; --s-brasil-suave: #1f4c3d; --s-cbis: #3987e5; --s-cbis-suave: #1d3b62;
+    --s-diag: #d95926; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1214; --surface: #141b1e; --ink: #e5eded; --muted: #9aa9ab; --line: #263134; --grid: #1d272a;
+  --accent: #5fc8b8; --s-brasil: #199e70; --s-brasil-suave: #1f4c3d; --s-cbis: #3987e5; --s-cbis-suave: #1d3b62;
+  --s-diag: #d95926; color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font: 400 15px/1.55 var(--f-body);
+  padding-inline: clamp(16px, 4vw, 40px); padding-block: 28px 48px;
+}
+.pagina { max-width: 1240px; margin-inline: auto; display: grid; gap: 22px; }
+
+header { display: grid; gap: 10px; }
+.sobrelinha { font: 600 12px/1 var(--f-body); letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
+h1 { margin: 0; font: 700 clamp(28px, 4.2vw, 42px)/1.05 var(--f-display); letter-spacing: -.01em; text-wrap: balance; }
+.tese { margin: 0; max-width: 68ch; color: var(--muted); font-size: 16px; }
+.tese strong { color: var(--ink); font-weight: 600; }
+
+nav[role="tablist"] { display: flex; flex-wrap: wrap; gap: 4px; border-bottom: 1px solid var(--line); }
+nav button {
+  font: 600 15px/1 var(--f-display); letter-spacing: .01em; color: var(--muted); background: none;
+  border: 0; border-bottom: 3px solid transparent; padding: 12px 14px 11px; cursor: pointer; margin-bottom: -1px;
+}
+nav button:hover { color: var(--ink); }
+nav button[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--accent); }
+button:focus-visible, select:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+section[role="tabpanel"] { display: grid; gap: 18px; }
+.pergunta { margin: 0; font: 600 20px/1.25 var(--f-display); text-wrap: balance; }
+.filtros { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; color: var(--muted); font-size: 14px; }
+.filtros label { display: flex; gap: 8px; align-items: center; }
+select {
+  font: 500 14px var(--f-body); color: var(--ink); background: var(--surface);
+  border: 1px solid var(--line); border-radius: 6px; padding: 6px 28px 6px 10px;
+}
+
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1px;
+        background: var(--line); border: 1px solid var(--line); border-radius: var(--raio); overflow: hidden; }
+.kpi { background: var(--surface); padding: 16px 18px; display: grid; gap: 4px; align-content: start; min-width: 0; }
+.kpi .rotulo { font-size: 13px; color: var(--muted); }
+.kpi .valor { font: 600 30px/1.1 var(--f-display); font-variant-numeric: tabular-nums; }
+.kpi .valor small { font: 500 15px var(--f-body); color: var(--muted); margin-left: 4px; }
+.kpi .nota { font-size: 12.5px; color: var(--muted); }
+.chip { display: inline-block; font: 600 11px/1 var(--f-body); letter-spacing: .04em; text-transform: uppercase;
+        padding: 4px 7px; border-radius: 4px; border: 1px solid currentColor; justify-self: start; }
+.chip.ok { color: var(--s-brasil); }
+.chip.alerta { color: var(--s-diag); }
+
+.grade { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.grade .largo { grid-column: 1 / -1; }
+@media (max-width: 860px) { .grade { grid-template-columns: minmax(0, 1fr); } }
+
+figure.cartao {
+  margin: 0; background: var(--surface); border: 1px solid var(--line); border-radius: var(--raio);
+  padding: 16px 18px 12px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; min-width: 0;
+}
+figcaption h3 { margin: 0; font: 600 16.5px/1.3 var(--f-display); text-wrap: balance; }
+figcaption p { margin: 4px 0 0; font-size: 13.5px; color: var(--muted); max-width: 70ch; }
+.tela { position: relative; height: 290px; width: 100%; min-width: 0; }
+.tela.alta { height: 560px; }
+details { font-size: 13px; color: var(--muted); }
+summary { cursor: pointer; width: max-content; }
+.tabela-wrap { overflow-x: auto; margin-top: 8px; }
+table { border-collapse: collapse; font-variant-numeric: tabular-nums; min-width: 100%; color: var(--ink); }
+th, td { text-align: right; padding: 5px 10px; border-bottom: 1px solid var(--grid); white-space: nowrap; }
+th:first-child, td:first-child { text-align: left; }
+th { font-weight: 600; color: var(--muted); }
+
+.leitura { margin: 0; padding: 14px 18px; border-left: 3px solid var(--accent); background: var(--surface);
+           border-radius: 0 var(--raio) var(--raio) 0; max-width: 90ch; }
+.leitura p { margin: 0; }
+.leitura p + p { margin-top: 8px; }
+footer { border-top: 1px solid var(--line); padding-top: 14px; color: var(--muted); font-size: 13px; display: grid; gap: 4px; }
+footer p { margin: 0; max-width: 100ch; }
+code, .mono { font-family: var(--f-mono); font-size: .92em; }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+</style>
+
+<div class="pagina">
+  <header>
+    <span class="sobrelinha">Ciência dos Dados · CEFET-MG Divinópolis</span>
+    <h1>Mamografias: Brasil × CBIS-DDSM</h1>
+    <p class="tese">A base pública CBIS-DDSM, muito usada para treinar modelos de apoio ao diagnóstico, representa as
+      mulheres atendidas no SUS? <strong>Na densidade mamária, sim. Na composição dos casos, não. Na idade, não dá
+      para saber</strong>, e é ela que mais muda o desempenho dos modelos.</p>
+  </header>
+
+  <nav role="tablist" aria-label="Seções do painel">
+    <button role="tab" id="aba-brasil" aria-controls="brasil" aria-selected="true">Brasil</button>
+    <button role="tab" id="aba-comparacao" aria-controls="comparacao" aria-selected="false">Brasil × CBIS-DDSM</button>
+    <button role="tab" id="aba-modelo" aria-controls="modelo" aria-selected="false">Modelo e viés</button>
+  </nav>
+
+  <!-- ============================== BRASIL ============================== -->
+  <section role="tabpanel" id="brasil" aria-labelledby="aba-brasil">
+    <div class="filtros">
+      <label for="f-regiao">Região
+        <select id="f-regiao"><option value="">Brasil (todas)</option></select>
+      </label>
+      <span>Mamografias: SIA/SUS · Óbitos: SIM · Casos estimados: INCA (2023)</span>
+    </div>
+    <div class="kpis">
+      <div class="kpi"><span class="rotulo">Mamografias no SUS, 2022</span><span class="valor" id="k-mamo"></span><span class="nota" id="k-mamo-nota"></span></div>
+      <div class="kpi"><span class="rotulo">Queda em 2020 (pandemia)</span><span class="valor" id="k-queda"></span><span class="nota">total de mamografias em relação a 2019</span></div>
+      <div class="kpi"><span class="rotulo">Óbitos de mulheres, 2022</span><span class="valor" id="k-obitos"></span><span class="nota">câncer de mama, por residência</span></div>
+      <div class="kpi"><span class="rotulo">Casos novos estimados por ano</span><span class="valor" id="k-casos"></span><span class="nota">triênio 2023–2025</span></div>
+    </div>
+    <div class="grade">
+      <figure class="cartao">
+        <figcaption><h3>Mamografias por finalidade, 2018–2022</h3><p>Rastreamento: mulheres sem sintomas. Diagnóstica: investigação de alteração.</p></figcaption>
+        <div class="tela"><canvas id="g-serie" aria-label="Mamografias por ano e finalidade"></canvas></div>
+        <details><summary>Ver tabela</summary><div class="tabela-wrap" id="t-serie"></div></details>
+      </figure>
+      <figure class="cartao">
+        <figcaption><h3>Óbitos de mulheres por câncer de mama</h3><p>CID-BR-10 041, por local de residência.</p></figcaption>
+        <div class="tela"><canvas id="g-obitos" aria-label="Óbitos por ano"></canvas></div>
+        <details><summary>Ver tabela</summary><div class="tabela-wrap" id="t-obitos"></div></details>
+      </figure>
+      <figure class="cartao">
+        <figcaption><h3>Rastreamentos por caso novo estimado, por UF</h3><p>Mamografias de rastreamento em 2022 ÷ casos estimados por ano. Indica a intensidade do rastreamento em relação à carga da doença.</p></figcaption>
+        <div class="tela alta" id="tela-uf"><canvas id="g-uf" aria-label="Rastreamentos por caso estimado por UF"></canvas></div>
+        <details><summary>Ver tabela</summary><div class="tabela-wrap" id="t-uf"></div></details>
+      </figure>
+      <figure class="cartao">
+        <figcaption><h3>Óbitos por faixa etária, 2018–2022</h3><p>Brasil. Em destaque, a faixa-alvo do rastreamento (50–69 anos).</p></figcaption>
+        <div class="tela alta"><canvas id="g-faixa-obitos" aria-label="Óbitos por faixa etária"></canvas></div>
+        <details><summary>Ver tabela</summary><div class="tabela-wrap" id="t-faixa-obitos"></div></details>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============================ COMPARAÇÃO ============================ -->
+  <section role="tabpanel" id="comparacao" aria-labelledby="aba-comparacao" hidden>
+    <p class="pergunta">As características dos casos do CBIS-DDSM batem com as das brasileiras?</p>
+    <div class="kpis">
+      <div class="kpi"><span class="rotulo">Densidade mamária</span><span class="valor" id="k-w"></span><span class="chip ok">compatível</span><span class="nota">w de Cohen entre as distribuições (0,1 = pequena)</span></div>
+      <div class="kpi"><span class="rotulo">Laudos suspeitos (BI-RADS 4–5)</span><span class="valor" id="k-susp"></span><span class="chip alerta">incompatível</span><span class="nota">rastreamento do SUS × lesões do CBIS-DDSM</span></div>
+      <div class="kpi"><span class="rotulo">Câncer entre os casos</span><span class="valor" id="k-casemix"></span><span class="chip alerta">incompatível</span><span class="nota" id="k-casemix-nota"></span></div>
+      <div class="kpi"><span class="rotulo">Mamas densas no Brasil</span><span class="valor" id="k-dens-idade"></span><span class="chip alerta">idade ausente no CBIS</span><span class="nota">aos 40–44 anos × aos 65–69 anos</span></div>
+    </div>
+    <div class="grade">
+      <figure class="cartao">
+        <figcaption><h3>Densidade mamária: Brasil × CBIS-DDSM</h3><p>Brasil: laudos do SISCAN, mulheres, 2018–2022. Escala BI-RADS de densidade: 1 adiposa … 4 densa.</p></figcaption>
+        <div class="filtros"><label for="f-subconjunto">Comparar com
+          <select id="f-subconjunto">
+            <option value="CBIS-DDSM">CBIS-DDSM: todas as lesões</option>
+            <option value="CBIS-DDSM: massas">CBIS-DDSM: massas</option>
+            <option value="CBIS-DDSM: calcificações">CBIS-DDSM: calcificações</option>
+          </select></label></div>
+        <div class="tela"><canvas id="g-densidade" aria-label="Distribuição de densidade"></canvas></div>
+        <details><summary>Ver tabela</summary><div class="tabela-wrap" id="t-densidade"></div></details>
+      </figure>
+      <figure class="cartao">
+        <figcaption><h3>No Brasil, a densidade cai com a idade</h3><p>% de mamas densas (categorias 3 e 4) por faixa etária. O tracejado é o CBIS-DDSM, que não informa a idade das pacientes.</p></figcaption>
+        <div class="tela"><canvas id="g-dens-idade" aria-label="Mamas densas por faixa etária"></canvas></div>
+        <details><summary>Ver tabela</summary><div class="tabela-wrap" id="t-dens-idade"></div></details>
+      </figure>
+      <figure class="cartao largo">
+        <figcaption><h3>Categoria BI-RADS: que tipo de caso cada base contém</h3><p>Categorias 0–5 (a 6, câncer já confirmado, não existe no CBIS-DDSM). 0 inconclusivo · 1–2 normal/benigno · 3 provavelmente benigno · 4 suspeito · 5 altamente suspeito.</p></figcaption>
+        <div class="tela"><canvas id="g-birads" aria-label="Distribuição BI-RADS"></canvas></div>
+        <details><summary>Ver tabela</summary><div class="tabela-wrap" id="t-birads"></div></details>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============================== MODELO ============================== -->
+  <section role="tabpanel" id="modelo" aria-labelledby="aba-modelo" hidden>
+    <p class="pergunta">Um modelo treinado no CBIS-DDSM funcionaria igual nas brasileiras?</p>
+    <div class="kpis">
+      <div class="kpi"><span class="rotulo">AUC no teste do CBIS-DDSM</span><span class="valor" id="k-auc-teste"></span><span class="nota">Random Forest, características de imagem de calcificações</span></div>
+      <div class="kpi"><span class="rotulo">AUC com a densidade do Brasil</span><span class="valor" id="k-auc-br"></span><span class="nota">todas as idades (reponderado)</span></div>
+      <div class="kpi"><span class="rotulo">AUC estimada, 40–49 anos</span><span class="valor" id="k-auc-40"></span><span class="nota">27% do rastreamento do SUS é nessa faixa</span></div>
+      <div class="kpi"><span class="rotulo">AUC estimada, 70 anos ou mais</span><span class="valor" id="k-auc-70"></span><span class="nota">mamas menos densas</span></div>
+    </div>
+    <div class="grade">
+      <figure class="cartao">
+        <figcaption><h3>Quanto mais densa a mama, pior o modelo</h3><p>AUC no conjunto de teste por densidade. 0,5 = acaso. A densidade 1 tem só 24 lesões; o valor dela é instável.</p></figcaption>
+        <div class="tela"><canvas id="g-auc-dens" aria-label="AUC por densidade"></canvas></div>
+        <details><summary>Ver tabela</summary><div class="tabela-wrap" id="t-auc-dens"></div></details>
+      </figure>
+      <figure class="cartao">
+        <figcaption><h3>…e para o radiologista também</h3><p>Brasil: % de laudos inconclusivos (BI-RADS 0, exigem exames complementares) por densidade.</p></figcaption>
+        <div class="tela"><canvas id="g-birads0" aria-label="Laudos inconclusivos por densidade"></canvas></div>
+        <details><summary>Ver tabela</summary><div class="tabela-wrap" id="t-birads0"></div></details>
+      </figure>
+      <figure class="cartao largo">
+        <figcaption><h3>AUC reponderada pela densidade de cada população</h3><p>Cada lesão do teste recebe peso = proporção da sua densidade na população ÷ proporção no teste. Barra clara: intervalo de 95% (bootstrap).</p></figcaption>
+        <div class="tela"><canvas id="g-auc-pop" aria-label="AUC por população"></canvas></div>
+        <details><summary>Ver tabela</summary><div class="tabela-wrap" id="t-auc-pop"></div></details>
+      </figure>
+    </div>
+    <div class="leitura">
+      <p><strong>Leitura.</strong> No agregado, o desempenho com a composição brasileira fica parecido com o medido na base.
+        Mas a média esconde um gradiente: o modelo vai pior nas mulheres de 40 a 49 anos, que têm mamas mais densas, e
+        melhor nas mais velhas. Sem a densidade 1 o gradiente diminui (AUC 0,70 → 0,76), mas continua na mesma direção.</p>
+      <p>A reponderação corrige só a mistura de densidades. Ela supõe que, dentro de cada densidade, o modelo erra igual
+        nas duas populações, e não corrige diferenças de equipamento nem de prevalência.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p><strong>Fontes:</strong> INCA (dados e números do câncer de mama), DATASUS/TABNET (SIA/SUS, SIM), SISCAN (laudos de
+      mamografia), CBIS-DDSM (TCIA / Kaggle). Período brasileiro: 2018–2022. Coleta por web scraping; código e notebooks no
+      repositório <span class="mono">representatividade-mamografias-br</span>.</p>
+    <p>Maira Beatriz de Almeida Lacerda · João Francisco Teles da Silva</p>
+  </footer>
+</div>
+
+<script id="dados" type="application/json">{"dim_localidade": [{"localidade": "Acre", "regiao": "Norte", "sigla": "AC", "pais": "Brasil"}, {"localidade": "Alagoas", "regiao": "Nordeste", "sigla": "AL", "pais": "Brasil"}, {"localidade": "Amapá", "regiao": "Norte", "sigla": "AP", "pais": "Brasil"}, {"localidade": "Amazonas", "regiao": "Norte", "sigla": "AM", "pais": "Brasil"}, {"localidade": "Bahia", "regiao": "Nordeste", "sigla": "BA", "pais": "Brasil"}, {"localidade": "Ceará", "regiao": "Nordeste", "sigla": "CE", "pais": "Brasil"}, {"localidade": "Distrito Federal", "regiao": "Centro-Oeste", "sigla": "DF", "pais": "Brasil"}, {"localidade": "Espírito Santo", "regiao": "Sudeste", "sigla": "ES", "pais": "Brasil"}, {"localidade": "Goiás", "regiao": "Centro-Oeste", "sigla": "GO", "pais": "Brasil"}, {"localidade": "Maranhão", "regiao": "Nordeste", "sigla": "MA", "pais": "Brasil"}, {"localidade": "Mato Grosso", "regiao": "Centro-Oeste", "sigla": "MT", "pais": "Brasil"}, {"localidade": "Mato Grosso do Sul", "regiao": "Centro-Oeste", "sigla": "MS", "pais": "Brasil"}, {"localidade": "Minas Gerais", "regiao": "Sudeste", "sigla": "MG", "pais": "Brasil"}, {"localidade": "Paraná", "regiao": "Sul", "sigla": "PR", "pais": "Brasil"}, {"localidade": "Paraíba", "regiao": "Nordeste", "sigla": "PB", "pais": "Brasil"}, {"localidade": "Pará", "regiao": "Norte", "sigla": "PA", "pais": "Brasil"}, {"localidade": "Pernambuco", "regiao": "Nordeste", "sigla": "PE", "pais": "Brasil"}, {"localidade": "Piauí", "regiao": "Nordeste", "sigla": "PI", "pais": "Brasil"}, {"localidade": "Rio Grande do Norte", "regiao": "Nordeste", "sigla": "RN", "pais": "Brasil"}, {"localidade": "Rio Grande do Sul", "regiao": "Sul", "sigla": "RS", "pais": "Brasil"}, {"localidade": "Rio de Janeiro", "regiao": "Sudeste", "sigla": "RJ", "pais": "Brasil"}, {"localidade": "Rondônia", "regiao": "Norte", "sigla": "RO", "pais": "Brasil"}, {"localidade": "Roraima", "regiao": "Norte", "sigla": "RR", "pais": "Brasil"}, {"localidade": "Santa Catarina", "regiao": "Sul", "sigla": "SC", "pais": "Brasil"}, {"localidade": "Sergipe", "regiao": "Nordeste", "sigla": "SE", "pais": "Brasil"}, {"localidade": "São Paulo", "regiao": "Sudeste", "sigla": "SP", "pais": "Brasil"}, {"localidade": "Tocantins", "regiao": "Norte", "sigla": "TO", "pais": "Brasil"}], "fato_uf_ano": [{"localidade": "Acre", "ano": 2018, "mamografias_rastreamento": 5543.0, "mamografias_diagnosticas": 523.0, "obitos_cancer_mama": 48.0}, {"localidade": "Alagoas", "ano": 2018, "mamografias_rastreamento": 78056.0, "mamografias_diagnosticas": 698.0, "obitos_cancer_mama": 160.0}, {"localidade": "Amapá", "ano": 2018, "mamografias_rastreamento": 74.0, "mamografias_diagnosticas": 4.0, "obitos_cancer_mama": 30.0}, {"localidade": "Amazonas", "ano": 2018, "mamografias_rastreamento": 31999.0, "mamografias_diagnosticas": 1005.0, "obitos_cancer_mama": 182.0}, {"localidade": "Bahia", "ano": 2018, "mamografias_rastreamento": 271478.0, "mamografias_diagnosticas": 17040.0, "obitos_cancer_mama": 980.0}, {"localidade": "Ceará", "ano": 2018, "mamografias_rastreamento": 114700.0, "mamografias_diagnosticas": 7688.0, "obitos_cancer_mama": 723.0}, {"localidade": "Distrito Federal", "ano": 2018, "mamografias_rastreamento": 3573.0, "mamografias_diagnosticas": 415.0, "obitos_cancer_mama": 263.0}, {"localidade": "Espírito Santo", "ano": 2018, "mamografias_rastreamento": 92634.0, "mamografias_diagnosticas": 6249.0, "obitos_cancer_mama": 333.0}, {"localidade": "Goiás", "ano": 2018, "mamografias_rastreamento": 70281.0, "mamografias_diagnosticas": 10366.0, "obitos_cancer_mama": 526.0}, {"localidade": "Maranhão", "ano": 2018, "mamografias_rastreamento": 46649.0, "mamografias_diagnosticas": 1732.0, "obitos_cancer_mama": 247.0}, {"localidade": "Mato Grosso", "ano": 2018, "mamografias_rastreamento": 22359.0, "mamografias_diagnosticas": 765.0, "obitos_cancer_mama": 190.0}, {"localidade": "Mato Grosso do Sul", "ano": 2018, "mamografias_rastreamento": 29596.0, "mamografias_diagnosticas": 3995.0, "obitos_cancer_mama": 227.0}, {"localidade": "Minas Gerais", "ano": 2018, "mamografias_rastreamento": 429358.0, "mamografias_diagnosticas": 62663.0, "obitos_cancer_mama": 1586.0}, {"localidade": "Paraná", "ano": 2018, "mamografias_rastreamento": 327416.0, "mamografias_diagnosticas": 34349.0, "obitos_cancer_mama": 1018.0}, {"localidade": "Paraíba", "ano": 2018, "mamografias_rastreamento": 54056.0, "mamografias_diagnosticas": 557.0, "obitos_cancer_mama": 258.0}, {"localidade": "Pará", "ano": 2018, "mamografias_rastreamento": 47146.0, "mamografias_diagnosticas": 3756.0, "obitos_cancer_mama": 346.0}, {"localidade": "Pernambuco", "ano": 2018, "mamografias_rastreamento": 179342.0, "mamografias_diagnosticas": 13439.0, "obitos_cancer_mama": 806.0}, {"localidade": "Piauí", "ano": 2018, "mamografias_rastreamento": 55857.0, "mamografias_diagnosticas": 3019.0, "obitos_cancer_mama": 184.0}, {"localidade": "Rio Grande do Norte", "ano": 2018, "mamografias_rastreamento": 50697.0, "mamografias_diagnosticas": 1798.0, "obitos_cancer_mama": 285.0}, {"localidade": "Rio Grande do Sul", "ano": 2018, "mamografias_rastreamento": 313132.0, "mamografias_diagnosticas": 30813.0, "obitos_cancer_mama": 1329.0}, {"localidade": "Rio de Janeiro", "ano": 2018, "mamografias_rastreamento": 231180.0, "mamografias_diagnosticas": 30964.0, "obitos_cancer_mama": 2367.0}, {"localidade": "Rondônia", "ano": 2018, "mamografias_rastreamento": 12132.0, "mamografias_diagnosticas": 3857.0, "obitos_cancer_mama": 69.0}, {"localidade": "Roraima", "ano": 2018, "mamografias_rastreamento": 5054.0, "mamografias_diagnosticas": 132.0, "obitos_cancer_mama": 28.0}, {"localidade": "Santa Catarina", "ano": 2018, "mamografias_rastreamento": 152575.0, "mamografias_diagnosticas": 13950.0, "obitos_cancer_mama": 661.0}, {"localidade": "Sergipe", "ano": 2018, "mamografias_rastreamento": 34062.0, "mamografias_diagnosticas": 458.0, "obitos_cancer_mama": 164.0}, {"localidade": "São Paulo", "ano": 2018, "mamografias_rastreamento": 1244733.0, "mamografias_diagnosticas": 133710.0, "obitos_cancer_mama": 4488.0}, {"localidade": "Tocantins", "ano": 2018, "mamografias_rastreamento": 7717.0, "mamografias_diagnosticas": 578.0, "obitos_cancer_mama": 74.0}, {"localidade": "Acre", "ano": 2019, "mamografias_rastreamento": 4352.0, "mamografias_diagnosticas": 406.0, "obitos_cancer_mama": 34.0}, {"localidade": "Alagoas", "ano": 2019, "mamografias_rastreamento": 80718.0, "mamografias_diagnosticas": 1516.0, "obitos_cancer_mama": 206.0}, {"localidade": "Amapá", "ano": 2019, "mamografias_rastreamento": 186.0, "mamografias_diagnosticas": 2.0, "obitos_cancer_mama": 25.0}, {"localidade": "Amazonas", "ano": 2019, "mamografias_rastreamento": 36440.0, "mamografias_diagnosticas": 699.0, "obitos_cancer_mama": 185.0}, {"localidade": "Bahia", "ano": 2019, "mamografias_rastreamento": 281918.0, "mamografias_diagnosticas": 18645.0, "obitos_cancer_mama": 1052.0}, {"localidade": "Ceará", "ano": 2019, "mamografias_rastreamento": 84481.0, "mamografias_diagnosticas": 4237.0, "obitos_cancer_mama": 758.0}, {"localidade": "Distrito Federal", "ano": 2019, "mamografias_rastreamento": 10078.0, "mamografias_diagnosticas": 1329.0, "obitos_cancer_mama": 250.0}, {"localidade": "Espírito Santo", "ano": 2019, "mamografias_rastreamento": 87105.0, "mamografias_diagnosticas": 6942.0, "obitos_cancer_mama": 357.0}, {"localidade": "Goiás", "ano": 2019, "mamografias_rastreamento": 79984.0, "mamografias_diagnosticas": 8153.0, "obitos_cancer_mama": 519.0}, {"localidade": "Maranhão", "ano": 2019, "mamografias_rastreamento": 40869.0, "mamografias_diagnosticas": 2387.0, "obitos_cancer_mama": 262.0}, {"localidade": "Mato Grosso", "ano": 2019, "mamografias_rastreamento": 29145.0, "mamografias_diagnosticas": 725.0, "obitos_cancer_mama": 199.0}, {"localidade": "Mato Grosso do Sul", "ano": 2019, "mamografias_rastreamento": 51282.0, "mamografias_diagnosticas": 6342.0, "obitos_cancer_mama": 219.0}, {"localidade": "Minas Gerais", "ano": 2019, "mamografias_rastreamento": 388351.0, "mamografias_diagnosticas": 66627.0, "obitos_cancer_mama": 1700.0}, {"localidade": "Paraná", "ano": 2019, "mamografias_rastreamento": 327150.0, "mamografias_diagnosticas": 35573.0, "obitos_cancer_mama": 997.0}, {"localidade": "Paraíba", "ano": 2019, "mamografias_rastreamento": 64773.0, "mamografias_diagnosticas": 719.0, "obitos_cancer_mama": 295.0}, {"localidade": "Pará", "ano": 2019, "mamografias_rastreamento": 46847.0, "mamografias_diagnosticas": 2975.0, "obitos_cancer_mama": 330.0}, {"localidade": "Pernambuco", "ano": 2019, "mamografias_rastreamento": 183752.0, "mamografias_diagnosticas": 10857.0, "obitos_cancer_mama": 822.0}, {"localidade": "Piauí", "ano": 2019, "mamografias_rastreamento": 56792.0, "mamografias_diagnosticas": 4232.0, "obitos_cancer_mama": 209.0}, {"localidade": "Rio Grande do Norte", "ano": 2019, "mamografias_rastreamento": 56379.0, "mamografias_diagnosticas": 3023.0, "obitos_cancer_mama": 267.0}, {"localidade": "Rio Grande do Sul", "ano": 2019, "mamografias_rastreamento": 311824.0, "mamografias_diagnosticas": 32532.0, "obitos_cancer_mama": 1420.0}, {"localidade": "Rio de Janeiro", "ano": 2019, "mamografias_rastreamento": 229516.0, "mamografias_diagnosticas": 31076.0, "obitos_cancer_mama": 2278.0}, {"localidade": "Rondônia", "ano": 2019, "mamografias_rastreamento": 9788.0, "mamografias_diagnosticas": 3462.0, "obitos_cancer_mama": 88.0}, {"localidade": "Roraima", "ano": 2019, "mamografias_rastreamento": 4391.0, "mamografias_diagnosticas": 124.0, "obitos_cancer_mama": 23.0}, {"localidade": "Santa Catarina", "ano": 2019, "mamografias_rastreamento": 140609.0, "mamografias_diagnosticas": 13623.0, "obitos_cancer_mama": 666.0}, {"localidade": "Sergipe", "ano": 2019, "mamografias_rastreamento": 42617.0, "mamografias_diagnosticas": 672.0, "obitos_cancer_mama": 173.0}, {"localidade": "São Paulo", "ano": 2019, "mamografias_rastreamento": 1235586.0, "mamografias_diagnosticas": 126772.0, "obitos_cancer_mama": 4665.0}, {"localidade": "Tocantins", "ano": 2019, "mamografias_rastreamento": 8378.0, "mamografias_diagnosticas": 750.0, "obitos_cancer_mama": 69.0}, {"localidade": "Acre", "ano": 2020, "mamografias_rastreamento": 2364.0, "mamografias_diagnosticas": 220.0, "obitos_cancer_mama": 26.0}, {"localidade": "Alagoas", "ano": 2020, "mamografias_rastreamento": 52231.0, "mamografias_diagnosticas": 989.0, "obitos_cancer_mama": 211.0}, {"localidade": "Amapá", "ano": 2020, "mamografias_rastreamento": 5137.0, "mamografias_diagnosticas": 177.0, "obitos_cancer_mama": 23.0}, {"localidade": "Amazonas", "ano": 2020, "mamografias_rastreamento": 17959.0, "mamografias_diagnosticas": 748.0, "obitos_cancer_mama": 213.0}, {"localidade": "Bahia", "ano": 2020, "mamografias_rastreamento": 165189.0, "mamografias_diagnosticas": 15916.0, "obitos_cancer_mama": 1048.0}, {"localidade": "Ceará", "ano": 2020, "mamografias_rastreamento": 50244.0, "mamografias_diagnosticas": 3360.0, "obitos_cancer_mama": 713.0}, {"localidade": "Distrito Federal", "ano": 2020, "mamografias_rastreamento": 6874.0, "mamografias_diagnosticas": 1359.0, "obitos_cancer_mama": 260.0}, {"localidade": "Espírito Santo", "ano": 2020, "mamografias_rastreamento": 44502.0, "mamografias_diagnosticas": 5441.0, "obitos_cancer_mama": 345.0}, {"localidade": "Goiás", "ano": 2020, "mamografias_rastreamento": 42344.0, "mamografias_diagnosticas": 3118.0, "obitos_cancer_mama": 539.0}, {"localidade": "Maranhão", "ano": 2020, "mamografias_rastreamento": 30121.0, "mamografias_diagnosticas": 2317.0, "obitos_cancer_mama": 254.0}, {"localidade": "Mato Grosso", "ano": 2020, "mamografias_rastreamento": 13109.0, "mamografias_diagnosticas": 430.0, "obitos_cancer_mama": 193.0}, {"localidade": "Mato Grosso do Sul", "ano": 2020, "mamografias_rastreamento": 24534.0, "mamografias_diagnosticas": 4818.0, "obitos_cancer_mama": 190.0}, {"localidade": "Minas Gerais", "ano": 2020, "mamografias_rastreamento": 216540.0, "mamografias_diagnosticas": 52147.0, "obitos_cancer_mama": 1774.0}, {"localidade": "Paraná", "ano": 2020, "mamografias_rastreamento": 173751.0, "mamografias_diagnosticas": 23719.0, "obitos_cancer_mama": 998.0}, {"localidade": "Paraíba", "ano": 2020, "mamografias_rastreamento": 35348.0, "mamografias_diagnosticas": 774.0, "obitos_cancer_mama": 294.0}, {"localidade": "Pará", "ano": 2020, "mamografias_rastreamento": 46580.0, "mamografias_diagnosticas": 2241.0, "obitos_cancer_mama": 354.0}, {"localidade": "Pernambuco", "ano": 2020, "mamografias_rastreamento": 86399.0, "mamografias_diagnosticas": 6200.0, "obitos_cancer_mama": 817.0}, {"localidade": "Piauí", "ano": 2020, "mamografias_rastreamento": 23879.0, "mamografias_diagnosticas": 1912.0, "obitos_cancer_mama": 200.0}, {"localidade": "Rio Grande do Norte", "ano": 2020, "mamografias_rastreamento": 36173.0, "mamografias_diagnosticas": 2135.0, "obitos_cancer_mama": 302.0}, {"localidade": "Rio Grande do Sul", "ano": 2020, "mamografias_rastreamento": 206289.0, "mamografias_diagnosticas": 25777.0, "obitos_cancer_mama": 1377.0}, {"localidade": "Rio de Janeiro", "ano": 2020, "mamografias_rastreamento": 117466.0, "mamografias_diagnosticas": 20172.0, "obitos_cancer_mama": 2209.0}, {"localidade": "Rondônia", "ano": 2020, "mamografias_rastreamento": 7681.0, "mamografias_diagnosticas": 3770.0, "obitos_cancer_mama": 81.0}, {"localidade": "Roraima", "ano": 2020, "mamografias_rastreamento": 2326.0, "mamografias_diagnosticas": 4.0, "obitos_cancer_mama": 25.0}, {"localidade": "Santa Catarina", "ano": 2020, "mamografias_rastreamento": 76339.0, "mamografias_diagnosticas": 11647.0, "obitos_cancer_mama": 667.0}, {"localidade": "Sergipe", "ano": 2020, "mamografias_rastreamento": 23869.0, "mamografias_diagnosticas": 577.0, "obitos_cancer_mama": 170.0}, {"localidade": "São Paulo", "ano": 2020, "mamografias_rastreamento": 759764.0, "mamografias_diagnosticas": 109976.0, "obitos_cancer_mama": 4477.0}, {"localidade": "Tocantins", "ano": 2020, "mamografias_rastreamento": 4777.0, "mamografias_diagnosticas": 503.0, "obitos_cancer_mama": 65.0}, {"localidade": "Acre", "ano": 2021, "mamografias_rastreamento": 2950.0, "mamografias_diagnosticas": 301.0, "obitos_cancer_mama": 37.0}, {"localidade": "Alagoas", "ano": 2021, "mamografias_rastreamento": 72972.0, "mamografias_diagnosticas": 995.0, "obitos_cancer_mama": 222.0}, {"localidade": "Amapá", "ano": 2021, "mamografias_rastreamento": 9831.0, "mamografias_diagnosticas": 353.0, "obitos_cancer_mama": 25.0}, {"localidade": "Amazonas", "ano": 2021, "mamografias_rastreamento": 23185.0, "mamografias_diagnosticas": 1167.0, "obitos_cancer_mama": 183.0}, {"localidade": "Bahia", "ano": 2021, "mamografias_rastreamento": 278955.0, "mamografias_diagnosticas": 18981.0, "obitos_cancer_mama": 1050.0}, {"localidade": "Ceará", "ano": 2021, "mamografias_rastreamento": 68636.0, "mamografias_diagnosticas": 6029.0, "obitos_cancer_mama": 740.0}, {"localidade": "Distrito Federal", "ano": 2021, "mamografias_rastreamento": 10839.0, "mamografias_diagnosticas": 2115.0, "obitos_cancer_mama": 229.0}, {"localidade": "Espírito Santo", "ano": 2021, "mamografias_rastreamento": 60468.0, "mamografias_diagnosticas": 5746.0, "obitos_cancer_mama": 329.0}, {"localidade": "Goiás", "ano": 2021, "mamografias_rastreamento": 70200.0, "mamografias_diagnosticas": 3152.0, "obitos_cancer_mama": 495.0}, {"localidade": "Maranhão", "ano": 2021, "mamografias_rastreamento": 53947.0, "mamografias_diagnosticas": 2605.0, "obitos_cancer_mama": 283.0}, {"localidade": "Mato Grosso", "ano": 2021, "mamografias_rastreamento": 19409.0, "mamografias_diagnosticas": 591.0, "obitos_cancer_mama": 224.0}, {"localidade": "Mato Grosso do Sul", "ano": 2021, "mamografias_rastreamento": 44342.0, "mamografias_diagnosticas": 6996.0, "obitos_cancer_mama": 219.0}, {"localidade": "Minas Gerais", "ano": 2021, "mamografias_rastreamento": 297944.0, "mamografias_diagnosticas": 58500.0, "obitos_cancer_mama": 1688.0}, {"localidade": "Paraná", "ano": 2021, "mamografias_rastreamento": 220948.0, "mamografias_diagnosticas": 24502.0, "obitos_cancer_mama": 1098.0}, {"localidade": "Paraíba", "ano": 2021, "mamografias_rastreamento": 51881.0, "mamografias_diagnosticas": 1019.0, "obitos_cancer_mama": 312.0}, {"localidade": "Pará", "ano": 2021, "mamografias_rastreamento": 48352.0, "mamografias_diagnosticas": 2065.0, "obitos_cancer_mama": 374.0}, {"localidade": "Pernambuco", "ano": 2021, "mamografias_rastreamento": 137193.0, "mamografias_diagnosticas": 9578.0, "obitos_cancer_mama": 910.0}, {"localidade": "Piauí", "ano": 2021, "mamografias_rastreamento": 44566.0, "mamografias_diagnosticas": 1946.0, "obitos_cancer_mama": 230.0}, {"localidade": "Rio Grande do Norte", "ano": 2021, "mamografias_rastreamento": 51818.0, "mamografias_diagnosticas": 2812.0, "obitos_cancer_mama": 257.0}, {"localidade": "Rio Grande do Sul", "ano": 2021, "mamografias_rastreamento": 258294.0, "mamografias_diagnosticas": 27246.0, "obitos_cancer_mama": 1351.0}, {"localidade": "Rio de Janeiro", "ano": 2021, "mamografias_rastreamento": 179953.0, "mamografias_diagnosticas": 25921.0, "obitos_cancer_mama": 2178.0}, {"localidade": "Rondônia", "ano": 2021, "mamografias_rastreamento": 11287.0, "mamografias_diagnosticas": 4324.0, "obitos_cancer_mama": 75.0}, {"localidade": "Roraima", "ano": 2021, "mamografias_rastreamento": 1394.0, "mamografias_diagnosticas": 13.0, "obitos_cancer_mama": 25.0}, {"localidade": "Santa Catarina", "ano": 2021, "mamografias_rastreamento": 115444.0, "mamografias_diagnosticas": 14589.0, "obitos_cancer_mama": 683.0}, {"localidade": "Sergipe", "ano": 2021, "mamografias_rastreamento": 42667.0, "mamografias_diagnosticas": 975.0, "obitos_cancer_mama": 157.0}, {"localidade": "São Paulo", "ano": 2021, "mamografias_rastreamento": 963622.0, "mamografias_diagnosticas": 135678.0, "obitos_cancer_mama": 4683.0}, {"localidade": "Tocantins", "ano": 2021, "mamografias_rastreamento": 6935.0, "mamografias_diagnosticas": 641.0, "obitos_cancer_mama": 82.0}, {"localidade": "Acre", "ano": 2022, "mamografias_rastreamento": 10320.0, "mamografias_diagnosticas": 706.0, "obitos_cancer_mama": 34.0}, {"localidade": "Alagoas", "ano": 2022, "mamografias_rastreamento": 74670.0, "mamografias_diagnosticas": 955.0, "obitos_cancer_mama": 221.0}, {"localidade": "Amapá", "ano": 2022, "mamografias_rastreamento": 10696.0, "mamografias_diagnosticas": 672.0, "obitos_cancer_mama": 29.0}, {"localidade": "Amazonas", "ano": 2022, "mamografias_rastreamento": 21052.0, "mamografias_diagnosticas": 1887.0, "obitos_cancer_mama": 228.0}, {"localidade": "Bahia", "ano": 2022, "mamografias_rastreamento": 298037.0, "mamografias_diagnosticas": 20125.0, "obitos_cancer_mama": 1083.0}, {"localidade": "Ceará", "ano": 2022, "mamografias_rastreamento": 102700.0, "mamografias_diagnosticas": 6377.0, "obitos_cancer_mama": 758.0}, {"localidade": "Distrito Federal", "ano": 2022, "mamografias_rastreamento": 10317.0, "mamografias_diagnosticas": 1981.0, "obitos_cancer_mama": 259.0}, {"localidade": "Espírito Santo", "ano": 2022, "mamografias_rastreamento": 74401.0, "mamografias_diagnosticas": 7113.0, "obitos_cancer_mama": 359.0}, {"localidade": "Goiás", "ano": 2022, "mamografias_rastreamento": 89055.0, "mamografias_diagnosticas": 3396.0, "obitos_cancer_mama": 568.0}, {"localidade": "Maranhão", "ano": 2022, "mamografias_rastreamento": 60380.0, "mamografias_diagnosticas": 3020.0, "obitos_cancer_mama": 292.0}, {"localidade": "Mato Grosso", "ano": 2022, "mamografias_rastreamento": 41867.0, "mamografias_diagnosticas": 729.0, "obitos_cancer_mama": 258.0}, {"localidade": "Mato Grosso do Sul", "ano": 2022, "mamografias_rastreamento": 57285.0, "mamografias_diagnosticas": 6871.0, "obitos_cancer_mama": 204.0}, {"localidade": "Minas Gerais", "ano": 2022, "mamografias_rastreamento": 367514.0, "mamografias_diagnosticas": 60427.0, "obitos_cancer_mama": 1802.0}, {"localidade": "Paraná", "ano": 2022, "mamografias_rastreamento": 301016.0, "mamografias_diagnosticas": 24664.0, "obitos_cancer_mama": 1164.0}, {"localidade": "Paraíba", "ano": 2022, "mamografias_rastreamento": 57460.0, "mamografias_diagnosticas": 1173.0, "obitos_cancer_mama": 330.0}, {"localidade": "Pará", "ano": 2022, "mamografias_rastreamento": 59823.0, "mamografias_diagnosticas": 2098.0, "obitos_cancer_mama": 381.0}, {"localidade": "Pernambuco", "ano": 2022, "mamografias_rastreamento": 146537.0, "mamografias_diagnosticas": 10058.0, "obitos_cancer_mama": 832.0}, {"localidade": "Piauí", "ano": 2022, "mamografias_rastreamento": 49905.0, "mamografias_diagnosticas": 3440.0, "obitos_cancer_mama": 210.0}, {"localidade": "Rio Grande do Norte", "ano": 2022, "mamografias_rastreamento": 59229.0, "mamografias_diagnosticas": 2471.0, "obitos_cancer_mama": 290.0}, {"localidade": "Rio Grande do Sul", "ano": 2022, "mamografias_rastreamento": 306815.0, "mamografias_diagnosticas": 28435.0, "obitos_cancer_mama": 1435.0}, {"localidade": "Rio de Janeiro", "ano": 2022, "mamografias_rastreamento": 213654.0, "mamografias_diagnosticas": 28110.0, "obitos_cancer_mama": 2364.0}, {"localidade": "Rondônia", "ano": 2022, "mamografias_rastreamento": 19254.0, "mamografias_diagnosticas": 2824.0, "obitos_cancer_mama": 93.0}, {"localidade": "Roraima", "ano": 2022, "mamografias_rastreamento": 1311.0, "mamografias_diagnosticas": 35.0, "obitos_cancer_mama": 34.0}, {"localidade": "Santa Catarina", "ano": 2022, "mamografias_rastreamento": 136544.0, "mamografias_diagnosticas": 15832.0, "obitos_cancer_mama": 741.0}, {"localidade": "Sergipe", "ano": 2022, "mamografias_rastreamento": 49880.0, "mamografias_diagnosticas": 877.0, "obitos_cancer_mama": 179.0}, {"localidade": "São Paulo", "ano": 2022, "mamografias_rastreamento": 1238623.0, "mamografias_diagnosticas": 151343.0, "obitos_cancer_mama": 4849.0}, {"localidade": "Tocantins", "ano": 2022, "mamografias_rastreamento": 7083.0, "mamografias_diagnosticas": 387.0, "obitos_cancer_mama": 106.0}], "fato_incidencia_uf": [{"localidade": "Acre", "casos_estimados": 100.0, "taxa_bruta_100mil": 22.21, "taxa_ajustada_100mil": 26.2}, {"localidade": "Alagoas", "casos_estimados": 690.0, "taxa_bruta_100mil": 39.23, "taxa_ajustada_100mil": 34.89}, {"localidade": "Amapá", "casos_estimados": 80.0, "taxa_bruta_100mil": 16.58, "taxa_ajustada_100mil": 20.04}, {"localidade": "Amazonas", "casos_estimados": 500.0, "taxa_bruta_100mil": 22.77, "taxa_ajustada_100mil": 28.34}, {"localidade": "Bahia", "casos_estimados": 4230.0, "taxa_bruta_100mil": 54.35, "taxa_ajustada_100mil": 43.28}, {"localidade": "Ceará", "casos_estimados": 3080.0, "taxa_bruta_100mil": 63.92, "taxa_ajustada_100mil": 54.13}, {"localidade": "Distrito Federal", "casos_estimados": 1030.0, "taxa_bruta_100mil": 62.7, "taxa_ajustada_100mil": 49.76}, {"localidade": "Espírito Santo", "casos_estimados": 900.0, "taxa_bruta_100mil": 42.2, "taxa_ajustada_100mil": 32.94}, {"localidade": "Goiás", "casos_estimados": 1970.0, "taxa_bruta_100mil": 52.74, "taxa_ajustada_100mil": 45.63}, {"localidade": "Maranhão", "casos_estimados": 1060.0, "taxa_bruta_100mil": 28.76, "taxa_ajustada_100mil": 28.29}, {"localidade": "Mato Grosso", "casos_estimados": 1040.0, "taxa_bruta_100mil": 57.7, "taxa_ajustada_100mil": 47.51}, {"localidade": "Mato Grosso do Sul", "casos_estimados": 910.0, "taxa_bruta_100mil": 62.22, "taxa_ajustada_100mil": 47.1}, {"localidade": "Minas Gerais", "casos_estimados": 7670.0, "taxa_bruta_100mil": 69.8, "taxa_ajustada_100mil": 49.28}, {"localidade": "Paraná", "casos_estimados": 3650.0, "taxa_bruta_100mil": 60.76, "taxa_ajustada_100mil": 41.06}, {"localidade": "Paraíba", "casos_estimados": 1180.0, "taxa_bruta_100mil": 55.4, "taxa_ajustada_100mil": 41.37}, {"localidade": "Pará", "casos_estimados": 1020.0, "taxa_bruta_100mil": 22.83, "taxa_ajustada_100mil": 23.88}, {"localidade": "Pernambuco", "casos_estimados": 2880.0, "taxa_bruta_100mil": 56.58, "taxa_ajustada_100mil": 46.4}, {"localidade": "Piauí", "casos_estimados": 860.0, "taxa_bruta_100mil": 50.31, "taxa_ajustada_100mil": 41.89}, {"localidade": "Rio Grande do Norte", "casos_estimados": 1140.0, "taxa_bruta_100mil": 61.61, "taxa_ajustada_100mil": 50.11}, {"localidade": "Rio Grande do Sul", "casos_estimados": 3720.0, "taxa_bruta_100mil": 62.67, "taxa_ajustada_100mil": 36.6}, {"localidade": "Rio de Janeiro", "casos_estimados": 10290.0, "taxa_bruta_100mil": 111.83, "taxa_ajustada_100mil": 70.57}, {"localidade": "Rondônia", "casos_estimados": 320.0, "taxa_bruta_100mil": 35.33, "taxa_ajustada_100mil": 36.99}, {"localidade": "Roraima", "casos_estimados": 70.0, "taxa_bruta_100mil": 22.09, "taxa_ajustada_100mil": 27.73}, {"localidade": "Santa Catarina", "casos_estimados": 3860.0, "taxa_bruta_100mil": 102.12, "taxa_ajustada_100mil": 74.79}, {"localidade": "Sergipe", "casos_estimados": 570.0, "taxa_bruta_100mil": 46.42, "taxa_ajustada_100mil": 42.11}, {"localidade": "São Paulo", "casos_estimados": 20470.0, "taxa_bruta_100mil": 84.43, "taxa_ajustada_100mil": 56.37}, {"localidade": "Tocantins", "casos_estimados": 320.0, "taxa_bruta_100mil": 38.58, "taxa_ajustada_100mil": 35.72}], "obitos_faixa": [{"faixa_etaria": "15 a 19 anos", "ano": 2018, "obitos": 1.0, "ordem_faixa": 0}, {"faixa_etaria": "15 a 19 anos", "ano": 2019, "obitos": 2.0, "ordem_faixa": 0}, {"faixa_etaria": "15 a 19 anos", "ano": 2020, "obitos": 1.0, "ordem_faixa": 0}, {"faixa_etaria": "15 a 19 anos", "ano": 2021, "obitos": 3.0, "ordem_faixa": 0}, {"faixa_etaria": "15 a 19 anos", "ano": 2022, "obitos": 2.0, "ordem_faixa": 0}, {"faixa_etaria": "20 a 29 anos", "ano": 2018, "obitos": 135.0, "ordem_faixa": 1}, {"faixa_etaria": "20 a 29 anos", "ano": 2019, "obitos": 107.0, "ordem_faixa": 1}, {"faixa_etaria": "20 a 29 anos", "ano": 2020, "obitos": 127.0, "ordem_faixa": 1}, {"faixa_etaria": "20 a 29 anos", "ano": 2021, "obitos": 106.0, "ordem_faixa": 1}, {"faixa_etaria": "20 a 29 anos", "ano": 2022, "obitos": 136.0, "ordem_faixa": 1}, {"faixa_etaria": "30 a 39 anos", "ano": 2018, "obitos": 1149.0, "ordem_faixa": 2}, {"faixa_etaria": "30 a 39 anos", "ano": 2019, "obitos": 1137.0, "ordem_faixa": 2}, {"faixa_etaria": "30 a 39 anos", "ano": 2020, "obitos": 1161.0, "ordem_faixa": 2}, {"faixa_etaria": "30 a 39 anos", "ano": 2021, "obitos": 1090.0, "ordem_faixa": 2}, {"faixa_etaria": "30 a 39 anos", "ano": 2022, "obitos": 1185.0, "ordem_faixa": 2}, {"faixa_etaria": "40 a 49 anos", "ano": 2018, "obitos": 2641.0, "ordem_faixa": 3}, {"faixa_etaria": "40 a 49 anos", "ano": 2019, "obitos": 2671.0, "ordem_faixa": 3}, {"faixa_etaria": "40 a 49 anos", "ano": 2020, "obitos": 2726.0, "ordem_faixa": 3}, {"faixa_etaria": "40 a 49 anos", "ano": 2021, "obitos": 2674.0, "ordem_faixa": 3}, {"faixa_etaria": "40 a 49 anos", "ano": 2022, "obitos": 2826.0, "ordem_faixa": 3}, {"faixa_etaria": "50 a 59 anos", "ano": 2018, "obitos": 3972.0, "ordem_faixa": 4}, {"faixa_etaria": "50 a 59 anos", "ano": 2019, "obitos": 4209.0, "ordem_faixa": 4}, {"faixa_etaria": "50 a 59 anos", "ano": 2020, "obitos": 4019.0, "ordem_faixa": 4}, {"faixa_etaria": "50 a 59 anos", "ano": 2021, "obitos": 4114.0, "ordem_faixa": 4}, {"faixa_etaria": "50 a 59 anos", "ano": 2022, "obitos": 4188.0, "ordem_faixa": 4}, {"faixa_etaria": "60 a 69 anos", "ano": 2018, "obitos": 3925.0, "ordem_faixa": 5}, {"faixa_etaria": "60 a 69 anos", "ano": 2019, "obitos": 4082.0, "ordem_faixa": 5}, {"faixa_etaria": "60 a 69 anos", "ano": 2020, "obitos": 3928.0, "ordem_faixa": 5}, {"faixa_etaria": "60 a 69 anos", "ano": 2021, "obitos": 4057.0, "ordem_faixa": 5}, {"faixa_etaria": "60 a 69 anos", "ano": 2022, "obitos": 4311.0, "ordem_faixa": 5}, {"faixa_etaria": "70 a 79 anos", "ano": 2018, "obitos": 3007.0, "ordem_faixa": 6}, {"faixa_etaria": "70 a 79 anos", "ano": 2019, "obitos": 3029.0, "ordem_faixa": 6}, {"faixa_etaria": "70 a 79 anos", "ano": 2020, "obitos": 3047.0, "ordem_faixa": 6}, {"faixa_etaria": "70 a 79 anos", "ano": 2021, "obitos": 3178.0, "ordem_faixa": 6}, {"faixa_etaria": "70 a 79 anos", "ano": 2022, "obitos": 3384.0, "ordem_faixa": 6}, {"faixa_etaria": "80 anos e mais", "ano": 2018, "obitos": 2742.0, "ordem_faixa": 7}, {"faixa_etaria": "80 anos e mais", "ano": 2019, "obitos": 2828.0, "ordem_faixa": 7}, {"faixa_etaria": "80 anos e mais", "ano": 2020, "obitos": 2814.0, "ordem_faixa": 7}, {"faixa_etaria": "80 anos e mais", "ano": 2021, "obitos": 2917.0, "ordem_faixa": 7}, {"faixa_etaria": "80 anos e mais", "ano": 2022, "obitos": 3071.0, "ordem_faixa": 7}], "densidade_faixa": [{"faixa_etaria": "até 9", "ordem_faixa": 0, "densidade": 4, "densidade_nome": "4 Densa", "exames": 336.0}, {"faixa_etaria": "até 9", "ordem_faixa": 0, "densidade": 1, "densidade_nome": "1 Adiposa", "exames": 316.0}, {"faixa_etaria": "até 9", "ordem_faixa": 0, "densidade": 3, "densidade_nome": "3 Predominantemente densa", "exames": 737.0}, {"faixa_etaria": "até 9", "ordem_faixa": 0, "densidade": 2, "densidade_nome": "2 Predominantemente adiposa", "exames": 713.0}, {"faixa_etaria": "10–14", "ordem_faixa": 1, "densidade": 4, "densidade_nome": "4 Densa", "exames": 149.0}, {"faixa_etaria": "10–14", "ordem_faixa": 1, "densidade": 1, "densidade_nome": "1 Adiposa", "exames": 46.0}, {"faixa_etaria": "10–14", "ordem_faixa": 1, "densidade": 3, "densidade_nome": "3 Predominantemente densa", "exames": 210.0}, {"faixa_etaria": "10–14", "ordem_faixa": 1, "densidade": 2, "densidade_nome": "2 Predominantemente adiposa", "exames": 102.0}, {"faixa_etaria": "15–19", "ordem_faixa": 2, "densidade": 4, "densidade_nome": "4 Densa", "exames": 1596.0}, {"faixa_etaria": "15–19", "ordem_faixa": 2, "densidade": 1, "densidade_nome": "1 Adiposa", "exames": 164.0}, {"faixa_etaria": "15–19", "ordem_faixa": 2, "densidade": 3, "densidade_nome": "3 Predominantemente densa", "exames": 1207.0}, {"faixa_etaria": "15–19", "ordem_faixa": 2, "densidade": 2, "densidade_nome": "2 Predominantemente adiposa", "exames": 294.0}, {"faixa_etaria": "20–24", "ordem_faixa": 3, "densidade": 4, "densidade_nome": "4 Densa", "exames": 4199.0}, {"faixa_etaria": "20–24", "ordem_faixa": 3, "densidade": 1, "densidade_nome": "1 Adiposa", "exames": 608.0}, {"faixa_etaria": "20–24", "ordem_faixa": 3, "densidade": 3, "densidade_nome": "3 Predominantemente densa", "exames": 3744.0}, {"faixa_etaria": "20–24", "ordem_faixa": 3, "densidade": 2, "densidade_nome": "2 Predominantemente adiposa", "exames": 1078.0}, {"faixa_etaria": "25–29", "ordem_faixa": 4, "densidade": 4, "densidade_nome": "4 Densa", "exames": 7213.0}, {"faixa_etaria": "25–29", "ordem_faixa": 4, "densidade": 1, "densidade_nome": "1 Adiposa", "exames": 1573.0}, {"faixa_etaria": "25–29", "ordem_faixa": 4, "densidade": 3, "densidade_nome": "3 Predominantemente densa", "exames": 8592.0}, {"faixa_etaria": "25–29", "ordem_faixa": 4, "densidade": 2, "densidade_nome": "2 Predominantemente adiposa", "exames": 2914.0}, {"faixa_etaria": "30–34", "ordem_faixa": 5, "densidade": 4, "densidade_nome": "4 Densa", "exames": 16711.0}, {"faixa_etaria": "30–34", "ordem_faixa": 5, "densidade": 1, "densidade_nome": "1 Adiposa", "exames": 4976.0}, {"faixa_etaria": "30–34", "ordem_faixa": 5, "densidade": 3, "densidade_nome": "3 Predominantemente densa", "exames": 25039.0}, {"faixa_etaria": "30–34", "ordem_faixa": 5, "densidade": 2, "densidade_nome": "2 Predominantemente adiposa", "exames": 10260.0}, {"faixa_etaria": "35–39", "ordem_faixa": 6, "densidade": 4, "densidade_nome": "4 Densa", "exames": 74733.0}, {"faixa_etaria": "35–39", "ordem_faixa": 6, "densidade": 1, "densidade_nome": "1 Adiposa", "exames": 25569.0}, {"faixa_etaria": "35–39", "ordem_faixa": 6, "densidade": 3, "densidade_nome": "3 Predominantemente densa", "exames": 125221.0}, {"faixa_etaria": "35–39", "ordem_faixa": 6, "densidade": 2, "densidade_nome": "2 Predominantemente adiposa", "exames": 59500.0}, {"faixa_etaria": "40–44", "ordem_faixa": 7, "densidade": 4, "densidade_nome": "4 Densa", "exames": 391374.0}, {"faixa_etaria": "40–44", "ordem_faixa": 7, "densidade": 1, "densidade_nome": "1 Adiposa", "exames": 147173.0}, {"faixa_etaria": "40–44", "ordem_faixa": 7, "densidade": 3, "densidade_nome": "3 Predominantemente densa", "exames": 701464.0}, {"faixa_etaria": "40–44", "ordem_faixa": 7, "densidade": 2, "densidade_nome": "2 Predominantemente adiposa", "exames": 365168.0}, {"faixa_etaria": "45–49", "ordem_faixa": 8, "densidade": 4, "densidade_nome": "4 Densa", "exames": 433023.0}, {"faixa_etaria": "45–49", "ordem_faixa": 8, "densidade": 1, "densidade_nome": "1 Adiposa", "exames": 216859.0}, {"faixa_etaria": "45–49", "ordem_faixa": 8, "densidade": 3, "densidade_nome": "3 Predominantemente densa", "exames": 851998.0}, {"faixa_etaria": "45–49", "ordem_faixa": 8, "densidade": 2, "densidade_nome": "2 Predominantemente adiposa", "exames": 523129.0}, {"faixa_etaria": "50–54", "ordem_faixa": 9, "densidade": 4, "densidade_nome": "4 Densa", "exames": 455432.0}, {"faixa_etaria": "50–54", "ordem_faixa": 9, "densidade": 1, "densidade_nome": "1 Adiposa", "exames": 405507.0}, {"faixa_etaria": "50–54", "ordem_faixa": 9, "densidade": 3, "densidade_nome": "3 Predominantemente densa", "exames": 1005839.0}, {"faixa_etaria": "50–54", "ordem_faixa": 9, "densidade": 2, "densidade_nome": "2 Predominantemente adiposa", "exames": 921143.0}, {"faixa_etaria": "55–59", "ordem_faixa": 10, "densidade": 4, "densidade_nome": "4 Densa", "exames": 320916.0}, {"faixa_etaria": "55–59", "ordem_faixa": 10, "densidade": 1, "densidade_nome": "1 Adiposa", "exames": 440971.0}, {"faixa_etaria": "55–59", "ordem_faixa": 10, "densidade": 3, "densidade_nome": "3 Predominantemente densa", "exames": 781494.0}, {"faixa_etaria": "55–59", "ordem_faixa": 10, "densidade": 2, "densidade_nome": "2 Predominantemente adiposa", "exames": 953639.0}, {"faixa_etaria": "60–64", "ordem_faixa": 11, "densidade": 4, "densidade_nome": "4 Densa", "exames": 217117.0}, {"faixa_etaria": "60–64", "ordem_faixa": 11, "densidade": 1, "densidade_nome": "1 Adiposa", "exames": 398845.0}, {"faixa_etaria": "60–64", "ordem_faixa": 11, "densidade": 3, "densidade_nome": "3 Predominantemente densa", "exames": 550006.0}, {"faixa_etaria": "60–64", "ordem_faixa": 11, "densidade": 2, "densidade_nome": "2 Predominantemente adiposa", "exames": 820641.0}, {"faixa_etaria": "65–69", "ordem_faixa": 12, "densidade": 4, "densidade_nome": "4 Densa", "exames": 130629.0}, {"faixa_etaria": "65–69", "ordem_faixa": 12, "densidade": 1, "densidade_nome": "1 Adiposa", "exames": 281231.0}, {"faixa_etaria": "65–69", "ordem_faixa": 12, "densidade": 3, "densidade_nome": "3 Predominantemente densa", "exames": 330704.0}, {"faixa_etaria": "65–69", "ordem_faixa": 12, "densidade": 2, "densidade_nome": "2 Predominantemente adiposa", "exames": 559250.0}, {"faixa_etaria": "70–74", "ordem_faixa": 13, "densidade": 4, "densidade_nome": "4 Densa", "exames": 47012.0}, {"faixa_etaria": "70–74", "ordem_faixa": 13, "densidade": 1, "densidade_nome": "1 Adiposa", "exames": 108132.0}, {"faixa_etaria": "70–74", "ordem_faixa": 13, "densidade": 3, "densidade_nome": "3 Predominantemente densa", "exames": 115532.0}, {"faixa_etaria": "70–74", "ordem_faixa": 13, "densidade": 2, "densidade_nome": "2 Predominantemente adiposa", "exames": 204907.0}, {"faixa_etaria": "75–79", "ordem_faixa": 14, "densidade": 4, "densidade_nome": "4 Densa", "exames": 17665.0}, {"faixa_etaria": "75–79", "ordem_faixa": 14, "densidade": 1, "densidade_nome": "1 Adiposa", "exames": 43810.0}, {"faixa_etaria": "75–79", "ordem_faixa": 14, "densidade": 3, "densidade_nome": "3 Predominantemente densa", "exames": 42017.0}, {"faixa_etaria": "75–79", "ordem_faixa": 14, "densidade": 2, "densidade_nome": "2 Predominantemente adiposa", "exames": 81588.0}, {"faixa_etaria": "80+", "ordem_faixa": 15, "densidade": 4, "densidade_nome": "4 Densa", "exames": 6703.0}, {"faixa_etaria": "80+", "ordem_faixa": 15, "densidade": 1, "densidade_nome": "1 Adiposa", "exames": 17675.0}, {"faixa_etaria": "80+", "ordem_faixa": 15, "densidade": 3, "densidade_nome": "3 Predominantemente densa", "exames": 16070.0}, {"faixa_etaria": "80+", "ordem_faixa": 15, "densidade": 2, "densidade_nome": "2 Predominantemente adiposa", "exames": 32254.0}], "comparacao_densidade": [{"fonte": "Brasil (SISCAN)", "densidade": 1, "densidade_nome": "1 Adiposa", "quantidade": 2093484.0, "percentual": 15.7226779301}, {"fonte": "Brasil (SISCAN)", "densidade": 2, "densidade_nome": "2 Predominantemente adiposa", "quantidade": 4536685.0, "percentual": 34.0718329471}, {"fonte": "Brasil (SISCAN)", "densidade": 3, "densidade_nome": "3 Predominantemente densa", "quantidade": 4560010.0, "percentual": 34.2470105279}, {"fonte": "Brasil (SISCAN)", "densidade": 4, "densidade_nome": "4 Densa", "quantidade": 2124881.0, "percentual": 15.9584785949}, {"fonte": "CBIS-DDSM", "densidade": 1, "densidade_nome": "1 Adiposa", "quantidade": 536.0, "percentual": 15.0308468873}, {"fonte": "CBIS-DDSM", "densidade": 2, "densidade_nome": "2 Predominantemente adiposa", "quantidade": 1373.0, "percentual": 38.5025238362}, {"fonte": "CBIS-DDSM", "densidade": 3, "densidade_nome": "3 Predominantemente densa", "quantidade": 1103.0, "percentual": 30.931015143}, {"fonte": "CBIS-DDSM", "densidade": 4, "densidade_nome": "4 Densa", "quantidade": 554.0, "percentual": 15.5356141335}, {"fonte": "CBIS-DDSM: massas", "densidade": 1, "densidade_nome": "1 Adiposa", "quantidade": 337.0, "percentual": 19.8702830189}, {"fonte": "CBIS-DDSM: massas", "densidade": 2, "densidade_nome": "2 Predominantemente adiposa", "quantidade": 757.0, "percentual": 44.6344339623}, {"fonte": "CBIS-DDSM: massas", "densidade": 3, "densidade_nome": "3 Predominantemente densa", "quantidade": 449.0, "percentual": 26.4740566038}, {"fonte": "CBIS-DDSM: massas", "densidade": 4, "densidade_nome": "4 Densa", "quantidade": 153.0, "percentual": 9.0212264151}, {"fonte": "CBIS-DDSM: calcificações", "densidade": 1, "densidade_nome": "1 Adiposa", "quantidade": 199.0, "percentual": 10.6417112299}, {"fonte": "CBIS-DDSM: calcificações", "densidade": 2, "densidade_nome": "2 Predominantemente adiposa", "quantidade": 616.0, "percentual": 32.9411764706}, {"fonte": "CBIS-DDSM: calcificações", "densidade": 3, "densidade_nome": "3 Predominantemente densa", "quantidade": 654.0, "percentual": 34.9732620321}, {"fonte": "CBIS-DDSM: calcificações", "densidade": 4, "densidade_nome": "4 Densa", "quantidade": 401.0, "percentual": 21.4438502674}], "comparacao_birads": [{"fonte": "Brasil: rastreamento", "birads": 0, "quantidade": 1520696.0, "percentual": 11.5930626845}, {"fonte": "Brasil: rastreamento", "birads": 1, "quantidade": 4462374.0, "percentual": 34.0190159662}, {"fonte": "Brasil: rastreamento", "birads": 2, "quantidade": 6761969.0, "percentual": 51.5500339895}, {"fonte": "Brasil: rastreamento", "birads": 3, "quantidade": 255217.0, "percentual": 1.9456529636}, {"fonte": "Brasil: rastreamento", "birads": 4, "quantidade": 99587.0, "percentual": 0.7592038998}, {"fonte": "Brasil: rastreamento", "birads": 5, "quantidade": 17450.0, "percentual": 0.1330304965}, {"fonte": "Brasil: diagnóstica", "birads": 0, "quantidade": 46467.0, "percentual": 15.2949579666}, {"fonte": "Brasil: diagnóstica", "birads": 1, "quantidade": 66669.0, "percentual": 21.9445962226}, {"fonte": "Brasil: diagnóstica", "birads": 2, "quantidade": 128920.0, "percentual": 42.4349749511}, {"fonte": "Brasil: diagnóstica", "birads": 3, "quantidade": 46184.0, "percentual": 15.2018064159}, {"fonte": "Brasil: diagnóstica", "birads": 4, "quantidade": 12419.0, "percentual": 4.0878060341}, {"fonte": "Brasil: diagnóstica", "birads": 5, "quantidade": 3147.0, "percentual": 1.0358584096}, {"fonte": "CBIS-DDSM", "birads": 0, "quantidade": 238.0, "percentual": 6.6704035874}, {"fonte": "CBIS-DDSM", "birads": 1, "quantidade": 3.0, "percentual": 0.0840807175}, {"fonte": "CBIS-DDSM", "birads": 2, "quantidade": 644.0, "percentual": 18.0493273543}, {"fonte": "CBIS-DDSM", "birads": 3, "quantidade": 477.0, "percentual": 13.3688340807}, {"fonte": "CBIS-DDSM", "birads": 4, "quantidade": 1633.0, "percentual": 45.7679372197}, {"fonte": "CBIS-DDSM", "birads": 5, "quantidade": 573.0, "percentual": 16.0594170404}], "birads_densidade_brasil": [{"densidade": 1, "densidade_nome": "1 Adiposa", "exames": 2092757.0, "pct_birads_0": 7.7401246299, "pct_birads_4_5": 0.7072966427}, {"densidade": 2, "densidade_nome": "2 Predominantemente adiposa", "exames": 4533823.0, "pct_birads_0": 10.8362412913, "pct_birads_4_5": 0.8961532023}, {"densidade": 3, "densidade_nome": "3 Predominantemente densa", "exames": 4555965.0, "pct_birads_0": 14.145872499, "pct_birads_4_5": 1.1435996545}, {"densidade": 4, "densidade_nome": "4 Densa", "exames": 2123656.0, "pct_birads_0": 12.2689833005, "pct_birads_4_5": 1.0277088191}], "modelo_auc_densidade": [{"densidade": 1, "densidade_nome": "1 Adiposa", "lesoes_teste": 24, "auc": 1.0}, {"densidade": 2, "densidade_nome": "2 Predominantemente adiposa", "lesoes_teste": 115, "auc": 0.84996535}, {"densidade": 3, "densidade_nome": "3 Predominantemente densa", "lesoes_teste": 115, "auc": 0.7071078431}, {"densidade": 4, "densidade_nome": "4 Densa", "lesoes_teste": 70, "auc": 0.5224489796}], "modelo_auc_populacao": [{"populacao": "CBIS-DDSM (teste, sem peso)", "auc": 0.7367600624, "ic95_inf": 0.682784246, "ic95_sup": 0.7874028229, "pct_densas": 57.0987654321, "auc_sem_densidade_1": 0.7179734509}, {"populacao": "Brasil, todas as idades", "auc": 0.7648287575, "ic95_inf": 0.7115302552, "ic95_sup": 0.8155055609, "pct_densas": 50.2054891228, "auc_sem_densidade_1": 0.7275221996}, {"populacao": "Brasil, 40–49", "auc": 0.7267058406, "ic95_inf": 0.6684972756, "ic95_sup": 0.78027633, "pct_densas": 65.5023651668, "auc_sem_densidade_1": 0.6992744794}, {"populacao": "Brasil, 50–69", "auc": 0.7797771151, "ic95_inf": 0.7249359299, "ic95_sup": 0.827332427, "pct_densas": 44.2316108356, "auc_sem_densidade_1": 0.7401760085}, {"populacao": "Brasil, 70+", "auc": 0.8067726816, "ic95_inf": 0.748382018, "ic95_sup": 0.8573862817, "pct_densas": 33.4075119483, "auc_sem_densidade_1": 0.7601782128}], "indicadores": {"mamografias_2022": 4251434.0, "queda_2020_pct": -39.86886912182707, "obitos_2022": 19103.0, "casos_estimados_ano": 73610.0, "cbis_pct_malignas": 40.83520179372198, "brasil_casos_por_100_mamografias": 1.7314157999395028, "razao_case_mix": 23.584861472991523, "w_cohen_densidade": 0.09689616771741255, "pct_densas_40_44": 68.08200206955112, "pct_densas_65_69": 35.437704618324894, "pct_suspeitos_rastreamento": 0.8922343962279412, "pct_suspeitos_cbis": 61.827354260089685, "cbis_lesoes": 3568, "cbis_pacientes": 1566}}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+(() => {
+  const D = JSON.parse(document.getElementById("dados").textContent);
+  const I = D.indicadores;
+  const nf = (v, d = 0) => new Intl.NumberFormat("pt-BR", { minimumFractionDigits: d, maximumFractionDigits: d }).format(v);
+  const pct = (v, d = 0) => nf(v, d) + "%";
+  const cor = (n) => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+  const graficos = {};
+
+  // ---------- auxiliares ----------
+  function tabela(id, cabecalho, linhas) {
+    const el = document.getElementById(id);
+    el.innerHTML = "<table><thead><tr>" + cabecalho.map((c) => `<th>${c}</th>`).join("") + "</tr></thead><tbody>" +
+      linhas.map((l) => "<tr>" + l.map((c) => `<td>${c}</td>`).join("") + "</tr>").join("") + "</tbody></table>";
+  }
+  function base(extra = {}) {
+    const tinta = cor("--muted"), grade = cor("--grid");
+    const eixo = (o = {}) => ({ grid: { color: grade, drawTicks: false }, border: { color: cor("--line") },
+      ticks: { color: tinta, padding: 6, font: { family: cor("--f-body") } }, ...o });
+    return {
+      responsive: true, maintainAspectRatio: false, animation: { duration: 250 },
+      interaction: { mode: "index", intersect: false },
+      plugins: {
+        legend: { labels: { color: cor("--ink"), boxWidth: 12, boxHeight: 12, useBorderRadius: true, borderRadius: 2,
+                             font: { family: cor("--f-body") } } },
+        tooltip: { backgroundColor: cor("--surface"), titleColor: cor("--ink"), bodyColor: cor("--ink"),
+                   borderColor: cor("--line"), borderWidth: 1, padding: 10, boxPadding: 4,
+                   titleFont: { family: cor("--f-body"), weight: "600" }, bodyFont: { family: cor("--f-body") } },
+      },
+      scales: { x: eixo(extra.x), y: eixo(extra.y) },
+    };
+  }
+  function desenha(id, config) {
+    if (graficos[id]) graficos[id].destroy();
+    graficos[id] = new Chart(document.getElementById(id), config);
+  }
+  const barra = { borderRadius: 4, borderSkipped: "start", borderWidth: 0 };
+
+  // ---------- aba Brasil ----------
+  const regioes = [...new Set(D.dim_localidade.map((l) => l.regiao))];
+  const selReg = document.getElementById("f-regiao");
+  regioes.forEach((r) => selReg.insertAdjacentHTML("beforeend", `<option value="${r}">${r}</option>`));
+  const regiaoDe = Object.fromEntries(D.dim_localidade.map((l) => [l.localidade, l.regiao]));
+  const siglaDe = Object.fromEntries(D.dim_localidade.map((l) => [l.localidade, l.sigla]));
+  const anos = [...new Set(D.fato_uf_ano.map((l) => l.ano))].sort();
+
+  function brasil() {
+    const reg = selReg.value;
+    const f = D.fato_uf_ano.filter((l) => !reg || regiaoDe[l.localidade] === reg);
+    const soma = (ano, campo) => f.filter((l) => l.ano === ano).reduce((s, l) => s + (l[campo] || 0), 0);
+    const rast = anos.map((a) => soma(a, "mamografias_rastreamento"));
+    const diag = anos.map((a) => soma(a, "mamografias_diagnosticas"));
+    const obit = anos.map((a) => soma(a, "obitos_cancer_mama"));
+    const total = anos.map((_, i) => rast[i] + diag[i]);
+    const i19 = anos.indexOf(2019), i20 = anos.indexOf(2020), i22 = anos.indexOf(2022);
+    const inc = D.fato_incidencia_uf.filter((l) => !reg || regiaoDe[l.localidade] === reg);
+    const casos = inc.reduce((s, l) => s + l.casos_estimados, 0);
+
+    document.getElementById("k-mamo").textContent = nf(total[i22]);
+    document.getElementById("k-mamo-nota").textContent = `${pct(100 * rast[i22] / total[i22])} de rastreamento · ${reg || "Brasil"}`;
+    document.getElementById("k-queda").textContent = pct(100 * (total[i20] / total[i19] - 1));
+    document.getElementById("k-obitos").textContent = nf(obit[i22]);
+    document.getElementById("k-casos").textContent = nf(casos);
+
+    const o = base({ y: { beginAtZero: true, ticks: { color: cor("--muted"), callback: (v) => nf(v) } } });
+    o.plugins.tooltip.callbacks = { label: (c) => ` ${c.dataset.label}: ${nf(c.parsed.y)}` };
+    desenha("g-serie", { type: "line", options: o, data: { labels: anos, datasets: [
+      { label: "Rastreamento", data: rast, borderColor: cor("--s-brasil"), backgroundColor: cor("--s-brasil"), borderWidth: 2, pointRadius: 4, pointHoverRadius: 6 },
+      { label: "Diagnóstica", data: diag, borderColor: cor("--s-diag"), backgroundColor: cor("--s-diag"), borderWidth: 2, pointRadius: 4, pointHoverRadius: 6 },
+    ] } });
+    tabela("t-serie", ["Ano", "Rastreamento", "Diagnóstica", "Total"], anos.map((a, i) => [a, nf(rast[i]), nf(diag[i]), nf(total[i])]));
+
+    const o2 = base({ y: { beginAtZero: true, ticks: { color: cor("--muted"), callback: (v) => nf(v) } } });
+    o2.plugins.legend.display = false;
+    o2.plugins.tooltip.callbacks = { label: (c) => ` Óbitos: ${nf(c.parsed.y)}` };
+    desenha("g-obitos", { type: "line", options: o2, data: { labels: anos, datasets: [
+      { label: "Óbitos", data: obit, borderColor: cor("--s-brasil"), backgroundColor: cor("--s-brasil"), borderWidth: 2, pointRadius: 4, pointHoverRadius: 6,
+        fill: { target: "origin", above: cor("--s-brasil-suave") + "66" } },
+    ] } });
+    tabela("t-obitos", ["Ano", "Óbitos"], anos.map((a, i) => [a, nf(obit[i])]));
+
+    const porUF = inc.map((l) => {
+      const r = D.fato_uf_ano.find((x) => x.localidade === l.localidade && x.ano === 2022);
+      return { uf: l.localidade, sigla: siglaDe[l.localidade], v: r.mamografias_rastreamento / l.casos_estimados };
+    }).sort((a, b) => b.v - a.v);
+    document.getElementById("tela-uf").style.height = Math.max(220, 40 + porUF.length * 19) + "px";
+    const o3 = base({ x: { beginAtZero: true }, y: { grid: { display: false }, ticks: { color: cor("--ink"), autoSkip: false, font: { family: cor("--f-mono"), size: 11 } } } });
+    o3.indexAxis = "y";
+    o3.plugins.legend.display = false;
+    o3.interaction = { mode: "nearest", axis: "y", intersect: false };
+    o3.plugins.tooltip.callbacks = { title: (c) => porUF[c[0].dataIndex].uf, label: (c) => ` ${nf(c.parsed.x, 1)} rastreamentos por caso` };
+    desenha("g-uf", { type: "bar", options: o3, data: { labels: porUF.map((p) => p.sigla), datasets: [
+      { data: porUF.map((p) => p.v), backgroundColor: cor("--s-brasil"), ...barra, barPercentage: 0.8, categoryPercentage: 0.9 },
+    ] } });
+    tabela("t-uf", ["UF", "Rastreamentos 2022 por caso"], porUF.map((p) => [p.uf, nf(p.v, 1)]));
+  }
+
+  function faixaObitos() {
+    const faixas = [...new Map(D.obitos_faixa.map((l) => [l.faixa_etaria, l.ordem_faixa])).entries()].sort((a, b) => a[1] - b[1]).map((e) => e[0]);
+    const tot = faixas.map((f) => D.obitos_faixa.filter((l) => l.faixa_etaria === f).reduce((s, l) => s + l.obitos, 0));
+    const soma = tot.reduce((a, b) => a + b, 0);
+    const p = tot.map((v) => 100 * v / soma);
+    const alvo = (f) => f.startsWith("50") || f.startsWith("60");
+    const rot = faixas.map((f) => f.replace(" anos e mais", "+").replace(" anos", "").replace(" a ", "–"));
+    const o = base({ x: { beginAtZero: true, ticks: { color: cor("--muted"), callback: (v) => v + "%" } }, y: { grid: { display: false }, ticks: { color: cor("--ink") } } });
+    o.indexAxis = "y";
+    o.plugins.legend.display = false;
+    o.interaction = { mode: "nearest", axis: "y", intersect: false };
+    o.plugins.tooltip.callbacks = { label: (c) => ` ${pct(c.parsed.x, 1)} dos óbitos (${nf(tot[c.dataIndex])})` };
+    desenha("g-faixa-obitos", { type: "bar", options: o, data: { labels: rot, datasets: [
+      { data: p, backgroundColor: faixas.map((f) => alvo(f) ? cor("--s-brasil") : cor("--s-brasil-suave")), ...barra, barPercentage: 0.75 },
+    ] } });
+    tabela("t-faixa-obitos", ["Faixa etária", "Óbitos 2018–2022", "%"], faixas.map((f, i) => [f, nf(tot[i]), pct(p[i], 1)]));
+  }
+
+  // ---------- aba Comparação ----------
+  const selSub = document.getElementById("f-subconjunto");
+  function comparacao() {
+    document.getElementById("k-w").textContent = nf(I.w_cohen_densidade, 2);
+    document.getElementById("k-susp").innerHTML = `${pct(I.pct_suspeitos_rastreamento, 1)} <small>× ${pct(I.pct_suspeitos_cbis)}</small>`;
+    document.getElementById("k-casemix").innerHTML = `${nf(I.razao_case_mix)}× <small>mais frequente</small>`;
+    document.getElementById("k-casemix-nota").textContent =
+      `CBIS: ${pct(I.cbis_pct_malignas)} das lesões malignas · SUS: ~${nf(I.brasil_casos_por_100_mamografias, 1)} caso por 100 mamografias`;
+    document.getElementById("k-dens-idade").innerHTML = `${pct(I.pct_densas_40_44)} <small>× ${pct(I.pct_densas_65_69)}</small>`;
+
+    const sub = selSub.value;
+    const de = (fonte) => D.comparacao_densidade.filter((l) => l.fonte === fonte).sort((a, b) => a.densidade - b.densidade);
+    const br = de("Brasil (SISCAN)"), cb = de(sub);
+    const o = base({ y: { beginAtZero: true, max: 50, ticks: { color: cor("--muted"), callback: (v) => v + "%" } }, x: { grid: { display: false } } });
+    o.plugins.tooltip.callbacks = { label: (c) => ` ${c.dataset.label}: ${pct(c.parsed.y, 1)}` };
+    desenha("g-densidade", { type: "bar", options: o, data: { labels: br.map((l) => l.densidade_nome.replace("Predominantemente", "Pred.")), datasets: [
+      { label: "Brasil (SISCAN)", data: br.map((l) => l.percentual), backgroundColor: cor("--s-brasil"), ...barra },
+      { label: sub, data: cb.map((l) => l.percentual), backgroundColor: cor("--s-cbis"), ...barra },
+    ] } });
+    tabela("t-densidade", ["Densidade", "Brasil (SISCAN)", sub], br.map((l, i) => [l.densidade_nome, pct(l.percentual, 1), pct(cb[i].percentual, 1)]));
+
+    const fx = [...new Map(D.densidade_faixa.map((l) => [l.faixa_etaria, l.ordem_faixa])).entries()]
+      .sort((a, b) => a[1] - b[1]).map((e) => e[0]);
+    const mostrar = fx.slice(fx.indexOf("35–39"));
+    const dens = mostrar.map((f) => {
+      const g = D.densidade_faixa.filter((l) => l.faixa_etaria === f);
+      const t = g.reduce((s, l) => s + l.exames, 0);
+      return { f, p: 100 * g.filter((l) => l.densidade >= 3).reduce((s, l) => s + l.exames, 0) / t, t };
+    });
+    const cbDens = D.comparacao_densidade.filter((l) => l.fonte === "CBIS-DDSM" && l.densidade >= 3).reduce((s, l) => s + l.percentual, 0);
+    const o2 = base({ y: { min: 0, max: 100, ticks: { color: cor("--muted"), callback: (v) => v + "%" } }, x: { grid: { display: false } } });
+    o2.plugins.tooltip.callbacks = { label: (c) => ` ${c.dataset.label}: ${pct(c.parsed.y, 1)}` };
+    desenha("g-dens-idade", { type: "line", options: o2, data: { labels: mostrar, datasets: [
+      { label: "Brasil: % mamas densas", data: dens.map((d) => d.p), borderColor: cor("--s-brasil"), backgroundColor: cor("--s-brasil"), borderWidth: 2, pointRadius: 4, pointHoverRadius: 6 },
+      { label: "CBIS-DDSM (sem idade)", data: mostrar.map(() => cbDens), borderColor: cor("--s-cbis"), backgroundColor: cor("--s-cbis"), borderDash: [6, 4], borderWidth: 2, pointRadius: 0, pointHoverRadius: 0 },
+    ] } });
+    tabela("t-dens-idade", ["Faixa etária", "% mamas densas", "Exames"], dens.map((d) => [d.f, pct(d.p, 1), nf(d.t)]));
+
+    const fontes = [["Brasil: rastreamento", "--s-brasil"], ["Brasil: diagnóstica", "--s-diag"], ["CBIS-DDSM", "--s-cbis"]];
+    const bi = (fonte) => D.comparacao_birads.filter((l) => l.fonte === fonte).sort((a, b) => a.birads - b.birads);
+    const o3 = base({ y: { beginAtZero: true, max: 60, ticks: { color: cor("--muted"), callback: (v) => v + "%" } }, x: { grid: { display: false } } });
+    o3.plugins.tooltip.callbacks = { title: (c) => "BI-RADS " + c[0].label, label: (c) => ` ${c.dataset.label}: ${pct(c.parsed.y, 1)}` };
+    desenha("g-birads", { type: "bar", options: o3, data: { labels: [0, 1, 2, 3, 4, 5].map(String), datasets:
+      fontes.map(([f, c]) => ({ label: f, data: bi(f).map((l) => l.percentual), backgroundColor: cor(c), ...barra })) } });
+    tabela("t-birads", ["BI-RADS", ...fontes.map((f) => f[0])], [0, 1, 2, 3, 4, 5].map((b) => [b, ...fontes.map(([f]) => pct(bi(f)[b].percentual, 1))]));
+  }
+
+  // ---------- aba Modelo ----------
+  function modelo() {
+    const pop = D.modelo_auc_populacao;
+    const acha = (p) => pop.find((l) => l.populacao.startsWith(p));
+    document.getElementById("k-auc-teste").textContent = nf(acha("CBIS").auc, 2);
+    document.getElementById("k-auc-br").textContent = nf(acha("Brasil, todas").auc, 2);
+    document.getElementById("k-auc-40").textContent = nf(acha("Brasil, 40").auc, 2);
+    document.getElementById("k-auc-70").textContent = nf(acha("Brasil, 70").auc, 2);
+
+    const ad = D.modelo_auc_densidade.sort((a, b) => a.densidade - b.densidade);
+    const o = base({ y: { min: 0, max: 1, ticks: { color: cor("--muted"), callback: (v) => nf(v, 1) } }, x: { grid: { display: false } } });
+    o.plugins.legend.display = false;
+    o.plugins.tooltip.callbacks = { label: (c) => c.datasetIndex === 0 ? ` AUC ${nf(c.parsed.y, 2)} (${ad[c.dataIndex].lesoes_teste} lesões)` : " acaso: 0,50" };
+    desenha("g-auc-dens", { type: "bar", options: o, data: { labels: ad.map((l) => l.densidade_nome.replace("Predominantemente", "Pred.")), datasets: [
+      { data: ad.map((l) => l.auc), backgroundColor: ad.map((l) => l.densidade === 1 ? cor("--s-cbis-suave") : cor("--s-cbis")), ...barra },
+      { type: "line", data: ad.map(() => 0.5), borderColor: cor("--muted"), borderDash: [4, 4], borderWidth: 1.5, pointRadius: 0, pointHoverRadius: 0 },
+    ] } });
+    tabela("t-auc-dens", ["Densidade", "Lesões no teste", "AUC"], ad.map((l) => [l.densidade_nome, l.lesoes_teste, nf(l.auc, 2)]));
+
+    const b0 = D.birads_densidade_brasil.sort((a, b) => a.densidade - b.densidade);
+    const o2 = base({ y: { beginAtZero: true, max: 16, ticks: { color: cor("--muted"), callback: (v) => v + "%" } }, x: { grid: { display: false } } });
+    o2.plugins.legend.display = false;
+    o2.plugins.tooltip.callbacks = { label: (c) => ` ${pct(c.parsed.y, 1)} dos laudos com BI-RADS 0` };
+    desenha("g-birads0", { type: "bar", options: o2, data: { labels: b0.map((l) => l.densidade_nome.replace("Predominantemente", "Pred.")), datasets: [
+      { data: b0.map((l) => l.pct_birads_0), backgroundColor: cor("--s-brasil"), ...barra },
+    ] } });
+    tabela("t-birads0", ["Densidade", "% BI-RADS 0", "% BI-RADS 4–5", "Exames"], b0.map((l) => [l.densidade_nome, pct(l.pct_birads_0, 1), pct(l.pct_birads_4_5, 2), nf(l.exames)]));
+
+    const o3 = base({ x: { min: 0.5, max: 1, ticks: { color: cor("--muted"), callback: (v) => nf(v, 1) } }, y: { grid: { display: false }, ticks: { color: cor("--ink") } } });
+    o3.indexAxis = "y";
+    o3.plugins.legend.display = false;
+    o3.interaction = { mode: "nearest", axis: "y", intersect: false };
+    o3.plugins.tooltip.filter = (c) => c.datasetIndex === 1;
+    o3.plugins.tooltip.callbacks = { label: (c) => {
+      const l = pop[c.dataIndex];
+      return [` AUC ${nf(l.auc, 2)} (IC 95%: ${nf(l.ic95_inf, 2)}–${nf(l.ic95_sup, 2)})`, ` ${pct(l.pct_densas)} de mamas densas`, ` sem densidade 1: ${nf(l.auc_sem_densidade_1, 2)}`];
+    } };
+    const ehCbis = (l) => l.populacao.startsWith("CBIS");
+    desenha("g-auc-pop", { type: "bar", options: o3, data: { labels: pop.map((l) => l.populacao), datasets: [
+      { data: pop.map((l) => [l.ic95_inf, l.ic95_sup]), backgroundColor: pop.map((l) => ehCbis(l) ? cor("--s-cbis-suave") : cor("--s-brasil-suave")),
+        borderRadius: 4, borderSkipped: false, grouped: false, barPercentage: 0.35 },
+      { data: pop.map((l) => [l.auc - 0.0035, l.auc + 0.0035]), backgroundColor: pop.map((l) => ehCbis(l) ? cor("--s-cbis") : cor("--s-brasil")),
+        borderRadius: 2, borderSkipped: false, grouped: false, barPercentage: 0.75 },
+    ] } });
+    tabela("t-auc-pop", ["População", "AUC", "IC 95%", "% mamas densas", "AUC sem densidade 1"],
+      pop.map((l) => [l.populacao, nf(l.auc, 2), `${nf(l.ic95_inf, 2)}–${nf(l.ic95_sup, 2)}`, pct(l.pct_densas), nf(l.auc_sem_densidade_1, 2)]));
+  }
+
+  function tudo() { brasil(); faixaObitos(); comparacao(); modelo(); }
+
+  // ---------- abas ----------
+  const abas = [...document.querySelectorAll('[role="tab"]')];
+  function abre(id, foco = false) {
+    abas.forEach((a) => {
+      const ativa = a.getAttribute("aria-controls") === id;
+      a.setAttribute("aria-selected", ativa);
+      a.tabIndex = ativa ? 0 : -1;
+      document.getElementById(a.getAttribute("aria-controls")).hidden = !ativa;
+      if (ativa && foco) a.focus();
+    });
+    Object.values(graficos).forEach((g) => g.resize());
+    try { history.replaceState(null, "", "#" + id); } catch (e) { /* sem histórico no visualizador */ }
+  }
+  abas.forEach((a, i) => {
+    a.addEventListener("click", () => abre(a.getAttribute("aria-controls")));
+    a.addEventListener("keydown", (e) => {
+      const d = e.key === "ArrowRight" ? 1 : e.key === "ArrowLeft" ? -1 : 0;
+      if (d) abre(abas[(i + d + abas.length) % abas.length].getAttribute("aria-controls"), true);
+    });
+  });
+
+  selReg.addEventListener("change", brasil);
+  selSub.addEventListener("change", comparacao);
+
+  if (window.Chart) {
+    Chart.defaults.font.family = cor("--f-body");
+    tudo();
+    // redesenha com as cores do tema quando o tema muda
+    matchMedia("(prefers-color-scheme: dark)").addEventListener("change", tudo);
+    new MutationObserver(tudo).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  } else {
+    document.querySelectorAll(".tela").forEach((t) => { t.style.height = "auto"; t.innerHTML = '<p>Não foi possível carregar a biblioteca de gráficos. Abra "Ver tabela" para os dados.</p>'; });
+    document.querySelectorAll("details").forEach((d) => d.open = true);
+  }
+  const inicial = (location.hash || "").slice(1);
+  abre(["brasil", "comparacao", "modelo"].includes(inicial) ? inicial : "brasil");
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+// =====================================================================================
+// Medidas DAX do painel. Crie uma tabela vazia "Medidas" (Página Inicial > Inserir dados >
+// Carregar) e adicione cada medida em Ferramentas de tabela > Nova medida.
+// =====================================================================================
+
+// ----- Brasil: mamografias e óbitos (fato_uf_ano) ------------------------------------
+
+Rastreamentos = SUM ( fato_uf_ano[mamografias_rastreamento] )
+
+Mamografias diagnósticas = SUM ( fato_uf_ano[mamografias_diagnosticas] )
+
+Mamografias = [Rastreamentos] + [Mamografias diagnósticas]
+
+% Rastreamento = DIVIDE ( [Rastreamentos], [Mamografias] )
+
+Óbitos = SUM ( fato_uf_ano[obitos_cancer_mama] )
+
+// variação em relação a 2019 (ano pré-pandemia), respeitando os filtros de UF/região
+Variação vs 2019 =
+VAR Base2019 =
+    CALCULATE ( [Mamografias], REMOVEFILTERS ( fato_uf_ano[ano] ), fato_uf_ano[ano] = 2019 )
+RETURN
+    DIVIDE ( [Mamografias] - Base2019, Base2019 )
+
+// ----- Incidência (fato_incidencia_uf) -----------------------------------------------
+
+// soma das UFs (corrige o erro de digitação do Sudeste na página do INCA)
+Casos estimados = SUM ( fato_incidencia_uf[casos_estimados] )
+
+Rastreamentos 2022 por caso estimado =
+DIVIDE (
+    CALCULATE ( [Rastreamentos], REMOVEFILTERS ( fato_uf_ano[ano] ), fato_uf_ano[ano] = 2022 ),
+    [Casos estimados]
+)
+
+Casos por 100 mamografias =
+100 * DIVIDE (
+    [Casos estimados],
+    CALCULATE ( [Mamografias], REMOVEFILTERS ( fato_uf_ano[ano] ), fato_uf_ano[ano] = 2022 )
+)
+
+// ----- CBIS-DDSM (cbis_lesoes) --------------------------------------------------------
+
+Lesões CBIS = COUNTROWS ( cbis_lesoes )
+
+Pacientes CBIS = DISTINCTCOUNT ( cbis_lesoes[patient_id] )
+
+% Malignas CBIS = AVERAGE ( cbis_lesoes[maligna] )
+
+// quantas vezes o câncer é mais frequente no CBIS-DDSM do que nos exames do SUS
+Razão case mix = DIVIDE ( 100 * [% Malignas CBIS], [Casos por 100 mamografias] )
+
+// ----- Densidade por idade (densidade_faixa) ------------------------------------------
+
+% Mamas densas =
+DIVIDE (
+    CALCULATE ( SUM ( densidade_faixa[exames] ), densidade_faixa[densidade] >= 3 ),
+    SUM ( densidade_faixa[exames] )
+)
+
+// ----- Comparações já agregadas (comparacao_densidade / comparacao_birads) -----------
+
+% da fonte (densidade) = DIVIDE ( SUM ( comparacao_densidade[percentual] ), 100 )
+
+% da fonte (BI-RADS) = DIVIDE ( SUM ( comparacao_birads[percentual] ), 100 )
+
+% suspeitos (BI-RADS 4–5) =
+CALCULATE ( [% da fonte (BI-RADS)], comparacao_birads[birads] >= 4 )
+
+// ----- Modelo (modelo_auc_populacao / modelo_auc_densidade) -------------------------
+
+AUC = AVERAGE ( modelo_auc_populacao[auc] )
+
+AUC por densidade = AVERAGE ( modelo_auc_densidade[auc] )
+
+IC 95% (texto) =
+FORMAT ( MIN ( modelo_auc_populacao[ic95_inf] ), "0.00" ) & " – "
+    & FORMAT ( MAX ( modelo_auc_populacao[ic95_sup] ), "0.00" )

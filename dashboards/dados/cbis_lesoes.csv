@@ -1,0 +1,3569 @@
+﻿patient_id,tipo_lesao,densidade,birads,patologia,maligna,conjunto
+P_00001,Massa,3.0,4,Maligna,1,Treino
+P_00001,Massa,3.0,4,Maligna,1,Treino
+P_00004,Massa,3.0,4,Benigna,0,Treino
+P_00004,Massa,3.0,4,Benigna,0,Treino
+P_00004,Massa,3.0,4,Benigna,0,Treino
+P_00009,Massa,3.0,4,Maligna,1,Treino
+P_00009,Massa,3.0,4,Maligna,1,Treino
+P_00015,Massa,3.0,4,Maligna,1,Treino
+P_00018,Massa,2.0,4,Benigna,0,Treino
+P_00018,Massa,2.0,4,Benigna,0,Treino
+P_00021,Massa,1.0,3,Benigna,0,Treino
+P_00021,Massa,1.0,3,Benigna,0,Treino
+P_00021,Massa,1.0,3,Benigna,0,Treino
+P_00021,Massa,1.0,3,Benigna,0,Treino
+P_00023,Massa,1.0,5,Maligna,1,Treino
+P_00023,Massa,1.0,5,Maligna,1,Treino
+P_00026,Massa,2.0,3,Benigna,0,Treino
+P_00026,Massa,2.0,3,Benigna,0,Treino
+P_00027,Massa,2.0,4,Benigna,0,Treino
+P_00027,Massa,2.0,4,Benigna,0,Treino
+P_00034,Massa,3.0,5,Maligna,1,Treino
+P_00034,Massa,3.0,5,Maligna,1,Treino
+P_00039,Massa,2.0,5,Maligna,1,Treino
+P_00039,Massa,2.0,5,Maligna,1,Treino
+P_00041,Massa,1.0,2,Benigna sem retorno,0,Treino
+P_00041,Massa,1.0,2,Benigna sem retorno,0,Treino
+P_00044,Massa,2.0,3,Benigna,0,Treino
+P_00044,Massa,2.0,3,Benigna,0,Treino
+P_00044,Massa,2.0,3,Benigna,0,Treino
+P_00044,Massa,2.0,3,Benigna,0,Treino
+P_00044,Massa,2.0,3,Benigna,0,Treino
+P_00044,Massa,2.0,3,Benigna,0,Treino
+P_00045,Massa,4.0,4,Maligna,1,Treino
+P_00045,Massa,4.0,4,Maligna,1,Treino
+P_00046,Massa,3.0,3,Maligna,1,Treino
+P_00051,Massa,2.0,5,Maligna,1,Treino
+P_00051,Massa,2.0,5,Maligna,1,Treino
+P_00054,Massa,4.0,3,Benigna sem retorno,0,Treino
+P_00055,Massa,2.0,0,Benigna,0,Treino
+P_00057,Massa,1.0,5,Maligna,1,Treino
+P_00057,Massa,1.0,5,Maligna,1,Treino
+P_00058,Massa,2.0,4,Maligna,1,Treino
+P_00059,Massa,1.0,3,Maligna,1,Treino
+P_00059,Massa,1.0,3,Maligna,1,Treino
+P_00061,Massa,2.0,3,Benigna,0,Treino
+P_00061,Massa,2.0,3,Benigna,0,Treino
+P_00064,Massa,3.0,3,Benigna sem retorno,0,Treino
+P_00065,Massa,2.0,0,Benigna,0,Treino
+P_00065,Massa,2.0,0,Benigna,0,Treino
+P_00068,Massa,3.0,4,Maligna,1,Treino
+P_00068,Massa,3.0,4,Maligna,1,Treino
+P_00074,Massa,3.0,5,Maligna,1,Treino
+P_00074,Massa,3.0,4,Maligna,1,Treino
+P_00074,Massa,3.0,4,Maligna,1,Treino
+P_00076,Massa,4.0,4,Benigna,0,Treino
+P_00076,Massa,4.0,4,Benigna,0,Treino
+P_00079,Massa,2.0,0,Maligna,1,Treino
+P_00079,Massa,2.0,0,Maligna,1,Treino
+P_00080,Massa,1.0,5,Maligna,1,Treino
+P_00080,Massa,1.0,5,Maligna,1,Treino
+P_00081,Massa,2.0,4,Benigna,0,Treino
+P_00081,Massa,2.0,4,Benigna,0,Treino
+P_00086,Massa,2.0,4,Maligna,1,Treino
+P_00086,Massa,2.0,4,Maligna,1,Treino
+P_00090,Massa,2.0,3,Benigna,0,Treino
+P_00090,Massa,2.0,4,Benigna,0,Treino
+P_00092,Massa,2.0,4,Maligna,1,Treino
+P_00092,Massa,2.0,5,Maligna,1,Treino
+P_00092,Massa,2.0,4,Maligna,1,Treino
+P_00092,Massa,2.0,4,Maligna,1,Treino
+P_00092,Massa,2.0,4,Maligna,1,Treino
+P_00092,Massa,2.0,4,Maligna,1,Treino
+P_00094,Massa,3.0,3,Benigna,0,Treino
+P_00094,Massa,3.0,3,Benigna,0,Treino
+P_00095,Massa,2.0,4,Maligna,1,Treino
+P_00095,Massa,2.0,4,Maligna,1,Treino
+P_00096,Massa,1.0,3,Benigna,0,Treino
+P_00096,Massa,1.0,3,Benigna,0,Treino
+P_00106,Massa,1.0,2,Benigna sem retorno,0,Treino
+P_00106,Massa,1.0,2,Benigna sem retorno,0,Treino
+P_00106,Massa,1.0,2,Benigna sem retorno,0,Treino
+P_00106,Massa,1.0,2,Benigna sem retorno,0,Treino
+P_00106,Massa,1.0,2,Benigna sem retorno,0,Treino
+P_00106,Massa,1.0,2,Benigna sem retorno,0,Treino
+P_00106,Massa,1.0,2,Benigna sem retorno,0,Treino
+P_00106,Massa,1.0,2,Benigna sem retorno,0,Treino
+P_00106,Massa,1.0,2,Benigna sem retorno,0,Treino
+P_00106,Massa,1.0,2,Benigna sem retorno,0,Treino
+P_00106,Massa,1.0,2,Benigna sem retorno,0,Treino
+P_00106,Massa,1.0,2,Benigna sem retorno,0,Treino
+P_00106,Massa,1.0,2,Benigna sem retorno,0,Treino
+P_00106,Massa,1.0,2,Benigna sem retorno,0,Treino
+P_00107,Massa,2.0,3,Benigna sem retorno,0,Treino
+P_00108,Massa,2.0,0,Benigna,0,Treino
+P_00108,Massa,2.0,0,Benigna,0,Treino
+P_00109,Massa,3.0,4,Benigna,0,Treino
+P_00110,Massa,3.0,5,Maligna,1,Treino
+P_00110,Massa,3.0,5,Maligna,1,Treino
+P_00110,Massa,3.0,4,Maligna,1,Treino
+P_00117,Massa,2.0,4,Benigna,0,Treino
+P_00119,Massa,2.0,3,Benigna,0,Treino
+P_00119,Massa,2.0,3,Benigna,0,Treino
+P_00120,Massa,4.0,4,Benigna,0,Treino
+P_00120,Massa,4.0,4,Benigna,0,Treino
+P_00122,Massa,2.0,3,Benigna sem retorno,0,Treino
+P_00128,Massa,3.0,4,Maligna,1,Treino
+P_00133,Massa,1.0,5,Maligna,1,Treino
+P_00133,Massa,1.0,5,Maligna,1,Treino
+P_00134,Massa,3.0,4,Maligna,1,Treino
+P_00134,Massa,3.0,4,Maligna,1,Treino
+P_00137,Massa,4.0,3,Benigna,0,Treino
+P_00137,Massa,4.0,3,Benigna,0,Treino
+P_00146,Massa,1.0,5,Maligna,1,Treino
+P_00146,Massa,1.0,5,Maligna,1,Treino
+P_00148,Massa,2.0,4,Maligna,1,Treino
+P_00148,Massa,2.0,4,Maligna,1,Treino
+P_00149,Massa,1.0,5,Maligna,1,Treino
+P_00149,Massa,1.0,3,Maligna,1,Treino
+P_00160,Massa,1.0,4,Maligna,1,Treino
+P_00160,Massa,1.0,4,Maligna,1,Treino
+P_00160,Massa,1.0,3,Benigna,0,Treino
+P_00160,Massa,1.0,3,Benigna,0,Treino
+P_00166,Massa,2.0,4,Benigna,0,Treino
+P_00166,Massa,2.0,4,Benigna,0,Treino
+P_00169,Massa,4.0,4,Benigna sem retorno,0,Treino
+P_00172,Massa,4.0,5,Maligna,1,Treino
+P_00172,Massa,4.0,5,Maligna,1,Treino
+P_00174,Massa,1.0,5,Maligna,1,Treino
+P_00174,Massa,1.0,5,Maligna,1,Treino
+P_00175,Massa,4.0,4,Maligna,1,Treino
+P_00175,Massa,4.0,4,Maligna,1,Treino
+P_00187,Massa,2.0,4,Benigna,0,Treino
+P_00187,Massa,2.0,4,Benigna,0,Treino
+P_00190,Massa,4.0,5,Maligna,1,Treino
+P_00199,Massa,1.0,5,Maligna,1,Treino
+P_00199,Massa,1.0,5,Maligna,1,Treino
+P_00205,Massa,2.0,4,Benigna,0,Treino
+P_00205,Massa,2.0,4,Benigna,0,Treino
+P_00206,Massa,3.0,3,Benigna,0,Treino
+P_00207,Massa,1.0,4,Maligna,1,Treino
+P_00207,Massa,1.0,4,Maligna,1,Treino
+P_00207,Massa,1.0,4,Maligna,1,Treino
+P_00207,Massa,1.0,4,Maligna,1,Treino
+P_00207,Massa,1.0,4,Maligna,1,Treino
+P_00207,Massa,1.0,4,Maligna,1,Treino
+P_00208,Massa,3.0,3,Benigna,0,Treino
+P_00215,Massa,3.0,3,Benigna,0,Treino
+P_00217,Massa,3.0,3,Maligna,1,Treino
+P_00218,Massa,3.0,4,Maligna,1,Treino
+P_00218,Massa,3.0,4,Maligna,1,Treino
+P_00219,Massa,3.0,4,Benigna,0,Treino
+P_00221,Massa,2.0,3,Benigna,0,Treino
+P_00224,Massa,3.0,3,Benigna,0,Treino
+P_00224,Massa,3.0,3,Benigna,0,Treino
+P_00224,Massa,3.0,3,Benigna,0,Treino
+P_00224,Massa,3.0,3,Benigna,0,Treino
+P_00225,Massa,1.0,4,Benigna,0,Treino
+P_00225,Massa,1.0,4,Benigna,0,Treino
+P_00226,Massa,4.0,3,Maligna,1,Treino
+P_00226,Massa,4.0,3,Maligna,1,Treino
+P_00229,Massa,2.0,3,Benigna sem retorno,0,Treino
+P_00229,Massa,2.0,3,Benigna sem retorno,0,Treino
+P_00231,Massa,3.0,3,Benigna,0,Treino
+P_00231,Massa,3.0,3,Benigna,0,Treino
+P_00234,Massa,3.0,3,Benigna,0,Treino
+P_00235,Massa,2.0,5,Maligna,1,Treino
+P_00235,Massa,2.0,5,Maligna,1,Treino
+P_00236,Massa,2.0,5,Maligna,1,Treino
+P_00239,Massa,2.0,4,Benigna,0,Treino
+P_00239,Massa,2.0,4,Benigna,0,Treino
+P_00240,Massa,2.0,4,Maligna,1,Treino
+P_00240,Massa,2.0,4,Maligna,1,Treino
+P_00241,Massa,2.0,4,Maligna,1,Treino
+P_00241,Massa,2.0,4,Maligna,1,Treino
+P_00242,Massa,2.0,4,Benigna,0,Treino
+P_00242,Massa,2.0,4,Benigna,0,Treino
+P_00247,Massa,3.0,4,Benigna,0,Treino
+P_00247,Massa,3.0,4,Benigna,0,Treino
+P_00248,Massa,2.0,5,Maligna,1,Treino
+P_00254,Massa,3.0,4,Maligna,1,Treino
+P_00254,Massa,3.0,4,Maligna,1,Treino
+P_00259,Massa,1.0,5,Maligna,1,Treino
+P_00259,Massa,1.0,5,Maligna,1,Treino
+P_00264,Massa,2.0,3,Maligna,1,Treino
+P_00264,Massa,2.0,3,Maligna,1,Treino
+P_00265,Massa,1.0,5,Maligna,1,Treino
+P_00265,Massa,1.0,5,Maligna,1,Treino
+P_00273,Massa,2.0,4,Benigna,0,Treino
+P_00279,Massa,3.0,0,Benigna,0,Treino
+P_00281,Massa,3.0,4,Benigna,0,Treino
+P_00283,Massa,3.0,4,Maligna,1,Treino
+P_00283,Massa,3.0,4,Maligna,1,Treino
+P_00287,Massa,2.0,5,Maligna,1,Treino
+P_00287,Massa,2.0,5,Maligna,1,Treino
+P_00289,Massa,3.0,3,Benigna,0,Treino
+P_00289,Massa,3.0,3,Benigna,0,Treino
+P_00294,Massa,2.0,4,Benigna,0,Treino
+P_00294,Massa,2.0,4,Benigna,0,Treino
+P_00298,Massa,3.0,4,Benigna,0,Treino
+P_00298,Massa,3.0,4,Benigna,0,Treino
+P_00303,Massa,2.0,3,Benigna,0,Treino
+P_00303,Massa,2.0,3,Benigna,0,Treino
+P_00303,Massa,2.0,3,Benigna,0,Treino
+P_00303,Massa,2.0,3,Benigna,0,Treino
+P_00304,Massa,3.0,0,Benigna,0,Treino
+P_00309,Massa,2.0,3,Benigna,0,Treino
+P_00309,Massa,2.0,3,Benigna,0,Treino
+P_00309,Massa,2.0,3,Benigna,0,Treino
+P_00309,Massa,2.0,3,Benigna,0,Treino
+P_00313,Massa,2.0,4,Maligna,1,Treino
+P_00313,Massa,2.0,4,Maligna,1,Treino
+P_00314,Massa,1.0,5,Maligna,1,Treino
+P_00314,Massa,1.0,5,Maligna,1,Treino
+P_00317,Massa,2.0,5,Maligna,1,Treino
+P_00319,Massa,1.0,5,Maligna,1,Treino
+P_00319,Massa,1.0,5,Maligna,1,Treino
+P_00320,Massa,3.0,3,Benigna,0,Treino
+P_00320,Massa,3.0,4,Benigna,0,Treino
+P_00328,Massa,3.0,2,Benigna sem retorno,0,Treino
+P_00328,Massa,3.0,4,Maligna,1,Treino
+P_00328,Massa,3.0,4,Maligna,1,Treino
+P_00328,Massa,3.0,4,Maligna,1,Treino
+P_00328,Massa,3.0,4,Maligna,1,Treino
+P_00330,Massa,2.0,4,Benigna,0,Treino
+P_00330,Massa,2.0,4,Benigna,0,Treino
+P_00332,Massa,1.0,4,Benigna,0,Treino
+P_00332,Massa,1.0,4,Benigna,0,Treino
+P_00332,Massa,1.0,4,Benigna,0,Treino
+P_00332,Massa,1.0,4,Benigna,0,Treino
+P_00333,Massa,2.0,0,Benigna,0,Treino
+P_00333,Massa,2.0,0,Benigna,0,Treino
+P_00334,Massa,3.0,3,Benigna,0,Treino
+P_00335,Massa,2.0,5,Maligna,1,Treino
+P_00342,Massa,1.0,3,Benigna sem retorno,0,Treino
+P_00342,Massa,1.0,3,Benigna sem retorno,0,Treino
+P_00342,Massa,1.0,3,Benigna sem retorno,0,Treino
+P_00342,Massa,1.0,3,Benigna sem retorno,0,Treino
+P_00348,Massa,4.0,4,Benigna,0,Treino
+P_00348,Massa,4.0,4,Benigna,0,Treino
+P_00351,Massa,2.0,3,Benigna,0,Treino
+P_00351,Massa,2.0,3,Benigna,0,Treino
+P_00354,Massa,2.0,5,Maligna,1,Treino
+P_00354,Massa,2.0,5,Maligna,1,Treino
+P_00356,Massa,2.0,4,Maligna,1,Treino
+P_00361,Massa,4.0,3,Maligna,1,Treino
+P_00363,Massa,2.0,5,Maligna,1,Treino
+P_00363,Massa,2.0,5,Maligna,1,Treino
+P_00366,Massa,2.0,3,Benigna,0,Treino
+P_00366,Massa,2.0,3,Benigna,0,Treino
+P_00370,Massa,2.0,4,Maligna,1,Treino
+P_00370,Massa,2.0,4,Maligna,1,Treino
+P_00376,Massa,1.0,2,Benigna sem retorno,0,Treino
+P_00376,Massa,1.0,2,Benigna sem retorno,0,Treino
+P_00376,Massa,1.0,2,Benigna sem retorno,0,Treino
+P_00376,Massa,1.0,2,Benigna sem retorno,0,Treino
+P_00376,Massa,1.0,2,Benigna sem retorno,0,Treino
+P_00383,Massa,1.0,5,Maligna,1,Treino
+P_00384,Massa,2.0,0,Benigna,0,Treino
+P_00384,Massa,2.0,0,Benigna,0,Treino
+P_00385,Massa,2.0,2,Benigna sem retorno,0,Treino
+P_00385,Massa,2.0,2,Benigna sem retorno,0,Treino
+P_00386,Massa,1.0,5,Maligna,1,Treino
+P_00386,Massa,1.0,5,Maligna,1,Treino
+P_00389,Massa,4.0,4,Benigna,0,Treino
+P_00396,Massa,2.0,5,Maligna,1,Treino
+P_00396,Massa,2.0,5,Maligna,1,Treino
+P_00399,Massa,1.0,5,Maligna,1,Treino
+P_00399,Massa,1.0,5,Maligna,1,Treino
+P_00401,Massa,2.0,3,Benigna,0,Treino
+P_00401,Massa,2.0,3,Benigna,0,Treino
+P_00406,Massa,4.0,5,Maligna,1,Treino
+P_00406,Massa,4.0,5,Maligna,1,Treino
+P_00408,Massa,3.0,4,Maligna,1,Treino
+P_00408,Massa,3.0,4,Maligna,1,Treino
+P_00411,Massa,1.0,3,Benigna,0,Treino
+P_00411,Massa,1.0,3,Benigna,0,Treino
+P_00412,Massa,2.0,4,Benigna,0,Treino
+P_00412,Massa,2.0,4,Benigna,0,Treino
+P_00413,Massa,4.0,4,Maligna,1,Treino
+P_00413,Massa,4.0,4,Maligna,1,Treino
+P_00414,Massa,3.0,5,Maligna,1,Treino
+P_00414,Massa,3.0,5,Maligna,1,Treino
+P_00415,Massa,2.0,4,Maligna,1,Treino
+P_00415,Massa,2.0,4,Maligna,1,Treino
+P_00417,Massa,3.0,4,Benigna,0,Treino
+P_00417,Massa,3.0,4,Benigna,0,Treino
+P_00419,Massa,2.0,3,Benigna,0,Treino
+P_00419,Massa,2.0,5,Maligna,1,Treino
+P_00419,Massa,2.0,5,Maligna,1,Treino
+P_00419,Massa,2.0,3,Benigna,0,Treino
+P_00419,Massa,2.0,3,Benigna,0,Treino
+P_00419,Massa,2.0,3,Benigna,0,Treino
+P_00420,Massa,1.0,4,Maligna,1,Treino
+P_00420,Massa,1.0,4,Maligna,1,Treino
+P_00420,Massa,1.0,4,Maligna,1,Treino
+P_00420,Massa,1.0,4,Maligna,1,Treino
+P_00421,Massa,1.0,3,Benigna,0,Treino
+P_00421,Massa,1.0,3,Benigna,0,Treino
+P_00423,Massa,3.0,0,Maligna,1,Treino
+P_00426,Massa,3.0,4,Benigna,0,Treino
+P_00426,Massa,3.0,4,Benigna,0,Treino
+P_00427,Massa,2.0,4,Benigna,0,Treino
+P_00428,Massa,2.0,4,Benigna,0,Treino
+P_00430,Massa,3.0,4,Benigna,0,Treino
+P_00430,Massa,3.0,4,Benigna,0,Treino
+P_00431,Massa,3.0,4,Benigna,0,Treino
+P_00431,Massa,3.0,4,Benigna,0,Treino
+P_00432,Massa,1.0,4,Maligna,1,Treino
+P_00432,Massa,1.0,4,Maligna,1,Treino
+P_00432,Massa,1.0,4,Maligna,1,Treino
+P_00432,Massa,1.0,4,Maligna,1,Treino
+P_00435,Massa,3.0,5,Maligna,1,Treino
+P_00436,Massa,3.0,3,Benigna,0,Treino
+P_00436,Massa,3.0,3,Benigna,0,Treino
+P_00437,Massa,4.0,3,Benigna,0,Treino
+P_00437,Massa,4.0,3,Benigna,0,Treino
+P_00439,Massa,1.0,4,Maligna,1,Treino
+P_00439,Massa,1.0,3,Maligna,1,Treino
+P_00440,Massa,3.0,4,Maligna,1,Treino
+P_00441,Massa,2.0,4,Benigna,0,Treino
+P_00442,Massa,1.0,4,Benigna,0,Treino
+P_00442,Massa,1.0,4,Benigna,0,Treino
+P_00444,Massa,4.0,4,Maligna,1,Treino
+P_00444,Massa,4.0,4,Maligna,1,Treino
+P_00450,Massa,3.0,4,Maligna,1,Treino
+P_00450,Massa,3.0,4,Maligna,1,Treino
+P_00451,Massa,2.0,3,Benigna,0,Treino
+P_00451,Massa,2.0,3,Benigna,0,Treino
+P_00453,Massa,1.0,0,Benigna,0,Treino
+P_00453,Massa,1.0,0,Benigna,0,Treino
+P_00454,Massa,2.0,0,Benigna,0,Treino
+P_00454,Massa,2.0,0,Benigna,0,Treino
+P_00462,Massa,2.0,4,Benigna,0,Treino
+P_00462,Massa,2.0,4,Benigna,0,Treino
+P_00465,Massa,2.0,5,Maligna,1,Treino
+P_00465,Massa,2.0,5,Maligna,1,Treino
+P_00468,Massa,1.0,2,Benigna,0,Treino
+P_00468,Massa,1.0,2,Benigna,0,Treino
+P_00471,Massa,3.0,5,Maligna,1,Treino
+P_00471,Massa,3.0,5,Maligna,1,Treino
+P_00475,Massa,3.0,3,Benigna,0,Treino
+P_00475,Massa,3.0,4,Benigna,0,Treino
+P_00484,Massa,2.0,5,Maligna,1,Treino
+P_00487,Massa,2.0,4,Benigna,0,Treino
+P_00487,Massa,2.0,4,Benigna,0,Treino
+P_00488,Massa,4.0,4,Benigna,0,Treino
+P_00488,Massa,4.0,4,Benigna,0,Treino
+P_00492,Massa,3.0,4,Benigna,0,Treino
+P_00495,Massa,3.0,2,Benigna,0,Treino
+P_00495,Massa,3.0,2,Benigna,0,Treino
+P_00496,Massa,3.0,0,Benigna,0,Treino
+P_00496,Massa,3.0,0,Benigna,0,Treino
+P_00499,Massa,1.0,4,Benigna,0,Treino
+P_00499,Massa,1.0,4,Benigna,0,Treino
+P_00504,Massa,2.0,4,Maligna,1,Treino
+P_00506,Massa,2.0,2,Benigna sem retorno,0,Treino
+P_00509,Massa,2.0,4,Benigna,0,Treino
+P_00509,Massa,2.0,4,Benigna,0,Treino
+P_00512,Massa,3.0,4,Benigna,0,Treino
+P_00512,Massa,3.0,3,Benigna,0,Treino
+P_00515,Massa,2.0,4,Benigna,0,Treino
+P_00515,Massa,2.0,4,Benigna,0,Treino
+P_00515,Massa,2.0,4,Benigna,0,Treino
+P_00517,Massa,3.0,2,Benigna sem retorno,0,Treino
+P_00517,Massa,3.0,2,Benigna sem retorno,0,Treino
+P_00518,Massa,1.0,4,Benigna,0,Treino
+P_00518,Massa,1.0,4,Benigna,0,Treino
+P_00519,Massa,3.0,5,Maligna,1,Treino
+P_00519,Massa,3.0,3,Maligna,1,Treino
+P_00522,Massa,2.0,3,Benigna,0,Treino
+P_00526,Massa,2.0,4,Maligna,1,Treino
+P_00526,Massa,2.0,4,Maligna,1,Treino
+P_00528,Massa,3.0,3,Benigna,0,Treino
+P_00528,Massa,3.0,3,Benigna,0,Treino
+P_00528,Massa,3.0,3,Benigna,0,Treino
+P_00528,Massa,3.0,3,Benigna,0,Treino
+P_00532,Massa,2.0,0,Benigna,0,Treino
+P_00534,Massa,3.0,3,Benigna,0,Treino
+P_00534,Massa,3.0,3,Benigna,0,Treino
+P_00535,Massa,2.0,3,Benigna,0,Treino
+P_00539,Massa,3.0,4,Maligna,1,Treino
+P_00539,Massa,3.0,4,Maligna,1,Treino
+P_00540,Massa,2.0,5,Maligna,1,Treino
+P_00540,Massa,2.0,5,Maligna,1,Treino
+P_00543,Massa,2.0,4,Maligna,1,Treino
+P_00543,Massa,2.0,4,Maligna,1,Treino
+P_00545,Massa,1.0,5,Maligna,1,Treino
+P_00549,Massa,1.0,0,Benigna,0,Treino
+P_00549,Massa,1.0,0,Benigna,0,Treino
+P_00550,Massa,3.0,4,Benigna,0,Treino
+P_00553,Massa,2.0,4,Maligna,1,Treino
+P_00553,Massa,2.0,4,Maligna,1,Treino
+P_00554,Massa,1.0,4,Maligna,1,Treino
+P_00554,Massa,1.0,4,Maligna,1,Treino
+P_00559,Massa,2.0,3,Benigna,0,Treino
+P_00559,Massa,2.0,3,Benigna,0,Treino
+P_00560,Massa,1.0,3,Benigna sem retorno,0,Treino
+P_00564,Massa,4.0,5,Maligna,1,Treino
+P_00566,Massa,2.0,4,Maligna,1,Treino
+P_00566,Massa,2.0,4,Maligna,1,Treino
+P_00568,Massa,2.0,5,Maligna,1,Treino
+P_00568,Massa,2.0,5,Maligna,1,Treino
+P_00569,Massa,2.0,4,Benigna,0,Treino
+P_00569,Massa,2.0,4,Benigna,0,Treino
+P_00572,Massa,4.0,4,Benigna,0,Treino
+P_00572,Massa,4.0,4,Benigna,0,Treino
+P_00573,Massa,1.0,5,Maligna,1,Treino
+P_00573,Massa,1.0,5,Maligna,1,Treino
+P_00575,Massa,3.0,4,Maligna,1,Treino
+P_00577,Massa,3.0,4,Maligna,1,Treino
+P_00577,Massa,3.0,4,Maligna,1,Treino
+P_00581,Massa,1.0,5,Maligna,1,Treino
+P_00584,Massa,1.0,5,Maligna,1,Treino
+P_00586,Massa,2.0,5,Maligna,1,Treino
+P_00586,Massa,2.0,5,Maligna,1,Treino
+P_00586,Massa,2.0,5,Maligna,1,Treino
+P_00592,Massa,1.0,0,Benigna,0,Treino
+P_00592,Massa,1.0,0,Benigna,0,Treino
+P_00596,Massa,2.0,4,Benigna,0,Treino
+P_00596,Massa,2.0,4,Benigna,0,Treino
+P_00596,Massa,2.0,4,Maligna,1,Treino
+P_00596,Massa,2.0,5,Maligna,1,Treino
+P_00597,Massa,4.0,4,Benigna,0,Treino
+P_00604,Massa,3.0,4,Maligna,1,Treino
+P_00604,Massa,3.0,4,Maligna,1,Treino
+P_00605,Massa,2.0,5,Maligna,1,Treino
+P_00607,Massa,1.0,1,Maligna,1,Treino
+P_00607,Massa,1.0,3,Maligna,1,Treino
+P_00611,Massa,2.0,3,Benigna,0,Treino
+P_00611,Massa,2.0,3,Benigna,0,Treino
+P_00616,Massa,3.0,5,Maligna,1,Treino
+P_00617,Massa,2.0,3,Benigna sem retorno,0,Treino
+P_00622,Massa,3.0,4,Benigna,0,Treino
+P_00626,Massa,2.0,0,Benigna,0,Treino
+P_00626,Massa,2.0,0,Benigna,0,Treino
+P_00630,Massa,2.0,0,Benigna,0,Treino
+P_00630,Massa,2.0,0,Benigna,0,Treino
+P_00634,Massa,4.0,3,Benigna,0,Treino
+P_00634,Massa,4.0,3,Benigna,0,Treino
+P_00634,Massa,4.0,3,Benigna,0,Treino
+P_00634,Massa,4.0,3,Benigna,0,Treino
+P_00634,Massa,4.0,5,Maligna,1,Treino
+P_00637,Massa,2.0,4,Maligna,1,Treino
+P_00640,Massa,3.0,4,Benigna,0,Treino
+P_00640,Massa,3.0,4,Benigna,0,Treino
+P_00644,Massa,3.0,4,Maligna,1,Treino
+P_00644,Massa,3.0,4,Maligna,1,Treino
+P_00648,Massa,2.0,0,Maligna,1,Treino
+P_00648,Massa,2.0,0,Maligna,1,Treino
+P_00651,Massa,3.0,4,Benigna,0,Treino
+P_00653,Massa,2.0,4,Maligna,1,Treino
+P_00653,Massa,2.0,4,Maligna,1,Treino
+P_00659,Massa,4.0,4,Benigna,0,Treino
+P_00660,Massa,2.0,4,Maligna,1,Treino
+P_00660,Massa,2.0,4,Maligna,1,Treino
+P_00661,Massa,1.0,0,Maligna,1,Treino
+P_00661,Massa,1.0,0,Maligna,1,Treino
+P_00665,Massa,1.0,5,Maligna,1,Treino
+P_00666,Massa,2.0,2,Benigna sem retorno,0,Treino
+P_00666,Massa,2.0,2,Benigna sem retorno,0,Treino
+P_00670,Massa,2.0,4,Benigna,0,Treino
+P_00670,Massa,2.0,4,Benigna,0,Treino
+P_00673,Massa,1.0,2,Benigna sem retorno,0,Treino
+P_00673,Massa,1.0,2,Benigna sem retorno,0,Treino
+P_00673,Massa,1.0,2,Benigna sem retorno,0,Treino
+P_00675,Massa,2.0,2,Benigna,0,Treino
+P_00675,Massa,2.0,2,Benigna,0,Treino
+P_00678,Massa,4.0,5,Maligna,1,Treino
+P_00678,Massa,4.0,5,Maligna,1,Treino
+P_00687,Massa,3.0,0,Benigna,0,Treino
+P_00687,Massa,3.0,0,Benigna,0,Treino
+P_00690,Massa,2.0,5,Maligna,1,Treino
+P_00692,Massa,4.0,5,Benigna,0,Treino
+P_00694,Massa,1.0,0,Benigna,0,Treino
+P_00694,Massa,1.0,0,Benigna,0,Treino
+P_00695,Massa,2.0,5,Maligna,1,Treino
+P_00695,Massa,2.0,5,Maligna,1,Treino
+P_00698,Massa,3.0,5,Maligna,1,Treino
+P_00698,Massa,3.0,5,Maligna,1,Treino
+P_00700,Massa,2.0,4,Benigna,0,Treino
+P_00700,Massa,2.0,4,Benigna,0,Treino
+P_00702,Massa,2.0,4,Maligna,1,Treino
+P_00702,Massa,2.0,4,Maligna,1,Treino
+P_00703,Massa,2.0,0,Benigna,0,Treino
+P_00703,Massa,2.0,0,Benigna,0,Treino
+P_00706,Massa,4.0,5,Maligna,1,Treino
+P_00706,Massa,4.0,5,Maligna,1,Treino
+P_00708,Massa,2.0,3,Benigna sem retorno,0,Treino
+P_00708,Massa,2.0,3,Benigna sem retorno,0,Treino
+P_00710,Massa,2.0,4,Benigna,0,Treino
+P_00710,Massa,2.0,4,Benigna,0,Treino
+P_00710,Massa,2.0,4,Benigna,0,Treino
+P_00710,Massa,2.0,0,Benigna,0,Treino
+P_00710,Massa,2.0,0,Benigna,0,Treino
+P_00711,Massa,2.0,4,Maligna,1,Treino
+P_00711,Massa,2.0,4,Maligna,1,Treino
+P_00711,Massa,2.0,2,Benigna,0,Treino
+P_00711,Massa,2.0,2,Benigna,0,Treino
+P_00715,Massa,2.0,0,Benigna,0,Treino
+P_00715,Massa,2.0,0,Benigna,0,Treino
+P_00716,Massa,3.0,4,Maligna,1,Treino
+P_00717,Massa,2.0,5,Maligna,1,Treino
+P_00717,Massa,2.0,5,Maligna,1,Treino
+P_00719,Massa,1.0,4,Maligna,1,Treino
+P_00719,Massa,1.0,4,Maligna,1,Treino
+P_00720,Massa,4.0,4,Maligna,1,Treino
+P_00723,Massa,2.0,4,Benigna,0,Treino
+P_00726,Massa,2.0,3,Benigna,0,Treino
+P_00726,Massa,2.0,3,Benigna,0,Treino
+P_00728,Massa,2.0,4,Maligna,1,Treino
+P_00728,Massa,2.0,4,Maligna,1,Treino
+P_00730,Massa,3.0,4,Maligna,1,Treino
+P_00731,Massa,2.0,4,Benigna,0,Treino
+P_00731,Massa,2.0,4,Benigna,0,Treino
+P_00732,Massa,2.0,5,Maligna,1,Treino
+P_00732,Massa,2.0,5,Maligna,1,Treino
+P_00733,Massa,1.0,4,Benigna,0,Treino
+P_00733,Massa,1.0,4,Benigna,0,Treino
+P_00734,Massa,2.0,5,Maligna,1,Treino
+P_00737,Massa,1.0,5,Maligna,1,Treino
+P_00737,Massa,1.0,5,Maligna,1,Treino
+P_00739,Massa,2.0,3,Benigna,0,Treino
+P_00739,Massa,2.0,3,Benigna,0,Treino
+P_00742,Massa,2.0,3,Benigna,0,Treino
+P_00742,Massa,2.0,3,Benigna,0,Treino
+P_00746,Massa,3.0,4,Maligna,1,Treino
+P_00746,Massa,3.0,4,Maligna,1,Treino
+P_00747,Massa,3.0,3,Benigna sem retorno,0,Treino
+P_00747,Massa,3.0,3,Benigna sem retorno,0,Treino
+P_00753,Massa,2.0,5,Maligna,1,Treino
+P_00753,Massa,2.0,5,Maligna,1,Treino
+P_00754,Massa,2.0,4,Benigna,0,Treino
+P_00754,Massa,2.0,4,Benigna,0,Treino
+P_00764,Massa,2.0,3,Benigna,0,Treino
+P_00764,Massa,2.0,3,Benigna,0,Treino
+P_00765,Massa,1.0,0,Benigna,0,Treino
+P_00765,Massa,1.0,0,Benigna,0,Treino
+P_00770,Massa,2.0,4,Maligna,1,Treino
+P_00775,Massa,2.0,3,Benigna sem retorno,0,Treino
+P_00775,Massa,2.0,3,Benigna sem retorno,0,Treino
+P_00776,Massa,3.0,4,Maligna,1,Treino
+P_00776,Massa,3.0,4,Maligna,1,Treino
+P_00778,Massa,3.0,2,Benigna,0,Treino
+P_00778,Massa,3.0,2,Benigna,0,Treino
+P_00778,Massa,3.0,2,Benigna,0,Treino
+P_00778,Massa,3.0,2,Benigna,0,Treino
+P_00779,Massa,1.0,5,Maligna,1,Treino
+P_00779,Massa,1.0,5,Maligna,1,Treino
+P_00781,Massa,2.0,3,Benigna,0,Treino
+P_00781,Massa,2.0,3,Benigna,0,Treino
+P_00782,Massa,2.0,4,Maligna,1,Treino
+P_00794,Massa,1.0,0,Benigna,0,Treino
+P_00794,Massa,1.0,0,Benigna,0,Treino
+P_00797,Massa,2.0,3,Benigna,0,Treino
+P_00797,Massa,2.0,5,Maligna,1,Treino
+P_00797,Massa,2.0,3,Benigna,0,Treino
+P_00797,Massa,2.0,5,Maligna,1,Treino
+P_00797,Massa,2.0,3,Benigna,0,Treino
+P_00797,Massa,2.0,3,Benigna,0,Treino
+P_00798,Massa,3.0,3,Benigna,0,Treino
+P_00798,Massa,3.0,3,Benigna,0,Treino
+P_00801,Massa,2.0,5,Maligna,1,Treino
+P_00801,Massa,2.0,5,Maligna,1,Treino
+P_00802,Massa,2.0,5,Maligna,1,Treino
+P_00802,Massa,2.0,5,Maligna,1,Treino
+P_00802,Massa,2.0,5,Maligna,1,Treino
+P_00802,Massa,2.0,5,Maligna,1,Treino
+P_00803,Massa,4.0,4,Maligna,1,Treino
+P_00810,Massa,2.0,4,Maligna,1,Treino
+P_00814,Massa,3.0,4,Benigna,0,Treino
+P_00814,Massa,3.0,4,Benigna,0,Treino
+P_00815,Massa,3.0,5,Maligna,1,Treino
+P_00815,Massa,3.0,5,Maligna,1,Treino
+P_00816,Massa,2.0,4,Benigna,0,Treino
+P_00816,Massa,2.0,4,Benigna,0,Treino
+P_00818,Massa,3.0,5,Maligna,1,Treino
+P_00818,Massa,3.0,5,Maligna,1,Treino
+P_00823,Massa,4.0,4,Benigna,0,Treino
+P_00823,Massa,4.0,4,Benigna,0,Treino
+P_00826,Massa,3.0,0,Benigna,0,Treino
+P_00826,Massa,3.0,0,Benigna,0,Treino
+P_00828,Massa,3.0,5,Maligna,1,Treino
+P_00829,Massa,4.0,3,Benigna,0,Treino
+P_00829,Massa,4.0,3,Benigna,0,Treino
+P_00831,Massa,4.0,5,Maligna,1,Treino
+P_00836,Massa,2.0,5,Maligna,1,Treino
+P_00836,Massa,2.0,5,Maligna,1,Treino
+P_00841,Massa,2.0,3,Benigna,0,Treino
+P_00841,Massa,2.0,3,Benigna,0,Treino
+P_00844,Massa,3.0,4,Benigna,0,Treino
+P_00844,Massa,3.0,4,Benigna,0,Treino
+P_00845,Massa,2.0,4,Maligna,1,Treino
+P_00847,Massa,4.0,2,Benigna,0,Treino
+P_00848,Massa,3.0,4,Maligna,1,Treino
+P_00848,Massa,3.0,4,Maligna,1,Treino
+P_00849,Massa,1.0,5,Maligna,1,Treino
+P_00849,Massa,1.0,5,Maligna,1,Treino
+P_00851,Massa,3.0,4,Maligna,1,Treino
+P_00851,Massa,3.0,4,Maligna,1,Treino
+P_00853,Massa,3.0,4,Maligna,1,Treino
+P_00859,Massa,2.0,0,Benigna,0,Treino
+P_00859,Massa,2.0,0,Benigna,0,Treino
+P_00863,Massa,2.0,4,Benigna,0,Treino
+P_00863,Massa,2.0,4,Benigna,0,Treino
+P_00865,Massa,2.0,4,Maligna,1,Treino
+P_00865,Massa,2.0,4,Maligna,1,Treino
+P_00869,Massa,1.0,3,Benigna,0,Treino
+P_00869,Massa,1.0,3,Benigna,0,Treino
+P_00870,Massa,3.0,5,Maligna,1,Treino
+P_00870,Massa,3.0,5,Maligna,1,Treino
+P_00871,Massa,2.0,4,Maligna,1,Treino
+P_00871,Massa,2.0,4,Maligna,1,Treino
+P_00881,Massa,2.0,4,Maligna,1,Treino
+P_00881,Massa,2.0,4,Maligna,1,Treino
+P_00884,Massa,3.0,4,Benigna sem retorno,0,Treino
+P_00886,Massa,3.0,5,Maligna,1,Treino
+P_00886,Massa,3.0,5,Maligna,1,Treino
+P_00889,Massa,3.0,4,Maligna,1,Treino
+P_00889,Massa,3.0,4,Maligna,1,Treino
+P_00891,Massa,1.0,5,Maligna,1,Treino
+P_00891,Massa,1.0,5,Maligna,1,Treino
+P_00892,Massa,3.0,4,Maligna,1,Treino
+P_00892,Massa,3.0,5,Maligna,1,Treino
+P_00894,Massa,2.0,3,Benigna,0,Treino
+P_00896,Massa,3.0,4,Benigna,0,Treino
+P_00898,Massa,2.0,4,Maligna,1,Treino
+P_00900,Massa,2.0,4,Maligna,1,Treino
+P_00901,Massa,2.0,5,Maligna,1,Treino
+P_00901,Massa,2.0,5,Maligna,1,Treino
+P_00902,Massa,3.0,4,Maligna,1,Treino
+P_00902,Massa,3.0,4,Maligna,1,Treino
+P_00903,Massa,4.0,5,Maligna,1,Treino
+P_00906,Massa,4.0,4,Maligna,1,Treino
+P_00906,Massa,4.0,3,Maligna,1,Treino
+P_00911,Massa,3.0,4,Benigna,0,Treino
+P_00913,Massa,3.0,0,Maligna,1,Treino
+P_00913,Massa,3.0,0,Maligna,1,Treino
+P_00914,Massa,3.0,3,Maligna,1,Treino
+P_00914,Massa,3.0,3,Maligna,1,Treino
+P_00914,Massa,3.0,3,Maligna,1,Treino
+P_00914,Massa,3.0,3,Maligna,1,Treino
+P_00914,Massa,3.0,3,Maligna,1,Treino
+P_00914,Massa,3.0,3,Maligna,1,Treino
+P_00915,Massa,3.0,0,Maligna,1,Treino
+P_00915,Massa,3.0,0,Maligna,1,Treino
+P_00917,Massa,4.0,4,Benigna,0,Treino
+P_00920,Massa,3.0,4,Benigna,0,Treino
+P_00920,Massa,3.0,4,Benigna,0,Treino
+P_00921,Massa,3.0,5,Maligna,1,Treino
+P_00927,Massa,1.0,0,Benigna,0,Treino
+P_00927,Massa,1.0,0,Benigna,0,Treino
+P_00929,Massa,2.0,5,Maligna,1,Treino
+P_00929,Massa,2.0,5,Maligna,1,Treino
+P_00931,Massa,2.0,4,Maligna,1,Treino
+P_00931,Massa,2.0,4,Maligna,1,Treino
+P_00935,Massa,2.0,4,Maligna,1,Treino
+P_00935,Massa,2.0,4,Maligna,1,Treino
+P_00939,Massa,3.0,3,Benigna,0,Treino
+P_00939,Massa,3.0,3,Benigna,0,Treino
+P_00941,Massa,2.0,3,Benigna,0,Treino
+P_00949,Massa,3.0,0,Benigna,0,Treino
+P_00949,Massa,3.0,0,Benigna,0,Treino
+P_00950,Massa,3.0,5,Maligna,1,Treino
+P_00952,Massa,2.0,3,Benigna sem retorno,0,Treino
+P_00952,Massa,2.0,3,Benigna sem retorno,0,Treino
+P_00958,Massa,3.0,3,Benigna,0,Treino
+P_00958,Massa,3.0,3,Benigna,0,Treino
+P_00959,Massa,2.0,5,Maligna,1,Treino
+P_00961,Massa,1.0,5,Maligna,1,Treino
+P_00963,Massa,1.0,3,Benigna,0,Treino
+P_00963,Massa,1.0,3,Benigna,0,Treino
+P_00968,Massa,2.0,4,Maligna,1,Treino
+P_00968,Massa,2.0,4,Maligna,1,Treino
+P_00970,Massa,2.0,2,Benigna sem retorno,0,Treino
+P_00972,Massa,1.0,4,Maligna,1,Treino
+P_00972,Massa,1.0,4,Maligna,1,Treino
+P_00976,Massa,1.0,0,Benigna,0,Treino
+P_00976,Massa,1.0,0,Benigna,0,Treino
+P_00978,Massa,3.0,3,Benigna,0,Treino
+P_00978,Massa,3.0,3,Benigna,0,Treino
+P_00982,Massa,2.0,3,Benigna,0,Treino
+P_00982,Massa,2.0,3,Benigna,0,Treino
+P_00984,Massa,1.0,5,Maligna,1,Treino
+P_00984,Massa,1.0,5,Maligna,1,Treino
+P_00988,Massa,1.0,0,Benigna,0,Treino
+P_00988,Massa,1.0,0,Benigna,0,Treino
+P_00990,Massa,2.0,5,Maligna,1,Treino
+P_00990,Massa,2.0,5,Maligna,1,Treino
+P_00994,Massa,4.0,4,Benigna,0,Treino
+P_00995,Massa,2.0,5,Maligna,1,Treino
+P_00995,Massa,2.0,5,Maligna,1,Treino
+P_00996,Massa,4.0,4,Benigna,0,Treino
+P_00997,Massa,2.0,5,Maligna,1,Treino
+P_00997,Massa,2.0,5,Maligna,1,Treino
+P_00999,Massa,2.0,5,Maligna,1,Treino
+P_00999,Massa,2.0,5,Maligna,1,Treino
+P_01000,Massa,2.0,5,Maligna,1,Treino
+P_01000,Massa,2.0,5,Maligna,1,Treino
+P_01008,Massa,3.0,5,Maligna,1,Treino
+P_01008,Massa,3.0,5,Maligna,1,Treino
+P_01009,Massa,2.0,4,Maligna,1,Treino
+P_01009,Massa,2.0,4,Maligna,1,Treino
+P_01018,Massa,4.0,3,Benigna sem retorno,0,Treino
+P_01031,Massa,2.0,5,Maligna,1,Treino
+P_01032,Massa,3.0,3,Benigna sem retorno,0,Treino
+P_01034,Massa,2.0,5,Maligna,1,Treino
+P_01034,Massa,2.0,4,Maligna,1,Treino
+P_01035,Massa,3.0,4,Maligna,1,Treino
+P_01035,Massa,3.0,4,Maligna,1,Treino
+P_01036,Massa,2.0,4,Benigna sem retorno,0,Treino
+P_01039,Massa,1.0,5,Maligna,1,Treino
+P_01039,Massa,1.0,2,Benigna,0,Treino
+P_01039,Massa,1.0,2,Benigna,0,Treino
+P_01039,Massa,1.0,2,Benigna,0,Treino
+P_01039,Massa,1.0,2,Benigna,0,Treino
+P_01039,Massa,1.0,2,Benigna,0,Treino
+P_01039,Massa,1.0,2,Benigna,0,Treino
+P_01039,Massa,1.0,2,Benigna,0,Treino
+P_01039,Massa,1.0,2,Benigna,0,Treino
+P_01039,Massa,1.0,2,Benigna,0,Treino
+P_01039,Massa,1.0,2,Benigna,0,Treino
+P_01039,Massa,1.0,2,Benigna,0,Treino
+P_01047,Massa,3.0,4,Maligna,1,Treino
+P_01047,Massa,3.0,4,Maligna,1,Treino
+P_01048,Massa,2.0,0,Benigna,0,Treino
+P_01048,Massa,2.0,0,Benigna,0,Treino
+P_01051,Massa,3.0,3,Benigna,0,Treino
+P_01051,Massa,3.0,3,Benigna,0,Treino
+P_01052,Massa,2.0,4,Benigna,0,Treino
+P_01052,Massa,2.0,4,Benigna,0,Treino
+P_01054,Massa,1.0,4,Maligna,1,Treino
+P_01057,Massa,2.0,5,Maligna,1,Treino
+P_01057,Massa,2.0,5,Maligna,1,Treino
+P_01062,Massa,3.0,3,Benigna,0,Treino
+P_01062,Massa,3.0,4,Benigna,0,Treino
+P_01070,Massa,1.0,4,Maligna,1,Treino
+P_01070,Massa,1.0,4,Maligna,1,Treino
+P_01071,Massa,1.0,5,Maligna,1,Treino
+P_01071,Massa,1.0,5,Maligna,1,Treino
+P_01076,Massa,3.0,5,Maligna,1,Treino
+P_01076,Massa,3.0,5,Maligna,1,Treino
+P_01077,Massa,3.0,0,Benigna,0,Treino
+P_01079,Massa,2.0,4,Maligna,1,Treino
+P_01079,Massa,2.0,5,Maligna,1,Treino
+P_01082,Massa,1.0,4,Benigna,0,Treino
+P_01083,Massa,3.0,5,Maligna,1,Treino
+P_01084,Massa,3.0,4,Maligna,1,Treino
+P_01084,Massa,3.0,4,Maligna,1,Treino
+P_01086,Massa,3.0,4,Maligna,1,Treino
+P_01088,Massa,2.0,5,Maligna,1,Treino
+P_01088,Massa,2.0,5,Maligna,1,Treino
+P_01093,Massa,4.0,4,Maligna,1,Treino
+P_01093,Massa,4.0,4,Maligna,1,Treino
+P_01097,Massa,4.0,4,Maligna,1,Treino
+P_01097,Massa,4.0,3,Maligna,1,Treino
+P_01103,Massa,1.0,4,Benigna,0,Treino
+P_01103,Massa,1.0,4,Maligna,1,Treino
+P_01103,Massa,1.0,4,Maligna,1,Treino
+P_01103,Massa,1.0,4,Benigna,0,Treino
+P_01103,Massa,1.0,4,Maligna,1,Treino
+P_01103,Massa,1.0,4,Maligna,1,Treino
+P_01104,Massa,3.0,4,Benigna,0,Treino
+P_01109,Massa,3.0,4,Maligna,1,Treino
+P_01112,Massa,2.0,4,Benigna,0,Treino
+P_01112,Massa,2.0,4,Benigna,0,Treino
+P_01115,Massa,2.0,0,Benigna,0,Treino
+P_01115,Massa,2.0,0,Benigna,0,Treino
+P_01118,Massa,2.0,4,Benigna,0,Treino
+P_01118,Massa,2.0,4,Benigna,0,Treino
+P_01120,Massa,3.0,5,Maligna,1,Treino
+P_01120,Massa,3.0,5,Maligna,1,Treino
+P_01123,Massa,2.0,4,Benigna,0,Treino
+P_01123,Massa,2.0,4,Benigna,0,Treino
+P_01124,Massa,2.0,0,Benigna,0,Treino
+P_01124,Massa,2.0,0,Benigna,0,Treino
+P_01130,Massa,2.0,4,Maligna,1,Treino
+P_01130,Massa,2.0,4,Maligna,1,Treino
+P_01131,Massa,3.0,0,Benigna,0,Treino
+P_01131,Massa,3.0,0,Benigna,0,Treino
+P_01133,Massa,2.0,4,Benigna sem retorno,0,Treino
+P_01134,Massa,2.0,5,Maligna,1,Treino
+P_01134,Massa,2.0,5,Maligna,1,Treino
+P_01138,Massa,1.0,4,Maligna,1,Treino
+P_01138,Massa,1.0,4,Maligna,1,Treino
+P_01142,Massa,2.0,3,Benigna sem retorno,0,Treino
+P_01142,Massa,2.0,3,Benigna sem retorno,0,Treino
+P_01144,Massa,2.0,5,Maligna,1,Treino
+P_01144,Massa,2.0,4,Maligna,1,Treino
+P_01146,Massa,3.0,4,Benigna,0,Treino
+P_01149,Massa,2.0,3,Maligna,1,Treino
+P_01149,Massa,2.0,4,Maligna,1,Treino
+P_01150,Massa,2.0,4,Benigna,0,Treino
+P_01150,Massa,2.0,4,Benigna,0,Treino
+P_01151,Massa,2.0,3,Maligna,1,Treino
+P_01151,Massa,2.0,3,Maligna,1,Treino
+P_01152,Massa,2.0,3,Benigna,0,Treino
+P_01152,Massa,2.0,3,Benigna,0,Treino
+P_01152,Massa,2.0,3,Benigna,0,Treino
+P_01152,Massa,2.0,3,Benigna,0,Treino
+P_01153,Massa,2.0,4,Benigna,0,Treino
+P_01155,Massa,2.0,4,Maligna,1,Treino
+P_01155,Massa,2.0,4,Maligna,1,Treino
+P_01158,Massa,4.0,4,Benigna,0,Treino
+P_01158,Massa,4.0,4,Benigna,0,Treino
+P_01162,Massa,3.0,4,Benigna,0,Treino
+P_01162,Massa,3.0,4,Benigna,0,Treino
+P_01163,Massa,2.0,4,Maligna,1,Treino
+P_01163,Massa,2.0,4,Maligna,1,Treino
+P_01164,Massa,2.0,0,Benigna,0,Treino
+P_01164,Massa,2.0,0,Benigna,0,Treino
+P_01165,Massa,4.0,2,Benigna sem retorno,0,Treino
+P_01165,Massa,4.0,2,Benigna sem retorno,0,Treino
+P_01165,Massa,4.0,4,Maligna,1,Treino
+P_01171,Massa,2.0,4,Benigna,0,Treino
+P_01171,Massa,2.0,4,Benigna,0,Treino
+P_01173,Massa,3.0,5,Maligna,1,Treino
+P_01173,Massa,3.0,5,Maligna,1,Treino
+P_01175,Massa,1.0,3,Benigna sem retorno,0,Treino
+P_01175,Massa,1.0,3,Benigna sem retorno,0,Treino
+P_01175,Massa,1.0,3,Benigna sem retorno,0,Treino
+P_01178,Massa,3.0,4,Benigna,0,Treino
+P_01178,Massa,3.0,4,Benigna,0,Treino
+P_01179,Massa,3.0,4,Maligna,1,Treino
+P_01179,Massa,3.0,4,Maligna,1,Treino
+P_01181,Massa,2.0,4,Benigna,0,Treino
+P_01181,Massa,2.0,4,Benigna,0,Treino
+P_01182,Massa,2.0,0,Benigna,0,Treino
+P_01182,Massa,2.0,0,Benigna,0,Treino
+P_01185,Massa,2.0,2,Benigna sem retorno,0,Treino
+P_01185,Massa,2.0,2,Benigna sem retorno,0,Treino
+P_01189,Massa,1.0,5,Maligna,1,Treino
+P_01189,Massa,1.0,5,Maligna,1,Treino
+P_01190,Massa,2.0,5,Maligna,1,Treino
+P_01190,Massa,2.0,5,Maligna,1,Treino
+P_01194,Massa,1.0,3,Benigna,0,Treino
+P_01201,Massa,3.0,4,Maligna,1,Treino
+P_01201,Massa,3.0,4,Maligna,1,Treino
+P_01203,Massa,2.0,3,Benigna,0,Treino
+P_01203,Massa,2.0,3,Benigna,0,Treino
+P_01206,Massa,2.0,4,Maligna,1,Treino
+P_01206,Massa,2.0,4,Maligna,1,Treino
+P_01207,Massa,3.0,2,Benigna sem retorno,0,Treino
+P_01209,Massa,2.0,4,Benigna,0,Treino
+P_01212,Massa,3.0,4,Benigna,0,Treino
+P_01212,Massa,3.0,4,Benigna,0,Treino
+P_01215,Massa,3.0,4,Benigna,0,Treino
+P_01215,Massa,3.0,4,Benigna,0,Treino
+P_01216,Massa,1.0,3,Benigna,0,Treino
+P_01216,Massa,1.0,3,Benigna,0,Treino
+P_01218,Massa,2.0,5,Maligna,1,Treino
+P_01218,Massa,2.0,5,Maligna,1,Treino
+P_01221,Massa,3.0,5,Maligna,1,Treino
+P_01221,Massa,3.0,5,Maligna,1,Treino
+P_01222,Massa,3.0,4,Maligna,1,Treino
+P_01225,Massa,2.0,4,Benigna,0,Treino
+P_01225,Massa,2.0,4,Benigna,0,Treino
+P_01226,Massa,1.0,4,Benigna,0,Treino
+P_01230,Massa,1.0,4,Maligna,1,Treino
+P_01231,Massa,1.0,3,Benigna sem retorno,0,Treino
+P_01231,Massa,1.0,3,Benigna sem retorno,0,Treino
+P_01232,Massa,2.0,5,Maligna,1,Treino
+P_01232,Massa,2.0,5,Maligna,1,Treino
+P_01233,Massa,3.0,0,Benigna,0,Treino
+P_01233,Massa,3.0,0,Benigna,0,Treino
+P_01237,Massa,2.0,3,Benigna,0,Treino
+P_01238,Massa,3.0,3,Benigna,0,Treino
+P_01238,Massa,3.0,3,Benigna,0,Treino
+P_01239,Massa,4.0,4,Benigna,0,Treino
+P_01241,Massa,3.0,4,Maligna,1,Treino
+P_01241,Massa,3.0,3,Maligna,1,Treino
+P_01243,Massa,3.0,0,Benigna,0,Treino
+P_01243,Massa,3.0,0,Benigna,0,Treino
+P_01248,Massa,1.0,5,Maligna,1,Treino
+P_01248,Massa,1.0,5,Maligna,1,Treino
+P_01250,Massa,2.0,2,Benigna,0,Treino
+P_01250,Massa,2.0,2,Benigna,0,Treino
+P_01258,Massa,1.0,4,Maligna,1,Treino
+P_01260,Massa,2.0,4,Maligna,1,Treino
+P_01261,Massa,2.0,5,Maligna,1,Treino
+P_01261,Massa,2.0,5,Maligna,1,Treino
+P_01262,Massa,2.0,5,Maligna,1,Treino
+P_01262,Massa,2.0,5,Maligna,1,Treino
+P_01262,Massa,2.0,5,Maligna,1,Treino
+P_01264,Massa,4.0,4,Benigna,0,Treino
+P_01265,Massa,2.0,3,Benigna,0,Treino
+P_01265,Massa,2.0,3,Benigna,0,Treino
+P_01267,Massa,2.0,4,Benigna,0,Treino
+P_01268,Massa,3.0,0,Benigna,0,Treino
+P_01268,Massa,3.0,0,Benigna,0,Treino
+P_01270,Massa,1.0,2,Benigna,0,Treino
+P_01270,Massa,1.0,2,Benigna,0,Treino
+P_01270,Massa,1.0,5,Maligna,1,Treino
+P_01270,Massa,1.0,5,Maligna,1,Treino
+P_01270,Massa,1.0,5,Maligna,1,Treino
+P_01271,Massa,3.0,4,Benigna,0,Treino
+P_01271,Massa,3.0,4,Benigna,0,Treino
+P_01273,Massa,2.0,3,Benigna,0,Treino
+P_01273,Massa,2.0,3,Benigna,0,Treino
+P_01273,Massa,2.0,3,Benigna,0,Treino
+P_01273,Massa,2.0,3,Benigna,0,Treino
+P_01273,Massa,2.0,3,Benigna,0,Treino
+P_01273,Massa,2.0,3,Benigna,0,Treino
+P_01274,Massa,2.0,2,Benigna sem retorno,0,Treino
+P_01279,Massa,2.0,4,Benigna,0,Treino
+P_01280,Massa,2.0,4,Benigna,0,Treino
+P_01280,Massa,2.0,4,Benigna,0,Treino
+P_01281,Massa,2.0,4,Maligna,1,Treino
+P_01283,Massa,3.0,4,Benigna,0,Treino
+P_01285,Massa,2.0,0,Benigna,0,Treino
+P_01285,Massa,2.0,0,Benigna,0,Treino
+P_01290,Massa,2.0,5,Maligna,1,Treino
+P_01297,Massa,4.0,3,Benigna,0,Treino
+P_01297,Massa,4.0,3,Benigna,0,Treino
+P_01299,Massa,4.0,4,Benigna,0,Treino
+P_01301,Massa,4.0,4,Benigna,0,Treino
+P_01301,Massa,4.0,4,Benigna,0,Treino
+P_01302,Massa,2.0,5,Maligna,1,Treino
+P_01302,Massa,2.0,5,Maligna,1,Treino
+P_01304,Massa,3.0,4,Maligna,1,Treino
+P_01304,Massa,3.0,4,Maligna,1,Treino
+P_01305,Massa,3.0,4,Benigna,0,Treino
+P_01305,Massa,3.0,4,Benigna,0,Treino
+P_01312,Massa,4.0,5,Maligna,1,Treino
+P_01317,Massa,3.0,4,Benigna sem retorno,0,Treino
+P_01324,Massa,3.0,0,Maligna,1,Treino
+P_01324,Massa,3.0,0,Maligna,1,Treino
+P_01325,Massa,2.0,4,Maligna,1,Treino
+P_01326,Massa,2.0,5,Maligna,1,Treino
+P_01326,Massa,2.0,5,Maligna,1,Treino
+P_01327,Massa,1.0,3,Benigna,0,Treino
+P_01328,Massa,2.0,4,Maligna,1,Treino
+P_01328,Massa,2.0,4,Maligna,1,Treino
+P_01330,Massa,2.0,4,Benigna sem retorno,0,Treino
+P_01332,Massa,2.0,2,Benigna sem retorno,0,Treino
+P_01332,Massa,2.0,2,Benigna sem retorno,0,Treino
+P_01340,Massa,2.0,4,Benigna,0,Treino
+P_01343,Massa,2.0,5,Maligna,1,Treino
+P_01343,Massa,2.0,4,Maligna,1,Treino
+P_01343,Massa,2.0,5,Maligna,1,Treino
+P_01343,Massa,2.0,4,Maligna,1,Treino
+P_01349,Massa,3.0,4,Benigna,0,Treino
+P_01350,Massa,2.0,4,Maligna,1,Treino
+P_01350,Massa,2.0,4,Maligna,1,Treino
+P_01354,Massa,3.0,4,Benigna,0,Treino
+P_01355,Massa,3.0,5,Maligna,1,Treino
+P_01356,Massa,2.0,5,Maligna,1,Treino
+P_01356,Massa,2.0,5,Maligna,1,Treino
+P_01357,Massa,1.0,4,Maligna,1,Treino
+P_01360,Massa,3.0,5,Maligna,1,Treino
+P_01360,Massa,3.0,5,Maligna,1,Treino
+P_01362,Massa,3.0,4,Benigna,0,Treino
+P_01363,Massa,3.0,0,Benigna,0,Treino
+P_01363,Massa,3.0,0,Benigna,0,Treino
+P_01364,Massa,1.0,5,Maligna,1,Treino
+P_01364,Massa,1.0,5,Maligna,1,Treino
+P_01367,Massa,4.0,4,Benigna,0,Treino
+P_01371,Massa,3.0,4,Maligna,1,Treino
+P_01371,Massa,3.0,4,Maligna,1,Treino
+P_01373,Massa,3.0,4,Maligna,1,Treino
+P_01373,Massa,3.0,4,Maligna,1,Treino
+P_01374,Massa,1.0,5,Maligna,1,Treino
+P_01374,Massa,1.0,5,Maligna,1,Treino
+P_01379,Massa,4.0,4,Maligna,1,Treino
+P_01379,Massa,4.0,4,Maligna,1,Treino
+P_01382,Massa,2.0,3,Benigna,0,Treino
+P_01382,Massa,2.0,3,Benigna,0,Treino
+P_01383,Massa,2.0,4,Maligna,1,Treino
+P_01383,Massa,2.0,4,Maligna,1,Treino
+P_01386,Massa,1.0,3,Benigna sem retorno,0,Treino
+P_01388,Massa,1.0,0,Benigna,0,Treino
+P_01388,Massa,1.0,0,Benigna,0,Treino
+P_01389,Massa,2.0,3,Benigna,0,Treino
+P_01389,Massa,2.0,3,Benigna,0,Treino
+P_01391,Massa,3.0,4,Maligna,1,Treino
+P_01394,Massa,2.0,5,Maligna,1,Treino
+P_01394,Massa,2.0,5,Maligna,1,Treino
+P_01394,Massa,2.0,5,Maligna,1,Treino
+P_01394,Massa,2.0,5,Maligna,1,Treino
+P_01394,Massa,2.0,5,Maligna,1,Treino
+P_01394,Massa,2.0,5,Maligna,1,Treino
+P_01398,Massa,2.0,2,Benigna sem retorno,0,Treino
+P_01398,Massa,2.0,2,Benigna sem retorno,0,Treino
+P_01402,Massa,2.0,4,Maligna,1,Treino
+P_01405,Massa,1.0,5,Maligna,1,Treino
+P_01405,Massa,1.0,5,Maligna,1,Treino
+P_01406,Massa,3.0,3,Benigna sem retorno,0,Treino
+P_01411,Massa,3.0,4,Maligna,1,Treino
+P_01412,Massa,1.0,5,Maligna,1,Treino
+P_01412,Massa,1.0,5,Maligna,1,Treino
+P_01413,Massa,2.0,5,Maligna,1,Treino
+P_01413,Massa,2.0,5,Maligna,1,Treino
+P_01417,Massa,4.0,4,Benigna,0,Treino
+P_01418,Massa,3.0,4,Maligna,1,Treino
+P_01418,Massa,3.0,4,Maligna,1,Treino
+P_01423,Massa,2.0,0,Benigna,0,Treino
+P_01423,Massa,2.0,0,Benigna,0,Treino
+P_01426,Massa,2.0,5,Maligna,1,Treino
+P_01426,Massa,2.0,5,Maligna,1,Treino
+P_01427,Massa,3.0,5,Maligna,1,Treino
+P_01430,Massa,2.0,5,Maligna,1,Treino
+P_01431,Massa,2.0,3,Benigna,0,Treino
+P_01433,Massa,3.0,4,Maligna,1,Treino
+P_01433,Massa,3.0,4,Maligna,1,Treino
+P_01434,Massa,1.0,5,Maligna,1,Treino
+P_01434,Massa,1.0,5,Maligna,1,Treino
+P_01438,Massa,2.0,5,Maligna,1,Treino
+P_01439,Massa,3.0,4,Benigna,0,Treino
+P_01439,Massa,3.0,4,Benigna,0,Treino
+P_01441,Massa,4.0,4,Maligna,1,Treino
+P_01441,Massa,4.0,4,Maligna,1,Treino
+P_01442,Massa,3.0,4,Benigna,0,Treino
+P_01442,Massa,3.0,4,Benigna,0,Treino
+P_01444,Massa,2.0,4,Maligna,1,Treino
+P_01445,Massa,4.0,3,Maligna,1,Treino
+P_01445,Massa,4.0,3,Maligna,1,Treino
+P_01447,Massa,4.0,4,Benigna,0,Treino
+P_01447,Massa,4.0,4,Benigna,0,Treino
+P_01452,Massa,2.0,4,Benigna,0,Treino
+P_01453,Massa,3.0,4,Benigna,0,Treino
+P_01454,Massa,2.0,4,Maligna,1,Treino
+P_01461,Massa,2.0,5,Maligna,1,Treino
+P_01461,Massa,2.0,5,Maligna,1,Treino
+P_01473,Massa,2.0,4,Benigna,0,Treino
+P_01474,Massa,3.0,5,Maligna,1,Treino
+P_01474,Massa,3.0,5,Maligna,1,Treino
+P_01475,Massa,1.0,0,Benigna,0,Treino
+P_01475,Massa,1.0,0,Benigna,0,Treino
+P_01481,Massa,2.0,5,Maligna,1,Treino
+P_01481,Massa,2.0,5,Maligna,1,Treino
+P_01482,Massa,4.0,3,Benigna,0,Treino
+P_01482,Massa,4.0,3,Benigna,0,Treino
+P_01484,Massa,3.0,4,Benigna,0,Treino
+P_01485,Massa,2.0,0,Benigna,0,Treino
+P_01485,Massa,2.0,0,Benigna,0,Treino
+P_01486,Massa,2.0,0,Benigna,0,Treino
+P_01486,Massa,2.0,0,Benigna,0,Treino
+P_01491,Massa,3.0,5,Maligna,1,Treino
+P_01493,Massa,3.0,4,Maligna,1,Treino
+P_01494,Massa,2.0,4,Maligna,1,Treino
+P_01494,Massa,2.0,5,Maligna,1,Treino
+P_01494,Massa,2.0,5,Maligna,1,Treino
+P_01495,Massa,2.0,4,Benigna,0,Treino
+P_01498,Massa,1.0,3,Benigna sem retorno,0,Treino
+P_01499,Massa,3.0,3,Benigna,0,Treino
+P_01499,Massa,3.0,3,Benigna,0,Treino
+P_01501,Massa,3.0,5,Maligna,1,Treino
+P_01501,Massa,3.0,5,Maligna,1,Treino
+P_01503,Massa,3.0,4,Benigna,0,Treino
+P_01503,Massa,3.0,4,Benigna,0,Treino
+P_01504,Massa,2.0,0,Maligna,1,Treino
+P_01504,Massa,2.0,0,Maligna,1,Treino
+P_01506,Massa,3.0,4,Maligna,1,Treino
+P_01506,Massa,3.0,4,Maligna,1,Treino
+P_01508,Massa,1.0,4,Benigna,0,Treino
+P_01509,Massa,4.0,5,Maligna,1,Treino
+P_01509,Massa,4.0,5,Maligna,1,Treino
+P_01514,Massa,3.0,5,Maligna,1,Treino
+P_01514,Massa,3.0,5,Maligna,1,Treino
+P_01516,Massa,2.0,5,Benigna,0,Treino
+P_01516,Massa,2.0,5,Benigna,0,Treino
+P_01517,Massa,4.0,4,Maligna,1,Treino
+P_01529,Massa,3.0,4,Maligna,1,Treino
+P_01529,Massa,3.0,4,Maligna,1,Treino
+P_01531,Massa,2.0,3,Benigna sem retorno,0,Treino
+P_01532,Massa,1.0,4,Benigna,0,Treino
+P_01532,Massa,1.0,4,Benigna,0,Treino
+P_01540,Massa,1.0,5,Maligna,1,Treino
+P_01540,Massa,1.0,5,Maligna,1,Treino
+P_01543,Massa,2.0,3,Benigna,0,Treino
+P_01543,Massa,2.0,3,Benigna,0,Treino
+P_01544,Massa,3.0,4,Maligna,1,Treino
+P_01544,Massa,3.0,4,Maligna,1,Treino
+P_01553,Massa,3.0,4,Maligna,1,Treino
+P_01556,Massa,2.0,5,Maligna,1,Treino
+P_01557,Massa,4.0,3,Benigna,0,Treino
+P_01557,Massa,4.0,3,Benigna,0,Treino
+P_01559,Massa,1.0,5,Maligna,1,Treino
+P_01560,Massa,2.0,4,Benigna,0,Treino
+P_01560,Massa,2.0,4,Benigna,0,Treino
+P_01564,Massa,2.0,5,Maligna,1,Treino
+P_01564,Massa,2.0,4,Maligna,1,Treino
+P_01565,Massa,3.0,4,Benigna,0,Treino
+P_01565,Massa,3.0,4,Benigna,0,Treino
+P_01567,Massa,3.0,3,Benigna,0,Treino
+P_01572,Massa,1.0,4,Benigna,0,Treino
+P_01572,Massa,1.0,4,Benigna,0,Treino
+P_01573,Massa,3.0,4,Maligna,1,Treino
+P_01573,Massa,3.0,4,Maligna,1,Treino
+P_01581,Massa,2.0,4,Benigna,0,Treino
+P_01581,Massa,2.0,4,Benigna,0,Treino
+P_01583,Massa,4.0,4,Benigna,0,Treino
+P_01589,Massa,2.0,4,Maligna,1,Treino
+P_01589,Massa,2.0,4,Maligna,1,Treino
+P_01591,Massa,2.0,4,Maligna,1,Treino
+P_01591,Massa,2.0,4,Maligna,1,Treino
+P_01593,Massa,2.0,5,Maligna,1,Treino
+P_01593,Massa,2.0,5,Maligna,1,Treino
+P_01596,Massa,2.0,4,Maligna,1,Treino
+P_01596,Massa,2.0,4,Maligna,1,Treino
+P_01600,Massa,2.0,5,Maligna,1,Treino
+P_01600,Massa,2.0,5,Maligna,1,Treino
+P_01600,Massa,2.0,5,Maligna,1,Treino
+P_01604,Massa,1.0,4,Maligna,1,Treino
+P_01604,Massa,1.0,4,Maligna,1,Treino
+P_01606,Massa,2.0,5,Maligna,1,Treino
+P_01608,Massa,2.0,4,Benigna,0,Treino
+P_01608,Massa,2.0,4,Benigna,0,Treino
+P_01611,Massa,2.0,4,Benigna,0,Treino
+P_01611,Massa,2.0,4,Benigna,0,Treino
+P_01612,Massa,4.0,4,Benigna,0,Treino
+P_01612,Massa,4.0,4,Benigna,0,Treino
+P_01613,Massa,3.0,4,Benigna,0,Treino
+P_01613,Massa,3.0,4,Benigna,0,Treino
+P_01619,Massa,2.0,4,Benigna,0,Treino
+P_01619,Massa,2.0,4,Benigna,0,Treino
+P_01620,Massa,3.0,3,Benigna,0,Treino
+P_01620,Massa,3.0,3,Benigna,0,Treino
+P_01621,Massa,1.0,3,Benigna,0,Treino
+P_01621,Massa,1.0,3,Benigna,0,Treino
+P_01630,Massa,2.0,4,Benigna,0,Treino
+P_01632,Massa,1.0,3,Benigna sem retorno,0,Treino
+P_01632,Massa,1.0,3,Benigna sem retorno,0,Treino
+P_01632,Massa,1.0,3,Benigna sem retorno,0,Treino
+P_01632,Massa,1.0,3,Benigna sem retorno,0,Treino
+P_01632,Massa,1.0,4,Maligna,1,Treino
+P_01632,Massa,1.0,4,Maligna,1,Treino
+P_01633,Massa,1.0,4,Maligna,1,Treino
+P_01633,Massa,1.0,4,Maligna,1,Treino
+P_01634,Massa,3.0,3,Maligna,1,Treino
+P_01634,Massa,3.0,3,Maligna,1,Treino
+P_01635,Massa,2.0,2,Benigna sem retorno,0,Treino
+P_01635,Massa,2.0,2,Benigna sem retorno,0,Treino
+P_01635,Massa,2.0,5,Benigna sem retorno,0,Treino
+P_01635,Massa,2.0,5,Benigna sem retorno,0,Treino
+P_01636,Massa,2.0,5,Maligna,1,Treino
+P_01637,Massa,3.0,4,Benigna,0,Treino
+P_01638,Massa,4.0,0,Benigna,0,Treino
+P_01638,Massa,4.0,0,Benigna,0,Treino
+P_01641,Massa,2.0,4,Maligna,1,Treino
+P_01641,Massa,2.0,4,Maligna,1,Treino
+P_01642,Massa,2.0,5,Maligna,1,Treino
+P_01642,Massa,2.0,5,Maligna,1,Treino
+P_01644,Massa,2.0,3,Benigna,0,Treino
+P_01644,Massa,2.0,3,Benigna,0,Treino
+P_01644,Massa,2.0,5,Maligna,1,Treino
+P_01644,Massa,2.0,5,Maligna,1,Treino
+P_01646,Massa,1.0,4,Maligna,1,Treino
+P_01646,Massa,1.0,4,Maligna,1,Treino
+P_01649,Massa,3.0,3,Benigna,0,Treino
+P_01650,Massa,3.0,3,Benigna,0,Treino
+P_01650,Massa,3.0,3,Benigna,0,Treino
+P_01652,Massa,1.0,4,Maligna,1,Treino
+P_01652,Massa,1.0,4,Maligna,1,Treino
+P_01653,Massa,2.0,3,Benigna sem retorno,0,Treino
+P_01654,Massa,3.0,3,Maligna,1,Treino
+P_01654,Massa,3.0,4,Maligna,1,Treino
+P_01656,Massa,2.0,4,Maligna,1,Treino
+P_01656,Massa,2.0,5,Maligna,1,Treino
+P_01656,Massa,2.0,5,Maligna,1,Treino
+P_01656,Massa,2.0,4,Maligna,1,Treino
+P_01656,Massa,2.0,5,Maligna,1,Treino
+P_01663,Massa,4.0,3,Benigna,0,Treino
+P_01663,Massa,4.0,3,Benigna,0,Treino
+P_01668,Massa,2.0,5,Maligna,1,Treino
+P_01668,Massa,2.0,5,Maligna,1,Treino
+P_01669,Massa,4.0,5,Maligna,1,Treino
+P_01669,Massa,4.0,5,Maligna,1,Treino
+P_01671,Massa,2.0,5,Maligna,1,Treino
+P_01671,Massa,2.0,5,Maligna,1,Treino
+P_01674,Massa,3.0,4,Maligna,1,Treino
+P_01675,Massa,3.0,0,Maligna,1,Treino
+P_01675,Massa,3.0,0,Maligna,1,Treino
+P_01680,Massa,2.0,4,Benigna,0,Treino
+P_01682,Massa,3.0,5,Maligna,1,Treino
+P_01682,Massa,3.0,5,Maligna,1,Treino
+P_01685,Massa,2.0,4,Benigna,0,Treino
+P_01685,Massa,2.0,4,Benigna,0,Treino
+P_01686,Massa,2.0,0,Benigna,0,Treino
+P_01686,Massa,2.0,0,Benigna,0,Treino
+P_01687,Massa,2.0,3,Benigna,0,Treino
+P_01687,Massa,2.0,3,Benigna,0,Treino
+P_01689,Massa,3.0,4,Benigna,0,Treino
+P_01694,Massa,3.0,4,Maligna,1,Treino
+P_01694,Massa,3.0,4,Maligna,1,Treino
+P_01698,Massa,1.0,3,Benigna,0,Treino
+P_01698,Massa,1.0,3,Benigna,0,Treino
+P_01701,Massa,2.0,5,Maligna,1,Treino
+P_01701,Massa,2.0,5,Maligna,1,Treino
+P_01702,Massa,1.0,3,Benigna,0,Treino
+P_01702,Massa,1.0,3,Benigna,0,Treino
+P_01710,Massa,2.0,0,Benigna,0,Treino
+P_01710,Massa,2.0,0,Benigna,0,Treino
+P_01712,Massa,1.0,4,Benigna,0,Treino
+P_01712,Massa,1.0,4,Benigna,0,Treino
+P_01712,Massa,1.0,4,Benigna,0,Treino
+P_01712,Massa,1.0,4,Benigna,0,Treino
+P_01714,Massa,2.0,0,Benigna,0,Treino
+P_01714,Massa,2.0,0,Benigna,0,Treino
+P_01715,Massa,2.0,0,Benigna,0,Treino
+P_01715,Massa,2.0,0,Benigna,0,Treino
+P_01717,Massa,1.0,3,Benigna sem retorno,0,Treino
+P_01717,Massa,1.0,3,Benigna sem retorno,0,Treino
+P_01720,Massa,2.0,3,Benigna,0,Treino
+P_01720,Massa,2.0,3,Benigna,0,Treino
+P_01725,Massa,3.0,4,Maligna,1,Treino
+P_01725,Massa,3.0,4,Maligna,1,Treino
+P_01733,Massa,3.0,4,Benigna,0,Treino
+P_01735,Massa,2.0,0,Maligna,1,Treino
+P_01735,Massa,2.0,0,Maligna,1,Treino
+P_01737,Massa,2.0,4,Benigna,0,Treino
+P_01737,Massa,2.0,4,Benigna,0,Treino
+P_01739,Massa,1.0,3,Benigna,0,Treino
+P_01739,Massa,1.0,3,Benigna,0,Treino
+P_01739,Massa,1.0,3,Benigna,0,Treino
+P_01739,Massa,1.0,3,Benigna,0,Treino
+P_01744,Massa,2.0,4,Maligna,1,Treino
+P_01745,Massa,3.0,5,Maligna,1,Treino
+P_01749,Massa,4.0,4,Benigna,0,Treino
+P_01749,Massa,4.0,4,Benigna,0,Treino
+P_01751,Massa,2.0,3,Benigna,0,Treino
+P_01751,Massa,2.0,3,Benigna,0,Treino
+P_01753,Massa,3.0,4,Maligna,1,Treino
+P_01753,Massa,3.0,4,Maligna,1,Treino
+P_01754,Massa,1.0,5,Maligna,1,Treino
+P_01754,Massa,1.0,5,Maligna,1,Treino
+P_01755,Massa,3.0,3,Benigna sem retorno,0,Treino
+P_01755,Massa,3.0,3,Benigna sem retorno,0,Treino
+P_01757,Massa,3.0,0,Benigna,0,Treino
+P_01757,Massa,3.0,0,Benigna,0,Treino
+P_01761,Massa,1.0,5,Maligna,1,Treino
+P_01761,Massa,1.0,5,Maligna,1,Treino
+P_01768,Massa,2.0,5,Maligna,1,Treino
+P_01768,Massa,2.0,5,Maligna,1,Treino
+P_01775,Massa,2.0,5,Maligna,1,Treino
+P_01776,Massa,2.0,4,Benigna,0,Treino
+P_01776,Massa,2.0,4,Benigna,0,Treino
+P_01780,Massa,1.0,5,Maligna,1,Treino
+P_01780,Massa,1.0,5,Maligna,1,Treino
+P_01785,Massa,3.0,4,Benigna,0,Treino
+P_01785,Massa,3.0,4,Benigna,0,Treino
+P_01786,Massa,2.0,4,Benigna,0,Treino
+P_01788,Massa,2.0,4,Maligna,1,Treino
+P_01788,Massa,2.0,4,Maligna,1,Treino
+P_01790,Massa,2.0,4,Maligna,1,Treino
+P_01790,Massa,2.0,4,Maligna,1,Treino
+P_01798,Massa,2.0,3,Benigna,0,Treino
+P_01798,Massa,2.0,3,Benigna,0,Treino
+P_01799,Massa,2.0,4,Maligna,1,Treino
+P_01799,Massa,2.0,4,Maligna,1,Treino
+P_01801,Massa,1.0,4,Maligna,1,Treino
+P_01801,Massa,1.0,4,Maligna,1,Treino
+P_01802,Massa,2.0,4,Benigna,0,Treino
+P_01803,Massa,2.0,4,Maligna,1,Treino
+P_01803,Massa,2.0,5,Maligna,1,Treino
+P_01804,Massa,3.0,3,Benigna sem retorno,0,Treino
+P_01805,Massa,1.0,0,Benigna,0,Treino
+P_01805,Massa,1.0,0,Benigna,0,Treino
+P_01805,Massa,1.0,0,Benigna,0,Treino
+P_01814,Massa,4.0,5,Maligna,1,Treino
+P_01816,Massa,2.0,3,Maligna,1,Treino
+P_01816,Massa,2.0,3,Maligna,1,Treino
+P_01817,Massa,2.0,4,Benigna,0,Treino
+P_01817,Massa,2.0,4,Benigna,0,Treino
+P_01819,Massa,2.0,2,Benigna sem retorno,0,Treino
+P_01821,Massa,1.0,4,Benigna sem retorno,0,Treino
+P_01821,Massa,1.0,4,Benigna sem retorno,0,Treino
+P_01822,Massa,1.0,3,Benigna sem retorno,0,Treino
+P_01822,Massa,1.0,3,Benigna sem retorno,0,Treino
+P_01824,Massa,1.0,5,Maligna,1,Treino
+P_01824,Massa,1.0,5,Maligna,1,Treino
+P_01826,Massa,1.0,4,Benigna,0,Treino
+P_01826,Massa,1.0,4,Benigna,0,Treino
+P_01829,Massa,4.0,4,Benigna,0,Treino
+P_01831,Massa,2.0,0,Benigna,0,Treino
+P_01831,Massa,2.0,0,Benigna,0,Treino
+P_01832,Massa,1.0,5,Maligna,1,Treino
+P_01840,Massa,3.0,4,Benigna,0,Treino
+P_01841,Massa,1.0,5,Maligna,1,Treino
+P_01841,Massa,1.0,5,Maligna,1,Treino
+P_01844,Massa,2.0,5,Maligna,1,Treino
+P_01848,Massa,1.0,4,Maligna,1,Treino
+P_01848,Massa,1.0,4,Maligna,1,Treino
+P_01849,Massa,1.0,2,Benigna sem retorno,0,Treino
+P_01849,Massa,1.0,2,Benigna sem retorno,0,Treino
+P_01850,Massa,3.0,4,Benigna,0,Treino
+P_01850,Massa,3.0,4,Benigna,0,Treino
+P_01853,Massa,2.0,4,Maligna,1,Treino
+P_01853,Massa,2.0,4,Maligna,1,Treino
+P_01860,Massa,4.0,4,Maligna,1,Treino
+P_01864,Massa,2.0,2,Benigna sem retorno,0,Treino
+P_01866,Massa,2.0,0,Benigna,0,Treino
+P_01866,Massa,2.0,0,Benigna,0,Treino
+P_01876,Massa,3.0,0,Benigna,0,Treino
+P_01876,Massa,3.0,0,Benigna,0,Treino
+P_01877,Massa,1.0,0,Benigna,0,Treino
+P_01877,Massa,1.0,0,Benigna,0,Treino
+P_01878,Massa,2.0,4,Benigna,0,Treino
+P_01878,Massa,2.0,4,Benigna,0,Treino
+P_01883,Massa,2.0,4,Benigna,0,Treino
+P_01886,Massa,3.0,5,Benigna,0,Treino
+P_01887,Massa,2.0,0,Benigna,0,Treino
+P_01887,Massa,2.0,0,Benigna,0,Treino
+P_01888,Massa,2.0,5,Maligna,1,Treino
+P_01889,Massa,1.0,3,Benigna,0,Treino
+P_01889,Massa,1.0,3,Benigna,0,Treino
+P_01890,Massa,2.0,3,Maligna,1,Treino
+P_01908,Massa,2.0,3,Maligna,1,Treino
+P_01946,Massa,2.0,3,Maligna,1,Treino
+P_01946,Massa,2.0,3,Maligna,1,Treino
+P_01981,Massa,2.0,3,Maligna,1,Treino
+P_01981,Massa,2.0,3,Maligna,1,Treino
+P_01983,Massa,2.0,3,Maligna,1,Treino
+P_02033,Massa,2.0,3,Maligna,1,Treino
+P_02033,Massa,2.0,3,Maligna,1,Treino
+P_02079,Massa,2.0,3,Maligna,1,Treino
+P_02079,Massa,2.0,3,Maligna,1,Treino
+P_02092,Massa,2.0,3,Maligna,1,Treino
+P_02092,Massa,2.0,3,Maligna,1,Treino
+P_00016,Massa,4.0,5,Maligna,1,Teste
+P_00016,Massa,4.0,5,Maligna,1,Teste
+P_00017,Massa,2.0,4,Maligna,1,Teste
+P_00017,Massa,2.0,4,Maligna,1,Teste
+P_00032,Massa,3.0,0,Benigna,0,Teste
+P_00032,Massa,3.0,0,Benigna,0,Teste
+P_00037,Massa,3.0,5,Maligna,1,Teste
+P_00037,Massa,3.0,5,Maligna,1,Teste
+P_00056,Massa,3.0,3,Benigna,0,Teste
+P_00066,Massa,4.0,4,Maligna,1,Teste
+P_00066,Massa,4.0,4,Maligna,1,Teste
+P_00099,Massa,2.0,4,Benigna,0,Teste
+P_00114,Massa,3.0,4,Benigna sem retorno,0,Teste
+P_00116,Massa,2.0,5,Maligna,1,Teste
+P_00116,Massa,2.0,5,Maligna,1,Teste
+P_00116,Massa,2.0,5,Maligna,1,Teste
+P_00116,Massa,2.0,5,Maligna,1,Teste
+P_00118,Massa,1.0,5,Maligna,1,Teste
+P_00118,Massa,1.0,5,Maligna,1,Teste
+P_00124,Massa,3.0,4,Benigna,0,Teste
+P_00126,Massa,3.0,4,Benigna,0,Teste
+P_00126,Massa,3.0,4,Benigna,0,Teste
+P_00131,Massa,1.0,3,Benigna,0,Teste
+P_00131,Massa,1.0,3,Benigna,0,Teste
+P_00145,Massa,3.0,0,Benigna,0,Teste
+P_00145,Massa,3.0,0,Benigna,0,Teste
+P_00147,Massa,2.0,4,Maligna,1,Teste
+P_00147,Massa,2.0,4,Maligna,1,Teste
+P_00156,Massa,3.0,4,Benigna,0,Teste
+P_00158,Massa,2.0,3,Benigna sem retorno,0,Teste
+P_00159,Massa,2.0,3,Benigna sem retorno,0,Teste
+P_00171,Massa,3.0,4,Benigna,0,Teste
+P_00171,Massa,3.0,4,Benigna,0,Teste
+P_00173,Massa,2.0,3,Benigna,0,Teste
+P_00173,Massa,2.0,3,Benigna,0,Teste
+P_00173,Massa,2.0,3,Benigna,0,Teste
+P_00173,Massa,2.0,3,Benigna,0,Teste
+P_00173,Massa,2.0,3,Benigna,0,Teste
+P_00173,Massa,2.0,3,Benigna,0,Teste
+P_00177,Massa,1.0,4,Benigna,0,Teste
+P_00177,Massa,1.0,4,Benigna,0,Teste
+P_00192,Massa,4.0,4,Benigna,0,Teste
+P_00194,Massa,3.0,4,Maligna,1,Teste
+P_00194,Massa,3.0,4,Maligna,1,Teste
+P_00198,Massa,2.0,4,Maligna,1,Teste
+P_00198,Massa,2.0,4,Maligna,1,Teste
+P_00200,Massa,3.0,3,Benigna sem retorno,0,Teste
+P_00200,Massa,3.0,3,Benigna sem retorno,0,Teste
+P_00200,Massa,3.0,3,Benigna sem retorno,0,Teste
+P_00200,Massa,3.0,3,Benigna sem retorno,0,Teste
+P_00202,Massa,1.0,5,Maligna,1,Teste
+P_00202,Massa,1.0,5,Maligna,1,Teste
+P_00203,Massa,3.0,4,Benigna,0,Teste
+P_00203,Massa,3.0,4,Benigna,0,Teste
+P_00209,Massa,3.0,5,Maligna,1,Teste
+P_00212,Massa,3.0,4,Maligna,1,Teste
+P_00212,Massa,3.0,4,Maligna,1,Teste
+P_00230,Massa,2.0,4,Benigna,0,Teste
+P_00230,Massa,2.0,4,Benigna,0,Teste
+P_00238,Massa,3.0,2,Benigna,0,Teste
+P_00238,Massa,3.0,3,Benigna,0,Teste
+P_00278,Massa,2.0,4,Benigna,0,Teste
+P_00278,Massa,2.0,4,Benigna,0,Teste
+P_00296,Massa,2.0,5,Maligna,1,Teste
+P_00296,Massa,2.0,5,Maligna,1,Teste
+P_00324,Massa,3.0,3,Maligna,1,Teste
+P_00324,Massa,3.0,4,Maligna,1,Teste
+P_00340,Massa,4.0,3,Benigna,0,Teste
+P_00343,Massa,2.0,2,Benigna sem retorno,0,Teste
+P_00343,Massa,2.0,2,Benigna sem retorno,0,Teste
+P_00343,Massa,2.0,2,Benigna sem retorno,0,Teste
+P_00343,Massa,2.0,2,Benigna sem retorno,0,Teste
+P_00343,Massa,2.0,2,Benigna sem retorno,0,Teste
+P_00343,Massa,2.0,2,Benigna sem retorno,0,Teste
+P_00347,Massa,1.0,5,Maligna,1,Teste
+P_00347,Massa,1.0,4,Maligna,1,Teste
+P_00358,Massa,4.0,4,Benigna,0,Teste
+P_00358,Massa,4.0,4,Benigna,0,Teste
+P_00359,Massa,3.0,3,Benigna,0,Teste
+P_00369,Massa,4.0,4,Benigna,0,Teste
+P_00369,Massa,4.0,4,Benigna,0,Teste
+P_00375,Massa,2.0,5,Maligna,1,Teste
+P_00375,Massa,2.0,5,Maligna,1,Teste
+P_00379,Massa,3.0,0,Benigna,0,Teste
+P_00379,Massa,3.0,0,Benigna,0,Teste
+P_00381,Massa,2.0,0,Benigna,0,Teste
+P_00381,Massa,2.0,0,Benigna,0,Teste
+P_00387,Massa,2.0,4,Benigna,0,Teste
+P_00387,Massa,2.0,4,Benigna,0,Teste
+P_00391,Massa,4.0,4,Benigna,0,Teste
+P_00391,Massa,4.0,4,Benigna,0,Teste
+P_00391,Massa,4.0,4,Benigna,0,Teste
+P_00391,Massa,4.0,4,Benigna,0,Teste
+P_00394,Massa,2.0,2,Benigna sem retorno,0,Teste
+P_00405,Massa,4.0,3,Benigna,0,Teste
+P_00405,Massa,4.0,3,Benigna,0,Teste
+P_00409,Massa,2.0,0,Benigna,0,Teste
+P_00409,Massa,2.0,0,Benigna,0,Teste
+P_00429,Massa,2.0,4,Benigna sem retorno,0,Teste
+P_00429,Massa,2.0,4,Benigna sem retorno,0,Teste
+P_00433,Massa,2.0,3,Benigna,0,Teste
+P_00433,Massa,2.0,3,Benigna,0,Teste
+P_00457,Massa,2.0,0,Benigna,0,Teste
+P_00457,Massa,2.0,0,Benigna,0,Teste
+P_00464,Massa,3.0,4,Benigna,0,Teste
+P_00464,Massa,3.0,4,Benigna,0,Teste
+P_00470,Massa,1.0,3,Benigna,0,Teste
+P_00470,Massa,1.0,3,Benigna,0,Teste
+P_00481,Massa,2.0,4,Maligna,1,Teste
+P_00481,Massa,2.0,4,Maligna,1,Teste
+P_00482,Massa,3.0,4,Benigna,0,Teste
+P_00482,Massa,3.0,4,Benigna,0,Teste
+P_00490,Massa,3.0,4,Benigna,0,Teste
+P_00490,Massa,3.0,4,Benigna,0,Teste
+P_00493,Massa,4.0,4,Benigna,0,Teste
+P_00494,Massa,2.0,5,Benigna,0,Teste
+P_00494,Massa,2.0,5,Benigna,0,Teste
+P_00498,Massa,1.0,4,Maligna,1,Teste
+P_00498,Massa,1.0,4,Maligna,1,Teste
+P_00500,Massa,2.0,4,Maligna,1,Teste
+P_00510,Massa,2.0,2,Benigna sem retorno,0,Teste
+P_00510,Massa,2.0,2,Benigna sem retorno,0,Teste
+P_00514,Massa,2.0,4,Maligna,1,Teste
+P_00516,Massa,2.0,5,Maligna,1,Teste
+P_00516,Massa,2.0,4,Maligna,1,Teste
+P_00524,Massa,1.0,4,Maligna,1,Teste
+P_00524,Massa,1.0,4,Maligna,1,Teste
+P_00533,Massa,3.0,3,Benigna sem retorno,0,Teste
+P_00533,Massa,3.0,3,Benigna sem retorno,0,Teste
+P_00544,Massa,2.0,4,Maligna,1,Teste
+P_00544,Massa,2.0,3,Maligna,1,Teste
+P_00576,Massa,2.0,4,Maligna,1,Teste
+P_00576,Massa,2.0,4,Maligna,1,Teste
+P_00587,Massa,2.0,4,Benigna,0,Teste
+P_00587,Massa,2.0,4,Benigna,0,Teste
+P_00591,Massa,1.0,5,Maligna,1,Teste
+P_00598,Massa,2.0,5,Maligna,1,Teste
+P_00598,Massa,2.0,5,Maligna,1,Teste
+P_00601,Massa,2.0,3,Benigna,0,Teste
+P_00601,Massa,2.0,3,Benigna,0,Teste
+P_00612,Massa,3.0,3,Benigna sem retorno,0,Teste
+P_00615,Massa,2.0,4,Benigna,0,Teste
+P_00615,Massa,2.0,4,Benigna,0,Teste
+P_00623,Massa,2.0,3,Benigna,0,Teste
+P_00623,Massa,2.0,3,Benigna,0,Teste
+P_00629,Massa,3.0,5,Benigna,0,Teste
+P_00629,Massa,3.0,5,Benigna,0,Teste
+P_00636,Massa,2.0,4,Maligna,1,Teste
+P_00636,Massa,2.0,4,Maligna,1,Teste
+P_00639,Massa,2.0,2,Benigna,0,Teste
+P_00641,Massa,2.0,1,Maligna,1,Teste
+P_00641,Massa,2.0,1,Maligna,1,Teste
+P_00652,Massa,3.0,3,Benigna,0,Teste
+P_00656,Massa,1.0,5,Maligna,1,Teste
+P_00662,Massa,2.0,4,Benigna,0,Teste
+P_00662,Massa,2.0,4,Benigna,0,Teste
+P_00671,Massa,1.0,4,Benigna,0,Teste
+P_00671,Massa,1.0,4,Benigna,0,Teste
+P_00677,Massa,2.0,5,Maligna,1,Teste
+P_00677,Massa,2.0,5,Maligna,1,Teste
+P_00699,Massa,3.0,0,Benigna,0,Teste
+P_00699,Massa,3.0,0,Benigna,0,Teste
+P_00707,Massa,2.0,3,Benigna,0,Teste
+P_00707,Massa,2.0,3,Benigna,0,Teste
+P_00718,Massa,3.0,4,Benigna,0,Teste
+P_00738,Massa,2.0,4,Benigna,0,Teste
+P_00738,Massa,2.0,4,Benigna,0,Teste
+P_00741,Massa,2.0,4,Maligna,1,Teste
+P_00741,Massa,2.0,4,Maligna,1,Teste
+P_00758,Massa,3.0,4,Maligna,1,Teste
+P_00758,Massa,3.0,4,Maligna,1,Teste
+P_00766,Massa,3.0,4,Benigna,0,Teste
+P_00766,Massa,3.0,4,Benigna,0,Teste
+P_00773,Massa,4.0,4,Maligna,1,Teste
+P_00773,Massa,4.0,4,Maligna,1,Teste
+P_00788,Massa,1.0,4,Benigna,0,Teste
+P_00813,Massa,1.0,4,Maligna,1,Teste
+P_00820,Massa,3.0,5,Maligna,1,Teste
+P_00820,Massa,3.0,5,Maligna,1,Teste
+P_00820,Massa,3.0,3,Benigna,0,Teste
+P_00820,Massa,3.0,3,Benigna,0,Teste
+P_00837,Massa,4.0,4,Benigna,0,Teste
+P_00837,Massa,4.0,4,Benigna,0,Teste
+P_00875,Massa,2.0,5,Maligna,1,Teste
+P_00875,Massa,2.0,5,Maligna,1,Teste
+P_00882,Massa,2.0,4,Benigna,0,Teste
+P_00882,Massa,2.0,4,Benigna,0,Teste
+P_00893,Massa,3.0,3,Benigna sem retorno,0,Teste
+P_00893,Massa,3.0,3,Benigna sem retorno,0,Teste
+P_00922,Massa,3.0,0,Benigna,0,Teste
+P_00922,Massa,3.0,0,Benigna,0,Teste
+P_00924,Massa,1.0,2,Benigna sem retorno,0,Teste
+P_00928,Massa,2.0,3,Benigna sem retorno,0,Teste
+P_00928,Massa,2.0,3,Benigna sem retorno,0,Teste
+P_00928,Massa,2.0,3,Benigna sem retorno,0,Teste
+P_00932,Massa,2.0,4,Maligna,1,Teste
+P_00942,Massa,2.0,5,Maligna,1,Teste
+P_00947,Massa,1.0,5,Maligna,1,Teste
+P_00947,Massa,1.0,5,Maligna,1,Teste
+P_00951,Massa,1.0,4,Benigna sem retorno,0,Teste
+P_00951,Massa,1.0,5,Maligna,1,Teste
+P_00951,Massa,1.0,5,Maligna,1,Teste
+P_00962,Massa,2.0,0,Maligna,1,Teste
+P_00962,Massa,2.0,0,Maligna,1,Teste
+P_00966,Massa,1.0,3,Benigna sem retorno,0,Teste
+P_00969,Massa,3.0,3,Benigna,0,Teste
+P_00969,Massa,3.0,4,Maligna,1,Teste
+P_00969,Massa,3.0,3,Benigna,0,Teste
+P_00969,Massa,3.0,4,Maligna,1,Teste
+P_00979,Massa,3.0,4,Benigna,0,Teste
+P_00979,Massa,3.0,4,Benigna,0,Teste
+P_00980,Massa,2.0,3,Benigna,0,Teste
+P_00980,Massa,2.0,3,Benigna,0,Teste
+P_00985,Massa,2.0,5,Maligna,1,Teste
+P_00985,Massa,2.0,5,Maligna,1,Teste
+P_00986,Massa,4.0,5,Maligna,1,Teste
+P_00987,Massa,4.0,5,Maligna,1,Teste
+P_00987,Massa,4.0,5,Maligna,1,Teste
+P_01014,Massa,2.0,5,Maligna,1,Teste
+P_01014,Massa,2.0,5,Maligna,1,Teste
+P_01044,Massa,2.0,5,Maligna,1,Teste
+P_01068,Massa,2.0,4,Maligna,1,Teste
+P_01090,Massa,1.0,3,Benigna,0,Teste
+P_01090,Massa,1.0,3,Benigna,0,Teste
+P_01090,Massa,1.0,3,Benigna,0,Teste
+P_01090,Massa,1.0,2,Benigna,0,Teste
+P_01090,Massa,1.0,3,Benigna,0,Teste
+P_01090,Massa,1.0,3,Benigna,0,Teste
+P_01090,Massa,1.0,3,Benigna,0,Teste
+P_01090,Massa,1.0,3,Benigna,0,Teste
+P_01101,Massa,2.0,3,Benigna,0,Teste
+P_01106,Massa,1.0,3,Benigna,0,Teste
+P_01108,Massa,4.0,3,Benigna,0,Teste
+P_01108,Massa,4.0,3,Benigna,0,Teste
+P_01110,Massa,4.0,5,Maligna,1,Teste
+P_01114,Massa,3.0,5,Maligna,1,Teste
+P_01119,Massa,3.0,5,Maligna,1,Teste
+P_01119,Massa,3.0,5,Maligna,1,Teste
+P_01140,Massa,2.0,4,Maligna,1,Teste
+P_01140,Massa,2.0,4,Maligna,1,Teste
+P_01145,Massa,2.0,3,Benigna sem retorno,0,Teste
+P_01167,Massa,2.0,4,Maligna,1,Teste
+P_01183,Massa,2.0,4,Benigna,0,Teste
+P_01183,Massa,2.0,3,Benigna,0,Teste
+P_01187,Massa,2.0,4,Benigna,0,Teste
+P_01192,Massa,3.0,4,Benigna,0,Teste
+P_01192,Massa,3.0,4,Benigna,0,Teste
+P_01204,Massa,1.0,5,Maligna,1,Teste
+P_01204,Massa,1.0,5,Maligna,1,Teste
+P_01210,Massa,2.0,4,Maligna,1,Teste
+P_01213,Massa,2.0,4,Maligna,1,Teste
+P_01213,Massa,2.0,4,Maligna,1,Teste
+P_01235,Massa,2.0,5,Maligna,1,Teste
+P_01251,Massa,2.0,4,Benigna,0,Teste
+P_01251,Massa,2.0,4,Benigna,0,Teste
+P_01254,Massa,2.0,3,Benigna,0,Teste
+P_01254,Massa,2.0,4,Benigna,0,Teste
+P_01257,Massa,2.0,4,Benigna,0,Teste
+P_01257,Massa,2.0,4,Benigna,0,Teste
+P_01277,Massa,1.0,4,Maligna,1,Teste
+P_01277,Massa,1.0,4,Maligna,1,Teste
+P_01294,Massa,2.0,5,Maligna,1,Teste
+P_01294,Massa,2.0,5,Maligna,1,Teste
+P_01298,Massa,3.0,3,Maligna,1,Teste
+P_01298,Massa,3.0,3,Maligna,1,Teste
+P_01307,Massa,3.0,3,Benigna,0,Teste
+P_01307,Massa,3.0,3,Benigna,0,Teste
+P_01316,Massa,2.0,4,Benigna,0,Teste
+P_01316,Massa,2.0,4,Benigna,0,Teste
+P_01322,Massa,4.0,4,Benigna,0,Teste
+P_01322,Massa,4.0,4,Benigna,0,Teste
+P_01323,Massa,2.0,4,Maligna,1,Teste
+P_01323,Massa,2.0,4,Maligna,1,Teste
+P_01331,Massa,2.0,3,Benigna sem retorno,0,Teste
+P_01331,Massa,2.0,3,Benigna sem retorno,0,Teste
+P_01333,Massa,2.0,5,Maligna,1,Teste
+P_01333,Massa,2.0,5,Maligna,1,Teste
+P_01347,Massa,4.0,5,Maligna,1,Teste
+P_01347,Massa,4.0,5,Maligna,1,Teste
+P_01348,Massa,2.0,4,Maligna,1,Teste
+P_01351,Massa,2.0,0,Maligna,1,Teste
+P_01365,Massa,4.0,3,Benigna sem retorno,0,Teste
+P_01378,Massa,3.0,0,Benigna,0,Teste
+P_01378,Massa,3.0,0,Benigna,0,Teste
+P_01378,Massa,3.0,0,Benigna,0,Teste
+P_01381,Massa,2.0,3,Benigna sem retorno,0,Teste
+P_01381,Massa,2.0,3,Benigna sem retorno,0,Teste
+P_01395,Massa,1.0,3,Benigna,0,Teste
+P_01395,Massa,1.0,3,Benigna,0,Teste
+P_01416,Massa,1.0,4,Benigna,0,Teste
+P_01416,Massa,1.0,4,Benigna,0,Teste
+P_01467,Massa,3.0,4,Maligna,1,Teste
+P_01477,Massa,2.0,4,Benigna,0,Teste
+P_01489,Massa,3.0,5,Maligna,1,Teste
+P_01502,Massa,2.0,4,Benigna,0,Teste
+P_01502,Massa,2.0,4,Benigna,0,Teste
+P_01510,Massa,4.0,4,Benigna,0,Teste
+P_01510,Massa,4.0,4,Benigna,0,Teste
+P_01512,Massa,3.0,4,Benigna,0,Teste
+P_01512,Massa,3.0,4,Benigna,0,Teste
+P_01518,Massa,4.0,4,Benigna,0,Teste
+P_01518,Massa,4.0,4,Benigna,0,Teste
+P_01534,Massa,3.0,4,Maligna,1,Teste
+P_01534,Massa,3.0,4,Maligna,1,Teste
+P_01539,Massa,2.0,4,Benigna,0,Teste
+P_01539,Massa,2.0,4,Benigna,0,Teste
+P_01546,Massa,3.0,4,Maligna,1,Teste
+P_01546,Massa,3.0,4,Maligna,1,Teste
+P_01551,Massa,2.0,0,Benigna,0,Teste
+P_01551,Massa,2.0,0,Benigna,0,Teste
+P_01558,Massa,2.0,5,Maligna,1,Teste
+P_01558,Massa,2.0,5,Maligna,1,Teste
+P_01566,Massa,3.0,3,Benigna,0,Teste
+P_01566,Massa,3.0,3,Benigna,0,Teste
+P_01566,Massa,3.0,3,Benigna,0,Teste
+P_01566,Massa,3.0,3,Benigna,0,Teste
+P_01566,Massa,3.0,3,Benigna,0,Teste
+P_01578,Massa,2.0,3,Benigna,0,Teste
+P_01590,Massa,3.0,4,Benigna,0,Teste
+P_01590,Massa,3.0,4,Benigna,0,Teste
+P_01595,Massa,2.0,0,Benigna,0,Teste
+P_01595,Massa,2.0,0,Benigna,0,Teste
+P_01599,Massa,2.0,4,Benigna,0,Teste
+P_01599,Massa,2.0,4,Benigna,0,Teste
+P_01605,Massa,3.0,3,Benigna,0,Teste
+P_01614,Massa,2.0,4,Benigna,0,Teste
+P_01617,Massa,2.0,5,Maligna,1,Teste
+P_01617,Massa,2.0,5,Maligna,1,Teste
+P_01623,Massa,3.0,5,Maligna,1,Teste
+P_01623,Massa,3.0,5,Benigna,0,Teste
+P_01640,Massa,4.0,5,Maligna,1,Teste
+P_01645,Massa,4.0,4,Benigna,0,Teste
+P_01651,Massa,2.0,5,Maligna,1,Teste
+P_01651,Massa,2.0,5,Maligna,1,Teste
+P_01661,Massa,3.0,4,Maligna,1,Teste
+P_01661,Massa,3.0,4,Maligna,1,Teste
+P_01666,Massa,2.0,4,Maligna,1,Teste
+P_01666,Massa,2.0,4,Maligna,1,Teste
+P_01673,Massa,2.0,0,Benigna,0,Teste
+P_01673,Massa,2.0,0,Benigna,0,Teste
+P_01677,Massa,4.0,3,Benigna,0,Teste
+P_01684,Massa,2.0,4,Benigna,0,Teste
+P_01684,Massa,2.0,4,Benigna,0,Teste
+P_01690,Massa,3.0,0,Benigna,0,Teste
+P_01690,Massa,3.0,0,Benigna,0,Teste
+P_01697,Massa,2.0,4,Benigna,0,Teste
+P_01697,Massa,2.0,3,Benigna,0,Teste
+P_01716,Massa,3.0,4,Benigna,0,Teste
+P_01716,Massa,3.0,4,Benigna,0,Teste
+P_01719,Massa,3.0,4,Maligna,1,Teste
+P_01719,Massa,3.0,4,Maligna,1,Teste
+P_01726,Massa,1.0,4,Benigna,0,Teste
+P_01726,Massa,1.0,4,Benigna,0,Teste
+P_01741,Massa,2.0,4,Maligna,1,Teste
+P_01741,Massa,2.0,4,Maligna,1,Teste
+P_01765,Massa,3.0,0,Benigna,0,Teste
+P_01765,Massa,3.0,0,Benigna,0,Teste
+P_01778,Massa,2.0,5,Maligna,1,Teste
+P_01787,Massa,1.0,5,Maligna,1,Teste
+P_01787,Massa,1.0,5,Maligna,1,Teste
+P_01795,Massa,3.0,4,Benigna,0,Teste
+P_01795,Massa,3.0,4,Benigna,0,Teste
+P_01796,Massa,4.0,4,Benigna,0,Teste
+P_01796,Massa,4.0,4,Benigna,0,Teste
+P_01797,Massa,2.0,4,Benigna,0,Teste
+P_01797,Massa,2.0,4,Benigna,0,Teste
+P_01800,Massa,4.0,2,Maligna,1,Teste
+P_01800,Massa,4.0,4,Maligna,1,Teste
+P_01800,Massa,4.0,3,Benigna,0,Teste
+P_01807,Massa,3.0,0,Benigna,0,Teste
+P_01815,Massa,3.0,4,Maligna,1,Teste
+P_01815,Massa,3.0,4,Maligna,1,Teste
+P_01825,Massa,2.0,3,Benigna sem retorno,0,Teste
+P_01825,Massa,2.0,3,Benigna sem retorno,0,Teste
+P_01833,Massa,2.0,5,Maligna,1,Teste
+P_01865,Massa,2.0,4,Maligna,1,Teste
+P_01912,Massa,3.0,5,Maligna,1,Teste
+P_01912,Massa,3.0,5,Maligna,1,Teste
+P_00005,Calcificação,3.0,3,Maligna,1,Treino
+P_00005,Calcificação,3.0,3,Maligna,1,Treino
+P_00007,Calcificação,4.0,4,Benigna,0,Treino
+P_00007,Calcificação,4.0,4,Benigna,0,Treino
+P_00008,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_00008,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_00008,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_00008,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_00008,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_00008,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_00008,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_00008,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_00008,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_00008,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_00008,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_00008,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_00008,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_00008,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_00008,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_00008,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_00010,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00010,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00011,Calcificação,3.0,4,Benigna,0,Treino
+P_00011,Calcificação,3.0,4,Benigna,0,Treino
+P_00012,Calcificação,2.0,4,Maligna,1,Treino
+P_00012,Calcificação,2.0,4,Maligna,1,Treino
+P_00013,Calcificação,4.0,4,Benigna,0,Treino
+P_00014,Calcificação,4.0,4,Maligna,1,Treino
+P_00014,Calcificação,4.0,4,Maligna,1,Treino
+P_00016,Calcificação,4.0,5,Maligna,1,Treino
+P_00016,Calcificação,4.0,5,Maligna,1,Treino
+P_00019,Calcificação,4.0,4,Benigna,0,Treino
+P_00019,Calcificação,4.0,4,Benigna,0,Treino
+P_00020,Calcificação,2.0,4,Maligna,1,Treino
+P_00020,Calcificação,2.0,4,Maligna,1,Treino
+P_00022,Calcificação,3.0,4,Benigna,0,Treino
+P_00022,Calcificação,3.0,4,Benigna,0,Treino
+P_00024,Calcificação,4.0,4,Benigna,0,Treino
+P_00024,Calcificação,4.0,4,Benigna,0,Treino
+P_00028,Calcificação,4.0,4,Benigna,0,Treino
+P_00029,Calcificação,3.0,4,Maligna,1,Treino
+P_00029,Calcificação,3.0,4,Maligna,1,Treino
+P_00030,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00030,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00030,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00030,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00030,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00030,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00031,Calcificação,4.0,4,Maligna,1,Treino
+P_00034,Calcificação,3.0,4,Maligna,1,Treino
+P_00034,Calcificação,3.0,4,Maligna,1,Treino
+P_00043,Calcificação,3.0,4,Maligna,1,Treino
+P_00047,Calcificação,2.0,4,Maligna,1,Treino
+P_00047,Calcificação,2.0,4,Maligna,1,Treino
+P_00047,Calcificação,2.0,4,Maligna,1,Treino
+P_00047,Calcificação,2.0,4,Maligna,1,Treino
+P_00047,Calcificação,2.0,4,Maligna,1,Treino
+P_00047,Calcificação,2.0,4,Maligna,1,Treino
+P_00048,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_00048,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_00048,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_00048,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_00049,Calcificação,4.0,4,Maligna,1,Treino
+P_00049,Calcificação,4.0,4,Maligna,1,Treino
+P_00060,Calcificação,3.0,4,Benigna,0,Treino
+P_00060,Calcificação,3.0,4,Benigna,0,Treino
+P_00062,Calcificação,3.0,4,Benigna,0,Treino
+P_00062,Calcificação,3.0,4,Benigna,0,Treino
+P_00063,Calcificação,2.0,5,Maligna,1,Treino
+P_00063,Calcificação,2.0,5,Maligna,1,Treino
+P_00071,Calcificação,2.0,3,Benigna,0,Treino
+P_00071,Calcificação,2.0,3,Benigna,0,Treino
+P_00078,Calcificação,2.0,4,Maligna,1,Treino
+P_00078,Calcificação,2.0,4,Maligna,1,Treino
+P_00083,Calcificação,4.0,4,Benigna,0,Treino
+P_00084,Calcificação,3.0,4,Maligna,1,Treino
+P_00084,Calcificação,3.0,4,Maligna,1,Treino
+P_00085,Calcificação,2.0,3,Maligna,1,Treino
+P_00085,Calcificação,2.0,3,Maligna,1,Treino
+P_00088,Calcificação,4.0,4,Maligna,1,Treino
+P_00088,Calcificação,4.0,4,Maligna,1,Treino
+P_00091,Calcificação,3.0,4,Benigna,0,Treino
+P_00091,Calcificação,3.0,4,Benigna,0,Treino
+P_00098,Calcificação,4.0,2,Benigna sem retorno,0,Treino
+P_00098,Calcificação,4.0,2,Benigna sem retorno,0,Treino
+P_00098,Calcificação,4.0,2,Benigna sem retorno,0,Treino
+P_00098,Calcificação,4.0,2,Benigna sem retorno,0,Treino
+P_00098,Calcificação,4.0,2,Benigna sem retorno,0,Treino
+P_00098,Calcificação,4.0,2,Benigna sem retorno,0,Treino
+P_00101,Calcificação,3.0,5,Maligna,1,Treino
+P_00101,Calcificação,3.0,5,Maligna,1,Treino
+P_00105,Calcificação,3.0,4,Benigna,0,Treino
+P_00105,Calcificação,3.0,4,Benigna,0,Treino
+P_00106,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_00106,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_00112,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00112,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00112,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00112,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00112,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00112,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00112,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00112,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00112,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00112,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00112,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00112,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00112,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00112,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00112,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00112,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00112,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00112,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00112,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00112,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00112,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00112,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00112,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00121,Calcificação,2.0,4,Maligna,1,Treino
+P_00121,Calcificação,2.0,4,Maligna,1,Treino
+P_00123,Calcificação,3.0,4,Benigna,0,Treino
+P_00123,Calcificação,3.0,4,Benigna,0,Treino
+P_00129,Calcificação,2.0,4,Benigna,0,Treino
+P_00129,Calcificação,2.0,4,Benigna,0,Treino
+P_00136,Calcificação,3.0,5,Maligna,1,Treino
+P_00136,Calcificação,3.0,5,Maligna,1,Treino
+P_00136,Calcificação,3.0,5,Maligna,1,Treino
+P_00151,Calcificação,4.0,4,Benigna,0,Treino
+P_00157,Calcificação,3.0,4,Maligna,1,Treino
+P_00157,Calcificação,3.0,4,Maligna,1,Treino
+P_00157,Calcificação,3.0,4,Maligna,1,Treino
+P_00157,Calcificação,3.0,4,Maligna,1,Treino
+P_00157,Calcificação,3.0,4,Maligna,1,Treino
+P_00159,Calcificação,2.0,4,Benigna sem retorno,0,Treino
+P_00159,Calcificação,2.0,4,Benigna sem retorno,0,Treino
+P_00161,Calcificação,4.0,4,Benigna,0,Treino
+P_00162,Calcificação,2.0,4,Maligna,1,Treino
+P_00162,Calcificação,2.0,4,Maligna,1,Treino
+P_00179,Calcificação,3.0,4,Benigna,0,Treino
+P_00179,Calcificação,3.0,4,Benigna,0,Treino
+P_00181,Calcificação,4.0,4,Benigna,0,Treino
+P_00181,Calcificação,4.0,4,Benigna,0,Treino
+P_00182,Calcificação,2.0,0,Benigna,0,Treino
+P_00182,Calcificação,2.0,0,Benigna,0,Treino
+P_00183,Calcificação,3.0,4,Benigna,0,Treino
+P_00185,Calcificação,2.0,4,Benigna,0,Treino
+P_00185,Calcificação,2.0,4,Benigna,0,Treino
+P_00188,Calcificação,3.0,5,Maligna,1,Treino
+P_00189,Calcificação,4.0,4,Maligna,1,Treino
+P_00189,Calcificação,4.0,4,Maligna,1,Treino
+P_00196,Calcificação,4.0,3,Benigna,0,Treino
+P_00196,Calcificação,4.0,3,Benigna,0,Treino
+P_00197,Calcificação,1.0,4,Benigna,0,Treino
+P_00197,Calcificação,1.0,4,Benigna,0,Treino
+P_00201,Calcificação,3.0,4,Maligna,1,Treino
+P_00208,Calcificação,3.0,4,Benigna,0,Treino
+P_00208,Calcificação,3.0,4,Benigna,0,Treino
+P_00208,Calcificação,3.0,4,Benigna,0,Treino
+P_00208,Calcificação,3.0,4,Benigna,0,Treino
+P_00220,Calcificação,3.0,4,Benigna,0,Treino
+P_00220,Calcificação,3.0,4,Benigna,0,Treino
+P_00224,Calcificação,3.0,4,Benigna,0,Treino
+P_00224,Calcificação,3.0,4,Benigna,0,Treino
+P_00232,Calcificação,4.0,4,Maligna,1,Treino
+P_00232,Calcificação,4.0,4,Maligna,1,Treino
+P_00243,Calcificação,4.0,4,Maligna,1,Treino
+P_00243,Calcificação,4.0,4,Maligna,1,Treino
+P_00245,Calcificação,3.0,4,Benigna,0,Treino
+P_00250,Calcificação,4.0,4,Benigna,0,Treino
+P_00251,Calcificação,3.0,4,Maligna,1,Treino
+P_00251,Calcificação,3.0,4,Maligna,1,Treino
+P_00255,Calcificação,4.0,4,Benigna,0,Treino
+P_00255,Calcificação,4.0,4,Benigna,0,Treino
+P_00256,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00256,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00260,Calcificação,2.0,4,Benigna,0,Treino
+P_00260,Calcificação,2.0,4,Benigna,0,Treino
+P_00263,Calcificação,2.0,4,Maligna,1,Treino
+P_00266,Calcificação,2.0,5,Maligna,1,Treino
+P_00266,Calcificação,2.0,5,Maligna,1,Treino
+P_00268,Calcificação,2.0,3,Maligna,1,Treino
+P_00268,Calcificação,2.0,3,Maligna,1,Treino
+P_00269,Calcificação,3.0,4,Benigna,0,Treino
+P_00269,Calcificação,3.0,4,Benigna,0,Treino
+P_00270,Calcificação,4.0,4,Benigna,0,Treino
+P_00270,Calcificação,4.0,4,Benigna,0,Treino
+P_00271,Calcificação,1.0,5,Maligna,1,Treino
+P_00271,Calcificação,1.0,5,Maligna,1,Treino
+P_00274,Calcificação,2.0,4,Benigna,0,Treino
+P_00275,Calcificação,3.0,4,Maligna,1,Treino
+P_00275,Calcificação,3.0,4,Maligna,1,Treino
+P_00276,Calcificação,3.0,4,Benigna,0,Treino
+P_00276,Calcificação,3.0,4,Benigna,0,Treino
+P_00280,Calcificação,2.0,4,Maligna,1,Treino
+P_00280,Calcificação,2.0,4,Maligna,1,Treino
+P_00282,Calcificação,3.0,4,Benigna,0,Treino
+P_00282,Calcificação,3.0,2,Benigna,0,Treino
+P_00284,Calcificação,2.0,4,Benigna,0,Treino
+P_00284,Calcificação,2.0,3,Benigna,0,Treino
+P_00284,Calcificação,2.0,3,Benigna,0,Treino
+P_00284,Calcificação,2.0,4,Benigna,0,Treino
+P_00288,Calcificação,1.0,4,Maligna,1,Treino
+P_00288,Calcificação,1.0,4,Maligna,1,Treino
+P_00291,Calcificação,3.0,4,Benigna,0,Treino
+P_00291,Calcificação,3.0,4,Benigna,0,Treino
+P_00291,Calcificação,3.0,4,Benigna,0,Treino
+P_00291,Calcificação,3.0,4,Benigna,0,Treino
+P_00291,Calcificação,3.0,4,Benigna,0,Treino
+P_00291,Calcificação,3.0,4,Benigna,0,Treino
+P_00291,Calcificação,3.0,4,Benigna,0,Treino
+P_00293,Calcificação,4.0,4,Maligna,1,Treino
+P_00293,Calcificação,4.0,4,Maligna,1,Treino
+P_00297,Calcificação,2.0,4,Benigna,0,Treino
+P_00297,Calcificação,2.0,4,Benigna,0,Treino
+P_00302,Calcificação,2.0,4,Benigna,0,Treino
+P_00302,Calcificação,2.0,4,Benigna,0,Treino
+P_00302,Calcificação,2.0,4,Benigna,0,Treino
+P_00302,Calcificação,2.0,4,Benigna,0,Treino
+P_00302,Calcificação,2.0,4,Benigna,0,Treino
+P_00302,Calcificação,2.0,4,Benigna,0,Treino
+P_00307,Calcificação,2.0,5,Maligna,1,Treino
+P_00307,Calcificação,2.0,4,Maligna,1,Treino
+P_00308,Calcificação,3.0,4,Benigna,0,Treino
+P_00308,Calcificação,3.0,4,Benigna,0,Treino
+P_00311,Calcificação,4.0,4,Benigna,0,Treino
+P_00312,Calcificação,4.0,4,Benigna,0,Treino
+P_00316,Calcificação,4.0,4,Maligna,1,Treino
+P_00316,Calcificação,4.0,4,Maligna,1,Treino
+P_00318,Calcificação,4.0,4,Benigna,0,Treino
+P_00321,Calcificação,1.0,4,Maligna,1,Treino
+P_00321,Calcificação,1.0,4,Maligna,1,Treino
+P_00322,Calcificação,2.0,4,Benigna,0,Treino
+P_00322,Calcificação,2.0,4,Benigna,0,Treino
+P_00326,Calcificação,4.0,4,Benigna,0,Treino
+P_00336,Calcificação,4.0,4,Benigna,0,Treino
+P_00336,Calcificação,4.0,4,Benigna,0,Treino
+P_00337,Calcificação,4.0,4,Benigna,0,Treino
+P_00337,Calcificação,4.0,4,Benigna,0,Treino
+P_00339,Calcificação,2.0,5,Maligna,1,Treino
+P_00339,Calcificação,2.0,5,Maligna,1,Treino
+P_00346,Calcificação,3.0,4,Benigna,0,Treino
+P_00346,Calcificação,3.0,3,Benigna,0,Treino
+P_00349,Calcificação,2.0,3,Benigna,0,Treino
+P_00349,Calcificação,2.0,3,Benigna,0,Treino
+P_00355,Calcificação,1.0,5,Benigna,0,Treino
+P_00355,Calcificação,1.0,5,Benigna,0,Treino
+P_00357,Calcificação,3.0,4,Benigna,0,Treino
+P_00360,Calcificação,4.0,4,Benigna,0,Treino
+P_00360,Calcificação,4.0,4,Benigna,0,Treino
+P_00364,Calcificação,1.0,4,Benigna,0,Treino
+P_00364,Calcificação,1.0,4,Benigna,0,Treino
+P_00373,Calcificação,4.0,4,Benigna,0,Treino
+P_00373,Calcificação,4.0,4,Benigna,0,Treino
+P_00377,Calcificação,4.0,4,Benigna,0,Treino
+P_00377,Calcificação,4.0,4,Benigna,0,Treino
+P_00377,Calcificação,4.0,4,Benigna,0,Treino
+P_00378,Calcificação,4.0,4,Benigna,0,Treino
+P_00378,Calcificação,4.0,4,Benigna,0,Treino
+P_00380,Calcificação,2.0,4,Benigna,0,Treino
+P_00380,Calcificação,2.0,4,Benigna,0,Treino
+P_00385,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00385,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00385,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00385,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00385,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00385,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00385,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00385,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00385,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00385,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00385,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00385,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00392,Calcificação,3.0,4,Maligna,1,Treino
+P_00392,Calcificação,3.0,4,Maligna,1,Treino
+P_00393,Calcificação,2.0,4,Benigna,0,Treino
+P_00394,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00394,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00395,Calcificação,1.0,4,Benigna,0,Treino
+P_00395,Calcificação,1.0,4,Benigna,0,Treino
+P_00395,Calcificação,1.0,4,Benigna,0,Treino
+P_00395,Calcificação,1.0,4,Benigna,0,Treino
+P_00395,Calcificação,1.0,4,Benigna,0,Treino
+P_00395,Calcificação,1.0,4,Benigna,0,Treino
+P_00398,Calcificação,3.0,3,Benigna,0,Treino
+P_00398,Calcificação,3.0,4,Benigna,0,Treino
+P_00400,Calcificação,4.0,4,Benigna,0,Treino
+P_00400,Calcificação,4.0,4,Benigna,0,Treino
+P_00404,Calcificação,2.0,4,Maligna,1,Treino
+P_00410,Calcificação,3.0,4,Maligna,1,Treino
+P_00410,Calcificação,3.0,4,Maligna,1,Treino
+P_00418,Calcificação,3.0,4,Maligna,1,Treino
+P_00418,Calcificação,3.0,4,Maligna,1,Treino
+P_00418,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00418,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00422,Calcificação,3.0,4,Maligna,1,Treino
+P_00422,Calcificação,3.0,3,Maligna,1,Treino
+P_00425,Calcificação,1.0,2,Benigna,0,Treino
+P_00425,Calcificação,1.0,2,Benigna,0,Treino
+P_00432,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_00432,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_00432,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_00432,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_00438,Calcificação,4.0,4,Maligna,1,Treino
+P_00438,Calcificação,4.0,4,Maligna,1,Treino
+P_00443,Calcificação,2.0,5,Maligna,1,Treino
+P_00445,Calcificação,2.0,5,Maligna,1,Treino
+P_00447,Calcificação,3.0,4,Benigna,0,Treino
+P_00447,Calcificação,3.0,4,Benigna,0,Treino
+P_00448,Calcificação,3.0,4,Benigna,0,Treino
+P_00448,Calcificação,3.0,4,Benigna,0,Treino
+P_00452,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00452,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00452,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00452,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00452,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00452,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00452,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00452,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00455,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_00455,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_00455,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_00455,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_00455,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_00455,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_00455,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_00455,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_00456,Calcificação,3.0,0,Benigna,0,Treino
+P_00456,Calcificação,3.0,0,Benigna,0,Treino
+P_00458,Calcificação,3.0,4,Benigna,0,Treino
+P_00467,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00467,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00467,Calcificação,3.0,4,Maligna,1,Treino
+P_00467,Calcificação,3.0,4,Maligna,1,Treino
+P_00469,Calcificação,3.0,4,Benigna,0,Treino
+P_00469,Calcificação,3.0,4,Benigna,0,Treino
+P_00471,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00471,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00471,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00471,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00471,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00471,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00473,Calcificação,4.0,4,Maligna,1,Treino
+P_00473,Calcificação,4.0,4,Maligna,1,Treino
+P_00474,Calcificação,4.0,5,Maligna,1,Treino
+P_00474,Calcificação,4.0,5,Maligna,1,Treino
+P_00476,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00476,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00476,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00476,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00476,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00476,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00476,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00476,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00479,Calcificação,3.0,5,Maligna,1,Treino
+P_00479,Calcificação,3.0,5,Maligna,1,Treino
+P_00480,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00480,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00480,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00480,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00480,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00480,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00484,Calcificação,2.0,4,Maligna,1,Treino
+P_00484,Calcificação,2.0,4,Maligna,1,Treino
+P_00486,Calcificação,1.0,4,Benigna,0,Treino
+P_00486,Calcificação,1.0,4,Benigna,0,Treino
+P_00491,Calcificação,3.0,4,Benigna,0,Treino
+P_00502,Calcificação,4.0,4,Maligna,1,Treino
+P_00502,Calcificação,4.0,4,Maligna,1,Treino
+P_00503,Calcificação,4.0,4,Benigna,0,Treino
+P_00503,Calcificação,4.0,4,Benigna,0,Treino
+P_00505,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_00505,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_00505,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_00505,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_00505,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_00505,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_00505,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_00506,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00506,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00508,Calcificação,3.0,4,Benigna,0,Treino
+P_00508,Calcificação,3.0,4,Benigna,0,Treino
+P_00510,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00510,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00510,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00510,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00510,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00510,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00510,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00510,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00510,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00510,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00510,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00510,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00519,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00519,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00520,Calcificação,2.0,4,Benigna,0,Treino
+P_00520,Calcificação,2.0,4,Benigna,0,Treino
+P_00522,Calcificação,2.0,3,Benigna,0,Treino
+P_00522,Calcificação,2.0,3,Benigna,0,Treino
+P_00523,Calcificação,2.0,5,Maligna,1,Treino
+P_00523,Calcificação,2.0,5,Maligna,1,Treino
+P_00527,Calcificação,3.0,5,Maligna,1,Treino
+P_00529,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00529,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00529,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00529,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00529,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00530,Calcificação,2.0,4,Maligna,1,Treino
+P_00530,Calcificação,2.0,4,Maligna,1,Treino
+P_00531,Calcificação,2.0,4,Benigna,0,Treino
+P_00531,Calcificação,2.0,4,Benigna,0,Treino
+P_00534,Calcificação,3.0,5,Maligna,1,Treino
+P_00534,Calcificação,3.0,5,Maligna,1,Treino
+P_00538,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00538,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00538,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00538,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00539,Calcificação,3.0,4,Maligna,1,Treino
+P_00539,Calcificação,3.0,4,Maligna,1,Treino
+P_00539,Calcificação,3.0,4,Maligna,1,Treino
+P_00539,Calcificação,3.0,4,Maligna,1,Treino
+P_00539,Calcificação,3.0,4,Maligna,1,Treino
+P_00539,Calcificação,3.0,4,Maligna,1,Treino
+P_00546,Calcificação,3.0,4,Maligna,1,Treino
+P_00548,Calcificação,4.0,4,Benigna,0,Treino
+P_00548,Calcificação,4.0,4,Benigna,0,Treino
+P_00548,Calcificação,4.0,4,Benigna,0,Treino
+P_00548,Calcificação,4.0,4,Benigna,0,Treino
+P_00548,Calcificação,4.0,4,Benigna,0,Treino
+P_00548,Calcificação,4.0,4,Benigna,0,Treino
+P_00551,Calcificação,2.0,4,Maligna,1,Treino
+P_00551,Calcificação,2.0,4,Maligna,1,Treino
+P_00552,Calcificação,4.0,4,Maligna,1,Treino
+P_00555,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00555,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00555,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00555,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00556,Calcificação,4.0,4,Benigna,0,Treino
+P_00556,Calcificação,4.0,4,Benigna,0,Treino
+P_00557,Calcificação,2.0,4,Benigna,0,Treino
+P_00557,Calcificação,2.0,4,Benigna,0,Treino
+P_00557,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00557,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00557,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00557,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00557,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00557,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00557,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00558,Calcificação,4.0,4,Benigna,0,Treino
+P_00558,Calcificação,4.0,4,Benigna,0,Treino
+P_00558,Calcificação,4.0,4,Benigna,0,Treino
+P_00559,Calcificação,2.0,4,Maligna,1,Treino
+P_00559,Calcificação,2.0,4,Maligna,1,Treino
+P_00559,Calcificação,2.0,4,Maligna,1,Treino
+P_00559,Calcificação,2.0,4,Maligna,1,Treino
+P_00563,Calcificação,4.0,4,Maligna,1,Treino
+P_00571,Calcificação,2.0,4,Benigna,0,Treino
+P_00571,Calcificação,2.0,4,Benigna,0,Treino
+P_00573,Calcificação,1.0,5,Maligna,1,Treino
+P_00573,Calcificação,1.0,5,Maligna,1,Treino
+P_00574,Calcificação,1.0,5,Maligna,1,Treino
+P_00574,Calcificação,1.0,5,Maligna,1,Treino
+P_00578,Calcificação,4.0,4,Benigna,0,Treino
+P_00578,Calcificação,4.0,4,Benigna,0,Treino
+P_00582,Calcificação,3.0,5,Maligna,1,Treino
+P_00583,Calcificação,4.0,4,Benigna,0,Treino
+P_00583,Calcificação,4.0,4,Benigna,0,Treino
+P_00584,Calcificação,1.0,5,Maligna,1,Treino
+P_00585,Calcificação,1.0,4,Benigna,0,Treino
+P_00585,Calcificação,1.0,4,Benigna,0,Treino
+P_00591,Calcificação,1.0,5,Maligna,1,Treino
+P_00591,Calcificação,1.0,5,Maligna,1,Treino
+P_00591,Calcificação,1.0,5,Maligna,1,Treino
+P_00591,Calcificação,1.0,5,Maligna,1,Treino
+P_00593,Calcificação,4.0,4,Benigna,0,Treino
+P_00593,Calcificação,4.0,4,Benigna,0,Treino
+P_00594,Calcificação,2.0,4,Maligna,1,Treino
+P_00594,Calcificação,2.0,4,Maligna,1,Treino
+P_00595,Calcificação,4.0,4,Maligna,1,Treino
+P_00595,Calcificação,4.0,4,Maligna,1,Treino
+P_00597,Calcificação,4.0,3,Benigna,0,Treino
+P_00597,Calcificação,4.0,3,Benigna,0,Treino
+P_00600,Calcificação,3.0,4,Benigna,0,Treino
+P_00600,Calcificação,3.0,4,Maligna,1,Treino
+P_00600,Calcificação,3.0,4,Benigna,0,Treino
+P_00600,Calcificação,3.0,4,Maligna,1,Treino
+P_00601,Calcificação,2.0,5,Maligna,1,Treino
+P_00601,Calcificação,2.0,5,Maligna,1,Treino
+P_00606,Calcificação,3.0,4,Maligna,1,Treino
+P_00606,Calcificação,3.0,4,Maligna,1,Treino
+P_00609,Calcificação,3.0,4,Maligna,1,Treino
+P_00609,Calcificação,3.0,4,Maligna,1,Treino
+P_00613,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00613,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00621,Calcificação,3.0,4,Benigna,0,Treino
+P_00621,Calcificação,3.0,4,Benigna,0,Treino
+P_00624,Calcificação,3.0,0,Benigna,0,Treino
+P_00624,Calcificação,3.0,0,Benigna,0,Treino
+P_00624,Calcificação,3.0,0,Benigna,0,Treino
+P_00624,Calcificação,3.0,0,Benigna,0,Treino
+P_00625,Calcificação,4.0,4,Benigna,0,Treino
+P_00627,Calcificação,2.0,4,Benigna,0,Treino
+P_00631,Calcificação,3.0,4,Maligna,1,Treino
+P_00631,Calcificação,3.0,4,Maligna,1,Treino
+P_00633,Calcificação,4.0,4,Benigna,0,Treino
+P_00635,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00635,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00635,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00635,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00635,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00635,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00638,Calcificação,3.0,4,Maligna,1,Treino
+P_00638,Calcificação,3.0,4,Maligna,1,Treino
+P_00639,Calcificação,2.0,4,Maligna,1,Treino
+P_00639,Calcificação,2.0,4,Maligna,1,Treino
+P_00642,Calcificação,2.0,2,Benigna,0,Treino
+P_00642,Calcificação,2.0,2,Benigna,0,Treino
+P_00642,Calcificação,2.0,4,Benigna,0,Treino
+P_00642,Calcificação,2.0,4,Benigna,0,Treino
+P_00645,Calcificação,3.0,4,Benigna,0,Treino
+P_00647,Calcificação,4.0,4,Benigna,0,Treino
+P_00647,Calcificação,4.0,4,Benigna,0,Treino
+P_00652,Calcificação,3.0,4,Maligna,1,Treino
+P_00652,Calcificação,3.0,4,Maligna,1,Treino
+P_00654,Calcificação,3.0,5,Maligna,1,Treino
+P_00654,Calcificação,3.0,4,Maligna,1,Treino
+P_00655,Calcificação,2.0,4,Benigna,0,Treino
+P_00655,Calcificação,2.0,4,Benigna,0,Treino
+P_00658,Calcificação,3.0,5,Maligna,1,Treino
+P_00658,Calcificação,3.0,5,Maligna,1,Treino
+P_00664,Calcificação,4.0,5,Maligna,1,Treino
+P_00664,Calcificação,4.0,5,Maligna,1,Treino
+P_00666,Calcificação,2.0,3,Benigna,0,Treino
+P_00666,Calcificação,2.0,3,Benigna,0,Treino
+P_00666,Calcificação,2.0,3,Benigna,0,Treino
+P_00666,Calcificação,2.0,4,Benigna,0,Treino
+P_00666,Calcificação,2.0,3,Benigna,0,Treino
+P_00666,Calcificação,2.0,4,Benigna,0,Treino
+P_00667,Calcificação,4.0,4,Maligna,1,Treino
+P_00667,Calcificação,4.0,4,Maligna,1,Treino
+P_00669,Calcificação,2.0,4,Benigna,0,Treino
+P_00669,Calcificação,2.0,4,Benigna,0,Treino
+P_00673,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_00673,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_00674,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00674,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00680,Calcificação,4.0,2,Benigna,0,Treino
+P_00680,Calcificação,4.0,2,Benigna,0,Treino
+P_00680,Calcificação,4.0,2,Benigna,0,Treino
+P_00680,Calcificação,4.0,2,Benigna,0,Treino
+P_00682,Calcificação,4.0,4,Benigna,0,Treino
+P_00682,Calcificação,4.0,4,Benigna,0,Treino
+P_00683,Calcificação,4.0,4,Maligna,1,Treino
+P_00683,Calcificação,4.0,4,Maligna,1,Treino
+P_00684,Calcificação,3.0,5,Maligna,1,Treino
+P_00684,Calcificação,3.0,5,Maligna,1,Treino
+P_00685,Calcificação,3.0,4,Maligna,1,Treino
+P_00685,Calcificação,3.0,5,Maligna,1,Treino
+P_00693,Calcificação,2.0,5,Maligna,1,Treino
+P_00693,Calcificação,2.0,5,Maligna,1,Treino
+P_00701,Calcificação,3.0,4,Benigna,0,Treino
+P_00701,Calcificação,3.0,4,Benigna,0,Treino
+P_00704,Calcificação,2.0,4,Benigna,0,Treino
+P_00704,Calcificação,2.0,4,Benigna,0,Treino
+P_00705,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00705,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00705,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00705,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00709,Calcificação,4.0,4,Benigna,0,Treino
+P_00709,Calcificação,4.0,4,Benigna,0,Treino
+P_00710,Calcificação,2.0,4,Maligna,1,Treino
+P_00710,Calcificação,2.0,4,Maligna,1,Treino
+P_00712,Calcificação,4.0,4,Benigna,0,Treino
+P_00712,Calcificação,4.0,4,Benigna,0,Treino
+P_00713,Calcificação,1.0,4,Benigna,0,Treino
+P_00725,Calcificação,4.0,4,Benigna,0,Treino
+P_00725,Calcificação,4.0,4,Benigna,0,Treino
+P_00729,Calcificação,4.0,4,Maligna,1,Treino
+P_00729,Calcificação,4.0,4,Maligna,1,Treino
+P_00734,Calcificação,2.0,4,Maligna,1,Treino
+P_00734,Calcificação,2.0,5,Maligna,1,Treino
+P_00735,Calcificação,2.0,4,Maligna,1,Treino
+P_00735,Calcificação,2.0,4,Maligna,1,Treino
+P_00736,Calcificação,2.0,4,Maligna,1,Treino
+P_00736,Calcificação,2.0,4,Maligna,1,Treino
+P_00743,Calcificação,3.0,4,Benigna,0,Treino
+P_00743,Calcificação,3.0,4,Benigna,0,Treino
+P_00744,Calcificação,4.0,2,Benigna sem retorno,0,Treino
+P_00744,Calcificação,4.0,2,Benigna sem retorno,0,Treino
+P_00750,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00750,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00750,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00750,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00750,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00750,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00751,Calcificação,2.0,4,Benigna,0,Treino
+P_00757,Calcificação,4.0,4,Benigna,0,Treino
+P_00759,Calcificação,4.0,4,Maligna,1,Treino
+P_00759,Calcificação,4.0,4,Maligna,1,Treino
+P_00759,Calcificação,4.0,4,Maligna,1,Treino
+P_00759,Calcificação,4.0,4,Maligna,1,Treino
+P_00761,Calcificação,3.0,3,Benigna,0,Treino
+P_00761,Calcificação,3.0,4,Benigna,0,Treino
+P_00767,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00767,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00767,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00767,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00768,Calcificação,2.0,4,Benigna,0,Treino
+P_00768,Calcificação,2.0,4,Benigna,0,Treino
+P_00771,Calcificação,2.0,4,Benigna,0,Treino
+P_00771,Calcificação,2.0,4,Benigna,0,Treino
+P_00772,Calcificação,4.0,4,Maligna,1,Treino
+P_00772,Calcificação,4.0,4,Maligna,1,Treino
+P_00778,Calcificação,3.0,4,Maligna,1,Treino
+P_00778,Calcificação,3.0,4,Maligna,1,Treino
+P_00780,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_00780,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_00780,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_00780,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_00780,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_00780,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_00780,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_00780,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_00780,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_00780,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_00780,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_00780,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_00780,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_00780,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_00784,Calcificação,1.0,5,Maligna,1,Treino
+P_00784,Calcificação,1.0,5,Maligna,1,Treino
+P_00787,Calcificação,3.0,4,Maligna,1,Treino
+P_00787,Calcificação,3.0,4,Maligna,1,Treino
+P_00792,Calcificação,2.0,4,Benigna,0,Treino
+P_00792,Calcificação,2.0,4,Benigna,0,Treino
+P_00793,Calcificação,4.0,4,Benigna,0,Treino
+P_00793,Calcificação,4.0,4,Benigna,0,Treino
+P_00799,Calcificação,4.0,2,Benigna sem retorno,0,Treino
+P_00799,Calcificação,4.0,2,Benigna sem retorno,0,Treino
+P_00799,Calcificação,4.0,2,Benigna sem retorno,0,Treino
+P_00799,Calcificação,4.0,2,Benigna sem retorno,0,Treino
+P_00806,Calcificação,4.0,4,Benigna,0,Treino
+P_00806,Calcificação,4.0,4,Benigna,0,Treino
+P_00808,Calcificação,4.0,4,Benigna,0,Treino
+P_00809,Calcificação,2.0,4,Maligna,1,Treino
+P_00809,Calcificação,2.0,4,Maligna,1,Treino
+P_00812,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00812,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00814,Calcificação,3.0,3,Benigna,0,Treino
+P_00814,Calcificação,3.0,3,Benigna,0,Treino
+P_00814,Calcificação,3.0,3,Benigna,0,Treino
+P_00814,Calcificação,3.0,3,Benigna,0,Treino
+P_00819,Calcificação,3.0,4,Benigna,0,Treino
+P_00819,Calcificação,3.0,4,Benigna,0,Treino
+P_00824,Calcificação,2.0,4,Benigna,0,Treino
+P_00824,Calcificação,2.0,4,Benigna,0,Treino
+P_00825,Calcificação,1.0,4,Benigna,0,Treino
+P_00832,Calcificação,4.0,5,Maligna,1,Treino
+P_00832,Calcificação,4.0,5,Maligna,1,Treino
+P_00833,Calcificação,3.0,3,Benigna,0,Treino
+P_00833,Calcificação,3.0,4,Benigna,0,Treino
+P_00834,Calcificação,2.0,4,Benigna,0,Treino
+P_00834,Calcificação,2.0,4,Benigna,0,Treino
+P_00835,Calcificação,3.0,4,Maligna,1,Treino
+P_00835,Calcificação,3.0,4,Maligna,1,Treino
+P_00840,Calcificação,4.0,2,Benigna sem retorno,0,Treino
+P_00840,Calcificação,4.0,2,Benigna sem retorno,0,Treino
+P_00842,Calcificação,2.0,4,Benigna,0,Treino
+P_00842,Calcificação,2.0,4,Benigna,0,Treino
+P_00846,Calcificação,4.0,4,Maligna,1,Treino
+P_00846,Calcificação,4.0,4,Maligna,1,Treino
+P_00847,Calcificação,4.0,4,Benigna,0,Treino
+P_00847,Calcificação,4.0,4,Benigna,0,Treino
+P_00852,Calcificação,4.0,4,Maligna,1,Treino
+P_00852,Calcificação,4.0,4,Maligna,1,Treino
+P_00854,Calcificação,4.0,4,Benigna,0,Treino
+P_00854,Calcificação,4.0,4,Benigna,0,Treino
+P_00855,Calcificação,3.0,2,Maligna,1,Treino
+P_00856,Calcificação,2.0,4,Maligna,1,Treino
+P_00858,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00858,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00858,Calcificação,3.0,4,Benigna,0,Treino
+P_00858,Calcificação,3.0,3,Benigna sem retorno,0,Treino
+P_00858,Calcificação,3.0,3,Benigna sem retorno,0,Treino
+P_00858,Calcificação,3.0,4,Benigna,0,Treino
+P_00861,Calcificação,2.0,4,Maligna,1,Treino
+P_00861,Calcificação,2.0,4,Maligna,1,Treino
+P_00862,Calcificação,4.0,4,Maligna,1,Treino
+P_00862,Calcificação,4.0,4,Maligna,1,Treino
+P_00864,Calcificação,3.0,4,Maligna,1,Treino
+P_00864,Calcificação,3.0,4,Maligna,1,Treino
+P_00866,Calcificação,2.0,4,Benigna,0,Treino
+P_00866,Calcificação,2.0,4,Benigna,0,Treino
+P_00868,Calcificação,2.0,4,Benigna,0,Treino
+P_00868,Calcificação,2.0,4,Benigna,0,Treino
+P_00877,Calcificação,2.0,4,Benigna,0,Treino
+P_00877,Calcificação,2.0,4,Benigna,0,Treino
+P_00877,Calcificação,2.0,4,Benigna,0,Treino
+P_00877,Calcificação,2.0,4,Benigna,0,Treino
+P_00878,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00878,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00880,Calcificação,4.0,4,Maligna,1,Treino
+P_00882,Calcificação,2.0,4,Benigna,0,Treino
+P_00882,Calcificação,2.0,4,Benigna,0,Treino
+P_00883,Calcificação,3.0,5,Maligna,1,Treino
+P_00883,Calcificação,3.0,5,Maligna,1,Treino
+P_00890,Calcificação,2.0,4,Maligna,1,Treino
+P_00895,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00895,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00897,Calcificação,4.0,4,Benigna,0,Treino
+P_00897,Calcificação,4.0,4,Benigna,0,Treino
+P_00899,Calcificação,4.0,4,Benigna,0,Treino
+P_00899,Calcificação,4.0,4,Benigna,0,Treino
+P_00909,Calcificação,2.0,4,Benigna,0,Treino
+P_00912,Calcificação,2.0,4,Benigna,0,Treino
+P_00912,Calcificação,2.0,4,Benigna,0,Treino
+P_00916,Calcificação,4.0,3,Maligna,1,Treino
+P_00923,Calcificação,3.0,4,Benigna,0,Treino
+P_00923,Calcificação,3.0,4,Benigna,0,Treino
+P_00924,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_00924,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_00924,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_00924,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_00924,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_00924,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_00924,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_00924,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_00925,Calcificação,3.0,5,Maligna,1,Treino
+P_00925,Calcificação,3.0,5,Maligna,1,Treino
+P_00926,Calcificação,2.0,4,Benigna,0,Treino
+P_00926,Calcificação,2.0,4,Benigna,0,Treino
+P_00930,Calcificação,3.0,4,Maligna,1,Treino
+P_00930,Calcificação,3.0,4,Maligna,1,Treino
+P_00933,Calcificação,3.0,4,Maligna,1,Treino
+P_00933,Calcificação,3.0,4,Maligna,1,Treino
+P_00937,Calcificação,3.0,5,Maligna,1,Treino
+P_00937,Calcificação,3.0,5,Maligna,1,Treino
+P_00937,Calcificação,3.0,4,Maligna,1,Treino
+P_00937,Calcificação,3.0,4,Benigna,0,Treino
+P_00937,Calcificação,3.0,4,Maligna,1,Treino
+P_00937,Calcificação,3.0,4,Benigna,0,Treino
+P_00944,Calcificação,1.0,3,Benigna,0,Treino
+P_00944,Calcificação,1.0,3,Benigna,0,Treino
+P_00945,Calcificação,3.0,4,Maligna,1,Treino
+P_00945,Calcificação,3.0,4,Maligna,1,Treino
+P_00953,Calcificação,2.0,3,Benigna,0,Treino
+P_00953,Calcificação,2.0,3,Benigna,0,Treino
+P_00954,Calcificação,4.0,5,Maligna,1,Treino
+P_00954,Calcificação,4.0,5,Maligna,1,Treino
+P_00955,Calcificação,2.0,4,Benigna,0,Treino
+P_00955,Calcificação,2.0,4,Benigna,0,Treino
+P_00956,Calcificação,3.0,4,Benigna,0,Treino
+P_00960,Calcificação,2.0,4,Benigna,0,Treino
+P_00960,Calcificação,2.0,4,Benigna,0,Treino
+P_00965,Calcificação,2.0,4,Benigna,0,Treino
+P_00965,Calcificação,2.0,4,Benigna,0,Treino
+P_00967,Calcificação,2.0,5,Maligna,1,Treino
+P_00967,Calcificação,2.0,5,Maligna,1,Treino
+P_00969,Calcificação,3.0,4,Maligna,1,Treino
+P_00969,Calcificação,3.0,4,Maligna,1,Treino
+P_00969,Calcificação,3.0,4,Maligna,1,Treino
+P_00969,Calcificação,3.0,4,Maligna,1,Treino
+P_00971,Calcificação,2.0,4,Maligna,1,Treino
+P_00973,Calcificação,4.0,4,Benigna,0,Treino
+P_00973,Calcificação,4.0,4,Benigna,0,Treino
+P_00977,Calcificação,4.0,4,Benigna,0,Treino
+P_00978,Calcificação,3.0,4,Maligna,1,Treino
+P_00978,Calcificação,3.0,4,Maligna,1,Treino
+P_00981,Calcificação,3.0,4,Maligna,1,Treino
+P_00981,Calcificação,3.0,4,Maligna,1,Treino
+P_00983,Calcificação,3.0,4,Maligna,1,Treino
+P_00989,Calcificação,3.0,3,Maligna,1,Treino
+P_00989,Calcificação,3.0,3,Maligna,1,Treino
+P_00989,Calcificação,3.0,3,Maligna,1,Treino
+P_00991,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00991,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_00992,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00992,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_00992,Calcificação,3.0,5,Maligna,1,Treino
+P_00992,Calcificação,3.0,5,Maligna,1,Treino
+P_00993,Calcificação,3.0,4,Maligna,1,Treino
+P_00993,Calcificação,3.0,4,Maligna,1,Treino
+P_00998,Calcificação,4.0,4,Maligna,1,Treino
+P_01002,Calcificação,3.0,5,Maligna,1,Treino
+P_01002,Calcificação,3.0,5,Maligna,1,Treino
+P_01003,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_01003,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_01010,Calcificação,3.0,4,Benigna,0,Treino
+P_01015,Calcificação,2.0,4,Maligna,1,Treino
+P_01015,Calcificação,2.0,4,Maligna,1,Treino
+P_01016,Calcificação,4.0,4,Benigna,0,Treino
+P_01019,Calcificação,2.0,0,Benigna,0,Treino
+P_01019,Calcificação,2.0,0,Benigna,0,Treino
+P_01029,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01029,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01029,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01029,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01029,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01029,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01029,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01029,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01033,Calcificação,2.0,4,Benigna,0,Treino
+P_01033,Calcificação,2.0,4,Benigna,0,Treino
+P_01034,Calcificação,2.0,4,Benigna,0,Treino
+P_01034,Calcificação,2.0,4,Benigna,0,Treino
+P_01034,Calcificação,2.0,4,Benigna,0,Treino
+P_01034,Calcificação,2.0,4,Benigna,0,Treino
+P_01034,Calcificação,2.0,4,Benigna,0,Treino
+P_01037,Calcificação,4.0,4,Benigna,0,Treino
+P_01037,Calcificação,4.0,4,Benigna,0,Treino
+P_01040,Calcificação,3.0,4,Benigna,0,Treino
+P_01040,Calcificação,3.0,4,Benigna,0,Treino
+P_01041,Calcificação,4.0,4,Maligna,1,Treino
+P_01041,Calcificação,4.0,4,Maligna,1,Treino
+P_01043,Calcificação,2.0,4,Maligna,1,Treino
+P_01043,Calcificação,2.0,4,Maligna,1,Treino
+P_01045,Calcificação,2.0,4,Maligna,1,Treino
+P_01045,Calcificação,2.0,4,Maligna,1,Treino
+P_01046,Calcificação,2.0,4,Benigna,0,Treino
+P_01046,Calcificação,2.0,4,Benigna,0,Treino
+P_01049,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01049,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01053,Calcificação,2.0,4,Benigna,0,Treino
+P_01053,Calcificação,2.0,4,Benigna,0,Treino
+P_01056,Calcificação,4.0,4,Benigna,0,Treino
+P_01056,Calcificação,4.0,4,Benigna,0,Treino
+P_01059,Calcificação,4.0,4,Maligna,1,Treino
+P_01059,Calcificação,4.0,4,Maligna,1,Treino
+P_01060,Calcificação,1.0,4,Maligna,1,Treino
+P_01060,Calcificação,1.0,4,Maligna,1,Treino
+P_01063,Calcificação,4.0,4,Benigna,0,Treino
+P_01064,Calcificação,2.0,4,Maligna,1,Treino
+P_01065,Calcificação,4.0,5,Maligna,1,Treino
+P_01065,Calcificação,4.0,5,Maligna,1,Treino
+P_01066,Calcificação,3.0,4,Benigna,0,Treino
+P_01066,Calcificação,3.0,4,Benigna,0,Treino
+P_01069,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01069,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01069,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01069,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01072,Calcificação,3.0,4,Maligna,1,Treino
+P_01072,Calcificação,3.0,4,Maligna,1,Treino
+P_01073,Calcificação,4.0,3,Benigna,0,Treino
+P_01073,Calcificação,4.0,3,Benigna,0,Treino
+P_01084,Calcificação,3.0,4,Maligna,1,Treino
+P_01084,Calcificação,3.0,4,Maligna,1,Treino
+P_01084,Calcificação,3.0,4,Maligna,1,Treino
+P_01087,Calcificação,2.0,5,Maligna,1,Treino
+P_01091,Calcificação,3.0,5,Maligna,1,Treino
+P_01094,Calcificação,3.0,0,Benigna,0,Treino
+P_01094,Calcificação,3.0,0,Benigna,0,Treino
+P_01095,Calcificação,3.0,4,Benigna,0,Treino
+P_01095,Calcificação,3.0,4,Benigna,0,Treino
+P_01099,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01099,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01099,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01099,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01099,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01099,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01099,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01099,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01099,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01099,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01099,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01099,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01099,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01099,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01099,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01099,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01100,Calcificação,4.0,4,Maligna,1,Treino
+P_01100,Calcificação,4.0,4,Maligna,1,Treino
+P_01102,Calcificação,3.0,2,Benigna,0,Treino
+P_01102,Calcificação,3.0,2,Benigna,0,Treino
+P_01107,Calcificação,2.0,4,Benigna,0,Treino
+P_01108,Calcificação,4.0,5,Maligna,1,Treino
+P_01108,Calcificação,4.0,5,Maligna,1,Treino
+P_01111,Calcificação,2.0,4,Benigna,0,Treino
+P_01111,Calcificação,2.0,4,Benigna,0,Treino
+P_01116,Calcificação,1.0,4,Maligna,1,Treino
+P_01116,Calcificação,1.0,4,Maligna,1,Treino
+P_01121,Calcificação,3.0,4,Benigna,0,Treino
+P_01122,Calcificação,2.0,5,Maligna,1,Treino
+P_01126,Calcificação,4.0,4,Maligna,1,Treino
+P_01126,Calcificação,4.0,4,Maligna,1,Treino
+P_01127,Calcificação,2.0,4,Maligna,1,Treino
+P_01127,Calcificação,2.0,4,Maligna,1,Treino
+P_01128,Calcificação,3.0,4,Maligna,1,Treino
+P_01128,Calcificação,3.0,4,Maligna,1,Treino
+P_01129,Calcificação,1.0,4,Maligna,1,Treino
+P_01129,Calcificação,1.0,4,Maligna,1,Treino
+P_01135,Calcificação,3.0,3,Maligna,1,Treino
+P_01135,Calcificação,3.0,3,Maligna,1,Treino
+P_01136,Calcificação,2.0,5,Maligna,1,Treino
+P_01136,Calcificação,2.0,5,Maligna,1,Treino
+P_01137,Calcificação,4.0,4,Benigna,0,Treino
+P_01137,Calcificação,4.0,4,Benigna,0,Treino
+P_01139,Calcificação,3.0,4,Benigna,0,Treino
+P_01139,Calcificação,3.0,4,Benigna,0,Treino
+P_01143,Calcificação,3.0,4,Maligna,1,Treino
+P_01156,Calcificação,3.0,4,Maligna,1,Treino
+P_01156,Calcificação,3.0,4,Maligna,1,Treino
+P_01156,Calcificação,3.0,4,Benigna,0,Treino
+P_01156,Calcificação,3.0,4,Benigna,0,Treino
+P_01159,Calcificação,4.0,3,Benigna,0,Treino
+P_01159,Calcificação,4.0,4,Benigna,0,Treino
+P_01160,Calcificação,2.0,4,Benigna,0,Treino
+P_01160,Calcificação,2.0,4,Benigna,0,Treino
+P_01160,Calcificação,2.0,4,Benigna,0,Treino
+P_01160,Calcificação,2.0,4,Benigna,0,Treino
+P_01160,Calcificação,2.0,4,Benigna,0,Treino
+P_01161,Calcificação,2.0,4,Maligna,1,Treino
+P_01161,Calcificação,2.0,4,Maligna,1,Treino
+P_01166,Calcificação,3.0,4,Maligna,1,Treino
+P_01166,Calcificação,3.0,4,Maligna,1,Treino
+P_01169,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01169,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01169,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01169,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01169,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01169,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01170,Calcificação,3.0,4,Benigna,0,Treino
+P_01170,Calcificação,3.0,4,Benigna,0,Treino
+P_01172,Calcificação,4.0,4,Benigna,0,Treino
+P_01172,Calcificação,4.0,4,Benigna,0,Treino
+P_01180,Calcificação,3.0,5,Maligna,1,Treino
+P_01180,Calcificação,3.0,5,Maligna,1,Treino
+P_01184,Calcificação,2.0,4,Benigna,0,Treino
+P_01184,Calcificação,2.0,4,Benigna,0,Treino
+P_01186,Calcificação,2.0,4,Benigna,0,Treino
+P_01186,Calcificação,2.0,4,Benigna,0,Treino
+P_01188,Calcificação,4.0,5,Maligna,1,Treino
+P_01188,Calcificação,4.0,5,Maligna,1,Treino
+P_01193,Calcificação,1.0,4,Maligna,1,Treino
+P_01196,Calcificação,4.0,4,Maligna,1,Treino
+P_01197,Calcificação,3.0,0,Maligna,1,Treino
+P_01197,Calcificação,3.0,0,Maligna,1,Treino
+P_01198,Calcificação,2.0,5,Maligna,1,Treino
+P_01198,Calcificação,2.0,5,Maligna,1,Treino
+P_01200,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01200,Calcificação,3.0,2,Benigna,0,Treino
+P_01200,Calcificação,3.0,4,Benigna sem retorno,0,Treino
+P_01205,Calcificação,2.0,4,Benigna,0,Treino
+P_01205,Calcificação,2.0,4,Benigna,0,Treino
+P_01219,Calcificação,2.0,4,Benigna,0,Treino
+P_01219,Calcificação,2.0,4,Benigna,0,Treino
+P_01220,Calcificação,4.0,4,Maligna,1,Treino
+P_01220,Calcificação,4.0,4,Maligna,1,Treino
+P_01227,Calcificação,3.0,4,Benigna,0,Treino
+P_01227,Calcificação,3.0,4,Benigna,0,Treino
+P_01229,Calcificação,4.0,4,Maligna,1,Treino
+P_01229,Calcificação,4.0,4,Maligna,1,Treino
+P_01234,Calcificação,4.0,4,Maligna,1,Treino
+P_01234,Calcificação,4.0,4,Maligna,1,Treino
+P_01240,Calcificação,4.0,4,Benigna,0,Treino
+P_01246,Calcificação,4.0,4,Benigna,0,Treino
+P_01249,Calcificação,4.0,4,Benigna,0,Treino
+P_01249,Calcificação,4.0,4,Benigna,0,Treino
+P_01250,Calcificação,2.0,4,Maligna,1,Treino
+P_01250,Calcificação,2.0,4,Maligna,1,Treino
+P_01252,Calcificação,3.0,5,Maligna,1,Treino
+P_01252,Calcificação,3.0,5,Maligna,1,Treino
+P_01255,Calcificação,4.0,4,Benigna,0,Treino
+P_01255,Calcificação,4.0,4,Benigna,0,Treino
+P_01256,Calcificação,4.0,4,Benigna,0,Treino
+P_01256,Calcificação,4.0,4,Benigna,0,Treino
+P_01259,Calcificação,2.0,4,Maligna,1,Treino
+P_01259,Calcificação,2.0,4,Maligna,1,Treino
+P_01262,Calcificação,2.0,5,Maligna,1,Treino
+P_01262,Calcificação,2.0,5,Maligna,1,Treino
+P_01262,Calcificação,2.0,5,Maligna,1,Treino
+P_01262,Calcificação,2.0,5,Maligna,1,Treino
+P_01262,Calcificação,2.0,5,Maligna,1,Treino
+P_01264,Calcificação,2.0,4,Maligna,1,Treino
+P_01274,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01274,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01274,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01274,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01274,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01274,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01275,Calcificação,2.0,4,Benigna,0,Treino
+P_01275,Calcificação,2.0,4,Benigna,0,Treino
+P_01276,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01276,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01276,Calcificação,3.0,4,Benigna,0,Treino
+P_01276,Calcificação,3.0,3,Benigna,0,Treino
+P_01276,Calcificação,3.0,4,Benigna,0,Treino
+P_01276,Calcificação,3.0,3,Benigna,0,Treino
+P_01284,Calcificação,3.0,5,Maligna,1,Treino
+P_01284,Calcificação,3.0,4,Benigna,0,Treino
+P_01286,Calcificação,3.0,4,Maligna,1,Treino
+P_01286,Calcificação,3.0,4,Maligna,1,Treino
+P_01288,Calcificação,3.0,4,Benigna,0,Treino
+P_01291,Calcificação,3.0,5,Maligna,1,Treino
+P_01291,Calcificação,3.0,5,Maligna,1,Treino
+P_01292,Calcificação,3.0,3,Benigna,0,Treino
+P_01292,Calcificação,3.0,3,Benigna,0,Treino
+P_01292,Calcificação,3.0,3,Benigna,0,Treino
+P_01292,Calcificação,3.0,3,Benigna,0,Treino
+P_01292,Calcificação,3.0,3,Benigna,0,Treino
+P_01292,Calcificação,3.0,3,Benigna,0,Treino
+P_01293,Calcificação,2.0,4,Benigna,0,Treino
+P_01293,Calcificação,2.0,4,Benigna,0,Treino
+P_01296,Calcificação,2.0,5,Maligna,1,Treino
+P_01296,Calcificação,2.0,5,Maligna,1,Treino
+P_01297,Calcificação,4.0,4,Maligna,1,Treino
+P_01297,Calcificação,4.0,3,Maligna,1,Treino
+P_01300,Calcificação,2.0,5,Maligna,1,Treino
+P_01300,Calcificação,2.0,5,Maligna,1,Treino
+P_01300,Calcificação,2.0,5,Maligna,1,Treino
+P_01300,Calcificação,2.0,5,Maligna,1,Treino
+P_01300,Calcificação,2.0,5,Maligna,1,Treino
+P_01306,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01306,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01306,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01306,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01306,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01306,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01307,Calcificação,3.0,4,Maligna,1,Treino
+P_01307,Calcificação,3.0,4,Maligna,1,Treino
+P_01309,Calcificação,1.0,4,Maligna,1,Treino
+P_01309,Calcificação,1.0,4,Maligna,1,Treino
+P_01313,Calcificação,2.0,4,Maligna,1,Treino
+P_01313,Calcificação,2.0,4,Maligna,1,Treino
+P_01314,Calcificação,1.0,4,Benigna,0,Treino
+P_01314,Calcificação,1.0,4,Benigna,0,Treino
+P_01315,Calcificação,4.0,4,Maligna,1,Treino
+P_01315,Calcificação,4.0,4,Maligna,1,Treino
+P_01319,Calcificação,3.0,4,Benigna,0,Treino
+P_01319,Calcificação,3.0,4,Benigna,0,Treino
+P_01321,Calcificação,1.0,5,Maligna,1,Treino
+P_01321,Calcificação,1.0,5,Maligna,1,Treino
+P_01321,Calcificação,1.0,5,Maligna,1,Treino
+P_01321,Calcificação,1.0,5,Maligna,1,Treino
+P_01321,Calcificação,1.0,5,Maligna,1,Treino
+P_01334,Calcificação,3.0,4,Benigna,0,Treino
+P_01334,Calcificação,3.0,4,Benigna,0,Treino
+P_01334,Calcificação,3.0,4,Benigna,0,Treino
+P_01334,Calcificação,3.0,4,Benigna,0,Treino
+P_01336,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01336,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01336,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01336,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01336,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01336,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01336,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01336,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01336,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01336,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01337,Calcificação,4.0,2,Benigna,0,Treino
+P_01337,Calcificação,4.0,2,Benigna,0,Treino
+P_01338,Calcificação,4.0,4,Benigna,0,Treino
+P_01338,Calcificação,4.0,4,Benigna,0,Treino
+P_01339,Calcificação,4.0,4,Maligna,1,Treino
+P_01339,Calcificação,4.0,4,Maligna,1,Treino
+P_01342,Calcificação,2.0,4,Maligna,1,Treino
+P_01342,Calcificação,2.0,4,Maligna,1,Treino
+P_01345,Calcificação,3.0,4,Maligna,1,Treino
+P_01346,Calcificação,2.0,5,Maligna,1,Treino
+P_01346,Calcificação,2.0,5,Maligna,1,Treino
+P_01358,Calcificação,2.0,5,Maligna,1,Treino
+P_01358,Calcificação,2.0,5,Maligna,1,Treino
+P_01359,Calcificação,3.0,5,Maligna,1,Treino
+P_01359,Calcificação,3.0,5,Maligna,1,Treino
+P_01361,Calcificação,4.0,5,Maligna,1,Treino
+P_01361,Calcificação,4.0,5,Maligna,1,Treino
+P_01362,Calcificação,3.0,4,Benigna,0,Treino
+P_01362,Calcificação,3.0,4,Benigna,0,Treino
+P_01365,Calcificação,4.0,4,Maligna,1,Treino
+P_01365,Calcificação,4.0,4,Maligna,1,Treino
+P_01366,Calcificação,4.0,3,Benigna,0,Treino
+P_01369,Calcificação,4.0,4,Benigna,0,Treino
+P_01370,Calcificação,3.0,5,Maligna,1,Treino
+P_01370,Calcificação,3.0,5,Maligna,1,Treino
+P_01375,Calcificação,1.0,4,Benigna,0,Treino
+P_01375,Calcificação,1.0,4,Benigna,0,Treino
+P_01384,Calcificação,4.0,4,Maligna,1,Treino
+P_01385,Calcificação,2.0,4,Benigna,0,Treino
+P_01385,Calcificação,2.0,4,Benigna,0,Treino
+P_01387,Calcificação,4.0,4,Benigna,0,Treino
+P_01387,Calcificação,4.0,4,Benigna,0,Treino
+P_01392,Calcificação,1.0,3,Benigna,0,Treino
+P_01392,Calcificação,1.0,3,Benigna,0,Treino
+P_01397,Calcificação,4.0,5,Maligna,1,Treino
+P_01397,Calcificação,4.0,5,Maligna,1,Treino
+P_01400,Calcificação,2.0,4,Maligna,1,Treino
+P_01400,Calcificação,2.0,4,Maligna,1,Treino
+P_01401,Calcificação,2.0,4,Benigna,0,Treino
+P_01401,Calcificação,2.0,4,Benigna,0,Treino
+P_01406,Calcificação,3.0,4,Benigna,0,Treino
+P_01406,Calcificação,3.0,4,Benigna,0,Treino
+P_01408,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01408,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01408,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01408,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01408,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01408,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01408,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01408,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01408,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01408,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01408,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01409,Calcificação,2.0,4,Benigna,0,Treino
+P_01409,Calcificação,2.0,4,Benigna,0,Treino
+P_01409,Calcificação,2.0,4,Benigna,0,Treino
+P_01409,Calcificação,2.0,4,Benigna,0,Treino
+P_01409,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01409,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01410,Calcificação,4.0,4,Benigna,0,Treino
+P_01410,Calcificação,4.0,4,Benigna,0,Treino
+P_01420,Calcificação,3.0,4,Maligna,1,Treino
+P_01420,Calcificação,3.0,4,Maligna,1,Treino
+P_01422,Calcificação,3.0,4,Benigna,0,Treino
+P_01422,Calcificação,3.0,4,Benigna,0,Treino
+P_01424,Calcificação,4.0,4,Maligna,1,Treino
+P_01424,Calcificação,4.0,4,Maligna,1,Treino
+P_01435,Calcificação,4.0,2,Benigna sem retorno,0,Treino
+P_01435,Calcificação,4.0,2,Benigna sem retorno,0,Treino
+P_01435,Calcificação,4.0,2,Benigna sem retorno,0,Treino
+P_01435,Calcificação,4.0,2,Benigna sem retorno,0,Treino
+P_01435,Calcificação,4.0,2,Benigna sem retorno,0,Treino
+P_01436,Calcificação,3.0,4,Benigna,0,Treino
+P_01436,Calcificação,3.0,4,Benigna,0,Treino
+P_01437,Calcificação,4.0,2,Benigna sem retorno,0,Treino
+P_01437,Calcificação,4.0,2,Benigna sem retorno,0,Treino
+P_01437,Calcificação,4.0,2,Benigna sem retorno,0,Treino
+P_01437,Calcificação,4.0,2,Benigna sem retorno,0,Treino
+P_01437,Calcificação,4.0,2,Benigna sem retorno,0,Treino
+P_01437,Calcificação,4.0,2,Benigna sem retorno,0,Treino
+P_01437,Calcificação,4.0,2,Benigna sem retorno,0,Treino
+P_01437,Calcificação,4.0,2,Benigna sem retorno,0,Treino
+P_01437,Calcificação,4.0,2,Benigna sem retorno,0,Treino
+P_01437,Calcificação,4.0,2,Benigna sem retorno,0,Treino
+P_01437,Calcificação,4.0,2,Benigna sem retorno,0,Treino
+P_01437,Calcificação,4.0,2,Benigna sem retorno,0,Treino
+P_01437,Calcificação,4.0,2,Benigna sem retorno,0,Treino
+P_01437,Calcificação,4.0,2,Benigna sem retorno,0,Treino
+P_01437,Calcificação,4.0,2,Benigna sem retorno,0,Treino
+P_01437,Calcificação,4.0,2,Benigna sem retorno,0,Treino
+P_01437,Calcificação,4.0,2,Benigna sem retorno,0,Treino
+P_01437,Calcificação,4.0,2,Benigna sem retorno,0,Treino
+P_01437,Calcificação,4.0,2,Benigna sem retorno,0,Treino
+P_01437,Calcificação,4.0,2,Benigna sem retorno,0,Treino
+P_01437,Calcificação,4.0,2,Benigna sem retorno,0,Treino
+P_01437,Calcificação,4.0,2,Benigna sem retorno,0,Treino
+P_01437,Calcificação,4.0,2,Benigna sem retorno,0,Treino
+P_01437,Calcificação,4.0,2,Benigna sem retorno,0,Treino
+P_01440,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01440,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01440,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01440,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01440,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01440,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01443,Calcificação,3.0,4,Maligna,1,Treino
+P_01443,Calcificação,3.0,4,Maligna,1,Treino
+P_01446,Calcificação,1.0,4,Benigna,0,Treino
+P_01451,Calcificação,1.0,4,Benigna,0,Treino
+P_01451,Calcificação,1.0,4,Benigna,0,Treino
+P_01454,Calcificação,2.0,4,Maligna,1,Treino
+P_01455,Calcificação,1.0,5,Maligna,1,Treino
+P_01455,Calcificação,1.0,5,Maligna,1,Treino
+P_01456,Calcificação,2.0,5,Maligna,1,Treino
+P_01456,Calcificação,2.0,5,Maligna,1,Treino
+P_01456,Calcificação,2.0,5,Maligna,1,Treino
+P_01456,Calcificação,2.0,5,Maligna,1,Treino
+P_01457,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01457,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01457,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01457,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01457,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01457,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01458,Calcificação,3.0,3,Benigna sem retorno,0,Treino
+P_01458,Calcificação,3.0,3,Benigna sem retorno,0,Treino
+P_01459,Calcificação,4.0,5,Maligna,1,Treino
+P_01459,Calcificação,4.0,5,Maligna,1,Treino
+P_01462,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01462,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01467,Calcificação,3.0,4,Maligna,1,Treino
+P_01467,Calcificação,3.0,4,Maligna,1,Treino
+P_01472,Calcificação,4.0,4,Maligna,1,Treino
+P_01478,Calcificação,2.0,4,Benigna,0,Treino
+P_01478,Calcificação,2.0,4,Benigna,0,Treino
+P_01487,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01488,Calcificação,3.0,3,Benigna,0,Treino
+P_01488,Calcificação,3.0,4,Benigna,0,Treino
+P_01497,Calcificação,4.0,4,Benigna,0,Treino
+P_01497,Calcificação,4.0,4,Benigna,0,Treino
+P_01497,Calcificação,4.0,4,Benigna,0,Treino
+P_01505,Calcificação,3.0,4,Maligna,1,Treino
+P_01505,Calcificação,3.0,5,Maligna,1,Treino
+P_01513,Calcificação,2.0,4,Benigna,0,Treino
+P_01513,Calcificação,2.0,4,Benigna,0,Treino
+P_01517,Calcificação,4.0,4,Maligna,1,Treino
+P_01522,Calcificação,2.0,4,Benigna,0,Treino
+P_01522,Calcificação,2.0,4,Benigna,0,Treino
+P_01524,Calcificação,3.0,4,Maligna,1,Treino
+P_01524,Calcificação,3.0,4,Maligna,1,Treino
+P_01526,Calcificação,2.0,5,Maligna,1,Treino
+P_01526,Calcificação,2.0,5,Maligna,1,Treino
+P_01537,Calcificação,4.0,5,Maligna,1,Treino
+P_01545,Calcificação,3.0,5,Maligna,1,Treino
+P_01545,Calcificação,3.0,5,Maligna,1,Treino
+P_01548,Calcificação,3.0,4,Maligna,1,Treino
+P_01548,Calcificação,3.0,4,Maligna,1,Treino
+P_01549,Calcificação,3.0,4,Maligna,1,Treino
+P_01549,Calcificação,3.0,4,Maligna,1,Treino
+P_01561,Calcificação,2.0,4,Maligna,1,Treino
+P_01561,Calcificação,2.0,4,Maligna,1,Treino
+P_01563,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01563,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01563,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01563,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01563,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01563,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01563,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01563,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01563,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01563,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01563,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01566,Calcificação,3.0,4,Benigna,0,Treino
+P_01566,Calcificação,3.0,4,Benigna,0,Treino
+P_01567,Calcificação,3.0,3,Benigna,0,Treino
+P_01567,Calcificação,3.0,3,Benigna,0,Treino
+P_01569,Calcificação,4.0,4,Benigna,0,Treino
+P_01569,Calcificação,4.0,4,Benigna,0,Treino
+P_01569,Calcificação,4.0,4,Benigna,0,Treino
+P_01570,Calcificação,2.0,4,Benigna,0,Treino
+P_01570,Calcificação,2.0,4,Benigna,0,Treino
+P_01571,Calcificação,4.0,4,Benigna,0,Treino
+P_01571,Calcificação,4.0,4,Benigna,0,Treino
+P_01573,Calcificação,3.0,4,Maligna,1,Treino
+P_01573,Calcificação,3.0,4,Maligna,1,Treino
+P_01573,Calcificação,3.0,4,Maligna,1,Treino
+P_01573,Calcificação,3.0,4,Maligna,1,Treino
+P_01574,Calcificação,2.0,4,Benigna,0,Treino
+P_01574,Calcificação,2.0,4,Benigna,0,Treino
+P_01575,Calcificação,4.0,4,Maligna,1,Treino
+P_01576,Calcificação,2.0,4,Maligna,1,Treino
+P_01576,Calcificação,2.0,4,Maligna,1,Treino
+P_01577,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01577,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01579,Calcificação,1.0,4,Benigna,0,Treino
+P_01579,Calcificação,1.0,4,Benigna,0,Treino
+P_01582,Calcificação,2.0,5,Maligna,1,Treino
+P_01582,Calcificação,2.0,5,Maligna,1,Treino
+P_01582,Calcificação,2.0,4,Benigna,0,Treino
+P_01582,Calcificação,2.0,4,Benigna,0,Treino
+P_01585,Calcificação,2.0,4,Maligna,1,Treino
+P_01585,Calcificação,2.0,4,Maligna,1,Treino
+P_01596,Calcificação,2.0,4,Maligna,1,Treino
+P_01596,Calcificação,2.0,4,Maligna,1,Treino
+P_01605,Calcificação,3.0,4,Maligna,1,Treino
+P_01605,Calcificação,3.0,4,Maligna,1,Treino
+P_01609,Calcificação,4.0,4,Benigna,0,Treino
+P_01609,Calcificação,4.0,4,Benigna,0,Treino
+P_01610,Calcificação,1.0,4,Maligna,1,Treino
+P_01616,Calcificação,4.0,4,Benigna,0,Treino
+P_01616,Calcificação,4.0,4,Benigna,0,Treino
+P_01625,Calcificação,2.0,4,Maligna,1,Treino
+P_01625,Calcificação,2.0,4,Maligna,1,Treino
+P_01626,Calcificação,2.0,5,Maligna,1,Treino
+P_01626,Calcificação,2.0,5,Maligna,1,Treino
+P_01628,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01628,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01628,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01628,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01628,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01628,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01628,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01628,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01628,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01628,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01629,Calcificação,3.0,4,Benigna,0,Treino
+P_01629,Calcificação,3.0,4,Benigna,0,Treino
+P_01639,Calcificação,4.0,4,Benigna,0,Treino
+P_01639,Calcificação,4.0,4,Benigna,0,Treino
+P_01647,Calcificação,4.0,4,Benigna,0,Treino
+P_01647,Calcificação,4.0,4,Benigna,0,Treino
+P_01655,Calcificação,3.0,4,Maligna,1,Treino
+P_01655,Calcificação,3.0,4,Maligna,1,Treino
+P_01659,Calcificação,4.0,4,Maligna,1,Treino
+P_01659,Calcificação,4.0,4,Maligna,1,Treino
+P_01660,Calcificação,2.0,3,Benigna,0,Treino
+P_01660,Calcificação,2.0,3,Benigna,0,Treino
+P_01664,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01664,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01664,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01664,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01664,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01664,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01676,Calcificação,4.0,4,Benigna,0,Treino
+P_01678,Calcificação,4.0,4,Benigna,0,Treino
+P_01678,Calcificação,4.0,4,Benigna,0,Treino
+P_01679,Calcificação,3.0,4,Maligna,1,Treino
+P_01679,Calcificação,3.0,4,Maligna,1,Treino
+P_01683,Calcificação,4.0,5,Maligna,1,Treino
+P_01688,Calcificação,3.0,4,Benigna,0,Treino
+P_01691,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01691,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01691,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01691,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01691,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01691,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01700,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_01700,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_01700,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_01700,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_01703,Calcificação,4.0,4,Benigna,0,Treino
+P_01705,Calcificação,4.0,4,Benigna,0,Treino
+P_01705,Calcificação,4.0,4,Benigna,0,Treino
+P_01709,Calcificação,2.0,4,Maligna,1,Treino
+P_01709,Calcificação,2.0,4,Maligna,1,Treino
+P_01718,Calcificação,4.0,4,Maligna,1,Treino
+P_01721,Calcificação,3.0,4,Benigna,0,Treino
+P_01723,Calcificação,4.0,4,Maligna,1,Treino
+P_01723,Calcificação,4.0,4,Maligna,1,Treino
+P_01724,Calcificação,4.0,4,Benigna,0,Treino
+P_01724,Calcificação,4.0,4,Benigna,0,Treino
+P_01725,Calcificação,3.0,4,Benigna,0,Treino
+P_01725,Calcificação,3.0,4,Benigna,0,Treino
+P_01729,Calcificação,3.0,4,Maligna,1,Treino
+P_01729,Calcificação,3.0,4,Maligna,1,Treino
+P_01730,Calcificação,3.0,4,Maligna,1,Treino
+P_01730,Calcificação,3.0,4,Maligna,1,Treino
+P_01732,Calcificação,4.0,4,Benigna,0,Treino
+P_01732,Calcificação,4.0,4,Benigna,0,Treino
+P_01736,Calcificação,4.0,4,Benigna,0,Treino
+P_01736,Calcificação,4.0,4,Benigna,0,Treino
+P_01736,Calcificação,4.0,4,Benigna,0,Treino
+P_01736,Calcificação,4.0,4,Benigna,0,Treino
+P_01740,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01740,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01740,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01740,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01740,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01740,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01741,Calcificação,2.0,4,Benigna,0,Treino
+P_01741,Calcificação,2.0,4,Benigna,0,Treino
+P_01748,Calcificação,3.0,4,Benigna,0,Treino
+P_01748,Calcificação,3.0,4,Benigna,0,Treino
+P_01750,Calcificação,4.0,5,Maligna,1,Treino
+P_01750,Calcificação,4.0,5,Maligna,1,Treino
+P_01756,Calcificação,4.0,4,Maligna,1,Treino
+P_01756,Calcificação,4.0,4,Maligna,1,Treino
+P_01759,Calcificação,4.0,4,Benigna,0,Treino
+P_01759,Calcificação,4.0,4,Benigna,0,Treino
+P_01760,Calcificação,4.0,2,Benigna sem retorno,0,Treino
+P_01760,Calcificação,4.0,2,Benigna sem retorno,0,Treino
+P_01766,Calcificação,3.0,4,Benigna,0,Treino
+P_01766,Calcificação,3.0,4,Benigna,0,Treino
+P_01767,Calcificação,4.0,4,Benigna,0,Treino
+P_01767,Calcificação,4.0,4,Benigna,0,Treino
+P_01769,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01769,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01769,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01769,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01769,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01769,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01769,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01769,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01769,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01769,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01769,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01770,Calcificação,2.0,4,Maligna,1,Treino
+P_01777,Calcificação,3.0,4,Benigna,0,Treino
+P_01777,Calcificação,3.0,4,Benigna,0,Treino
+P_01777,Calcificação,3.0,4,Benigna,0,Treino
+P_01777,Calcificação,3.0,4,Benigna,0,Treino
+P_01783,Calcificação,4.0,4,Benigna,0,Treino
+P_01784,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01784,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01786,Calcificação,2.0,5,Maligna,1,Treino
+P_01786,Calcificação,2.0,5,Maligna,1,Treino
+P_01791,Calcificação,2.0,4,Benigna,0,Treino
+P_01791,Calcificação,2.0,4,Benigna,0,Treino
+P_01792,Calcificação,4.0,4,Maligna,1,Treino
+P_01792,Calcificação,4.0,4,Maligna,1,Treino
+P_01793,Calcificação,4.0,4,Maligna,1,Treino
+P_01793,Calcificação,4.0,4,Maligna,1,Treino
+P_01809,Calcificação,2.0,4,Maligna,1,Treino
+P_01810,Calcificação,3.0,4,Benigna,0,Treino
+P_01810,Calcificação,3.0,4,Benigna,0,Treino
+P_01818,Calcificação,4.0,4,Maligna,1,Treino
+P_01818,Calcificação,4.0,4,Maligna,1,Treino
+P_01819,Calcificação,2.0,4,Maligna,1,Treino
+P_01819,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01819,Calcificação,2.0,4,Maligna,1,Treino
+P_01819,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01823,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01823,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01823,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01823,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01823,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01823,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01823,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01823,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01830,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01830,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01830,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01830,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01830,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01830,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01830,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01830,Calcificação,3.0,2,Benigna sem retorno,0,Treino
+P_01832,Calcificação,1.0,4,Benigna,0,Treino
+P_01832,Calcificação,1.0,4,Benigna,0,Treino
+P_01838,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_01838,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_01838,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_01838,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_01838,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_01838,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_01838,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_01838,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_01838,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_01838,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_01838,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_01838,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_01838,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_01838,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_01838,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_01838,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_01838,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_01839,Calcificação,4.0,4,Maligna,1,Treino
+P_01839,Calcificação,4.0,4,Maligna,1,Treino
+P_01840,Calcificação,3.0,4,Maligna,1,Treino
+P_01846,Calcificação,3.0,5,Maligna,1,Treino
+P_01846,Calcificação,3.0,5,Maligna,1,Treino
+P_01847,Calcificação,4.0,4,Maligna,1,Treino
+P_01847,Calcificação,4.0,4,Maligna,1,Treino
+P_01856,Calcificação,3.0,4,Maligna,1,Treino
+P_01856,Calcificação,3.0,4,Maligna,1,Treino
+P_01858,Calcificação,2.0,4,Benigna,0,Treino
+P_01858,Calcificação,2.0,4,Benigna,0,Treino
+P_01864,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01864,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01864,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01864,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01864,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01864,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01864,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01864,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01864,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01864,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01864,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01864,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01864,Calcificação,2.0,2,Benigna sem retorno,0,Treino
+P_01875,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_01875,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_01875,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_01875,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_01875,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_01884,Calcificação,2.0,3,Benigna,0,Treino
+P_01884,Calcificação,2.0,3,Benigna,0,Treino
+P_01885,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_01885,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_01885,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_01885,Calcificação,1.0,2,Benigna sem retorno,0,Treino
+P_02105,Calcificação,2.0,5,Maligna,1,Treino
+P_02105,Calcificação,2.0,5,Maligna,1,Treino
+P_02115,Calcificação,3.0,0,Benigna,0,Treino
+P_02115,Calcificação,3.0,0,Benigna,0,Treino
+P_02133,Calcificação,3.0,3,Maligna,1,Treino
+P_02133,Calcificação,3.0,3,Maligna,1,Treino
+P_02154,Calcificação,4.0,0,Maligna,1,Treino
+P_02154,Calcificação,4.0,0,Maligna,1,Treino
+P_02190,Calcificação,3.0,3,Maligna,1,Treino
+P_02190,Calcificação,3.0,3,Maligna,1,Treino
+P_02195,Calcificação,4.0,3,Maligna,1,Treino
+P_02195,Calcificação,4.0,0,Maligna,1,Treino
+P_02218,Calcificação,2.0,3,Maligna,1,Treino
+P_02218,Calcificação,2.0,3,Maligna,1,Treino
+P_02220,Calcificação,2.0,0,Maligna,1,Treino
+P_02220,Calcificação,2.0,0,Maligna,1,Treino
+P_02226,Calcificação,3.0,5,Maligna,1,Treino
+P_02226,Calcificação,3.0,5,Maligna,1,Treino
+P_02232,Calcificação,2.0,3,Maligna,1,Treino
+P_02232,Calcificação,2.0,3,Maligna,1,Treino
+P_02234,Calcificação,3.0,0,Benigna,0,Treino
+P_02234,Calcificação,3.0,0,Benigna,0,Treino
+P_02259,Calcificação,2.0,0,Maligna,1,Treino
+P_02259,Calcificação,2.0,0,Maligna,1,Treino
+P_02270,Calcificação,3.0,0,Maligna,1,Treino
+P_02270,Calcificação,3.0,0,Maligna,1,Treino
+P_02285,Calcificação,2.0,0,Maligna,1,Treino
+P_02285,Calcificação,2.0,0,Maligna,1,Treino
+P_02313,Calcificação,2.0,0,Benigna,0,Treino
+P_02313,Calcificação,2.0,0,Benigna,0,Treino
+P_02316,Calcificação,2.0,0,Benigna,0,Treino
+P_02316,Calcificação,2.0,0,Benigna,0,Treino
+P_02318,Calcificação,2.0,0,Benigna,0,Treino
+P_02318,Calcificação,2.0,0,Benigna,0,Treino
+P_02323,Calcificação,3.0,0,Maligna,1,Treino
+P_02323,Calcificação,3.0,0,Maligna,1,Treino
+P_02348,Calcificação,2.0,0,Maligna,1,Treino
+P_02348,Calcificação,2.0,0,Maligna,1,Treino
+P_02368,Calcificação,3.0,0,Maligna,1,Treino
+P_02368,Calcificação,3.0,0,Maligna,1,Treino
+P_02380,Calcificação,2.0,3,Maligna,1,Treino
+P_02380,Calcificação,2.0,3,Maligna,1,Treino
+P_02393,Calcificação,3.0,3,Maligna,1,Treino
+P_02393,Calcificação,3.0,3,Maligna,1,Treino
+P_02400,Calcificação,1.0,3,Maligna,1,Treino
+P_02400,Calcificação,1.0,3,Maligna,1,Treino
+P_02402,Calcificação,3.0,3,Maligna,1,Treino
+P_02402,Calcificação,3.0,3,Maligna,1,Treino
+P_02405,Calcificação,3.0,0,Maligna,1,Treino
+P_02405,Calcificação,3.0,0,Maligna,1,Treino
+P_02409,Calcificação,2.0,0,Benigna,0,Treino
+P_02409,Calcificação,2.0,0,Benigna,0,Treino
+P_02419,Calcificação,3.0,0,Maligna,1,Treino
+P_02419,Calcificação,3.0,0,Maligna,1,Treino
+P_02424,Calcificação,2.0,4,Maligna,1,Treino
+P_02424,Calcificação,2.0,4,Maligna,1,Treino
+P_02434,Calcificação,3.0,0,Benigna,0,Treino
+P_02434,Calcificação,3.0,0,Benigna,0,Treino
+P_02437,Calcificação,3.0,5,Maligna,1,Treino
+P_02437,Calcificação,3.0,5,Maligna,1,Treino
+P_02442,Calcificação,1.0,5,Maligna,1,Treino
+P_02442,Calcificação,1.0,5,Maligna,1,Treino
+P_02456,Calcificação,1.0,3,Maligna,1,Treino
+P_02459,Calcificação,2.0,3,Maligna,1,Treino
+P_02459,Calcificação,2.0,3,Maligna,1,Treino
+P_02460,Calcificação,4.0,5,Maligna,1,Treino
+P_02460,Calcificação,4.0,5,Maligna,1,Treino
+P_02468,Calcificação,3.0,0,Benigna,0,Treino
+P_02468,Calcificação,3.0,0,Benigna,0,Treino
+P_02475,Calcificação,1.0,0,Maligna,1,Treino
+P_02475,Calcificação,1.0,0,Maligna,1,Treino
+P_02489,Calcificação,2.0,0,Maligna,1,Treino
+P_02489,Calcificação,2.0,0,Maligna,1,Treino
+P_02508,Calcificação,2.0,4,Maligna,1,Treino
+P_02508,Calcificação,2.0,4,Maligna,1,Treino
+P_02518,Calcificação,3.0,5,Maligna,1,Treino
+P_02518,Calcificação,3.0,5,Maligna,1,Treino
+P_02522,Calcificação,2.0,0,Maligna,1,Treino
+P_02522,Calcificação,2.0,0,Maligna,1,Treino
+P_02559,Calcificação,3.0,3,Maligna,1,Treino
+P_02559,Calcificação,3.0,3,Maligna,1,Treino
+P_02563,Calcificação,3.0,0,Benigna,0,Treino
+P_02563,Calcificação,3.0,0,Benigna,0,Treino
+P_02566,Calcificação,2.0,5,Maligna,1,Treino
+P_02566,Calcificação,2.0,5,Maligna,1,Treino
+P_02572,Calcificação,2.0,0,Maligna,1,Treino
+P_02572,Calcificação,2.0,0,Maligna,1,Treino
+P_02584,Calcificação,1.0,0,Benigna,0,Treino
+P_02584,Calcificação,1.0,0,Benigna,0,Treino
+P_00038,Calcificação,2.0,4,Benigna,0,Teste
+P_00038,Calcificação,2.0,4,Benigna,0,Teste
+P_00038,Calcificação,2.0,2,Benigna sem retorno,0,Teste
+P_00038,Calcificação,2.0,2,Benigna sem retorno,0,Teste
+P_00038,Calcificação,2.0,2,Benigna sem retorno,0,Teste
+P_00038,Calcificação,2.0,2,Benigna sem retorno,0,Teste
+P_00041,Calcificação,1.0,2,Benigna sem retorno,0,Teste
+P_00041,Calcificação,1.0,2,Benigna sem retorno,0,Teste
+P_00077,Calcificação,2.0,2,Benigna sem retorno,0,Teste
+P_00077,Calcificação,2.0,2,Benigna sem retorno,0,Teste
+P_00077,Calcificação,2.0,2,Benigna sem retorno,0,Teste
+P_00077,Calcificação,2.0,2,Benigna sem retorno,0,Teste
+P_00077,Calcificação,2.0,2,Benigna sem retorno,0,Teste
+P_00077,Calcificação,2.0,2,Benigna sem retorno,0,Teste
+P_00100,Calcificação,4.0,4,Benigna,0,Teste
+P_00100,Calcificação,4.0,4,Benigna,0,Teste
+P_00127,Calcificação,2.0,4,Maligna,1,Teste
+P_00127,Calcificação,2.0,4,Maligna,1,Teste
+P_00132,Calcificação,4.0,4,Benigna,0,Teste
+P_00140,Calcificação,2.0,2,Benigna sem retorno,0,Teste
+P_00140,Calcificação,2.0,2,Benigna sem retorno,0,Teste
+P_00140,Calcificação,2.0,2,Benigna sem retorno,0,Teste
+P_00140,Calcificação,2.0,2,Benigna sem retorno,0,Teste
+P_00140,Calcificação,2.0,2,Benigna sem retorno,0,Teste
+P_00140,Calcificação,2.0,2,Benigna sem retorno,0,Teste
+P_00140,Calcificação,2.0,2,Benigna sem retorno,0,Teste
+P_00140,Calcificação,2.0,2,Benigna sem retorno,0,Teste
+P_00141,Calcificação,1.0,4,Benigna,0,Teste
+P_00141,Calcificação,1.0,4,Benigna,0,Teste
+P_00150,Calcificação,3.0,4,Maligna,1,Teste
+P_00163,Calcificação,1.0,4,Benigna,0,Teste
+P_00163,Calcificação,1.0,4,Benigna,0,Teste
+P_00164,Calcificação,4.0,4,Maligna,1,Teste
+P_00180,Calcificação,4.0,2,Benigna,0,Teste
+P_00180,Calcificação,4.0,2,Benigna,0,Teste
+P_00195,Calcificação,4.0,4,Benigna,0,Teste
+P_00195,Calcificação,4.0,4,Benigna,0,Teste
+P_00202,Calcificação,1.0,5,Maligna,1,Teste
+P_00202,Calcificação,1.0,5,Maligna,1,Teste
+P_00214,Calcificação,1.0,2,Benigna sem retorno,0,Teste
+P_00214,Calcificação,1.0,2,Benigna sem retorno,0,Teste
+P_00214,Calcificação,1.0,2,Benigna sem retorno,0,Teste
+P_00214,Calcificação,1.0,2,Benigna sem retorno,0,Teste
+P_00214,Calcificação,1.0,2,Benigna sem retorno,0,Teste
+P_00223,Calcificação,4.0,4,Benigna,0,Teste
+P_00244,Calcificação,4.0,4,Maligna,1,Teste
+P_00246,Calcificação,1.0,4,Benigna,0,Teste
+P_00257,Calcificação,2.0,4,Benigna,0,Teste
+P_00257,Calcificação,2.0,4,Benigna,0,Teste
+P_00299,Calcificação,4.0,4,Maligna,1,Teste
+P_00299,Calcificação,4.0,4,Maligna,1,Teste
+P_00299,Calcificação,4.0,4,Maligna,1,Teste
+P_00315,Calcificação,2.0,4,Benigna,0,Teste
+P_00325,Calcificação,4.0,4,Benigna,0,Teste
+P_00331,Calcificação,3.0,4,Benigna,0,Teste
+P_00331,Calcificação,3.0,4,Benigna,0,Teste
+P_00344,Calcificação,4.0,4,Benigna,0,Teste
+P_00344,Calcificação,4.0,4,Benigna,0,Teste
+P_00352,Calcificação,2.0,4,Benigna,0,Teste
+P_00352,Calcificação,2.0,4,Benigna,0,Teste
+P_00353,Calcificação,3.0,4,Benigna,0,Teste
+P_00353,Calcificação,3.0,4,Benigna,0,Teste
+P_00353,Calcificação,3.0,4,Maligna,1,Teste
+P_00353,Calcificação,3.0,4,Maligna,1,Teste
+P_00368,Calcificação,3.0,4,Benigna,0,Teste
+P_00368,Calcificação,3.0,4,Benigna,0,Teste
+P_00372,Calcificação,3.0,5,Maligna,1,Teste
+P_00372,Calcificação,3.0,5,Maligna,1,Teste
+P_00390,Calcificação,2.0,5,Maligna,1,Teste
+P_00390,Calcificação,2.0,5,Maligna,1,Teste
+P_00397,Calcificação,4.0,4,Maligna,1,Teste
+P_00402,Calcificação,3.0,2,Benigna sem retorno,0,Teste
+P_00402,Calcificação,3.0,2,Benigna sem retorno,0,Teste
+P_00403,Calcificação,2.0,5,Maligna,1,Teste
+P_00403,Calcificação,2.0,5,Maligna,1,Teste
+P_00460,Calcificação,3.0,4,Benigna,0,Teste
+P_00460,Calcificação,3.0,4,Benigna,0,Teste
+P_00466,Calcificação,4.0,4,Maligna,1,Teste
+P_00485,Calcificação,3.0,5,Maligna,1,Teste
+P_00485,Calcificação,3.0,5,Maligna,1,Teste
+P_00485,Calcificação,3.0,5,Maligna,1,Teste
+P_00485,Calcificação,3.0,5,Maligna,1,Teste
+P_00485,Calcificação,3.0,5,Maligna,1,Teste
+P_00485,Calcificação,3.0,5,Maligna,1,Teste
+P_00495,Calcificação,3.0,2,Benigna sem retorno,0,Teste
+P_00495,Calcificação,3.0,2,Benigna sem retorno,0,Teste
+P_00495,Calcificação,3.0,2,Benigna sem retorno,0,Teste
+P_00495,Calcificação,3.0,2,Benigna sem retorno,0,Teste
+P_00497,Calcificação,3.0,4,Maligna,1,Teste
+P_00497,Calcificação,3.0,4,Maligna,1,Teste
+P_00537,Calcificação,4.0,5,Maligna,1,Teste
+P_00562,Calcificação,2.0,2,Benigna sem retorno,0,Teste
+P_00562,Calcificação,2.0,2,Benigna sem retorno,0,Teste
+P_00562,Calcificação,2.0,2,Benigna sem retorno,0,Teste
+P_00562,Calcificação,2.0,2,Benigna sem retorno,0,Teste
+P_00562,Calcificação,2.0,2,Benigna sem retorno,0,Teste
+P_00562,Calcificação,2.0,2,Benigna sem retorno,0,Teste
+P_00570,Calcificação,2.0,4,Maligna,1,Teste
+P_00579,Calcificação,4.0,0,Benigna,0,Teste
+P_00589,Calcificação,3.0,4,Benigna,0,Teste
+P_00589,Calcificação,3.0,4,Benigna,0,Teste
+P_00608,Calcificação,3.0,4,Benigna,0,Teste
+P_00608,Calcificação,3.0,4,Benigna,0,Teste
+P_00620,Calcificação,3.0,4,Benigna,0,Teste
+P_00643,Calcificação,3.0,4,Maligna,1,Teste
+P_00643,Calcificação,3.0,4,Maligna,1,Teste
+P_00646,Calcificação,3.0,4,Maligna,1,Teste
+P_00646,Calcificação,3.0,4,Maligna,1,Teste
+P_00649,Calcificação,3.0,4,Benigna,0,Teste
+P_00649,Calcificação,3.0,4,Benigna,0,Teste
+P_00663,Calcificação,2.0,4,Benigna,0,Teste
+P_00663,Calcificação,2.0,4,Benigna,0,Teste
+P_00678,Calcificação,4.0,4,Maligna,1,Teste
+P_00679,Calcificação,2.0,4,Benigna,0,Teste
+P_00679,Calcificação,2.0,4,Benigna,0,Teste
+P_00681,Calcificação,2.0,4,Maligna,1,Teste
+P_00681,Calcificação,2.0,4,Maligna,1,Teste
+P_00686,Calcificação,4.0,4,Maligna,1,Teste
+P_00723,Calcificação,2.0,4,Benigna,0,Teste
+P_00723,Calcificação,2.0,3,Benigna,0,Teste
+P_00723,Calcificação,2.0,4,Benigna,0,Teste
+P_00753,Calcificação,2.0,3,Benigna,0,Teste
+P_00753,Calcificação,2.0,3,Benigna,0,Teste
+P_00774,Calcificação,4.0,4,Benigna,0,Teste
+P_00774,Calcificação,4.0,4,Benigna,0,Teste
+P_00789,Calcificação,4.0,4,Benigna,0,Teste
+P_00790,Calcificação,3.0,4,Benigna,0,Teste
+P_00790,Calcificação,3.0,4,Benigna,0,Teste
+P_00795,Calcificação,1.0,2,Benigna sem retorno,0,Teste
+P_00795,Calcificação,1.0,2,Benigna sem retorno,0,Teste
+P_00811,Calcificação,4.0,4,Benigna,0,Teste
+P_00827,Calcificação,4.0,4,Maligna,1,Teste
+P_00827,Calcificação,4.0,4,Maligna,1,Teste
+P_00843,Calcificação,3.0,4,Benigna,0,Teste
+P_00843,Calcificação,3.0,4,Benigna,0,Teste
+P_00857,Calcificação,3.0,4,Maligna,1,Teste
+P_00857,Calcificação,3.0,4,Maligna,1,Teste
+P_00876,Calcificação,4.0,4,Maligna,1,Teste
+P_00876,Calcificação,4.0,4,Maligna,1,Teste
+P_00879,Calcificação,3.0,5,Maligna,1,Teste
+P_00879,Calcificação,3.0,5,Maligna,1,Teste
+P_00905,Calcificação,3.0,2,Benigna sem retorno,0,Teste
+P_00905,Calcificação,3.0,2,Benigna sem retorno,0,Teste
+P_00906,Calcificação,4.0,3,Maligna,1,Teste
+P_00906,Calcificação,4.0,3,Maligna,1,Teste
+P_00906,Calcificação,4.0,3,Maligna,1,Teste
+P_00919,Calcificação,2.0,4,Maligna,1,Teste
+P_00919,Calcificação,2.0,4,Maligna,1,Teste
+P_00974,Calcificação,3.0,4,Maligna,1,Teste
+P_00974,Calcificação,3.0,4,Maligna,1,Teste
+P_01004,Calcificação,2.0,4,Benigna,0,Teste
+P_01004,Calcificação,2.0,4,Benigna,0,Teste
+P_01004,Calcificação,2.0,4,Benigna,0,Teste
+P_01004,Calcificação,2.0,4,Benigna,0,Teste
+P_01006,Calcificação,4.0,4,Benigna,0,Teste
+P_01006,Calcificação,4.0,4,Benigna,0,Teste
+P_01022,Calcificação,3.0,4,Benigna,0,Teste
+P_01022,Calcificação,3.0,4,Benigna,0,Teste
+P_01030,Calcificação,3.0,2,Benigna sem retorno,0,Teste
+P_01030,Calcificação,3.0,2,Benigna sem retorno,0,Teste
+P_01030,Calcificação,3.0,2,Benigna sem retorno,0,Teste
+P_01030,Calcificação,3.0,2,Benigna sem retorno,0,Teste
+P_01042,Calcificação,2.0,4,Benigna,0,Teste
+P_01042,Calcificação,2.0,4,Benigna,0,Teste
+P_01050,Calcificação,4.0,5,Maligna,1,Teste
+P_01058,Calcificação,3.0,4,Maligna,1,Teste
+P_01058,Calcificação,3.0,4,Maligna,1,Teste
+P_01067,Calcificação,2.0,5,Maligna,1,Teste
+P_01067,Calcificação,2.0,5,Maligna,1,Teste
+P_01092,Calcificação,4.0,4,Maligna,1,Teste
+P_01092,Calcificação,4.0,4,Maligna,1,Teste
+P_01132,Calcificação,2.0,4,Benigna,0,Teste
+P_01148,Calcificação,4.0,4,Maligna,1,Teste
+P_01152,Calcificação,2.0,4,Benigna,0,Teste
+P_01152,Calcificação,2.0,4,Benigna,0,Teste
+P_01154,Calcificação,4.0,4,Maligna,1,Teste
+P_01154,Calcificação,4.0,4,Maligna,1,Teste
+P_01157,Calcificação,3.0,4,Maligna,1,Teste
+P_01157,Calcificação,3.0,4,Maligna,1,Teste
+P_01179,Calcificação,3.0,5,Maligna,1,Teste
+P_01211,Calcificação,3.0,2,Benigna sem retorno,0,Teste
+P_01211,Calcificação,3.0,2,Benigna sem retorno,0,Teste
+P_01211,Calcificação,3.0,2,Benigna sem retorno,0,Teste
+P_01211,Calcificação,3.0,2,Benigna sem retorno,0,Teste
+P_01211,Calcificação,3.0,2,Benigna sem retorno,0,Teste
+P_01211,Calcificação,3.0,2,Benigna sem retorno,0,Teste
+P_01217,Calcificação,4.0,4,Maligna,1,Teste
+P_01217,Calcificação,4.0,4,Maligna,1,Teste
+P_01224,Calcificação,2.0,2,Benigna sem retorno,0,Teste
+P_01224,Calcificação,2.0,2,Benigna sem retorno,0,Teste
+P_01237,Calcificação,2.0,4,Benigna,0,Teste
+P_01237,Calcificação,2.0,4,Benigna,0,Teste
+P_01253,Calcificação,2.0,3,Maligna,1,Teste
+P_01253,Calcificação,2.0,3,Maligna,1,Teste
+P_01272,Calcificação,3.0,4,Benigna,0,Teste
+P_01272,Calcificação,3.0,4,Benigna,0,Teste
+P_01272,Calcificação,3.0,4,Benigna,0,Teste
+P_01272,Calcificação,3.0,4,Benigna,0,Teste
+P_01303,Calcificação,4.0,4,Maligna,1,Teste
+P_01303,Calcificação,4.0,4,Maligna,1,Teste
+P_01308,Calcificação,4.0,4,Benigna,0,Teste
+P_01318,Calcificação,3.0,4,Benigna,0,Teste
+P_01320,Calcificação,4.0,4,Benigna,0,Teste
+P_01352,Calcificação,2.0,2,Benigna sem retorno,0,Teste
+P_01352,Calcificação,2.0,2,Benigna sem retorno,0,Teste
+P_01353,Calcificação,4.0,4,Benigna,0,Teste
+P_01353,Calcificação,4.0,4,Benigna,0,Teste
+P_01390,Calcificação,3.0,5,Maligna,1,Teste
+P_01390,Calcificação,3.0,5,Maligna,1,Teste
+P_01390,Calcificação,3.0,5,Maligna,1,Teste
+P_01390,Calcificação,3.0,5,Maligna,1,Teste
+P_01399,Calcificação,3.0,4,Benigna,0,Teste
+P_01399,Calcificação,3.0,4,Benigna,0,Teste
+P_01407,Calcificação,3.0,2,Benigna sem retorno,0,Teste
+P_01407,Calcificação,3.0,2,Benigna sem retorno,0,Teste
+P_01407,Calcificação,3.0,4,Benigna,0,Teste
+P_01407,Calcificação,3.0,4,Benigna,0,Teste
+P_01414,Calcificação,4.0,4,Benigna,0,Teste
+P_01414,Calcificação,4.0,4,Benigna,0,Teste
+P_01415,Calcificação,3.0,4,Benigna,0,Teste
+P_01419,Calcificação,3.0,5,Maligna,1,Teste
+P_01419,Calcificação,3.0,5,Maligna,1,Teste
+P_01425,Calcificação,2.0,5,Maligna,1,Teste
+P_01425,Calcificação,2.0,5,Maligna,1,Teste
+P_01460,Calcificação,3.0,2,Benigna sem retorno,0,Teste
+P_01460,Calcificação,3.0,2,Benigna sem retorno,0,Teste
+P_01460,Calcificação,3.0,2,Benigna sem retorno,0,Teste
+P_01460,Calcificação,3.0,2,Benigna sem retorno,0,Teste
+P_01460,Calcificação,3.0,2,Benigna sem retorno,0,Teste
+P_01460,Calcificação,3.0,2,Benigna sem retorno,0,Teste
+P_01465,Calcificação,4.0,4,Benigna,0,Teste
+P_01471,Calcificação,4.0,4,Maligna,1,Teste
+P_01471,Calcificação,4.0,4,Maligna,1,Teste
+P_01476,Calcificação,3.0,4,Benigna,0,Teste
+P_01476,Calcificação,3.0,4,Benigna,0,Teste
+P_01483,Calcificação,1.0,5,Maligna,1,Teste
+P_01483,Calcificação,1.0,5,Maligna,1,Teste
+P_01490,Calcificação,3.0,4,Benigna,0,Teste
+P_01490,Calcificação,3.0,4,Benigna,0,Teste
+P_01502,Calcificação,2.0,5,Maligna,1,Teste
+P_01502,Calcificação,2.0,5,Maligna,1,Teste
+P_01523,Calcificação,4.0,4,Benigna,0,Teste
+P_01534,Calcificação,3.0,4,Maligna,1,Teste
+P_01534,Calcificação,3.0,4,Maligna,1,Teste
+P_01535,Calcificação,4.0,4,Benigna,0,Teste
+P_01535,Calcificação,4.0,4,Benigna,0,Teste
+P_01536,Calcificação,3.0,4,Maligna,1,Teste
+P_01536,Calcificação,3.0,4,Maligna,1,Teste
+P_01538,Calcificação,3.0,4,Maligna,1,Teste
+P_01538,Calcificação,3.0,4,Maligna,1,Teste
+P_01547,Calcificação,2.0,4,Benigna,0,Teste
+P_01547,Calcificação,2.0,4,Benigna,0,Teste
+P_01562,Calcificação,1.0,4,Benigna,0,Teste
+P_01562,Calcificação,1.0,4,Benigna,0,Teste
+P_01602,Calcificação,3.0,4,Maligna,1,Teste
+P_01621,Calcificação,1.0,4,Benigna,0,Teste
+P_01621,Calcificação,1.0,4,Benigna,0,Teste
+P_01635,Calcificação,2.0,4,Maligna,1,Teste
+P_01635,Calcificação,2.0,4,Maligna,1,Teste
+P_01643,Calcificação,2.0,4,Benigna,0,Teste
+P_01643,Calcificação,2.0,4,Benigna,0,Teste
+P_01643,Calcificação,2.0,3,Benigna,0,Teste
+P_01643,Calcificação,2.0,3,Benigna,0,Teste
+P_01670,Calcificação,3.0,4,Maligna,1,Teste
+P_01670,Calcificação,3.0,4,Maligna,1,Teste
+P_01670,Calcificação,3.0,4,Maligna,1,Teste
+P_01670,Calcificação,3.0,4,Maligna,1,Teste
+P_01711,Calcificação,3.0,2,Benigna,0,Teste
+P_01711,Calcificação,3.0,2,Benigna,0,Teste
+P_01713,Calcificação,4.0,4,Benigna,0,Teste
+P_01728,Calcificação,3.0,4,Benigna,0,Teste
+P_01743,Calcificação,,5,Maligna,1,Teste
+P_01743,Calcificação,,5,Maligna,1,Teste
+P_01752,Calcificação,4.0,4,Benigna,0,Teste
+P_01752,Calcificação,4.0,4,Benigna,0,Teste
+P_01773,Calcificação,1.0,4,Benigna,0,Teste
+P_01773,Calcificação,1.0,4,Benigna,0,Teste
+P_01803,Calcificação,2.0,5,Maligna,1,Teste
+P_01803,Calcificação,2.0,5,Maligna,1,Teste
+P_01820,Calcificação,2.0,4,Benigna,0,Teste
+P_01834,Calcificação,4.0,4,Maligna,1,Teste
+P_01842,Calcificação,4.0,4,Maligna,1,Teste
+P_01845,Calcificação,2.0,4,Benigna,0,Teste
+P_01845,Calcificação,2.0,4,Benigna,0,Teste
+P_01845,Calcificação,2.0,4,Benigna,0,Teste
+P_01845,Calcificação,2.0,4,Benigna,0,Teste
+P_01861,Calcificação,4.0,4,Maligna,1,Teste
+P_01861,Calcificação,4.0,4,Maligna,1,Teste
+P_01867,Calcificação,2.0,2,Benigna sem retorno,0,Teste
+P_01867,Calcificação,2.0,2,Benigna sem retorno,0,Teste
+P_01867,Calcificação,2.0,2,Benigna sem retorno,0,Teste
+P_01867,Calcificação,2.0,2,Benigna sem retorno,0,Teste
+P_01868,Calcificação,2.0,3,Benigna,0,Teste
+P_01868,Calcificação,2.0,3,Benigna,0,Teste
+P_01872,Calcificação,4.0,4,Benigna,0,Teste
+P_01872,Calcificação,4.0,4,Benigna,0,Teste
+P_01882,Calcificação,2.0,4,Benigna,0,Teste
+P_01882,Calcificação,2.0,4,Benigna,0,Teste
+P_01883,Calcificação,2.0,5,Maligna,1,Teste
+P_01883,Calcificação,2.0,4,Maligna,1,Teste
+P_02102,Calcificação,2.0,0,Maligna,1,Teste
+P_02102,Calcificação,2.0,0,Maligna,1,Teste
+P_02139,Calcificação,2.0,3,Maligna,1,Teste
+P_02139,Calcificação,2.0,3,Maligna,1,Teste
+P_02153,Calcificação,2.0,0,Benigna,0,Teste
+P_02153,Calcificação,2.0,0,Benigna,0,Teste
+P_02159,Calcificação,2.0,0,Benigna,0,Teste
+P_02159,Calcificação,2.0,0,Benigna,0,Teste
+P_02176,Calcificação,4.0,5,Maligna,1,Teste
+P_02176,Calcificação,4.0,5,Maligna,1,Teste
+P_02198,Calcificação,3.0,3,Maligna,1,Teste
+P_02198,Calcificação,3.0,3,Maligna,1,Teste
+P_02275,Calcificação,2.0,3,Maligna,1,Teste
+P_02275,Calcificação,2.0,3,Maligna,1,Teste
+P_02418,Calcificação,3.0,3,Maligna,1,Teste
+P_02418,Calcificação,3.0,3,Maligna,1,Teste
+P_02420,Calcificação,2.0,3,Maligna,1,Teste
+P_02420,Calcificação,2.0,3,Maligna,1,Teste
+P_02432,Calcificação,2.0,3,Maligna,1,Teste
+P_02432,Calcificação,2.0,3,Maligna,1,Teste
+P_02464,Calcificação,2.0,0,Maligna,1,Teste
+P_02464,Calcificação,2.0,0,Maligna,1,Teste
+P_02498,Calcificação,4.0,0,Benigna,0,Teste
+P_02498,Calcificação,4.0,0,Benigna,0,Teste
+P_02501,Calcificação,3.0,0,Maligna,1,Teste
+P_02501,Calcificação,3.0,0,Maligna,1,Teste

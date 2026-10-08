@@ -37,9 +37,8 @@ PAGINAS = {
 REGIOES = set(config.REGIOES_UF)
 
 
-# ---------------------------------------------------------------
+
 # 1. Coleta (HTML bruto)
-# ---------------------------------------------------------------
 def coletar(forcar: bool = False) -> None:
     config.RAW_INCA.mkdir(parents=True, exist_ok=True)
     metadados_path = config.RAW_INCA / "coleta.json"

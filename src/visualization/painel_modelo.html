@@ -1,0 +1,493 @@
+<title>Mamografias Brasil × CBIS-DDSM</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: cabeçalho com a tese, abas por pergunta, faixa de indicadores e grade de gráficos (2 colunas → 1 no celular) */
+:root {
+  --bg: #f5f8f8;
+  --surface: #ffffff;
+  --ink: #0f1a1c;
+  --muted: #56666a;
+  --line: #d9e2e3;
+  --grid: #e9eeee;
+  --accent: #0d6b62;
+  --s-brasil: #1baf7a;
+  --s-brasil-suave: #a8e2cb;
+  --s-cbis: #2a78d6;
+  --s-cbis-suave: #b7d3f6;
+  --s-diag: #eb6834;
+  --f-display: "IBM Plex Sans Condensed", "Arial Narrow", "Roboto Condensed", sans-serif;
+  --f-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Consolas, monospace;
+  --raio: 10px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1214; --surface: #141b1e; --ink: #e5eded; --muted: #9aa9ab; --line: #263134; --grid: #1d272a;
+    --accent: #5fc8b8; --s-brasil: #199e70; --s-brasil-suave: #1f4c3d; --s-cbis: #3987e5; --s-cbis-suave: #1d3b62;
+    --s-diag: #d95926; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1214; --surface: #141b1e; --ink: #e5eded; --muted: #9aa9ab; --line: #263134; --grid: #1d272a;
+  --accent: #5fc8b8; --s-brasil: #199e70; --s-brasil-suave: #1f4c3d; --s-cbis: #3987e5; --s-cbis-suave: #1d3b62;
+  --s-diag: #d95926; color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font: 400 15px/1.55 var(--f-body);
+  padding-inline: clamp(16px, 4vw, 40px); padding-block: 28px 48px;
+}
+.pagina { max-width: 1240px; margin-inline: auto; display: grid; gap: 22px; }
+
+header { display: grid; gap: 10px; }
+.sobrelinha { font: 600 12px/1 var(--f-body); letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
+h1 { margin: 0; font: 700 clamp(28px, 4.2vw, 42px)/1.05 var(--f-display); letter-spacing: -.01em; text-wrap: balance; }
+.tese { margin: 0; max-width: 68ch; color: var(--muted); font-size: 16px; }
+.tese strong { color: var(--ink); font-weight: 600; }
+
+nav[role="tablist"] { display: flex; flex-wrap: wrap; gap: 4px; border-bottom: 1px solid var(--line); }
+nav button {
+  font: 600 15px/1 var(--f-display); letter-spacing: .01em; color: var(--muted); background: none;
+  border: 0; border-bottom: 3px solid transparent; padding: 12px 14px 11px; cursor: pointer; margin-bottom: -1px;
+}
+nav button:hover { color: var(--ink); }
+nav button[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--accent); }
+button:focus-visible, select:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+section[role="tabpanel"] { display: grid; gap: 18px; }
+.pergunta { margin: 0; font: 600 20px/1.25 var(--f-display); text-wrap: balance; }
+.filtros { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; color: var(--muted); font-size: 14px; }
+.filtros label { display: flex; gap: 8px; align-items: center; }
+select {
+  font: 500 14px var(--f-body); color: var(--ink); background: var(--surface);
+  border: 1px solid var(--line); border-radius: 6px; padding: 6px 28px 6px 10px;
+}
+
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1px;
+        background: var(--line); border: 1px solid var(--line); border-radius: var(--raio); overflow: hidden; }
+.kpi { background: var(--surface); padding: 16px 18px; display: grid; gap: 4px; align-content: start; min-width: 0; }
+.kpi .rotulo { font-size: 13px; color: var(--muted); }
+.kpi .valor { font: 600 30px/1.1 var(--f-display); font-variant-numeric: tabular-nums; }
+.kpi .valor small { font: 500 15px var(--f-body); color: var(--muted); margin-left: 4px; }
+.kpi .nota { font-size: 12.5px; color: var(--muted); }
+.chip { display: inline-block; font: 600 11px/1 var(--f-body); letter-spacing: .04em; text-transform: uppercase;
+        padding: 4px 7px; border-radius: 4px; border: 1px solid currentColor; justify-self: start; }
+.chip.ok { color: var(--s-brasil); }
+.chip.alerta { color: var(--s-diag); }
+
+.grade { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.grade .largo { grid-column: 1 / -1; }
+@media (max-width: 860px) { .grade { grid-template-columns: minmax(0, 1fr); } }
+
+figure.cartao {
+  margin: 0; background: var(--surface); border: 1px solid var(--line); border-radius: var(--raio);
+  padding: 16px 18px 12px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; min-width: 0;
+}
+figcaption h3 { margin: 0; font: 600 16.5px/1.3 var(--f-display); text-wrap: balance; }
+figcaption p { margin: 4px 0 0; font-size: 13.5px; color: var(--muted); max-width: 70ch; }
+.tela { position: relative; height: 290px; width: 100%; min-width: 0; }
+.tela.alta { height: 560px; }
+details { font-size: 13px; color: var(--muted); }
+summary { cursor: pointer; width: max-content; }
+.tabela-wrap { overflow-x: auto; margin-top: 8px; }
+table { border-collapse: collapse; font-variant-numeric: tabular-nums; min-width: 100%; color: var(--ink); }
+th, td { text-align: right; padding: 5px 10px; border-bottom: 1px solid var(--grid); white-space: nowrap; }
+th:first-child, td:first-child { text-align: left; }
+th { font-weight: 600; color: var(--muted); }
+
+.leitura { margin: 0; padding: 14px 18px; border-left: 3px solid var(--accent); background: var(--surface);
+           border-radius: 0 var(--raio) var(--raio) 0; max-width: 90ch; }
+.leitura p { margin: 0; }
+.leitura p + p { margin-top: 8px; }
+footer { border-top: 1px solid var(--line); padding-top: 14px; color: var(--muted); font-size: 13px; display: grid; gap: 4px; }
+footer p { margin: 0; max-width: 100ch; }
+code, .mono { font-family: var(--f-mono); font-size: .92em; }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+</style>
+
+<div class="pagina">
+  <header>
+    <span class="sobrelinha">Ciência dos Dados · CEFET-MG Divinópolis</span>
+    <h1>Mamografias: Brasil × CBIS-DDSM</h1>
+    <p class="tese">A base pública CBIS-DDSM, muito usada para treinar modelos de apoio ao diagnóstico, representa as
+      mulheres atendidas no SUS? <strong>Na densidade mamária, sim. Na composição dos casos, não. Na idade, não dá
+      para saber</strong>, e é ela que mais muda o desempenho dos modelos.</p>
+  </header>
+
+  <nav role="tablist" aria-label="Seções do painel">
+    <button role="tab" id="aba-brasil" aria-controls="brasil" aria-selected="true">Brasil</button>
+    <button role="tab" id="aba-comparacao" aria-controls="comparacao" aria-selected="false">Brasil × CBIS-DDSM</button>
+    <button role="tab" id="aba-modelo" aria-controls="modelo" aria-selected="false">Modelo e viés</button>
+  </nav>
+
+  <!-- ============================== BRASIL ============================== -->
+  <section role="tabpanel" id="brasil" aria-labelledby="aba-brasil">
+    <div class="filtros">
+      <label for="f-regiao">Região
+        <select id="f-regiao"><option value="">Brasil (todas)</option></select>
+      </label>
+      <span>Mamografias: SIA/SUS · Óbitos: SIM · Casos estimados: INCA (2023)</span>
+    </div>
+    <div class="kpis">
+      <div class="kpi"><span class="rotulo">Mamografias no SUS, 2022</span><span class="valor" id="k-mamo"></span><span class="nota" id="k-mamo-nota"></span></div>
+      <div class="kpi"><span class="rotulo">Queda em 2020 (pandemia)</span><span class="valor" id="k-queda"></span><span class="nota">total de mamografias em relação a 2019</span></div>
+      <div class="kpi"><span class="rotulo">Óbitos de mulheres, 2022</span><span class="valor" id="k-obitos"></span><span class="nota">câncer de mama, por residência</span></div>
+      <div class="kpi"><span class="rotulo">Casos novos estimados por ano</span><span class="valor" id="k-casos"></span><span class="nota">triênio 2023–2025</span></div>
+    </div>
+    <div class="grade">
+      <figure class="cartao">
+        <figcaption><h3>Mamografias por finalidade, 2018–2022</h3><p>Rastreamento: mulheres sem sintomas. Diagnóstica: investigação de alteração.</p></figcaption>
+        <div class="tela"><canvas id="g-serie" aria-label="Mamografias por ano e finalidade"></canvas></div>
+        <details><summary>Ver tabela</summary><div class="tabela-wrap" id="t-serie"></div></details>
+      </figure>
+      <figure class="cartao">
+        <figcaption><h3>Óbitos de mulheres por câncer de mama</h3><p>CID-BR-10 041, por local de residência.</p></figcaption>
+        <div class="tela"><canvas id="g-obitos" aria-label="Óbitos por ano"></canvas></div>
+        <details><summary>Ver tabela</summary><div class="tabela-wrap" id="t-obitos"></div></details>
+      </figure>
+      <figure class="cartao">
+        <figcaption><h3>Rastreamentos por caso novo estimado, por UF</h3><p>Mamografias de rastreamento em 2022 ÷ casos estimados por ano. Indica a intensidade do rastreamento em relação à carga da doença.</p></figcaption>
+        <div class="tela alta" id="tela-uf"><canvas id="g-uf" aria-label="Rastreamentos por caso estimado por UF"></canvas></div>
+        <details><summary>Ver tabela</summary><div class="tabela-wrap" id="t-uf"></div></details>
+      </figure>
+      <figure class="cartao">
+        <figcaption><h3>Óbitos por faixa etária, 2018–2022</h3><p>Brasil. Em destaque, a faixa-alvo do rastreamento (50–69 anos).</p></figcaption>
+        <div class="tela alta"><canvas id="g-faixa-obitos" aria-label="Óbitos por faixa etária"></canvas></div>
+        <details><summary>Ver tabela</summary><div class="tabela-wrap" id="t-faixa-obitos"></div></details>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============================ COMPARAÇÃO ============================ -->
+  <section role="tabpanel" id="comparacao" aria-labelledby="aba-comparacao" hidden>
+    <p class="pergunta">As características dos casos do CBIS-DDSM batem com as das brasileiras?</p>
+    <div class="kpis">
+      <div class="kpi"><span class="rotulo">Densidade mamária</span><span class="valor" id="k-w"></span><span class="chip ok">compatível</span><span class="nota">w de Cohen entre as distribuições (0,1 = pequena)</span></div>
+      <div class="kpi"><span class="rotulo">Laudos suspeitos (BI-RADS 4–5)</span><span class="valor" id="k-susp"></span><span class="chip alerta">incompatível</span><span class="nota">rastreamento do SUS × lesões do CBIS-DDSM</span></div>
+      <div class="kpi"><span class="rotulo">Câncer entre os casos</span><span class="valor" id="k-casemix"></span><span class="chip alerta">incompatível</span><span class="nota" id="k-casemix-nota"></span></div>
+      <div class="kpi"><span class="rotulo">Mamas densas no Brasil</span><span class="valor" id="k-dens-idade"></span><span class="chip alerta">idade ausente no CBIS</span><span class="nota">aos 40–44 anos × aos 65–69 anos</span></div>
+    </div>
+    <div class="grade">
+      <figure class="cartao">
+        <figcaption><h3>Densidade mamária: Brasil × CBIS-DDSM</h3><p>Brasil: laudos do SISCAN, mulheres, 2018–2022. Escala BI-RADS de densidade: 1 adiposa … 4 densa.</p></figcaption>
+        <div class="filtros"><label for="f-subconjunto">Comparar com
+          <select id="f-subconjunto">
+            <option value="CBIS-DDSM">CBIS-DDSM: todas as lesões</option>
+            <option value="CBIS-DDSM: massas">CBIS-DDSM: massas</option>
+            <option value="CBIS-DDSM: calcificações">CBIS-DDSM: calcificações</option>
+          </select></label></div>
+        <div class="tela"><canvas id="g-densidade" aria-label="Distribuição de densidade"></canvas></div>
+        <details><summary>Ver tabela</summary><div class="tabela-wrap" id="t-densidade"></div></details>
+      </figure>
+      <figure class="cartao">
+        <figcaption><h3>No Brasil, a densidade cai com a idade</h3><p>% de mamas densas (categorias 3 e 4) por faixa etária. O tracejado é o CBIS-DDSM, que não informa a idade das pacientes.</p></figcaption>
+        <div class="tela"><canvas id="g-dens-idade" aria-label="Mamas densas por faixa etária"></canvas></div>
+        <details><summary>Ver tabela</summary><div class="tabela-wrap" id="t-dens-idade"></div></details>
+      </figure>
+      <figure class="cartao largo">
+        <figcaption><h3>Categoria BI-RADS: que tipo de caso cada base contém</h3><p>Categorias 0–5 (a 6, câncer já confirmado, não existe no CBIS-DDSM). 0 inconclusivo · 1–2 normal/benigno · 3 provavelmente benigno · 4 suspeito · 5 altamente suspeito.</p></figcaption>
+        <div class="tela"><canvas id="g-birads" aria-label="Distribuição BI-RADS"></canvas></div>
+        <details><summary>Ver tabela</summary><div class="tabela-wrap" id="t-birads"></div></details>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============================== MODELO ============================== -->
+  <section role="tabpanel" id="modelo" aria-labelledby="aba-modelo" hidden>
+    <p class="pergunta">Um modelo treinado no CBIS-DDSM funcionaria igual nas brasileiras?</p>
+    <div class="kpis">
+      <div class="kpi"><span class="rotulo">AUC no teste do CBIS-DDSM</span><span class="valor" id="k-auc-teste"></span><span class="nota">Random Forest, características de imagem de calcificações</span></div>
+      <div class="kpi"><span class="rotulo">AUC com a densidade do Brasil</span><span class="valor" id="k-auc-br"></span><span class="nota">todas as idades (reponderado)</span></div>
+      <div class="kpi"><span class="rotulo">AUC estimada, 40–49 anos</span><span class="valor" id="k-auc-40"></span><span class="nota">27% do rastreamento do SUS é nessa faixa</span></div>
+      <div class="kpi"><span class="rotulo">AUC estimada, 70 anos ou mais</span><span class="valor" id="k-auc-70"></span><span class="nota">mamas menos densas</span></div>
+    </div>
+    <div class="grade">
+      <figure class="cartao">
+        <figcaption><h3>Quanto mais densa a mama, pior o modelo</h3><p>AUC no conjunto de teste por densidade. 0,5 = acaso. A densidade 1 tem só 24 lesões; o valor dela é instável.</p></figcaption>
+        <div class="tela"><canvas id="g-auc-dens" aria-label="AUC por densidade"></canvas></div>
+        <details><summary>Ver tabela</summary><div class="tabela-wrap" id="t-auc-dens"></div></details>
+      </figure>
+      <figure class="cartao">
+        <figcaption><h3>…e para o radiologista também</h3><p>Brasil: % de laudos inconclusivos (BI-RADS 0, exigem exames complementares) por densidade.</p></figcaption>
+        <div class="tela"><canvas id="g-birads0" aria-label="Laudos inconclusivos por densidade"></canvas></div>
+        <details><summary>Ver tabela</summary><div class="tabela-wrap" id="t-birads0"></div></details>
+      </figure>
+      <figure class="cartao largo">
+        <figcaption><h3>AUC reponderada pela densidade de cada população</h3><p>Cada lesão do teste recebe peso = proporção da sua densidade na população ÷ proporção no teste. Barra clara: intervalo de 95% (bootstrap).</p></figcaption>
+        <div class="tela"><canvas id="g-auc-pop" aria-label="AUC por população"></canvas></div>
+        <details><summary>Ver tabela</summary><div class="tabela-wrap" id="t-auc-pop"></div></details>
+      </figure>
+    </div>
+    <div class="leitura">
+      <p><strong>Leitura.</strong> No agregado, o desempenho com a composição brasileira fica parecido com o medido na base.
+        Mas a média esconde um gradiente: o modelo vai pior nas mulheres de 40 a 49 anos, que têm mamas mais densas, e
+        melhor nas mais velhas. Sem a densidade 1 o gradiente diminui (AUC 0,70 → 0,76), mas continua na mesma direção.</p>
+      <p>A reponderação corrige só a mistura de densidades. Ela supõe que, dentro de cada densidade, o modelo erra igual
+        nas duas populações, e não corrige diferenças de equipamento nem de prevalência.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p><strong>Fontes:</strong> INCA (dados e números do câncer de mama), DATASUS/TABNET (SIA/SUS, SIM), SISCAN (laudos de
+      mamografia), CBIS-DDSM (TCIA / Kaggle). Período brasileiro: 2018–2022. Coleta por web scraping; código e notebooks no
+      repositório <span class="mono">representatividade-mamografias-br</span>.</p>
+    <p>Maira Beatriz de Almeida Lacerda · João Francisco Teles da Silva</p>
+  </footer>
+</div>
+
+<script id="dados" type="application/json">__DADOS_JSON__</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+(() => {
+  const D = JSON.parse(document.getElementById("dados").textContent);
+  const I = D.indicadores;
+  const nf = (v, d = 0) => new Intl.NumberFormat("pt-BR", { minimumFractionDigits: d, maximumFractionDigits: d }).format(v);
+  const pct = (v, d = 0) => nf(v, d) + "%";
+  const cor = (n) => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+  const graficos = {};
+
+  // ---------- auxiliares ----------
+  function tabela(id, cabecalho, linhas) {
+    const el = document.getElementById(id);
+    el.innerHTML = "<table><thead><tr>" + cabecalho.map((c) => `<th>${c}</th>`).join("") + "</tr></thead><tbody>" +
+      linhas.map((l) => "<tr>" + l.map((c) => `<td>${c}</td>`).join("") + "</tr>").join("") + "</tbody></table>";
+  }
+  function base(extra = {}) {
+    const tinta = cor("--muted"), grade = cor("--grid");
+    const eixo = (o = {}) => ({ grid: { color: grade, drawTicks: false }, border: { color: cor("--line") },
+      ticks: { color: tinta, padding: 6, font: { family: cor("--f-body") } }, ...o });
+    return {
+      responsive: true, maintainAspectRatio: false, animation: { duration: 250 },
+      interaction: { mode: "index", intersect: false },
+      plugins: {
+        legend: { labels: { color: cor("--ink"), boxWidth: 12, boxHeight: 12, useBorderRadius: true, borderRadius: 2,
+                             font: { family: cor("--f-body") } } },
+        tooltip: { backgroundColor: cor("--surface"), titleColor: cor("--ink"), bodyColor: cor("--ink"),
+                   borderColor: cor("--line"), borderWidth: 1, padding: 10, boxPadding: 4,
+                   titleFont: { family: cor("--f-body"), weight: "600" }, bodyFont: { family: cor("--f-body") } },
+      },
+      scales: { x: eixo(extra.x), y: eixo(extra.y) },
+    };
+  }
+  function desenha(id, config) {
+    if (graficos[id]) graficos[id].destroy();
+    graficos[id] = new Chart(document.getElementById(id), config);
+  }
+  const barra = { borderRadius: 4, borderSkipped: "start", borderWidth: 0 };
+
+  // ---------- aba Brasil ----------
+  const regioes = [...new Set(D.dim_localidade.map((l) => l.regiao))];
+  const selReg = document.getElementById("f-regiao");
+  regioes.forEach((r) => selReg.insertAdjacentHTML("beforeend", `<option value="${r}">${r}</option>`));
+  const regiaoDe = Object.fromEntries(D.dim_localidade.map((l) => [l.localidade, l.regiao]));
+  const siglaDe = Object.fromEntries(D.dim_localidade.map((l) => [l.localidade, l.sigla]));
+  const anos = [...new Set(D.fato_uf_ano.map((l) => l.ano))].sort();
+
+  function brasil() {
+    const reg = selReg.value;
+    const f = D.fato_uf_ano.filter((l) => !reg || regiaoDe[l.localidade] === reg);
+    const soma = (ano, campo) => f.filter((l) => l.ano === ano).reduce((s, l) => s + (l[campo] || 0), 0);
+    const rast = anos.map((a) => soma(a, "mamografias_rastreamento"));
+    const diag = anos.map((a) => soma(a, "mamografias_diagnosticas"));
+    const obit = anos.map((a) => soma(a, "obitos_cancer_mama"));
+    const total = anos.map((_, i) => rast[i] + diag[i]);
+    const i19 = anos.indexOf(2019), i20 = anos.indexOf(2020), i22 = anos.indexOf(2022);
+    const inc = D.fato_incidencia_uf.filter((l) => !reg || regiaoDe[l.localidade] === reg);
+    const casos = inc.reduce((s, l) => s + l.casos_estimados, 0);
+
+    document.getElementById("k-mamo").textContent = nf(total[i22]);
+    document.getElementById("k-mamo-nota").textContent = `${pct(100 * rast[i22] / total[i22])} de rastreamento · ${reg || "Brasil"}`;
+    document.getElementById("k-queda").textContent = pct(100 * (total[i20] / total[i19] - 1));
+    document.getElementById("k-obitos").textContent = nf(obit[i22]);
+    document.getElementById("k-casos").textContent = nf(casos);
+
+    const o = base({ y: { beginAtZero: true, ticks: { color: cor("--muted"), callback: (v) => nf(v) } } });
+    o.plugins.tooltip.callbacks = { label: (c) => ` ${c.dataset.label}: ${nf(c.parsed.y)}` };
+    desenha("g-serie", { type: "line", options: o, data: { labels: anos, datasets: [
+      { label: "Rastreamento", data: rast, borderColor: cor("--s-brasil"), backgroundColor: cor("--s-brasil"), borderWidth: 2, pointRadius: 4, pointHoverRadius: 6 },
+      { label: "Diagnóstica", data: diag, borderColor: cor("--s-diag"), backgroundColor: cor("--s-diag"), borderWidth: 2, pointRadius: 4, pointHoverRadius: 6 },
+    ] } });
+    tabela("t-serie", ["Ano", "Rastreamento", "Diagnóstica", "Total"], anos.map((a, i) => [a, nf(rast[i]), nf(diag[i]), nf(total[i])]));
+
+    const o2 = base({ y: { beginAtZero: true, ticks: { color: cor("--muted"), callback: (v) => nf(v) } } });
+    o2.plugins.legend.display = false;
+    o2.plugins.tooltip.callbacks = { label: (c) => ` Óbitos: ${nf(c.parsed.y)}` };
+    desenha("g-obitos", { type: "line", options: o2, data: { labels: anos, datasets: [
+      { label: "Óbitos", data: obit, borderColor: cor("--s-brasil"), backgroundColor: cor("--s-brasil"), borderWidth: 2, pointRadius: 4, pointHoverRadius: 6,
+        fill: { target: "origin", above: cor("--s-brasil-suave") + "66" } },
+    ] } });
+    tabela("t-obitos", ["Ano", "Óbitos"], anos.map((a, i) => [a, nf(obit[i])]));
+
+    const porUF = inc.map((l) => {
+      const r = D.fato_uf_ano.find((x) => x.localidade === l.localidade && x.ano === 2022);
+      return { uf: l.localidade, sigla: siglaDe[l.localidade], v: r.mamografias_rastreamento / l.casos_estimados };
+    }).sort((a, b) => b.v - a.v);
+    document.getElementById("tela-uf").style.height = Math.max(220, 40 + porUF.length * 19) + "px";
+    const o3 = base({ x: { beginAtZero: true }, y: { grid: { display: false }, ticks: { color: cor("--ink"), autoSkip: false, font: { family: cor("--f-mono"), size: 11 } } } });
+    o3.indexAxis = "y";
+    o3.plugins.legend.display = false;
+    o3.interaction = { mode: "nearest", axis: "y", intersect: false };
+    o3.plugins.tooltip.callbacks = { title: (c) => porUF[c[0].dataIndex].uf, label: (c) => ` ${nf(c.parsed.x, 1)} rastreamentos por caso` };
+    desenha("g-uf", { type: "bar", options: o3, data: { labels: porUF.map((p) => p.sigla), datasets: [
+      { data: porUF.map((p) => p.v), backgroundColor: cor("--s-brasil"), ...barra, barPercentage: 0.8, categoryPercentage: 0.9 },
+    ] } });
+    tabela("t-uf", ["UF", "Rastreamentos 2022 por caso"], porUF.map((p) => [p.uf, nf(p.v, 1)]));
+  }
+
+  function faixaObitos() {
+    const faixas = [...new Map(D.obitos_faixa.map((l) => [l.faixa_etaria, l.ordem_faixa])).entries()].sort((a, b) => a[1] - b[1]).map((e) => e[0]);
+    const tot = faixas.map((f) => D.obitos_faixa.filter((l) => l.faixa_etaria === f).reduce((s, l) => s + l.obitos, 0));
+    const soma = tot.reduce((a, b) => a + b, 0);
+    const p = tot.map((v) => 100 * v / soma);
+    const alvo = (f) => f.startsWith("50") || f.startsWith("60");
+    const rot = faixas.map((f) => f.replace(" anos e mais", "+").replace(" anos", "").replace(" a ", "–"));
+    const o = base({ x: { beginAtZero: true, ticks: { color: cor("--muted"), callback: (v) => v + "%" } }, y: { grid: { display: false }, ticks: { color: cor("--ink") } } });
+    o.indexAxis = "y";
+    o.plugins.legend.display = false;
+    o.interaction = { mode: "nearest", axis: "y", intersect: false };
+    o.plugins.tooltip.callbacks = { label: (c) => ` ${pct(c.parsed.x, 1)} dos óbitos (${nf(tot[c.dataIndex])})` };
+    desenha("g-faixa-obitos", { type: "bar", options: o, data: { labels: rot, datasets: [
+      { data: p, backgroundColor: faixas.map((f) => alvo(f) ? cor("--s-brasil") : cor("--s-brasil-suave")), ...barra, barPercentage: 0.75 },
+    ] } });
+    tabela("t-faixa-obitos", ["Faixa etária", "Óbitos 2018–2022", "%"], faixas.map((f, i) => [f, nf(tot[i]), pct(p[i], 1)]));
+  }
+
+  // ---------- aba Comparação ----------
+  const selSub = document.getElementById("f-subconjunto");
+  function comparacao() {
+    document.getElementById("k-w").textContent = nf(I.w_cohen_densidade, 2);
+    document.getElementById("k-susp").innerHTML = `${pct(I.pct_suspeitos_rastreamento, 1)} <small>× ${pct(I.pct_suspeitos_cbis)}</small>`;
+    document.getElementById("k-casemix").innerHTML = `${nf(I.razao_case_mix)}× <small>mais frequente</small>`;
+    document.getElementById("k-casemix-nota").textContent =
+      `CBIS: ${pct(I.cbis_pct_malignas)} das lesões malignas · SUS: ~${nf(I.brasil_casos_por_100_mamografias, 1)} caso por 100 mamografias`;
+    document.getElementById("k-dens-idade").innerHTML = `${pct(I.pct_densas_40_44)} <small>× ${pct(I.pct_densas_65_69)}</small>`;
+
+    const sub = selSub.value;
+    const de = (fonte) => D.comparacao_densidade.filter((l) => l.fonte === fonte).sort((a, b) => a.densidade - b.densidade);
+    const br = de("Brasil (SISCAN)"), cb = de(sub);
+    const o = base({ y: { beginAtZero: true, max: 50, ticks: { color: cor("--muted"), callback: (v) => v + "%" } }, x: { grid: { display: false } } });
+    o.plugins.tooltip.callbacks = { label: (c) => ` ${c.dataset.label}: ${pct(c.parsed.y, 1)}` };
+    desenha("g-densidade", { type: "bar", options: o, data: { labels: br.map((l) => l.densidade_nome.replace("Predominantemente", "Pred.")), datasets: [
+      { label: "Brasil (SISCAN)", data: br.map((l) => l.percentual), backgroundColor: cor("--s-brasil"), ...barra },
+      { label: sub, data: cb.map((l) => l.percentual), backgroundColor: cor("--s-cbis"), ...barra },
+    ] } });
+    tabela("t-densidade", ["Densidade", "Brasil (SISCAN)", sub], br.map((l, i) => [l.densidade_nome, pct(l.percentual, 1), pct(cb[i].percentual, 1)]));
+
+    const fx = [...new Map(D.densidade_faixa.map((l) => [l.faixa_etaria, l.ordem_faixa])).entries()]
+      .sort((a, b) => a[1] - b[1]).map((e) => e[0]);
+    const mostrar = fx.slice(fx.indexOf("35–39"));
+    const dens = mostrar.map((f) => {
+      const g = D.densidade_faixa.filter((l) => l.faixa_etaria === f);
+      const t = g.reduce((s, l) => s + l.exames, 0);
+      return { f, p: 100 * g.filter((l) => l.densidade >= 3).reduce((s, l) => s + l.exames, 0) / t, t };
+    });
+    const cbDens = D.comparacao_densidade.filter((l) => l.fonte === "CBIS-DDSM" && l.densidade >= 3).reduce((s, l) => s + l.percentual, 0);
+    const o2 = base({ y: { min: 0, max: 100, ticks: { color: cor("--muted"), callback: (v) => v + "%" } }, x: { grid: { display: false } } });
+    o2.plugins.tooltip.callbacks = { label: (c) => ` ${c.dataset.label}: ${pct(c.parsed.y, 1)}` };
+    desenha("g-dens-idade", { type: "line", options: o2, data: { labels: mostrar, datasets: [
+      { label: "Brasil: % mamas densas", data: dens.map((d) => d.p), borderColor: cor("--s-brasil"), backgroundColor: cor("--s-brasil"), borderWidth: 2, pointRadius: 4, pointHoverRadius: 6 },
+      { label: "CBIS-DDSM (sem idade)", data: mostrar.map(() => cbDens), borderColor: cor("--s-cbis"), backgroundColor: cor("--s-cbis"), borderDash: [6, 4], borderWidth: 2, pointRadius: 0, pointHoverRadius: 0 },
+    ] } });
+    tabela("t-dens-idade", ["Faixa etária", "% mamas densas", "Exames"], dens.map((d) => [d.f, pct(d.p, 1), nf(d.t)]));
+
+    const fontes = [["Brasil: rastreamento", "--s-brasil"], ["Brasil: diagnóstica", "--s-diag"], ["CBIS-DDSM", "--s-cbis"]];
+    const bi = (fonte) => D.comparacao_birads.filter((l) => l.fonte === fonte).sort((a, b) => a.birads - b.birads);
+    const o3 = base({ y: { beginAtZero: true, max: 60, ticks: { color: cor("--muted"), callback: (v) => v + "%" } }, x: { grid: { display: false } } });
+    o3.plugins.tooltip.callbacks = { title: (c) => "BI-RADS " + c[0].label, label: (c) => ` ${c.dataset.label}: ${pct(c.parsed.y, 1)}` };
+    desenha("g-birads", { type: "bar", options: o3, data: { labels: [0, 1, 2, 3, 4, 5].map(String), datasets:
+      fontes.map(([f, c]) => ({ label: f, data: bi(f).map((l) => l.percentual), backgroundColor: cor(c), ...barra })) } });
+    tabela("t-birads", ["BI-RADS", ...fontes.map((f) => f[0])], [0, 1, 2, 3, 4, 5].map((b) => [b, ...fontes.map(([f]) => pct(bi(f)[b].percentual, 1))]));
+  }
+
+  // ---------- aba Modelo ----------
+  function modelo() {
+    const pop = D.modelo_auc_populacao;
+    const acha = (p) => pop.find((l) => l.populacao.startsWith(p));
+    document.getElementById("k-auc-teste").textContent = nf(acha("CBIS").auc, 2);
+    document.getElementById("k-auc-br").textContent = nf(acha("Brasil, todas").auc, 2);
+    document.getElementById("k-auc-40").textContent = nf(acha("Brasil, 40").auc, 2);
+    document.getElementById("k-auc-70").textContent = nf(acha("Brasil, 70").auc, 2);
+
+    const ad = D.modelo_auc_densidade.sort((a, b) => a.densidade - b.densidade);
+    const o = base({ y: { min: 0, max: 1, ticks: { color: cor("--muted"), callback: (v) => nf(v, 1) } }, x: { grid: { display: false } } });
+    o.plugins.legend.display = false;
+    o.plugins.tooltip.callbacks = { label: (c) => c.datasetIndex === 0 ? ` AUC ${nf(c.parsed.y, 2)} (${ad[c.dataIndex].lesoes_teste} lesões)` : " acaso: 0,50" };
+    desenha("g-auc-dens", { type: "bar", options: o, data: { labels: ad.map((l) => l.densidade_nome.replace("Predominantemente", "Pred.")), datasets: [
+      { data: ad.map((l) => l.auc), backgroundColor: ad.map((l) => l.densidade === 1 ? cor("--s-cbis-suave") : cor("--s-cbis")), ...barra },
+      { type: "line", data: ad.map(() => 0.5), borderColor: cor("--muted"), borderDash: [4, 4], borderWidth: 1.5, pointRadius: 0, pointHoverRadius: 0 },
+    ] } });
+    tabela("t-auc-dens", ["Densidade", "Lesões no teste", "AUC"], ad.map((l) => [l.densidade_nome, l.lesoes_teste, nf(l.auc, 2)]));
+
+    const b0 = D.birads_densidade_brasil.sort((a, b) => a.densidade - b.densidade);
+    const o2 = base({ y: { beginAtZero: true, max: 16, ticks: { color: cor("--muted"), callback: (v) => v + "%" } }, x: { grid: { display: false } } });
+    o2.plugins.legend.display = false;
+    o2.plugins.tooltip.callbacks = { label: (c) => ` ${pct(c.parsed.y, 1)} dos laudos com BI-RADS 0` };
+    desenha("g-birads0", { type: "bar", options: o2, data: { labels: b0.map((l) => l.densidade_nome.replace("Predominantemente", "Pred.")), datasets: [
+      { data: b0.map((l) => l.pct_birads_0), backgroundColor: cor("--s-brasil"), ...barra },
+    ] } });
+    tabela("t-birads0", ["Densidade", "% BI-RADS 0", "% BI-RADS 4–5", "Exames"], b0.map((l) => [l.densidade_nome, pct(l.pct_birads_0, 1), pct(l.pct_birads_4_5, 2), nf(l.exames)]));
+
+    const o3 = base({ x: { min: 0.5, max: 1, ticks: { color: cor("--muted"), callback: (v) => nf(v, 1) } }, y: { grid: { display: false }, ticks: { color: cor("--ink") } } });
+    o3.indexAxis = "y";
+    o3.plugins.legend.display = false;
+    o3.interaction = { mode: "nearest", axis: "y", intersect: false };
+    o3.plugins.tooltip.filter = (c) => c.datasetIndex === 1;
+    o3.plugins.tooltip.callbacks = { label: (c) => {
+      const l = pop[c.dataIndex];
+      return [` AUC ${nf(l.auc, 2)} (IC 95%: ${nf(l.ic95_inf, 2)}–${nf(l.ic95_sup, 2)})`, ` ${pct(l.pct_densas)} de mamas densas`, ` sem densidade 1: ${nf(l.auc_sem_densidade_1, 2)}`];
+    } };
+    const ehCbis = (l) => l.populacao.startsWith("CBIS");
+    desenha("g-auc-pop", { type: "bar", options: o3, data: { labels: pop.map((l) => l.populacao), datasets: [
+      { data: pop.map((l) => [l.ic95_inf, l.ic95_sup]), backgroundColor: pop.map((l) => ehCbis(l) ? cor("--s-cbis-suave") : cor("--s-brasil-suave")),
+        borderRadius: 4, borderSkipped: false, grouped: false, barPercentage: 0.35 },
+      { data: pop.map((l) => [l.auc - 0.0035, l.auc + 0.0035]), backgroundColor: pop.map((l) => ehCbis(l) ? cor("--s-cbis") : cor("--s-brasil")),
+        borderRadius: 2, borderSkipped: false, grouped: false, barPercentage: 0.75 },
+    ] } });
+    tabela("t-auc-pop", ["População", "AUC", "IC 95%", "% mamas densas", "AUC sem densidade 1"],
+      pop.map((l) => [l.populacao, nf(l.auc, 2), `${nf(l.ic95_inf, 2)}–${nf(l.ic95_sup, 2)}`, pct(l.pct_densas), nf(l.auc_sem_densidade_1, 2)]));
+  }
+
+  function tudo() { brasil(); faixaObitos(); comparacao(); modelo(); }
+
+  // ---------- abas ----------
+  const abas = [...document.querySelectorAll('[role="tab"]')];
+  function abre(id, foco = false) {
+    abas.forEach((a) => {
+      const ativa = a.getAttribute("aria-controls") === id;
+      a.setAttribute("aria-selected", ativa);
+      a.tabIndex = ativa ? 0 : -1;
+      document.getElementById(a.getAttribute("aria-controls")).hidden = !ativa;
+      if (ativa && foco) a.focus();
+    });
+    Object.values(graficos).forEach((g) => g.resize());
+    try { history.replaceState(null, "", "#" + id); } catch (e) { /* sem histórico no visualizador */ }
+  }
+  abas.forEach((a, i) => {
+    a.addEventListener("click", () => abre(a.getAttribute("aria-controls")));
+    a.addEventListener("keydown", (e) => {
+      const d = e.key === "ArrowRight" ? 1 : e.key === "ArrowLeft" ? -1 : 0;
+      if (d) abre(abas[(i + d + abas.length) % abas.length].getAttribute("aria-controls"), true);
+    });
+  });
+
+  selReg.addEventListener("change", brasil);
+  selSub.addEventListener("change", comparacao);
+
+  if (window.Chart) {
+    Chart.defaults.font.family = cor("--f-body");
+    tudo();
+    // redesenha com as cores do tema quando o tema muda
+    matchMedia("(prefers-color-scheme: dark)").addEventListener("change", tudo);
+    new MutationObserver(tudo).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  } else {
+    document.querySelectorAll(".tela").forEach((t) => { t.style.height = "auto"; t.innerHTML = '<p>Não foi possível carregar a biblioteca de gráficos. Abra "Ver tabela" para os dados.</p>'; });
+    document.querySelectorAll("details").forEach((d) => d.open = true);
+  }
+  const inicial = (location.hash || "").slice(1);
+  abre(["brasil", "comparacao", "modelo"].includes(inicial) ? inicial : "brasil");
+})();
+</script>

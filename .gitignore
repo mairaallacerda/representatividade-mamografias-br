@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+*.egg-info/
+.pytest_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Dados (grandes / regeneráveis) — mantém só a estrutura de pastas
+data/raw/**
+data/interim/**
+data/processed/**
+!data/**/
+!data/**/.gitkeep
+
+# Imagens médicas
+*.dcm
+*.DCM
+
+# Power BI (arquivos temporários)
+dashboards/*.pbix.tmp
+~$*
+
+# Editores / SO
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini

@@ -1,0 +1,26 @@
+# Coleta de dados
+requests
+beautifulsoup4
+lxml
+selenium
+webdriver-manager
+
+# Tratamento e análise
+pandas
+numpy
+scipy
+statsmodels
+scikit-learn
+
+# Visualização
+matplotlib
+seaborn
+plotly
+
+# Processamento de imagens
+opencv-python-headless
+scikit-image
+pydicom
+
+# Ambiente
+jupyterlab

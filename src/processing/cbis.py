@@ -55,6 +55,26 @@ def carrega_imagens() -> pd.DataFrame:
     return df
 
 
+TIPOS = {"full mammogram images": "full", "cropped images": "recorte", "ROI mask images": "mascara"}
+
+
+def liga_imagens(lesoes: pd.DataFrame, imagens: pd.DataFrame) -> pd.DataFrame:
+    """Acrescenta às lesões as colunas caminho_full, caminho_recorte e caminho_mascara.
+
+    A mamografia completa é identificada pelo caso da imagem (``Calc-Training_P_00005_RIGHT_CC``)
+    e o recorte/máscara pelo caso da lesão (``..._RIGHT_CC_1``), ambos tirados dos caminhos
+    originais do CSV de lesões.
+    """
+    df = lesoes.copy()
+    df["case_full"] = df["image_file_path"].str.split("/").str[0]
+    df["case_roi"] = df["cropped_image_file_path"].str.split("/").str[0]
+    for tipo, nome in TIPOS.items():
+        mapa = imagens[imagens["tipo_imagem"] == tipo].drop_duplicates("case_id").set_index("case_id")["caminho"]
+        chave = "case_full" if nome == "full" else "case_roi"
+        df[f"caminho_{nome}"] = df[chave].map(mapa)
+    return df
+
+
 if __name__ == "__main__":
     df = carrega_cbis()
     print(df.shape)

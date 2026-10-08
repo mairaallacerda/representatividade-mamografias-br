@@ -3,6 +3,7 @@
 import logging
 import re
 import time
+from urllib.parse import urlencode
 
 import requests
 from bs4 import Tag
@@ -15,15 +16,24 @@ log = logging.getLogger(__name__)
 def baixa_html(
     url: str,
     metodo: str = "get",
-    dados: dict | None = None,
+    dados: dict | list[tuple[str, str]] | None = None,
     pausa: float = 1.0,
     tentativas: int = 3,
+    codificacao_form: str | None = None,
 ) -> str:
-    """Baixa uma página via GET ou POST (formulários do TABNET), com novas tentativas."""
+    """Baixa uma página via GET ou POST (formulários do TABNET), com novas tentativas.
+
+    ``codificacao_form``: codifica o corpo do POST nessa codificação em vez de UTF-8
+    (o TABNET só entende os campos com acento em ISO-8859-1).
+    """
+    headers = dict(config.HEADERS)
+    if dados is not None and codificacao_form:
+        dados = urlencode(dados, encoding=codificacao_form)
+        headers["Content-Type"] = "application/x-www-form-urlencoded"
     for tentativa in range(1, tentativas + 1):
         time.sleep(pausa)  # evita sobrecarregar os servidores públicos
         try:
-            resp = requests.request(metodo, url, data=dados, headers=config.HEADERS, timeout=60)
+            resp = requests.request(metodo, url, data=dados, headers=headers, timeout=120)
             resp.raise_for_status()
             resp.encoding = resp.apparent_encoding
             return resp.text

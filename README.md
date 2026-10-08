@@ -72,9 +72,11 @@ pip install -r requirements.txt
 
 ```bash
 python -m src.scraping.inca      # INCA: incidência, mamografias no SUS (2018–2022), mortalidade
+python -m src.scraping.tabnet    # TABNET: mamografias (SIA) e óbitos por câncer de mama (SIM), 2018–2022
 ```
 
-HTML bruto em `data/raw/inca/`, CSVs em `data/interim/`. Detalhes e problemas encontrados na fonte: [docs/scraping_inca.md](docs/scraping_inca.md).
+HTML bruto em `data/raw/`, CSVs em `data/interim/`. Análise de cada fonte e problemas encontrados:
+[docs/scraping_inca.md](docs/scraping_inca.md) · [docs/scraping_tabnet.md](docs/scraping_tabnet.md).
 
 Testes:
 

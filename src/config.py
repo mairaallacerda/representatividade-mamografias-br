@@ -24,9 +24,7 @@ URLS = {
         "controle-do-cancer-de-mama/dados-e-numeros"
     ),
     "tabnet_home": "https://datasus.saude.gov.br/informacoes-de-saude-tabnet/",
-    # TODO: preencher com o endpoint tabcgi.exe da consulta de mamografias (SISCAN)
-    "tabnet_siscan_mamografia": None,
-}
+}  # as consultas do TABNET estão em src/scraping/tabnet.py
 
 # CSVs de metadados do CBIS-DDSM
 CBIS_FILES = {

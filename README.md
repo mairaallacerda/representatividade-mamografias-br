@@ -19,9 +19,9 @@ Trabalho da disciplina **Ciência dos Dados** — Engenharia de Computação, CE
 
 | Fonte | Conteúdo | Forma de obtenção |
 |---|---|---|
-| **CBIS-DDSM** ([TCIA](https://www.cancerimagingarchive.net/collection/cbis-ddsm/) / Kaggle) | Imagens + metadados clínicos: densidade mamária, tipo de anormalidade, tipo/distribuição de calcificação, BI-RADS, patologia | Download direto (CSV/DICOM) |
-| **INCA** | Estimativas de incidência, mortalidade, "Dados e números 2024" | Web scraping (requests + BeautifulSoup) |
-| **DATASUS / TABNET** | Mamografias realizadas (SISCAN), faixa etária, UF, ano | Web scraping com envio de formulário (requests.post / Selenium) |
+| **CBIS-DDSM** ([Kaggle](https://www.kaggle.com/datasets/awsaf49/cbis-ddsm-breast-cancer-image-dataset), versão em JPEG do [TCIA](https://www.cancerimagingarchive.net/collection/cbis-ddsm/)) | Imagens + metadados clínicos: densidade mamária, tipo de anormalidade, tipo/distribuição de calcificação, BI-RADS, patologia | Download direto (CSV + JPEG) |
+| **INCA** | Estimativas de incidência, mortalidade, mamografias no SUS 2018–2022 | Web scraping (requests + BeautifulSoup) |
+| **DATASUS / TABNET** | Mamografias realizadas (SIA) e óbitos por câncer de mama (SIM), por UF, faixa etária e ano | Web scraping com envio de formulário (requests.post) |
 
 **Período (dados brasileiros):** mamografias realizadas entre **2018 e 2022**, além das estimativas de incidência mais recentes. O CBIS-DDSM é tratado como base **transversal**.
 
@@ -35,7 +35,7 @@ Trabalho da disciplina **Ciência dos Dados** — Engenharia de Computação, CE
 │   ├── raw/            # dados brutos (não versionados)
 │   │   ├── inca/
 │   │   ├── datasus/
-│   │   └── cbis-ddsm/  # CSVs de metadados (e imagens, se baixadas)
+│   │   └── cbis-ddsm/  # CSVs de metadados + jpeg/ (link para as imagens)
 │   ├── interim/        # dados intermediários (pós-limpeza parcial)
 │   └── processed/      # dados finais, prontos para análise
 ├── notebooks/          # análises exploratórias (numerados em ordem)
@@ -84,12 +84,46 @@ Testes:
 python -m pytest
 ```
 
-### CBIS-DDSM
+### CBIS-DDSM (Kaggle)
 
-Baixe os CSVs de metadados do CBIS-DDSM e coloque em `data/raw/cbis-ddsm/`:
+O dataset **não é versionado** no repositório: são ~6 GB (10.237 imagens JPEG), acima do que o GitHub
+aceita, e a fonte deve ser citada em vez de redistribuída. Cada pessoa baixa a sua cópia.
 
-- `mass_case_description_train_set.csv`, `mass_case_description_test_set.csv`
-- `calc_case_description_train_set.csv`, `calc_case_description_test_set.csv`
+**1. Baixar** a versão do Kaggle, [CBIS-DDSM: Breast Cancer Image Dataset](https://www.kaggle.com/datasets/awsaf49/cbis-ddsm-breast-cancer-image-dataset).
+Dá para baixar o `.zip` pelo navegador ("Download") ou usar a API do Kaggle. A API exige um token pessoal:
+gere em *Kaggle → Settings → API → Create New Token* e salve o arquivo em `~/.kaggle/kaggle.json`.
+
+```bash
+pip install kaggle
+kaggle datasets download -d awsaf49/cbis-ddsm-breast-cancer-image-dataset -p ~/datasets --unzip
+```
+
+**2. Colocar no projeto.** O projeto espera esta estrutura:
+
+```
+data/raw/cbis-ddsm/
+├── mass_case_description_train_set.csv
+├── mass_case_description_test_set.csv
+├── calc_case_description_train_set.csv
+├── calc_case_description_test_set.csv
+├── dicom_info.csv          # 1 linha por imagem; liga imagem ↔ lesão
+├── meta.csv
+└── jpeg/                   # imagens (pasta ou link simbólico)
+```
+
+Copie os CSVs da pasta `csv/` do download. Para as imagens, em vez de copiar 6 GB, crie um **link simbólico**
+para a pasta `jpeg/` baixada:
+
+```bash
+cp ~/datasets/csv/*.csv data/raw/cbis-ddsm/
+ln -s ~/datasets/jpeg data/raw/cbis-ddsm/jpeg
+```
+
+**3. Conferir:**
+
+```bash
+python -c "from src.processing.cbis import carrega_imagens; d = carrega_imagens(); print(d.existe.sum(), 'de', len(d), 'imagens encontradas')"
+```
 
 Depois:
 

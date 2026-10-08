@@ -9,6 +9,7 @@ RAW = DATA / "raw"
 RAW_INCA = RAW / "inca"
 RAW_DATASUS = RAW / "datasus"
 RAW_CBIS = RAW / "cbis-ddsm"
+CBIS_JPEG = RAW_CBIS / "jpeg"  # pode ser um link simbólico para as imagens baixadas do Kaggle (~6 GB)
 INTERIM = DATA / "interim"
 PROCESSED = DATA / "processed"
 FIGURES = ROOT / "reports" / "figures"

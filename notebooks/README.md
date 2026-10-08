@@ -1,13 +1,15 @@
 # Notebooks
 
-A coleta é feita por scripts (`python -m src.scraping.inca` e `python -m src.scraping.tabnet`), não por notebooks.
+A coleta é feita por scripts (`python -m src.scraping.inca`, `.tabnet` e `.siscan`), não por notebooks.
 Os notebooks partem dos CSVs em `data/interim/` e dos metadados do CBIS-DDSM em `data/raw/cbis-ddsm/`.
 
-| Notebook | Conteúdo | Status |
+| Notebook | Conteúdo | Depende de |
 |---|---|---|
-| `01_analise_exploratoria.ipynb` | Mamografias, mortalidade e incidência no Brasil; perfil do CBIS-DDSM; malignidade × densidade/BI-RADS/tipo; comparação de composição Brasil × CBIS | pronto |
-| `02_comparacao_birads_densidade.ipynb` | Comparação direta das distribuições de BI-RADS e densidade (depende de dados do SISCAN) | a fazer |
-| `03_imagens_calcificacoes.ipynb` | Qualidade e ligação das imagens (recuperação das 566 imagens sem tipo); PDI de microcalcificações; características × malignidade e × densidade; modelo por densidade e por prevalência | pronto (precisa das imagens em `data/raw/cbis-ddsm/jpeg`; ~7 min na 1ª execução, depois usa cache) |
+| `01_analise_exploratoria.ipynb` | Mamografias, mortalidade e incidência no Brasil; perfil do CBIS-DDSM; malignidade × densidade/BI-RADS/tipo; composição dos casos Brasil × CBIS | scrapers INCA e TABNET |
+| `03_imagens_calcificacoes.ipynb` | Qualidade e ligação das imagens (recuperação das 566 imagens sem tipo); PDI de microcalcificações; características × malignidade e × densidade; modelo por densidade e por prevalência | imagens em `data/raw/cbis-ddsm/jpeg` (~7 min na 1ª execução, depois usa cache) |
+| `04_comparacao_birads_densidade.ipynb` | Comparação direta Brasil (SISCAN) × CBIS-DDSM: densidade (geral e por idade), BI-RADS, densidade × dificuldade, AUC do modelo reponderada pela composição brasileira; **resposta à pergunta do trabalho** | scraper SISCAN e previsões salvas pelo notebook 03 |
+
+Ordem de execução: 01 → 03 → 04. (O número 02 ficou reservado e não foi usado.)
 
 As figuras são salvas em `reports/figures/`.
 

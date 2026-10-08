@@ -1,16 +1,15 @@
 # Notebooks
 
-Numerados na ordem em que devem ser executados:
+A coleta é feita por scripts (`python -m src.scraping.inca` e `python -m src.scraping.tabnet`), não por notebooks.
+Os notebooks partem dos CSVs em `data/interim/` e dos metadados do CBIS-DDSM em `data/raw/cbis-ddsm/`.
 
-| Notebook | Etapa |
-|---|---|
-| `01_coleta_inca.ipynb` | Scraping das páginas do INCA |
-| `02_coleta_tabnet.ipynb` | Scraping do TABNET/DATASUS (mamografias 2018–2022) |
-| `03_eda_cbis_ddsm.ipynb` | Análise exploratória dos metadados do CBIS-DDSM |
-| `04_tratamento_padronizacao.ipynb` | Limpeza e padronização de categorias |
-| `05_comparacao_br_x_cbis.ipynb` | Cruzamento e testes estatísticos |
-| `06_associacao_malignidade.ipynb` | Densidade / tipo / BI-RADS × malignidade |
-| `07_imagens_calcificacoes.ipynb` | PDI e extração de características (complementar) |
+| Notebook | Conteúdo | Status |
+|---|---|---|
+| `01_analise_exploratoria.ipynb` | Mamografias, mortalidade e incidência no Brasil; perfil do CBIS-DDSM; malignidade × densidade/BI-RADS/tipo; comparação de composição Brasil × CBIS | pronto |
+| `02_comparacao_birads_densidade.ipynb` | Comparação direta das distribuições de BI-RADS e densidade (depende de dados do SISCAN) | a fazer |
+| `03_imagens_calcificacoes.ipynb` | PDI e extração de características (complementar) | a fazer |
+
+As figuras são salvas em `reports/figures/`.
 
 Para importar o código de `src/` dentro de um notebook:
 

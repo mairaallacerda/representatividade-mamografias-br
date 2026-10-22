@@ -1,4 +1,4 @@
-"""Exporta as tabelas do painel de BI (Power BI e painel HTML) para ``dashboards/dados/``.
+"""Exporta as tabelas do painel interativo (painel HTML) para ``dashboards/dados/``.
 
 Modelo em estrela:
 
@@ -219,7 +219,7 @@ def exportar() -> dict[str, pd.DataFrame]:
     }
     DESTINO.mkdir(parents=True, exist_ok=True)
     for nome, df in tabelas.items():
-        # UTF-8 com BOM: o Power BI e o Excel reconhecem os acentos automaticamente
+        # UTF-8 com BOM: o Excel reconhece os acentos automaticamente
         df.to_csv(DESTINO / f"{nome}.csv", index=False, encoding="utf-8-sig")
         log.info("dashboards/dados/%s.csv (%d linhas)", nome, len(df))
     (DESTINO / "indicadores.json").write_text(json.dumps(indicadores(tabelas), indent=2, ensure_ascii=False))

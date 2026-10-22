@@ -48,7 +48,7 @@ Trabalho da disciplina **Ciência dos Dados** — Engenharia de Computação, CE
 │   ├── images/         # PDI e extração de características (OpenCV/scikit-image)
 │   └── visualization/  # gráficos padronizados
 ├── reports/figures/    # figuras geradas para o relatório
-├── dashboards/         # painéis de BI (Power BI)
+├── dashboards/         # painel interativo (painel.html)
 ├── docs/               # pré-projeto, proposta e referências
 └── tests/
 ```
@@ -58,7 +58,7 @@ Trabalho da disciplina **Ciência dos Dados** — Engenharia de Computação, CE
 1. **Extração** — scraping direcionado do INCA e do TABNET; leitura dos metadados do CBIS-DDSM.
 2. **Tratamento** — valores ausentes, limpeza com regex, padronização de categorias (faixas etárias, BI-RADS, densidade), estruturação em `pandas`.
 3. **Análise** — exploratória do CBIS-DDSM, comparação com o contexto brasileiro, associação características × malignidade (qui-quadrado, etc.), análise temporal 2018–2022.
-4. **Visualização** — Matplotlib/Seaborn, Plotly e painel em Power BI.
+4. **Visualização** — Matplotlib/Seaborn e painel interativo em HTML.
 5. **Imagens (complementar)** — pré-processamento e extração de características de calcificações; exploração de ML supervisionado para discutir viés.
 
 ## Como rodar

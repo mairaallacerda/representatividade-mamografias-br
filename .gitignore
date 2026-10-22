@@ -21,8 +21,7 @@ data/processed/**
 *.dcm
 *.DCM
 
-# Power BI (arquivos temporários)
-dashboards/*.pbix.tmp
+# Arquivos temporários do Office
 ~$*
 
 # Editores / SO

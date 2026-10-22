@@ -52,9 +52,9 @@ dim_localidade (1 linha por UF: localidade, regiao, sigla)
 
 Tabelas independentes (já agregadas):
    taxas_regiao              incidência (2023) e mortalidade (2021) ajustadas por idade, por região (INCA)
-   modelo_vpp_regiao         VPP do modelo de calcificações com a prevalência de cada região (notebook 03)
-   siscan_regiao             % mamas densas (bruta e padronizada por idade), w × CBIS-DDSM e AUC por região (notebook 04)
-   siscan_densidade_uf       % mamas densas por UF (SISCAN, notebook 04)
+   modelo_vpp_regiao         VPP do modelo de calcificações com a prevalência de cada região (notebook 02)
+   siscan_regiao             % mamas densas (bruta e padronizada por idade), w × CBIS-DDSM e AUC por região (notebook 03)
+   siscan_densidade_uf       % mamas densas por UF (SISCAN, notebook 03)
    obitos_faixa              óbitos por faixa etária × ano (SIM)
    densidade_faixa           exames por densidade × faixa etária (SISCAN)
    comparacao_densidade      % por densidade: Brasil × CBIS-DDSM (todas, massas, calcificações)

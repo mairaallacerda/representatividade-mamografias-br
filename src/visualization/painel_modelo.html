@@ -58,13 +58,15 @@ nav button[aria-selected="true"] { color: var(--ink); border-bottom-color: var(-
 button:focus-visible, select:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
 section[role="tabpanel"] { display: grid; gap: 18px; }
+section[role="tabpanel"][hidden] { display: none; }
 .pergunta { margin: 0; font: 600 20px/1.25 var(--f-display); text-wrap: balance; }
 .filtros { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; color: var(--muted); font-size: 14px; }
 .filtros label { display: flex; gap: 8px; align-items: center; }
 select {
   font: 500 14px var(--f-body); color: var(--ink); background: var(--surface);
-  border: 1px solid var(--line); border-radius: 6px; padding: 6px 28px 6px 10px;
+  border: 1px solid var(--line); border-radius: 6px; padding: 6px 28px 6px 10px; max-width: 100%; min-width: 0;
 }
+.filtros label { min-width: 0; max-width: 100%; }
 
 .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1px;
         background: var(--line); border: 1px solid var(--line); border-radius: var(--raio); overflow: hidden; }
@@ -85,6 +87,7 @@ select {
 figure.cartao {
   margin: 0; background: var(--surface); border: 1px solid var(--line); border-radius: var(--raio);
   padding: 16px 18px 12px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; min-width: 0;
+  align-content: start;
 }
 figcaption h3 { margin: 0; font: 600 16.5px/1.3 var(--f-display); text-wrap: balance; }
 figcaption p { margin: 4px 0 0; font-size: 13.5px; color: var(--muted); max-width: 70ch; }
@@ -97,6 +100,16 @@ table { border-collapse: collapse; font-variant-numeric: tabular-nums; min-width
 th, td { text-align: right; padding: 5px 10px; border-bottom: 1px solid var(--grid); white-space: nowrap; }
 th:first-child, td:first-child { text-align: left; }
 th { font-weight: 600; color: var(--muted); }
+
+.mapa { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 4px; width: 100%; max-width: 400px;
+        margin-inline: auto; }
+.uf { aspect-ratio: 1; border-radius: 6px; display: grid; place-content: center; text-align: center; line-height: 1.15;
+      font-variant-numeric: tabular-nums; }
+.uf b { font: 600 13px var(--f-display); }
+.uf span { font-size: 11.5px; }
+.legenda-mapa { display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 12px; color: var(--muted); }
+.legenda-mapa .rampa { width: 140px; height: 10px; border-radius: 3px;
+  background: linear-gradient(90deg, color-mix(in srgb, var(--s-brasil) 10%, var(--surface)), var(--s-brasil)); }
 
 .leitura { margin: 0; padding: 14px 18px; border-left: 3px solid var(--accent); background: var(--surface);
            border-radius: 0 var(--raio) var(--raio) 0; max-width: 90ch; }
@@ -119,6 +132,7 @@ code, .mono { font-family: var(--f-mono); font-size: .92em; }
 
   <nav role="tablist" aria-label="Seções do painel">
     <button role="tab" id="aba-brasil" aria-controls="brasil" aria-selected="true">Brasil</button>
+    <button role="tab" id="aba-regioes" aria-controls="regioes" aria-selected="false">Regiões</button>
     <button role="tab" id="aba-comparacao" aria-controls="comparacao" aria-selected="false">Brasil × CBIS-DDSM</button>
     <button role="tab" id="aba-modelo" aria-controls="modelo" aria-selected="false">Modelo e viés</button>
   </nav>
@@ -157,6 +171,53 @@ code, .mono { font-family: var(--f-mono); font-size: .92em; }
         <div class="tela alta"><canvas id="g-faixa-obitos" aria-label="Óbitos por faixa etária"></canvas></div>
         <details><summary>Ver tabela</summary><div class="tabela-wrap" id="t-faixa-obitos"></div></details>
       </figure>
+    </div>
+  </section>
+
+  <section role="tabpanel" id="regioes" aria-labelledby="aba-regioes" hidden>
+    <p class="pergunta">O Brasil é um só? Incidência, rastreamento e mortalidade em cada região</p>
+    <div class="kpis">
+      <div class="kpi"><span class="rotulo">Rastreamentos no SUS por 1.000 mulheres</span><span class="valor" id="k-reg-cob"></span><span class="nota" id="k-reg-cob-nota"></span></div>
+      <div class="kpi"><span class="rotulo">Óbitos por caso estimado</span><span class="valor" id="k-reg-obc"></span><span class="nota" id="k-reg-obc-nota"></span></div>
+      <div class="kpi"><span class="rotulo">Mamas densas (SISCAN)</span><span class="valor" id="k-reg-dens"></span><span class="nota" id="k-reg-dens-nota"></span></div>
+      <div class="kpi"><span class="rotulo">VPP do mesmo modelo</span><span class="valor" id="k-reg-vpp"></span><span class="nota" id="k-reg-vpp-nota"></span></div>
+    </div>
+    <div class="grade">
+      <figure class="cartao">
+        <figcaption><h3>Indicadores por região</h3><p>Incidência e mortalidade ajustadas por idade (INCA). Rastreamento: SIA/SUS 2022. Mulheres estimadas pelo INCA (casos ÷ taxa bruta), todas as idades.</p></figcaption>
+        <div class="filtros"><label for="f-indicador">Indicador <select id="f-indicador"></select></label></div>
+        <div class="tela"><canvas id="g-reg" aria-label="Indicador por região"></canvas></div>
+        <details><summary>Ver tabela</summary><div class="tabela-wrap" id="t-reg"></div></details>
+      </figure>
+      <figure class="cartao">
+        <figcaption><h3>Mapa por UF</h3><p>Cada quadrado é uma UF, na posição aproximada do mapa; todas com o mesmo tamanho. Passe o mouse para ver o nome.</p></figcaption>
+        <div class="filtros"><label for="f-mapa">Mostrar <select id="f-mapa"></select></label></div>
+        <div class="mapa" id="mapa" role="img" aria-label="Mapa em grade das UFs"></div>
+        <div class="legenda-mapa"><span id="leg-min"></span><span class="rampa"></span><span id="leg-max"></span></div>
+        <details><summary>Ver tabela</summary><div class="tabela-wrap" id="t-mapa"></div></details>
+      </figure>
+      <figure class="cartao">
+        <figcaption><h3>A pandemia em cada região</h3><p>Rastreamentos no SUS em relação a 2019 (2019 = 100). Em destaque, a região escolhida; em cinza, as demais; tracejado, o Brasil.</p></figcaption>
+        <div class="filtros"><label for="f-destaque">Destacar <select id="f-destaque"></select></label></div>
+        <div class="tela"><canvas id="g-pandemia" aria-label="Rastreamentos por região em relação a 2019"></canvas></div>
+        <details><summary>Ver tabela</summary><div class="tabela-wrap" id="t-pandemia"></div></details>
+      </figure>
+      <figure class="cartao">
+        <figcaption><h3>O mesmo modelo em cada região</h3><p>VPP do modelo de calcificações (mesma sensibilidade e especificidade) com a prevalência estimada de cada região: casos ÷ mamografias no SUS.</p></figcaption>
+        <div class="tela"><canvas id="g-vpp" aria-label="VPP do modelo por região"></canvas></div>
+        <details><summary>Ver tabela</summary><div class="tabela-wrap" id="t-vpp"></div></details>
+      </figure>
+    </div>
+    <div class="leitura">
+      <p><strong>Leitura.</strong> O Norte combina a menor incidência registrada, a menor cobertura de rastreamento e a maior
+        razão entre óbitos e casos, o que sugere diagnóstico mais tardio. O Sul rastreia mais e, mesmo assim, tem a maior
+        mortalidade ajustada. Perguntar se o CBIS-DDSM "representa o Brasil" envolve também perguntar <em>qual</em> Brasil.</p>
+      <p>Na densidade, o CBIS-DDSM se parece com o Sudeste (47% de mamas densas, contra 46% na base), mas não com o Norte
+        (65%, e 63% mesmo descontando a idade). O Norte é onde o modelo teria o pior desempenho estimado: a população
+        mais vulnerável é a menos representada pela base.</p>
+      <p>Os exames são só do SUS: onde há mais planos de saúde (Sudeste, Sul, DF), o rastreamento real é maior e a
+        prevalência usada no VPP fica superestimada. A razão óbitos ÷ casos não é letalidade: compara grupos de mulheres
+        diferentes e serve só para comparar regiões.</p>
     </div>
   </section>
 
@@ -350,6 +411,132 @@ code, .mono { font-family: var(--f-mono); font-size: .92em; }
     tabela("t-faixa-obitos", ["Faixa etária", "Óbitos 2018–2022", "%"], faixas.map((f, i) => [f, nf(tot[i]), pct(p[i], 1)]));
   }
 
+  const ORDEM_REG = ["Norte", "Nordeste", "Centro-Oeste", "Sudeste", "Sul"];
+  const mulheresUF = Object.fromEntries(D.fato_incidencia_uf.map((l) => [l.localidade, l.casos_estimados / l.taxa_bruta_100mil * 1e5]));
+  const rast22 = Object.fromEntries(D.fato_uf_ano.filter((l) => l.ano === 2022).map((l) => [l.localidade, l]));
+  const IND_REG = {
+    inc: ["Incidência ajustada (por 100 mil, INCA 2023)", 1],
+    mort: ["Mortalidade ajustada (por 100 mil, INCA 2021)", 1],
+    cob: ["Rastreamentos no SUS por 1.000 mulheres (2022)", 0],
+    porCaso: ["Rastreamentos por caso estimado (2022)", 0],
+    obCaso: ["Óbitos (2022) por caso estimado (2023)", 2],
+    dens: ["% mamas densas (SISCAN 2018–2022)", 0],
+    auc: ["AUC estimada do modelo (densidade da região)", 2],
+  };
+  const IND_MAPA = { cob: IND_REG.cob, inc: IND_REG.inc, porCaso: IND_REG.porCaso, dens: IND_REG.dens };
+  const densUF = Object.fromEntries(D.siscan_densidade_uf.map((l) => [l.localidade, l.pct_densas]));
+  const GRADE_UF = { RR: [0, 1], AP: [0, 3], AM: [1, 1], PA: [1, 2], MA: [1, 3], CE: [1, 4], RN: [1, 5],
+    AC: [2, 0], RO: [2, 1], TO: [2, 2], PI: [2, 3], PE: [2, 4], PB: [2, 5], MT: [3, 1], GO: [3, 2], DF: [3, 3],
+    BA: [3, 4], AL: [3, 5], MS: [4, 1], MG: [4, 2], ES: [4, 3], SE: [4, 5], PR: [5, 1], SP: [5, 2], RJ: [5, 3],
+    SC: [6, 1], RS: [7, 1] };
+  const selInd = document.getElementById("f-indicador");
+  const selMapa = document.getElementById("f-mapa");
+  const selDest = document.getElementById("f-destaque");
+  Object.entries(IND_REG).forEach(([k, [n]]) => selInd.insertAdjacentHTML("beforeend", `<option value="${k}">${n}</option>`));
+  Object.entries(IND_MAPA).forEach(([k, [n]]) => selMapa.insertAdjacentHTML("beforeend", `<option value="${k}">${n}</option>`));
+  ORDEM_REG.forEach((r) => selDest.insertAdjacentHTML("beforeend", `<option value="${r}">${r}</option>`));
+  selInd.value = "cob";
+
+  const ufsReg = D.fato_incidencia_uf.map((l) => {
+    const f = rast22[l.localidade];
+    return { uf: l.localidade, sigla: siglaDe[l.localidade], regiao: regiaoDe[l.localidade], inc: l.taxa_ajustada_100mil,
+             cob: 1000 * f.mamografias_rastreamento / mulheresUF[l.localidade], porCaso: f.mamografias_rastreamento / l.casos_estimados,
+             dens: densUF[l.localidade] };
+  });
+  const porRegiao = ORDEM_REG.map((r) => {
+    const ufs = D.dim_localidade.filter((l) => l.regiao === r).map((l) => l.localidade);
+    const s = (c) => ufs.reduce((a, u) => a + (rast22[u][c] || 0), 0);
+    const casos = D.fato_incidencia_uf.filter((l) => ufs.includes(l.localidade)).reduce((a, l) => a + l.casos_estimados, 0);
+    const mulheres = ufs.reduce((a, u) => a + mulheresUF[u], 0);
+    const t = D.taxas_regiao.find((l) => l.regiao === r);
+    const sis = D.siscan_regiao.find((l) => l.regiao === r);
+    return { r, inc: t.incidencia_ajustada_100mil, mort: t.mortalidade_ajustada_100mil,
+             cob: 1000 * s("mamografias_rastreamento") / mulheres, porCaso: s("mamografias_rastreamento") / casos,
+             obCaso: s("obitos_cancer_mama") / casos, dens: sis.pct_densas, densPad: sis.pct_densas_padronizada,
+             w: sis.w_cbis, auc: sis.auc };
+  });
+  const extremos = (k) => {
+    const o = [...porRegiao].sort((a, b) => a[k] - b[k]);
+    return [o[0], o[o.length - 1]];
+  };
+
+  function abaRegioes() {
+    const kpi = (id, k, d, unid = "") => {
+      const [mn, mx] = extremos(k);
+      document.getElementById(id).innerHTML = `${nf(mn[k], d)}${unid} <small>× ${nf(mx[k], d)}${unid}</small>`;
+      document.getElementById(id + "-nota").textContent = `${mn.r} × ${mx.r}`;
+    };
+    kpi("k-reg-cob", "cob", 0);
+    kpi("k-reg-obc", "obCaso", 2);
+    kpi("k-reg-dens", "dens", 0, "%");
+    const vppR = D.modelo_vpp_regiao.filter((l) => ORDEM_REG.includes(l.regiao));
+    const vppCbis = D.modelo_vpp_regiao.find((l) => l.regiao.startsWith("CBIS"));
+    const vs = vppR.map((l) => l.vpp);
+    document.getElementById("k-reg-vpp").innerHTML = `${pct(100 * Math.min(...vs), 1)} <small>a ${pct(100 * Math.max(...vs), 1)}</small>`;
+    document.getElementById("k-reg-vpp-nota").textContent = `nas regiões · no CBIS-DDSM: ${pct(100 * vppCbis.vpp)}`;
+
+    const k = selInd.value, [nomeK, dK] = IND_REG[k];
+    const o = base({ x: { beginAtZero: true, ticks: { color: cor("--muted"), callback: (v) => nf(v, dK === 2 ? 1 : 0) } },
+                     y: { grid: { display: false }, ticks: { color: cor("--ink") } } });
+    o.indexAxis = "y";
+    o.plugins.legend.display = false;
+    o.interaction = { mode: "nearest", axis: "y", intersect: false };
+    o.plugins.tooltip.callbacks = { label: (c) => ` ${nomeK}: ${nf(c.parsed.x, dK)}` };
+    desenha("g-reg", { type: "bar", options: o, data: { labels: ORDEM_REG, datasets: [
+      { data: porRegiao.map((p) => p[k]), backgroundColor: cor("--s-brasil"), ...barra, barPercentage: 0.7 },
+    ] } });
+    tabela("t-reg", ["Região", "Incidência aj.", "Mortalidade aj.", "Rastr./1.000 mulheres", "Rastr./caso", "Óbitos/caso",
+                     "% densas", "% densas (padr. idade)", "w × CBIS-DDSM", "AUC estimada"],
+      porRegiao.map((p) => [p.r, nf(p.inc, 1), nf(p.mort, 1), nf(p.cob), nf(p.porCaso), nf(p.obCaso, 2),
+                            pct(p.dens), pct(p.densPad), nf(p.w, 2), nf(p.auc, 2)]));
+
+    const km = selMapa.value, [nomeM, dM] = IND_MAPA[km];
+    const max = Math.max(...ufsReg.map((u) => u[km]));
+    const porSigla = Object.fromEntries(ufsReg.map((u) => [u.sigla, u]));
+    document.getElementById("mapa").innerHTML = Object.entries(GRADE_UF).map(([sg, [lin, col]]) => {
+      const u = porSigla[sg], x = Math.round(10 + 90 * u[km] / max);
+      return `<div class="uf" title="${u.uf} (${u.regiao}): ${nf(u[km], dM)}" style="grid-row:${lin + 1};grid-column:${col + 1};` +
+        `background:color-mix(in srgb, var(--s-brasil) ${x}%, var(--surface));color:${x > 70 ? "#fff" : "var(--ink)"}">` +
+        `<b>${sg}</b><span>${nf(u[km], dM)}</span></div>`;
+    }).join("");
+    document.getElementById("leg-min").textContent = "0";
+    document.getElementById("leg-max").textContent = nf(max, dM);
+    tabela("t-mapa", ["UF", "Região", nomeM], [...ufsReg].sort((a, b) => a[km] - b[km]).map((u) => [u.uf, u.regiao, nf(u[km], dM)]));
+
+    const rastAno = (r, a) => D.fato_uf_ano.filter((l) => l.ano === a && (!r || regiaoDe[l.localidade] === r))
+      .reduce((s, l) => s + l.mamografias_rastreamento, 0);
+    const indice = (r) => anos.map((a) => 100 * rastAno(r, a) / rastAno(r, 2019));
+    const dest = selDest.value;
+    const o2 = base({ y: { ticks: { color: cor("--muted"), callback: (v) => nf(v) } }, x: { grid: { display: false } } });
+    o2.plugins.legend.display = false;
+    o2.plugins.tooltip.itemSort = (a, b) => b.parsed.y - a.parsed.y;
+    o2.plugins.tooltip.callbacks = { label: (c) => ` ${c.dataset.label}: ${nf(c.parsed.y)}` };
+    const linhas = ORDEM_REG.map((r) => ({ label: r, data: indice(r), borderColor: r === dest ? cor("--s-brasil") : cor("--muted") + "66",
+      backgroundColor: r === dest ? cor("--s-brasil") : cor("--muted"), borderWidth: r === dest ? 3 : 1.5,
+      pointRadius: r === dest ? 4 : 0, pointHoverRadius: 5, order: r === dest ? 0 : 2 }));
+    linhas.push({ label: "Brasil", data: indice(""), borderColor: cor("--ink"), backgroundColor: cor("--ink"), borderDash: [5, 4],
+      borderWidth: 1.5, pointRadius: 0, pointHoverRadius: 4, order: 1 });
+    desenha("g-pandemia", { type: "line", options: o2, data: { labels: anos, datasets: linhas } });
+    tabela("t-pandemia", ["Ano", ...ORDEM_REG, "Brasil"], anos.map((a, i) => [a, ...linhas.map((l) => nf(l.data[i]))]));
+
+    const vb = D.modelo_vpp_regiao.filter((l) => !l.regiao.startsWith("CBIS"));
+    const o3 = base({ x: { beginAtZero: true, ticks: { color: cor("--muted"), callback: (v) => v + "%" } },
+                      y: { grid: { display: false }, ticks: { color: cor("--ink") } } });
+    o3.indexAxis = "y";
+    o3.plugins.legend.display = false;
+    o3.interaction = { mode: "nearest", axis: "y", intersect: false };
+    o3.plugins.tooltip.callbacks = { label: (c) => {
+      const l = vb[c.dataIndex];
+      return [` VPP ${pct(100 * l.vpp, 1)}`, ` ${nf(l.fp_por_cancer)} falsos positivos por câncer detectado`, ` prevalência estimada ${pct(100 * l.prevalencia, 2)}`];
+    } };
+    desenha("g-vpp", { type: "bar", options: o3, data: { labels: vb.map((l) => l.regiao), datasets: [
+      { data: vb.map((l) => 100 * l.vpp), backgroundColor: vb.map((l) => l.regiao === "Brasil" ? cor("--muted") : cor("--s-brasil")), ...barra, barPercentage: 0.7 },
+    ] } });
+    tabela("t-vpp", ["População", "Prevalência", "VPP", "Falsos positivos por câncer", "Falsos positivos/ano"],
+      D.modelo_vpp_regiao.map((l) => [l.regiao, pct(100 * l.prevalencia, 2), pct(100 * l.vpp, 1), nf(l.fp_por_cancer),
+                                      l.fp_ano == null ? "—" : nf(l.fp_ano)]));
+  }
+
   const selSub = document.getElementById("f-subconjunto");
   function comparacao() {
     document.getElementById("k-w").textContent = nf(I.w_cohen_densidade, 2);
@@ -443,7 +630,9 @@ code, .mono { font-family: var(--f-mono); font-size: .92em; }
       pop.map((l) => [l.populacao, nf(l.auc, 2), `${nf(l.ic95_inf, 2)}–${nf(l.ic95_sup, 2)}`, pct(l.pct_densas), nf(l.auc_sem_densidade_1, 2)]));
   }
 
-  function tudo() { brasil(); faixaObitos(); comparacao(); modelo(); }
+  // gráficos desenhados numa aba oculta ficam com largura zero: cada aba é redesenhada ao ser aberta
+  const DESENHA_ABA = { brasil: () => { brasil(); faixaObitos(); }, regioes: abaRegioes, comparacao, modelo };
+  function tudo() { Object.values(DESENHA_ABA).forEach((f) => f()); }
 
   const abas = [...document.querySelectorAll('[role="tab"]')];
   function abre(id, foco = false) {
@@ -454,7 +643,7 @@ code, .mono { font-family: var(--f-mono); font-size: .92em; }
       document.getElementById(a.getAttribute("aria-controls")).hidden = !ativa;
       if (ativa && foco) a.focus();
     });
-    Object.values(graficos).forEach((g) => g.resize());
+    if (window.Chart) DESENHA_ABA[id]();
     try { history.replaceState(null, "", "#" + id); } catch (e) { /* sem histórico no visualizador */ }
   }
   abas.forEach((a, i) => {
@@ -467,6 +656,7 @@ code, .mono { font-family: var(--f-mono); font-size: .92em; }
 
   selReg.addEventListener("change", brasil);
   selSub.addEventListener("change", comparacao);
+  [selInd, selMapa, selDest].forEach((s) => s.addEventListener("change", abaRegioes));
 
   if (window.Chart) {
     Chart.defaults.font.family = cor("--f-body");
@@ -478,6 +668,6 @@ code, .mono { font-family: var(--f-mono); font-size: .92em; }
     document.querySelectorAll("details").forEach((d) => d.open = true);
   }
   const inicial = (location.hash || "").slice(1);
-  abre(["brasil", "comparacao", "modelo"].includes(inicial) ? inicial : "brasil");
+  abre(["brasil", "regioes", "comparacao", "modelo"].includes(inicial) ? inicial : "brasil");
 })();
 </script>

@@ -73,6 +73,36 @@ def fato_incidencia_uf() -> pd.DataFrame:
             [["localidade", "casos_estimados", "taxa_bruta_100mil", "taxa_ajustada_100mil"]])
 
 
+def taxas_regiao() -> pd.DataFrame:
+    """Taxas ajustadas por idade (INCA) por região; não podem ser obtidas somando as UFs."""
+    inc = _le("inca_incidencia").query("nivel == 'regiao' and indicador == 'taxa_ajustada_100mil'")
+    mort = _le("inca_mortalidade").query("nivel == 'regiao'")
+    return (inc.set_index("localidade")[["valor"]].rename(columns={"valor": "incidencia_ajustada_100mil"})
+            .join(mort.set_index("localidade")[["valor"]].rename(columns={"valor": "mortalidade_ajustada_100mil"}))
+            .rename_axis("regiao").reset_index())
+
+
+def siscan_regiao() -> pd.DataFrame:
+    df = pd.read_csv(config.PROCESSED / "siscan_regiao.csv")
+    return df.rename(columns={"% mamas densas": "pct_densas", "% densas padronizada por idade": "pct_densas_padronizada",
+                              "w CBIS-DDSM × região": "w_cbis", "AUC": "auc", "IC95% inf": "ic95_inf",
+                              "IC95% sup": "ic95_sup"})[["regiao", "pct_densas", "pct_densas_padronizada", "w_cbis",
+                                                         "auc", "ic95_inf", "ic95_sup"]]
+
+
+def siscan_densidade_uf() -> pd.DataFrame:
+    df = pd.read_csv(config.PROCESSED / "siscan_densidade_uf.csv")
+    return df.rename(columns={"uf": "localidade", "% mamas densas": "pct_densas", "laudos SISCAN": "laudos"})[
+        ["localidade", "pct_densas", "laudos"]]
+
+
+def modelo_vpp_regiao() -> pd.DataFrame:
+    df = pd.read_csv(config.PROCESSED / "vpp_regiao.csv")
+    return df.rename(columns={"VPP": "vpp", "falsos positivos por câncer detectado": "fp_por_cancer",
+                              "falsos positivos/ano": "fp_ano"})[["regiao", "prevalencia", "vpp", "fp_por_cancer",
+                                                                  "fp_ano"]]
+
+
 def obitos_faixa() -> pd.DataFrame:
     df = _le("datasus_sim_obitos_mama_faixa_ano").query("faixa_etaria != 'Idade ignorada'")
     ordem = {f: i for i, f in enumerate(dict.fromkeys(df["faixa_etaria"]))}
@@ -208,6 +238,7 @@ def exportar() -> dict[str, pd.DataFrame]:
         "dim_localidade": dim_localidade(),
         "fato_uf_ano": fato_uf_ano(),
         "fato_incidencia_uf": fato_incidencia_uf(),
+        "taxas_regiao": taxas_regiao(),
         "obitos_faixa": obitos_faixa(),
         "densidade_faixa": densidade_faixa(),
         "comparacao_densidade": comparacao_densidade(cbis),
@@ -215,6 +246,9 @@ def exportar() -> dict[str, pd.DataFrame]:
         "birads_densidade_brasil": birads_densidade_brasil(),
         "modelo_auc_densidade": modelo_auc_densidade(),
         "modelo_auc_populacao": modelo_auc_populacao(),
+        "modelo_vpp_regiao": modelo_vpp_regiao(),
+        "siscan_regiao": siscan_regiao(),
+        "siscan_densidade_uf": siscan_densidade_uf(),
         "cbis_lesoes": cbis_lesoes(cbis),
     }
     DESTINO.mkdir(parents=True, exist_ok=True)

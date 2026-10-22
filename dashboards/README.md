@@ -19,6 +19,7 @@ explorer.exe dashboards/painel.html
 | Aba | Filtro | Gráficos |
 |---|---|---|
 | **Brasil** | região | mamografias por finalidade (2018–2022), óbitos, rastreamentos por caso estimado por UF, óbitos por faixa etária |
+| **Regiões** | indicador · indicador do mapa · região em destaque | indicadores por região (incidência e mortalidade ajustadas, rastreamento por 1.000 mulheres e por caso, óbitos por caso, % mamas densas, AUC estimada), mapa em grade por UF, rastreamento em relação a 2019 (pandemia), VPP do modelo em cada região |
 | **Brasil × CBIS-DDSM** | todas as lesões / massas / calcificações | densidade mamária nas duas bases, densidade por idade no Brasil, BI-RADS nas duas bases |
 | **Modelo e viés** | — | AUC por densidade, laudos inconclusivos (BI-RADS 0) por densidade, AUC reponderada pela composição brasileira |
 
@@ -50,6 +51,10 @@ dim_localidade (1 linha por UF: localidade, regiao, sigla)
    └──* fato_incidencia_uf   casos estimados e taxas (INCA, 2023) por UF
 
 Tabelas independentes (já agregadas):
+   taxas_regiao              incidência (2023) e mortalidade (2021) ajustadas por idade, por região (INCA)
+   modelo_vpp_regiao         VPP do modelo de calcificações com a prevalência de cada região (notebook 03)
+   siscan_regiao             % mamas densas (bruta e padronizada por idade), w × CBIS-DDSM e AUC por região (notebook 04)
+   siscan_densidade_uf       % mamas densas por UF (SISCAN, notebook 04)
    obitos_faixa              óbitos por faixa etária × ano (SIM)
    densidade_faixa           exames por densidade × faixa etária (SISCAN)
    comparacao_densidade      % por densidade: Brasil × CBIS-DDSM (todas, massas, calcificações)

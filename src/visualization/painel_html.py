@@ -20,9 +20,10 @@ log = logging.getLogger(__name__)
 DADOS = config.ROOT / "dashboards" / "dados"
 MODELO = Path(__file__).with_name("painel_modelo.html")
 
-TABELAS = ["dim_localidade", "fato_uf_ano", "fato_incidencia_uf", "obitos_faixa", "densidade_faixa",
+TABELAS = ["dim_localidade", "fato_uf_ano", "fato_incidencia_uf", "taxas_regiao", "obitos_faixa", "densidade_faixa",
            "comparacao_densidade", "comparacao_birads", "birads_densidade_brasil",
-           "modelo_auc_densidade", "modelo_auc_populacao"]
+           "modelo_auc_densidade", "modelo_auc_populacao", "modelo_vpp_regiao", "siscan_regiao",
+           "siscan_densidade_uf"]
 
 
 def carrega_dados() -> dict:

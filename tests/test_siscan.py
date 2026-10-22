@@ -1,6 +1,6 @@
 import pytest
 
-from src.scraping.siscan import ConsultaSiscan, campos_ocultos, le_google_datatable, monta_post
+from src.scraping.siscan import ConsultaSiscan, campos_ocultos, densidade_do_filtro, le_google_datatable, monta_post
 from src.scraping.tabnet import opcoes_do_formulario
 
 FORM = """
@@ -55,6 +55,12 @@ def test_monta_post():
     assert ("SUF de residencia", "TODAS_AS_CATEGORIAS__") in dados
     assert ("nomedef", "siscan/mamografia_residbr.def") in dados  # campo oculto do formulário
     assert not any(k == "listahidden1" for k, _ in dados)
+
+
+def test_densidade_do_filtro():
+    assert densidade_do_filtro(ConsultaSiscan("t", "UF de residencia", "Faixa etária", "teste",
+                                              filtros={"XTipo mama dir": ["Densa"]})) == 4
+    assert densidade_do_filtro(ConsultaSiscan("t", "UF de residencia", "Faixa etária", "teste")) is None
 
 
 def test_monta_post_ano_indisponivel():

@@ -72,6 +72,16 @@ CONSULTAS = [
                    "Mamografias por categoria BI-RADS e indicação clínica, 2018–2022"),
     ConsultaSiscan("siscan_birads_densidade", "BI-RADS", "Tipo mama dir",
                    "Mamografias por categoria BI-RADS e tipo de mama (densidade), 2018–2022"),
+    ConsultaSiscan("siscan_densidade_uf", "UF de residencia", "Tipo mama dir",
+                   "Mamografias por UF de residência e tipo de mama (densidade), 2018–2022"),
+    ConsultaSiscan("siscan_birads_uf", "UF de residencia", "BI-RADS",
+                   "Mamografias de rastreamento por UF de residência e categoria BI-RADS, 2018–2022",
+                   filtros={**SO_MULHERES, "XInd Clinica": ["Mamog. Rastreamento"]}),
+    # UF × faixa etária, uma consulta por densidade: permite padronizar a densidade de cada região pela idade
+    *[ConsultaSiscan(f"siscan_uf_faixa_densidade_{d}", "UF de residencia", "Faixa etária",
+                     f"Mamografias por UF de residência e faixa etária, só tipo de mama {nome}, 2018–2022",
+                     filtros={**SO_MULHERES, "XTipo mama dir": [nome]})
+      for nome, d in DENSIDADE_BIRADS.items()],
 ]
 
 
@@ -152,6 +162,12 @@ def coletar(forcar: bool = False) -> None:
         metadados_path.write_text(json.dumps(metadados, indent=2, ensure_ascii=False))
 
 
+def densidade_do_filtro(consulta: ConsultaSiscan) -> int | None:
+    """Densidade BI-RADS quando a consulta filtra um único tipo de mama; senão ``None``."""
+    tipos = consulta.filtros.get("XTipo mama dir", [])
+    return DENSIDADE_BIRADS[tipos[0]] if len(tipos) == 1 else None
+
+
 def extrair_consulta(consulta: ConsultaSiscan) -> pd.DataFrame:
     html = (config.RAW_DATASUS / f"{consulta.nome}.html").read_text(encoding="utf-8")
     colunas, linhas = le_google_datatable(html)
@@ -164,6 +180,9 @@ def extrair_consulta(consulta: ConsultaSiscan) -> pd.DataFrame:
     for var, col in [(consulta.linha, "linha"), (consulta.coluna, "coluna")]:
         if var.startswith("Tipo mama"):
             df[f"densidade_birads_{col}"] = df[col].map(DENSIDADE_BIRADS)
+    densidade = densidade_do_filtro(consulta)
+    if densidade is not None:
+        df["densidade_birads_filtro"] = densidade
     df["consulta"] = consulta.nome
     df["descricao"] = consulta.descricao
     return df

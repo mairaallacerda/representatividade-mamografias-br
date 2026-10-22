@@ -48,6 +48,12 @@ As partes comuns (ler as opções do formulário e escolher pelo texto) são rea
 | `siscan_birads_ano.csv` | BI-RADS × ano |
 | `siscan_birads_indicacao.csv` | BI-RADS × indicação |
 | `siscan_birads_densidade.csv` | BI-RADS × tipo de mama |
+| `siscan_densidade_uf.csv` | UF de residência × tipo de mama |
+| `siscan_birads_uf.csv` | UF de residência × BI-RADS, só rastreamento (filtro `XInd Clinica`) |
+| `siscan_uf_faixa_densidade_{1..4}.csv` | UF de residência × faixa etária, uma consulta por tipo de mama (filtro `XTipo mama dir`); juntas formam UF × idade × densidade, usadas para padronizar a densidade pela idade |
+
+O formulário não tem a variável "região": as regiões são a soma das UFs. As linhas de UF vêm com o código do IBGE
+(`11 Rondônia`); a análise remove o código.
 
 **Tipo de mama → densidade BI-RADS** (mesma escala do CBIS-DDSM): Adiposa = 1, Predominantemente adiposa = 2,
 Predominantemente densa = 3, Densa = 4. "Implante", "reconstruída" e "ignorado" ficam fora da escala.
@@ -62,5 +68,7 @@ Predominantemente densa = 3, Densa = 4. "Implante", "reconstruída" e "ignorado"
 
 - O SISCAN **não cobre todo o SUS**. Em 2022 registrou cerca de 3,0 milhões de mamografias em mulheres, contra cerca
   de 4,25 milhões no SIA (faturamento). A adesão ao sistema varia entre estados e municípios.
+- A adesão varia muito entre regiões: comparando com o SIA em 2018–2022, o SISCAN tem cerca de metade dos exames no
+  Sudeste, 82% no Sul e mais de 90% no Norte, Nordeste e Centro-Oeste.
 - Quase todos os laudos no SISCAN são de **rastreamento** (≈ 97%). As mamografias diagnósticas registradas são poucas.
 - A unidade é o **exame**, não a mulher: a mesma pessoa pode aparecer em vários anos.

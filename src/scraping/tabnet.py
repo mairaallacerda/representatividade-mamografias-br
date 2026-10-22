@@ -101,7 +101,6 @@ CONSULTAS = [
 ]
 
 
-# 1. Leitura do formulário e montagem do POST
 def opcoes_do_formulario(html: str) -> dict[str, dict[str, str]]:
     """{nome_do_select: {rótulo: valor}} para todos os <select> do formulário."""
     form = BeautifulSoup(html, "lxml").find("form")
@@ -149,7 +148,6 @@ def monta_post(consulta: Consulta, opcoes: dict[str, dict[str, str]]) -> list[tu
     return dados
 
 
-# 2. Coleta
 def coletar(forcar: bool = False) -> None:
     config.RAW_DATASUS.mkdir(parents=True, exist_ok=True)
     metadados_path = config.RAW_DATASUS / "coleta.json"
@@ -182,7 +180,6 @@ def coletar(forcar: bool = False) -> None:
         metadados_path.write_text(json.dumps(metadados, indent=2, ensure_ascii=False))
 
 
-# 3. Extração da tabela de resultado
 def tabela_resultado(html: str) -> Tag:
     soup = BeautifulSoup(html, "lxml")
     tabela = soup.find("table", class_="tabdados") or max(soup.find_all("table"), key=lambda t: len(t.find_all("tr")), default=None)

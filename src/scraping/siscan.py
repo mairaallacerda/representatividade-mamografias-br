@@ -75,7 +75,6 @@ CONSULTAS = [
 ]
 
 
-# 1. Montagem do POST
 def campos_ocultos(html: str) -> list[tuple[str, str]]:
     form = BeautifulSoup(html, "lxml").find("form")
     return [(i["name"], i.get("value", "")) for i in form.find_all("input", type="hidden") if i.get("name")]
@@ -104,7 +103,6 @@ def monta_post(consulta: ConsultaSiscan, opcoes: dict[str, dict[str, str]],
     return dados + ocultos + [("grafico", "")]
 
 
-# 2. Leitura do resultado (dados dentro do JavaScript)
 def le_google_datatable(html: str) -> tuple[list[str], list[list]]:
     """Extrai colunas e linhas de ``data.addColumn(...)`` / ``data.addRows([...])``.
 
@@ -125,7 +123,6 @@ def le_google_datatable(html: str) -> tuple[list[str], list[list]]:
     return [c.strip() for c in colunas], linhas
 
 
-# 3. Coleta e extração
 def coletar(forcar: bool = False) -> None:
     config.RAW_DATASUS.mkdir(parents=True, exist_ok=True)
     metadados_path = config.RAW_DATASUS / "coleta_siscan.json"

@@ -37,8 +37,6 @@ PAGINAS = {
 REGIOES = set(config.REGIOES_UF)
 
 
-
-# 1. Coleta (HTML bruto)
 def coletar(forcar: bool = False) -> None:
     config.RAW_INCA.mkdir(parents=True, exist_ok=True)
     metadados_path = config.RAW_INCA / "coleta.json"
@@ -66,9 +64,6 @@ def _conteudo(nome: str) -> Tag:
     return soup.find(id="content-core") or soup
 
 
-# ---------------------------------------------------------------
-# Auxiliares de parsing
-# ---------------------------------------------------------------
 def titulo_da_tabela(tabela: Tag) -> str:
     """O título ("Tabela N. Número de ...") fica em um parágrafo antes da <table>."""
     for el in tabela.find_all_previous(["p", "h2", "h3", "h4", "strong", "span", "div"], limit=10):
@@ -122,9 +117,6 @@ def tabela_para_longo(tabela: Tag, var_coluna: str) -> pd.DataFrame:
     return pd.DataFrame(registros)
 
 
-# ---------------------------------------------------------------
-# 2. Extração por página
-# ---------------------------------------------------------------
 def extrair_incidencia() -> pd.DataFrame:
     tabela = _conteudo("incidencia").find("table")
     titulo = titulo_da_tabela(tabela)
@@ -220,9 +212,6 @@ def extrair_mortalidade() -> pd.DataFrame:
     return df
 
 
-# ---------------------------------------------------------------
-# 3. Validação: soma das UFs = região e soma das regiões = Brasil
-# ---------------------------------------------------------------
 def validar(df: pd.DataFrame, chaves: list[str], nome: str) -> int:
     """Compara totais declarados pela fonte com as somas das partes. Retorna nº de divergências."""
     divergencias = 0

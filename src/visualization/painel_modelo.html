@@ -3,7 +3,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
 <style>
-/* Layout: cabeçalho com a tese, abas por pergunta, faixa de indicadores e grade de gráficos (2 colunas → 1 no celular) */
 :root {
   --bg: #f5f8f8;
   --surface: #ffffff;
@@ -124,7 +123,6 @@ code, .mono { font-family: var(--f-mono); font-size: .92em; }
     <button role="tab" id="aba-modelo" aria-controls="modelo" aria-selected="false">Modelo e viés</button>
   </nav>
 
-  <!-- ============================== BRASIL ============================== -->
   <section role="tabpanel" id="brasil" aria-labelledby="aba-brasil">
     <div class="filtros">
       <label for="f-regiao">Região
@@ -162,7 +160,6 @@ code, .mono { font-family: var(--f-mono); font-size: .92em; }
     </div>
   </section>
 
-  <!-- ============================ COMPARAÇÃO ============================ -->
   <section role="tabpanel" id="comparacao" aria-labelledby="aba-comparacao" hidden>
     <p class="pergunta">As características dos casos do CBIS-DDSM batem com as das brasileiras?</p>
     <div class="kpis">
@@ -196,7 +193,6 @@ code, .mono { font-family: var(--f-mono); font-size: .92em; }
     </div>
   </section>
 
-  <!-- ============================== MODELO ============================== -->
   <section role="tabpanel" id="modelo" aria-labelledby="aba-modelo" hidden>
     <p class="pergunta">Um modelo treinado no CBIS-DDSM funcionaria igual nas brasileiras?</p>
     <div class="kpis">
@@ -250,7 +246,6 @@ code, .mono { font-family: var(--f-mono); font-size: .92em; }
   const cor = (n) => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
   const graficos = {};
 
-  // ---------- auxiliares ----------
   function tabela(id, cabecalho, linhas) {
     const el = document.getElementById(id);
     el.innerHTML = "<table><thead><tr>" + cabecalho.map((c) => `<th>${c}</th>`).join("") + "</tr></thead><tbody>" +
@@ -279,7 +274,6 @@ code, .mono { font-family: var(--f-mono); font-size: .92em; }
   }
   const barra = { borderRadius: 4, borderSkipped: "start", borderWidth: 0 };
 
-  // ---------- aba Brasil ----------
   const regioes = [...new Set(D.dim_localidade.map((l) => l.regiao))];
   const selReg = document.getElementById("f-regiao");
   regioes.forEach((r) => selReg.insertAdjacentHTML("beforeend", `<option value="${r}">${r}</option>`));
@@ -356,7 +350,6 @@ code, .mono { font-family: var(--f-mono); font-size: .92em; }
     tabela("t-faixa-obitos", ["Faixa etária", "Óbitos 2018–2022", "%"], faixas.map((f, i) => [f, nf(tot[i]), pct(p[i], 1)]));
   }
 
-  // ---------- aba Comparação ----------
   const selSub = document.getElementById("f-subconjunto");
   function comparacao() {
     document.getElementById("k-w").textContent = nf(I.w_cohen_densidade, 2);
@@ -403,7 +396,6 @@ code, .mono { font-family: var(--f-mono); font-size: .92em; }
     tabela("t-birads", ["BI-RADS", ...fontes.map((f) => f[0])], [0, 1, 2, 3, 4, 5].map((b) => [b, ...fontes.map(([f]) => pct(bi(f)[b].percentual, 1))]));
   }
 
-  // ---------- aba Modelo ----------
   function modelo() {
     const pop = D.modelo_auc_populacao;
     const acha = (p) => pop.find((l) => l.populacao.startsWith(p));
@@ -453,7 +445,6 @@ code, .mono { font-family: var(--f-mono); font-size: .92em; }
 
   function tudo() { brasil(); faixaObitos(); comparacao(); modelo(); }
 
-  // ---------- abas ----------
   const abas = [...document.querySelectorAll('[role="tab"]')];
   function abre(id, foco = false) {
     abas.forEach((a) => {
@@ -480,7 +471,6 @@ code, .mono { font-family: var(--f-mono); font-size: .92em; }
   if (window.Chart) {
     Chart.defaults.font.family = cor("--f-body");
     tudo();
-    // redesenha com as cores do tema quando o tema muda
     matchMedia("(prefers-color-scheme: dark)").addEventListener("change", tudo);
     new MutationObserver(tudo).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
   } else {

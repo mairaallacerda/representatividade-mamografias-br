@@ -14,20 +14,17 @@ INTERIM = DATA / "interim"
 PROCESSED = DATA / "processed"
 FIGURES = ROOT / "reports" / "figures"
 
-# Período de análise dos dados brasileiros
 ANO_INICIO = 2018
 ANO_FIM = 2022
 
-# Fontes brasileiras — conferir as URLs na etapa de análise da estrutura das páginas
 URLS = {
     "inca_dados_numeros": (
         "https://www.gov.br/inca/pt-br/assuntos/gestor-e-profissional-de-saude/"
         "controle-do-cancer-de-mama/dados-e-numeros"
     ),
     "tabnet_home": "https://datasus.saude.gov.br/informacoes-de-saude-tabnet/",
-}  # as consultas do TABNET estão em src/scraping/tabnet.py
+}
 
-# CSVs de metadados do CBIS-DDSM
 CBIS_FILES = {
     "mass_train": "mass_case_description_train_set.csv",
     "mass_test": "mass_case_description_test_set.csv",

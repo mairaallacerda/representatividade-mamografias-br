@@ -1,7 +1,10 @@
 """Estilo único dos gráficos do projeto (matplotlib)."""
 
+import re
+
 import matplotlib as mpl
 import matplotlib.pyplot as plt
+import matplotlib.ticker as mticker
 
 from src import config
 
@@ -59,6 +62,30 @@ def milhar(x, _=None) -> str:
     return f"{x:.0f}"
 
 
+class _FormatadorVirgula(mticker.ScalarFormatter):
+    def __call__(self, x, pos=None):
+        return super().__call__(x, pos).replace(".", ",")
+
+
+_DECIMAL = re.compile(r"(?<![\d.,])(\d+)\.(\d{1,2})(?![\d.])")
+
+
+def virgula_decimal(fig: plt.Figure) -> None:
+    """Troca o ponto decimal por vírgula nos eixos e nos textos da figura (1.5 → 1,5).
+
+    Só números com 1 ou 2 casas decimais são trocados; "4.251.434" (separador de milhar) fica como está.
+    """
+    for ax in fig.axes:
+        for eixo in (ax.xaxis, ax.yaxis):
+            if type(eixo.get_major_formatter()) is mticker.ScalarFormatter:
+                eixo.set_major_formatter(_FormatadorVirgula())
+    for texto in fig.findobj(mpl.text.Text):
+        conteudo = texto.get_text()
+        if conteudo and "$" not in conteudo:
+            texto.set_text(_DECIMAL.sub(r"\1,\2", conteudo))
+
+
 def salvar(fig: plt.Figure, nome: str) -> None:
     config.FIGURES.mkdir(parents=True, exist_ok=True)
+    virgula_decimal(fig)
     fig.savefig(config.FIGURES / f"{nome}.png")

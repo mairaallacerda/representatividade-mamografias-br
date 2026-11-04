@@ -19,7 +19,7 @@ explorer.exe dashboards/painel.html
 | Aba | Filtro | Gráficos |
 |---|---|---|
 | **Brasil** | região | mamografias por finalidade (2018–2022), óbitos, rastreamentos por caso estimado por UF, óbitos por faixa etária |
-| **Regiões** | indicador · indicador do mapa · região em destaque | indicadores por região (incidência e mortalidade ajustadas, rastreamento por 1.000 mulheres e por caso, óbitos por caso, % mamas densas, AUC estimada), mapa em grade por UF, rastreamento em relação a 2019 (pandemia), VPP do modelo em cada região |
+| **Regiões** | ▶ reproduzir / barra de anos · indicador · indicador do mapa · região em destaque | rastreamento ano a ano, 2018–2022 (mapa por UF e regiões em relação a 2019, animados); indicadores por região (incidência e mortalidade ajustadas, rastreamento por 1.000 mulheres e por caso, óbitos por caso, % mamas densas, AUC estimada), mapa em grade por UF, rastreamento em relação a 2019 (pandemia), VPP do modelo em cada região |
 | **Brasil × CBIS-DDSM** | todas as lesões / massas / calcificações | densidade mamária nas duas bases, densidade por idade no Brasil, BI-RADS nas duas bases |
 | **Modelo e viés** | — | AUC por densidade, laudos inconclusivos (BI-RADS 0) por densidade, AUC reponderada pela composição brasileira |
 

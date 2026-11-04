@@ -112,7 +112,18 @@ th { font-weight: 600; color: var(--muted); }
         margin-inline: auto; }
 .uf { aspect-ratio: 1; border-radius: 6px; display: grid; place-content: center; text-align: center; line-height: 1.15;
       font-variant-numeric: tabular-nums; }
+.uf { transition: background-color .6s ease, color .6s ease; }
 .uf b { font: 600 13px var(--f-display); }
+.tempo { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; }
+.tempo button {
+  font: 600 14px var(--f-body); color: var(--surface); background: var(--accent); border: 0; border-radius: 6px;
+  padding: 8px 16px; cursor: pointer; min-width: 112px;
+}
+.tempo input[type="range"] { flex: 1; min-width: 160px; accent-color: var(--accent); }
+.tempo .ano { font: 700 34px/1 var(--f-display); font-variant-numeric: tabular-nums; min-width: 4ch; }
+.tempo .resumo { flex-basis: 100%; margin: 0; color: var(--muted); font-size: 14px; }
+.lado-a-lado { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: 18px; align-items: center; }
+@media (max-width: 860px) { .lado-a-lado { grid-template-columns: minmax(0, 1fr); } }
 .uf span { font-size: 11.5px; }
 .legenda-mapa { display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 12px; color: var(--muted); }
 .legenda-mapa .rampa { width: 140px; height: 10px; border-radius: 3px;
@@ -190,6 +201,23 @@ code, .mono { font-family: var(--f-mono); font-size: .92em; }
       <div class="kpi"><span class="rotulo">VPP do mesmo modelo</span><span class="valor" id="k-reg-vpp"></span><span class="nota" id="k-reg-vpp-nota"></span></div>
     </div>
     <div class="grade">
+      <figure class="cartao largo">
+        <figcaption><h3>Rastreamento ano a ano, 2018–2022</h3><p>Aperte ▶ para ver a pandemia derrubar os exames em 2020 e a recuperação desigual até 2022. À esquerda, rastreamentos no SUS por 1.000 mulheres em cada UF (mesma escala em todos os anos); à direita, cada região em relação a 2019.</p></figcaption>
+        <div class="tempo">
+          <button type="button" id="b-play" aria-pressed="false">▶ Reproduzir</button>
+          <label for="f-ano" class="ano" id="ano-atual">2018</label>
+          <input type="range" id="f-ano" min="2018" max="2022" step="1" value="2018" aria-label="Ano">
+          <p class="resumo" id="ano-resumo" aria-live="polite"></p>
+        </div>
+        <div class="lado-a-lado">
+          <div>
+            <div class="mapa" id="mapa-ano" role="img" aria-label="Mapa em grade: rastreamentos por 1.000 mulheres por UF no ano escolhido"></div>
+            <div class="legenda-mapa"><span>0</span><span class="rampa"></span><span id="leg-ano-max"></span></div>
+          </div>
+          <div class="tela"><canvas id="g-ano" aria-label="Rastreamento de cada região em relação a 2019"></canvas></div>
+        </div>
+        <details><summary>Ver tabela</summary><div class="tabela-wrap" id="t-ano"></div></details>
+      </figure>
       <figure class="cartao">
         <figcaption><h3>Indicadores por região</h3><p>Incidência e mortalidade ajustadas por idade (INCA). Rastreamento: SIA/SUS 2022. Mulheres estimadas pelo INCA (casos ÷ taxa bruta), todas as idades.</p></figcaption>
         <div class="filtros"><label for="f-indicador">Indicador <select id="f-indicador"></select></label></div>
@@ -467,7 +495,92 @@ code, .mono { font-family: var(--f-mono); font-size: .92em; }
     return [o[0], o[o.length - 1]];
   };
 
+  // linha do tempo: o mapa e as barras mudam juntos, ano a ano
+  const rastUFAno = {};
+  D.fato_uf_ano.forEach((l) => { (rastUFAno[l.localidade] ||= {})[l.ano] = l.mamografias_rastreamento; });
+  const cobUF = (uf, a) => 1000 * rastUFAno[uf][a] / mulheresUF[uf];
+  const maxCobAno = Math.max(...Object.keys(mulheresUF).flatMap((u) => anos.map((a) => cobUF(u, a))));
+  const ufDaSigla = Object.fromEntries(D.dim_localidade.map((l) => [l.sigla, l.localidade]));
+  const rastRegAno = (r, a) => D.fato_uf_ano.filter((l) => l.ano === a && (!r || regiaoDe[l.localidade] === r))
+    .reduce((s, l) => s + l.mamografias_rastreamento, 0);
+  const selAno = document.getElementById("f-ano");
+  const btnPlay = document.getElementById("b-play");
+  const ultimoAno = anos[anos.length - 1];
+  const semMovimento = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  selAno.min = anos[0];
+  selAno.max = ultimoAno;
+  let anoAtual = anos[0], relogio = null;
+
+  function montaMapaAno() {
+    const el = document.getElementById("mapa-ano");
+    if (el.childElementCount) return;
+    el.innerHTML = Object.entries(GRADE_UF).map(([sg, [lin, col]]) =>
+      `<div class="uf" data-uf="${ufDaSigla[sg]}" style="grid-row:${lin + 1};grid-column:${col + 1}"><b>${sg}</b><span></span></div>`).join("");
+    document.getElementById("leg-ano-max").textContent = nf(maxCobAno);
+  }
+  function atualizaAno() {
+    selAno.value = anoAtual;
+    document.getElementById("ano-atual").textContent = anoAtual;
+    document.querySelectorAll("#mapa-ano .uf").forEach((t) => {
+      const v = cobUF(t.dataset.uf, anoAtual), x = Math.round(10 + 90 * v / maxCobAno);
+      t.style.background = `color-mix(in srgb, var(--s-brasil) ${x}%, var(--surface))`;
+      t.style.color = x > 70 ? "#fff" : "var(--ink)";
+      t.title = `${t.dataset.uf}: ${nf(v)} rastreamentos por 1.000 mulheres em ${anoAtual}`;
+      t.querySelector("span").textContent = nf(v);
+    });
+    const g = graficos["g-ano"];
+    if (g) {
+      const idx = ORDEM_REG.map((r) => 100 * rastRegAno(r, anoAtual) / rastRegAno(r, 2019));
+      g.data.labels = ORDEM_REG.map((r, i) => `${r} (${nf(idx[i])})`);
+      g.data.datasets[0].data = idx;
+      g.data.datasets[0].backgroundColor = idx.map((v) => (v < 100 ? cor("--s-diag") : cor("--s-brasil")));
+      g.update();
+    }
+    const br = rastRegAno("", anoAtual), br19 = rastRegAno("", 2019), dif = 100 * (br / br19 - 1);
+    const difTexto = `${dif > 0 ? "+" : ""}${nf(dif, Math.abs(dif) < 1 ? 1 : 0)}%`;
+    document.getElementById("ano-resumo").textContent = `Brasil em ${anoAtual}: ${nf(br)} mamografias de rastreamento no SUS` +
+      (anoAtual === 2019 ? " (ano de referência)." : `, ${difTexto} em relação a 2019.`);
+  }
+  function para() {
+    clearInterval(relogio);
+    relogio = null;
+    btnPlay.textContent = "▶ Reproduzir";
+    btnPlay.setAttribute("aria-pressed", "false");
+  }
+  function toca() {
+    if (anoAtual >= ultimoAno) { anoAtual = anos[0]; atualizaAno(); }
+    btnPlay.textContent = "❚❚ Pausar";
+    btnPlay.setAttribute("aria-pressed", "true");
+    relogio = setInterval(() => {
+      if (anoAtual >= ultimoAno) return para();
+      anoAtual += 1;
+      atualizaAno();
+    }, 1400);
+  }
+  btnPlay.addEventListener("click", () => (relogio ? para() : toca()));
+  selAno.addEventListener("input", () => { para(); anoAtual = Number(selAno.value); atualizaAno(); });
+
+  function linhaDoTempo() {
+    montaMapaAno();
+    const o = base({
+      x: { min: 0, max: 130, grid: { color: (c) => (c.tick.value === 100 ? cor("--muted") : cor("--grid")), drawTicks: false },
+           ticks: { color: cor("--muted"), stepSize: 20, callback: (v) => nf(v) } },
+      y: { grid: { display: false }, ticks: { color: cor("--ink") } },
+    });
+    o.indexAxis = "y";
+    o.animation = semMovimento ? false : { duration: 700, easing: "easeOutCubic" };
+    o.plugins.legend.display = false;
+    o.interaction = { mode: "nearest", axis: "y", intersect: false };
+    o.plugins.tooltip.callbacks = { label: (c) => ` ${nf(c.parsed.x)} (2019 = 100)` };
+    desenha("g-ano", { type: "bar", options: o, data: { labels: ORDEM_REG, datasets: [
+      { data: ORDEM_REG.map(() => 100), ...barra, barPercentage: 0.7 },
+    ] } });
+    tabela("t-ano", ["UF", ...anos], Object.keys(mulheresUF).sort().map((u) => [u, ...anos.map((a) => nf(cobUF(u, a)))]));
+    atualizaAno();
+  }
+
   function abaRegioes() {
+    linhaDoTempo();
     const kpi = (id, k, d, unid = "") => {
       const [mn, mx] = extremos(k);
       document.getElementById(id).innerHTML = `${nf(mn[k], d)}${unid} <small>× ${nf(mx[k], d)}${unid}</small>`;
@@ -650,6 +763,7 @@ code, .mono { font-family: var(--f-mono); font-size: .92em; }
       document.getElementById(a.getAttribute("aria-controls")).hidden = !ativa;
       if (ativa && foco) a.focus();
     });
+    para();
     if (window.Chart) DESENHA_ABA[id]();
     try { history.replaceState(null, "", "#" + id); } catch (e) { /* sem histórico no visualizador */ }
   }

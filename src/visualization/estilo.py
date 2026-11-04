@@ -5,6 +5,8 @@ import re
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 import matplotlib.ticker as mticker
+from matplotlib import font_manager
+from matplotlib.transforms import offset_copy
 
 from src import config
 
@@ -20,37 +22,82 @@ GRADE = "#e1e0d9"
 EIXO = "#c3c2b7"
 FUNDO = "#fcfcfb"
 
+# IBM Plex Sans (licença SIL OFL, em assets/fontes): a mesma fonte do painel HTML
+PASTA_FONTES = config.ROOT / "assets" / "fontes"
+FONTE = "IBM Plex Sans"
+
+
+def _registra_fontes() -> None:
+    for arquivo in PASTA_FONTES.rglob("*.ttf"):
+        font_manager.fontManager.addfont(str(arquivo))
+
 
 def aplicar() -> None:
+    _registra_fontes()
     mpl.rcParams.update({
+        "font.family": "sans-serif",
+        "font.sans-serif": [FONTE, "DejaVu Sans"],
         "figure.facecolor": FUNDO,
         "axes.facecolor": FUNDO,
         "savefig.facecolor": FUNDO,
         "figure.dpi": 110,
-        "savefig.dpi": 150,
+        "savefig.dpi": 160,
         "savefig.bbox": "tight",
+        "savefig.pad_inches": 0.3,
         "font.size": 10,
-        "axes.titlesize": 12,
-        "axes.titleweight": "bold",
+        "axes.titlesize": 11.5,
+        "axes.titleweight": "semibold",
         "axes.titlelocation": "left",
+        "axes.titlepad": 10,
+        "figure.titlesize": 14,
+        "figure.titleweight": "bold",
         "axes.labelcolor": TINTA_SECUNDARIA,
+        "axes.labelsize": 9.5,
         "axes.edgecolor": EIXO,
         "axes.spines.top": False,
         "axes.spines.right": False,
+        "axes.spines.left": False,
         "axes.grid": True,
         "axes.grid.axis": "y",
         "axes.axisbelow": True,
         "grid.color": GRADE,
-        "grid.linewidth": 0.6,
+        "grid.linewidth": 0.7,
+        "xtick.major.size": 0,
+        "ytick.major.size": 0,
+        "xtick.major.pad": 6,
+        "ytick.major.pad": 6,
         "xtick.color": TINTA_SUAVE,
         "ytick.color": TINTA_SUAVE,
         "xtick.labelcolor": TINTA_SECUNDARIA,
         "ytick.labelcolor": TINTA_SECUNDARIA,
+        "xtick.labelsize": 9.5,
+        "ytick.labelsize": 9.5,
         "text.color": TINTA,
         "legend.frameon": False,
-        "lines.linewidth": 2,
+        "legend.fontsize": 9.5,
+        "legend.handlelength": 1.0,
+        "legend.handleheight": 1.0,
+        "lines.linewidth": 2.2,
+        "lines.solid_capstyle": "round",
         "axes.prop_cycle": mpl.cycler(color=CORES),
     })
+
+
+def cabecalho(fig: plt.Figure, titulo: str, subtitulo: str | None = None) -> None:
+    """Título (a conclusão do gráfico) e subtítulo (como ler o gráfico) acima de tudo, alinhados à esquerda."""
+    fig.subplots_adjust(top=0.95)
+    acima = lambda pts: offset_copy(fig.transFigure, fig=fig, x=0, y=pts, units="points")
+    fig.text(0.01, 1, titulo, transform=acima(30 if subtitulo else 10), ha="left", va="bottom",
+             fontsize=14, fontweight="bold", color=TINTA)
+    if subtitulo:
+        fig.text(0.01, 1, subtitulo, transform=acima(10), ha="left", va="bottom", fontsize=10,
+                 color=TINTA_SECUNDARIA)
+
+
+def rodape(fig: plt.Figure, texto: str) -> None:
+    """Fonte dos dados, em letra pequena abaixo do gráfico."""
+    fig.text(0.01, 0, texto, transform=offset_copy(fig.transFigure, fig=fig, x=0, y=-12, units="points"),
+             ha="left", va="top", fontsize=8.5, color=TINTA_SUAVE)
 
 
 def milhar(x, _=None) -> str:
